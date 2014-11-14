@@ -1,0 +1,29 @@
+- title: Home
+  url: /
+
+- title: Courses
+  url: /courses/
+
+- title: Learning Environment
+  url: /learning-environment/
+
+- title: Applications
+  url: /applications/
+  include_children_in_nav: false
+  children:
+    - title: Service One
+      url: /services/service-one/
+    - title: Service Two
+      url: /services/service-two/
+
+- title: Student Services
+  url: /student-services/
+
+- title: News and Events
+  url: /news-and-events/
+
+- title: About Us
+  url: /about-us/
+
+- title: Contact Us
+  url: /contact-us/

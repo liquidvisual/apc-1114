@@ -1,0 +1,18 @@
+{% assign items = site.data.items %}
+
+<!-- Accordion Module -->
+<dl class="accordion" data-accordion>
+    {% for item in items %}
+        {% assign id = item.title | downcase | replace: ' ', '-' %}
+        <dd class="accordion-navigation">
+            <a href="{{ id | prepend: "#"}}"><b>{{ item.title }}</b> <i class="icon-angle-down"></i><i class="icon-angle-up"></i></a>
+            <div id="{{ id }}" class="content">
+                <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
+                {% for item in item.children  %}
+                    <li><a href="{{ school.url }}">{{ item.title }}</a></li>
+                {% endfor %}
+                </ul>
+            </div> <!-- .content -->
+        </dd> <!-- .accordion-navigation -->
+    {% endfor %}
+</dl> <!-- .accordion -->

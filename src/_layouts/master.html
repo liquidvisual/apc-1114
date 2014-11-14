@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]>       <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if lt IE 9]>       <html class="no-js lt-ie9"> <![endif]-->
+<!--[if IE 9]>          <html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!-->  <html class="no-js"> <!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="{{ page.description }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="authenticity_token" name="csrf-param">
+    <meta content="7FQ7qndXIp9udjC02eCyzTwrwpVgLy5jnP09yYahLdY=" name="csrf-token">
+    <title>
+        {% comment %} SEO IMPLEMENTATION {% endcomment %}
+        {% if page.url == '/' %}
+            {{ site.data.settings.seo_title }}
+        {% else %}
+            {% if page.seo_title %}
+                {{ page.title }} - {{ page.seo_title }}
+            {% else %}
+                {{ page.title }} - {{ site.data.settings.seo_title }}
+            {% endif %}
+        {% endif %}
+    </title>
+
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl }}">
+
+    <!-- build:css({src,.tmp}) /assets/css/optimized.css -->
+    <link rel="stylesheet" href="/_bower_components/animate.css/animate.min.css">
+    <link rel="stylesheet" href="/_bower_components/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="/css/foundation/app.css">
+
+    <link rel="stylesheet" href="/css/application.css">
+    <link rel="stylesheet" href="/css/foundation_and_overrides.css">
+
+    <link rel="stylesheet" href="/css/liquidvisual/liquidvisual.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- endbuild -->
+
+    <!-- Typekit Fonts -->
+    <script src="https://use.typekit.net/zfg7awl.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+    <!--[if gt IE 8]>
+    <![endif]-->
+
+    <!-- build:js(src) /assets/scripts/priority-optimized.js -->
+    <script src="/_bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+</head>
+<body>
+    <div class="lv-super developerX">
+        <div class="lv-page">
+
+            <!-- HEADER -->
+            <header class="header">
+                {% include header.html %}
+            </header>
+
+            <!-- NAVIGATION -->
+            <nav class="navigation show-for-large-up">
+                <div class="row collapse outer-row">
+                    <div class="columns">
+                        <div class="topbar">
+                            {% include navigation.html %}
+                        </div>
+                    </div>
+                </div>
+            </nav> <!-- .navigation -->
+
+            {{ content }}
+
+            <!-- FOOTER -->
+            <footer class="footer">
+                {% include footer.html %}
+            </footer>
+
+        </div> <!-- .lv-page -->
+    </div> <!-- .lv-super -->
+
+    <!-- OFF-CANVAS MENU -->
+    <nav id="off-canvas-menu" class="hide" aria-hidden="true">
+        {% include navigation.html %}
+    </nav>
+
+    <!--[if lt IE 9]>
+    <div class="lv-alert lv-unselectable">
+        <p>Your browser is out of date. Please <a href="http://outdatedbrowser.com">upgrade</a> to experience more of the web.</p>
+        <span class="lv-alert-close">&times;</span>
+    </div>
+    <![endif]-->
+
+    <!-- **** JAVASCRIPT **** -->
+
+    <!-- CDN -->
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.3.13/slick.css"/>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+
+    <!-- build:js(src) /assets/scripts/optimized.js -->
+    <script src="/_bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/_bower_components/jquery-placeholder/jquery.placeholder.js"></script>
+    <script src="/_bower_components/jQuery.mmenu/src/js/jquery.mmenu.min.all.js"></script>
+    <script src="/_bower_components/fastclick/lib/fastclick.js"></script>
+    <script src="/_bower_components/foundation/js/foundation/foundation.js"></script>
+    <script src="/_bower_components/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+    <script src="/_bower_components/nprogress/nprogress.js"></script>
+    <script src="/scripts/main.js"></script>
+    <!-- endbuild -->
+
+    {% comment %}
+        ~~~ DEV REFERENCE ONLY ~~~
+
+        ** FOUNDATION 5 **
+        <script src="/_bower_components/foundation/js/foundation/foundation.js"></script>
+        <script src="/_bower_components/foundation/js/foundation/foundation.abide.js"></script>
+        <script src="/_bower_components/foundation/js/foundation/foundation.accordion.js"></script>
+        <script src="/_bower_components/foundation/js/foundation/foundation.alert.js"></script>
+        <script src="/_bower_components/foundation/js/foundation/foundation.clearing.js"></script>
+        <script src="/_bower_components/foundation/js/foundation/foundation.dropdown.js"></script>
+        <script src="/_bower_components/foundation/js/foundation/foundation.equalizer.js"></script>
+        <script src="/_bower_components/foundation/js/foundation/foundation.interchange.js"></script>
+        <script src="/_bower_components/foundation/js/foundation/foundation.joyride.js"></script>
+        <script src="/_bower_components/foundation/js/foundation/foundation.magellan.js"></script>
+        <script src="/_bower_components/foundation/js/foundation/foundation.offcanvas.js"></script>
+        <script src="/_bower_components/foundation/js/foundation/foundation.reveal.js"></script>
+        <script src="/_bower_components/foundation/js/foundation/foundation.slider.js"></script>
+        <script src="/_bower_components/foundation/js/foundation/foundation.tab.js"></script>
+        <script src="/_bower_components/foundation/js/foundation/foundation.tooltip.js"></script>
+        <script src="/_bower_components/foundation/js/foundation/foundation.topbar.js"></script>
+
+        ** OTHER **
+        <script src="/scripts/legacy/jquery-1.11.1.min.js"></script>
+        <script src="/_bower_components/bxSlider/jquery.bxslider.min.js"></script>
+        <script src="/_bower_components/jquery.scrollTo/jquery.scrollTo.min.js"></script>
+        <script src="/_bower_components/WOW/dist/wow.min.js"></script>
+    {% endcomment %}
+
+    <script>
+        $(document).foundation();
+        $("#off-canvas-menu").mmenu({ "offCanvas": { "position": "right" }});
+    </script>
+
+    {% include google_analytics.html %}
+
+    <!-- No Javascript Warning -->
+    <noscript>
+        <div class="lv-alert lv-unselectable">
+            <p>Your browser has Javascript disabled. Some features may be limited.</p>
+        </div>
+    </noscript>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+{% comment %}
+    Updated: 15.11.14
+    Note: sitemap data is pulled from /data/sitemap.yml
+{% endcomment %}
+
+{% assign settings = site.data.settings %}
+{% assign sitemap = site.data.sitemap %}
+
+<ul>
+    {% comment %} Important: leave 'Home' out of the loop {% endcomment %}
+    <li class="{% if page.url == "/" %} active {% endif %}"><a href="/">Home</a></li>
+
+    {% comment %} First Level {% endcomment %}
+    {% for item in sitemap | offset: 1 %}
+    <li class="{% if item.url == page.url %} active {% endif %}{% if item.children %} has-dropdown {% endif %}">
+        <a href="{{ item.url }}">{{ item.title }}</a>
+
+        {% comment %} Second Level {% endcomment %}
+        {% if item.children and item.include_children_in_nav %}
+        <ul class="dropdown">
+            {% for item in item.children %}
+            <li class="{% if item.children %} has-dropdown {% endif %}"><a href="{{ item.url }}">{{ item.title }}</a>
+
+                {% comment %} Third Level {% endcomment %}
+                {% if item.children and item.include_children_in_nav %}
+                <ul class="dropdown">
+                {% for item in item.children %}
+                    <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+                {% endfor %}
+                </ul>
+                {% endif %}
+
+            </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
