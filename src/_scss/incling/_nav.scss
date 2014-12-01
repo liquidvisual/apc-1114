@@ -1,0 +1,72 @@
+nav.top-bar li { 
+  a.top_nav { 
+    background: $apc_blue url(asset_path('left_tag.jpg')) left no-repeat !important;
+    text-transform: uppercase; 
+    border-bottom: 1px solid $apc_blue;
+    font-size: .75em;
+    font-weight: 100 !important;
+    padding-left: 20px !important; /* 1 extra px because of the white line */
+    padding-right: 19px !important;
+  } 
+  a.first { }
+  a.last { }
+}
+nav.top-bar li.first a.top_nav { 
+  background: $apc_blue !important; 
+}
+
+/** Dropdown customisation **/
+.f-dropdown .category_heading { color: #fff; text-transform: uppercase; display: block; clear: both; float: none; line-height: 1em; }
+.f-dropdown ul.triangle { display: block; float: none; clear: both; margin: 0 0 2em 0;  }
+.f-dropdown ul.triangle li { background: none; color: #ccc;}
+
+.courses_nav .category { display: block; overflow: auto; margin-bottom: 2em;}
+.courses_menu a {
+}
+
+.courses_nav .category_heading a { color: #fff;}
+.courses_nav ul.triangle li a { color: #fff;}
+.courses_nav ul.triangle li.no_cat a { color: red;}
+
+li.courses_menu:hover a.courses_link {
+  border-top: 1px solid  scale-color($apc_dark_grey, $lightness: -20%);
+  border-left: 1px solid  scale-color($apc_dark_grey, $lightness: -20%);
+  border-right: 1px solid  scale-color($apc_dark_grey, $lightness: -20%);
+  padding-left: 19px !important;
+  padding-right: 18px !important;
+  border-bottom: 0px solid $apc_blue;
+  background: $apc_blue;
+  z-index: 1000; 
+  position: relative;
+  right: -1px;
+  bottom: -1px;
+  background-image: none !important;
+}
+
+.top-bar-section ul li:hover { 
+  background: none;
+}
+.top-bar-section ul.triangle li:hover a { 
+  background-color: $apc_blue !important;
+}
+
+.top-bar-section ul li.courses_menu ul.triangle li, ul#language_selections li {
+  &:hover { 
+    background-color: $apc_blue;
+  }
+  a { 
+    color: #ccc; 
+    padding: 0; 
+    margin: 0; 
+    line-height: 1.4em; 
+    &:hover { 
+      background-color: $apc_blue; 
+      color: #fff; 
+    }
+  }
+}
+
+.row.courses_nav { padding: 1em 2em;}
+
+.top-bar-section .f-dropdown { display:none}
+.top-bar-section .courses_menu:hover .f-dropdown { display:block}
