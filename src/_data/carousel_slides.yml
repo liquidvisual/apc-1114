@@ -1,0 +1,14 @@
+- caption_title: "Lorem Ipsums"
+  caption_body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit i..."
+  url: /about-us/
+  image: "/img/content/banner-1.jpg"
+
+- caption_title: "Experience the Difference"
+  caption_body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero."
+  url: ""
+  image: "/img/content/banner-2.jpg"
+
+- caption_title: "Your Time is Now"
+  caption_body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum"
+  url: ""
+  image: "/img/content/banner-3.jpg"

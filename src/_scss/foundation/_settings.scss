@@ -97,11 +97,28 @@ $include-html-global-classes: $include-html-classes;
 
 // We use these as default colors throughout
 $primary-color: #0c4d9e;
-// $secondary-color: #e7e7e7;
+$secondary-color: #e7e7e7;
+$tertiary-color: red;
 // $alert-color: #f04124;
 // $success-color: #43AC6A;
 // $warning-color: #f08a24;
 // $info-color: #a0d3e8;
+
+$apc_blue: #0c4d9e;
+$apc_smoke: #f1f1f1;
+$apc_grey: #808285;
+$apc_dark_grey: #706d78;
+$apc_dark_blue: #0e3c77;
+
+$english_cat: #4bb1e4;
+$hospitality_cat: #b2a259;
+$accounting_cat: #91ba3f;
+$marketing_cat: #507e95;
+$tourism_cat: #669933;
+$information_tech_cat: #9999cc;
+$business_cat: #d15c1d;
+$management_cat: #993333;
+$tesol_cat: #e6c83a;
 
 // $white       : #FFFFFF;
 // $ghost       : #FAFAFA;
@@ -211,8 +228,8 @@ $xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (m
 // $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
-// $h1-font-size: rem-calc(44);
-// $h2-font-size: rem-calc(37);
+$h1-font-size: rem-calc(44);
+$h2-font-size: rem-calc(35); // 37
 // $h3-font-size: rem-calc(27);
 // $h4-font-size: rem-calc(23);
 // $h5-font-size: rem-calc(18);
@@ -240,7 +257,7 @@ $xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (m
 // We use these to style paragraphs
 // $paragraph-font-family: inherit;
 // $paragraph-font-weight: $font-weight-normal;
-// $paragraph-font-size: 1rem;
+$paragraph-font-size: rem-calc(14); //1rem;
 // $paragraph-line-height: 1.6;
 // $paragraph-margin-bottom: rem-calc(20);
 // $paragraph-aside-font-size: rem-calc(14);
@@ -427,9 +444,9 @@ $xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (m
 // $include-html-button-classes: $include-html-classes;
 
 // We use these to build padding for buttons.
-// $button-tny: rem-calc(10);
+$button-tny: rem-calc(8);
 // $button-sml: rem-calc(14);
-// $button-med: rem-calc(16);
+$button-med: rem-calc(10); // 16
 // $button-lrg: rem-calc(18);
 
 // We use this to control the display property.
@@ -453,7 +470,7 @@ $xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (m
 // We use these to control button border and hover styles.
 // $button-border-width: 0px;
 // $button-border-style: solid;
-// $button-bg-color: $primary-color;
+$button-bg-color: $apc-dark-blue; //$primary-color;
 // $button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-factor);
 // $button-border-color: $button-bg-hover;
 // $secondary-button-bg-hover: scale-color($secondary-color, $lightness: $button-function-factor);

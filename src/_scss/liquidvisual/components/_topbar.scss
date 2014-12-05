@@ -36,6 +36,7 @@
 }
 
 .topbar li {
+	position: relative;
 	display: inline-block;
 	display: table-cell;
 
@@ -44,11 +45,14 @@
 	}
 }
 
-.topbar li.has-dropdown a:after {
-	content: "\f0d7";
-	font-family: "FontAwesome";
-	padding-left: rem-calc(5);
-}
+// .topbar li.has-dropdown:after {
+// 	content: "\f0d7";
+// 	font-family: "FontAwesome";
+// 	position: absolute;
+// 	right: 0;
+// 	top: 0;
+// 	color: white;
+// }
 
 .topbar a {
 	@extend .transition;
@@ -62,7 +66,7 @@
 	&:after {
 		// content: "|";
 		position: relative;
-		left: 20px;
+		left: 15px;
 	}
 
 	@media #{$large-up} {
@@ -75,6 +79,15 @@
 	background: darken($primary-color, 10%);
 	border-radius: $global-radius 0 $global-radius 0;
 }
+
+.topbar li.active:first-child > a {
+	background: none;
+}
+
+.topbar li:last-child a:after {
+	content: "";
+}
+
 
 .no-touch .topbar a:hover {
 	color: white;

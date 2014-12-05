@@ -2,112 +2,37 @@
 IGNORE THIS COMMENT: Interchange code reference for dev self:
 <img width="200" data-interchange="[/ImageGen.ashx?width=200&image=@logo.Url, (default)], [@logo.Url, (retina)]" alt="@logo.Name">
 {% endcomment %}
-{% assign settings = site.data.settings %}
+
 {% comment %}
-<div class="row outer-row">
-<div class="medium-6 columns">
-	<a class="logo" href="/" title="{{ settings.seo_title }}" itemprop="url">
-	<img src="{{ settings.logo }}" alt="{{ settings.company_title }}" itemprop="logo"></a>
-</div>
-<div class="medium-6 columns">
-	<!--  -->
-</div>
-</div>
-<!-- Important: Hamburger outside of row -->
-<a href="#" class="hamburger hide-for-large-up"><span>OPEN MENU</span></a>
+<ul class='f-dropdown' data-dropdown-content id='language_selections'>
+	<li><a href="australia"><img alt="Australia" class="map" src="/img/template/flags/32/Australia.png" />English&nbsp;<i class='fa fa-caret-down'></i></a></li>
+	<li><a href="southkorea"><img alt="Southkorea" class="map" src="/img/template/flags/32/Southkorea.png" />Korean</a></li>
+	<li><a href="china"><img alt="China" class="map" src="/img/template/flags/32/China.png" />Chinese</a></li>
+	<li><a href="thailand"><img alt="Thailand" class="map" src="/img/template/flags/32/Thailand.png" />Thai</a></li>
+	<li><a href="spain"><img alt="Spain" class="map" src="/img/template/flags/32/Spain.png" />Spanish</a></li>
+	<li><a href="japan"><img alt="Japan" class="map" src="/img/template/flags/32/Japan.png" />Japanese</a></li>
+	<li><a href="poland"><img alt="Poland" class="map" src="/img/template/flags/32/Poland.png" />Polish</a></li>
+	<li><a href="portugal"><img alt="Portugal" class="map" src="/img/template/flags/32/Portugal.png" />Portugal</a></li>
+</ul>
 {% endcomment %}
-<header>
-	<div class='row'>
-		<div class='large-4 columns show-for-medium-up'>
-			<a href="/"><img width="282" alt="Logo" id="logo" src="/img/content/logo.png" />
-			</a>
+
+{% assign settings = site.data.settings %}
+{% assign logo = "/img/content/logo.png" %}
+
+<div class="row outer-row">
+	<div class="header-top">
+		<div class="medium-6 medium-push-6 columns medium-text-right">
+			<a class="button tiny round swish" href=""><i class="fa fa-play"></i> Apply Now</a>
+			<a class="button tiny round swish" href=""><i class="fa fa-play"></i> Student Login</a>
 		</div>
-		<div class='large-8 small-12 columns responsive_top'>
-			<ul class='inline-list' id='quick-links'>
-				<li class='main_link'>
-					<a class="button tiny round swish" href=""><i class="fa fa-play"></i> Apply Now
-					</a>
-				</li>
-				<li class='main_link'>
-					<a class="button tiny round swish" href=""><i class="fa fa-play"></i> Student Login
-					</a>
-				</li>
-				<li class='main_link hidden-for-small-only' data-dropdown='language_selections' data-options='is_hover:true' id='language_nav'>
-					<a class="button tiny round swish" href="" id="language-selector"><img alt="Australia" class="map" src="/img/template/flags/32/Australia.png" />
-						English
-						<i class="fa fa-play"></i>
-					</a>
-					<ul class='f-dropdown' data-dropdown-content id='language_selections'>
-						<li>
-							<a href="australia"><img alt="Australia" class="map" src="/img/template/flags/32/Australia.png" />
-								English
-								&nbsp;
-								<i class='fa fa-caret-down'></i>
-							</a>
-						</li>
-						<li>
-							<a href="southkorea"><img alt="Southkorea" class="map" src="/img/template/flags/32/Southkorea.png" />
-								Korean
-							</a>
-						</li>
-						<li>
-							<a href="china"><img alt="China" class="map" src="/img/template/flags/32/China.png" />
-								Chinese
-							</a>
-						</li>
-						<li>
-							<a href="thailand"><img alt="Thailand" class="map" src="/img/template/flags/32/Thailand.png" />
-								Thai
-							</a>
-						</li>
-						<li>
-							<a href="spain"><img alt="Spain" class="map" src="/img/template/flags/32/Spain.png" />
-								Spanish
-							</a>
-						</li>
-						<li>
-							<a href="japan"><img alt="Japan" class="map" src="/img/template/flags/32/Japan.png" />
-								Japanese
-							</a>
-						</li>
-						<li>
-							<a href="poland"><img alt="Poland" class="map" src="/img/template/flags/32/Poland.png" />
-								Polish
-							</a>
-						</li>
-						<li>
-							<a href="portugal"><img alt="Portugal" class="map" src="/img/template/flags/32/Portugal.png" />
-								Portugal
-							</a>
-						</li>
-					</ul>
-				</li>
-				<div class='main_link visible-for-small-only' id='language_selector_mobile'>
-					<div class='text-right'>
-						<a class="right-off-canvas-toggle" href="#rightNav" role="button"><img alt="Australia" class="map" src="/img/template/flags/32/Australia.png" />
-						</a>
-					</div>
-				</div>
-			</ul>
-		</div>
-		</div>
-		<div class='row show-for-small-only'>
-		<a href="/"><img alt="Logo" id="logo" src="/img/content/logo.png">
-		</a>
-		</div>
-		<div class='row'>
-		<div class='show-for-small-only'>
-			<nav class='tab-bar'>
-				<div class='left tab-bar-section text-left'>
-					<a class="left-off-canvas-toggle" href="#leftNav" role="button">MENU
-					</a>
-				</div>
-				<div class='right-small'>
-					<a class="hamburger menu-icon" href="#leftNav" role="button"><span></a>
-					<!-- <a href="#" class="hamburger hide-for-large-up"><span>OPEN MENU</span></a> -->
-				</div>
-			</nav>
-		</div>
-		<!-- include nav -->
 	</div>
-</header>
+	<div class="medium-6 medium-pull-6 columns">
+		<a class="logo" href="/" title="{{ settings.seo_title }}" itemprop="url">
+		<img src="{{ logo }}" alt="{{ settings.company_title }}" itemprop="logo"></a>
+	</div>
+</div>
+
+<!-- Important: Hamburger outside of row -->
+<div class="header-mobile-menu hide-for-large-up">
+	<a href="#" class="hide-for-large-up">MENU <span class="hamburger"><span class="hamburger-icon"></span></span></a>
+</div>

@@ -13,6 +13,7 @@ var TOUCH_ENABLED = $(".touch").length;
 
 $(document).ready(function() {
     NProgress.start(); // Start preloader bar
+    setupHero();
 });
 
 $(window).load(function() {
@@ -22,6 +23,60 @@ $(window).load(function() {
 // window.onload = function(){
 //     // NProgress.done();
 // }
+
+//-----------------------------------------------------------------
+// setupHero
+//-----------------------------------------------------------------
+
+function setupHero() {
+    bxSlider1 = $('#lv-hero-carousel').bxSlider({
+        auto: (TOUCH_ENABLED ? false : true),
+        mode: 'horizontal',
+        adaptiveHeight: true,
+        responsive: true,
+        touchEnabled: false,
+        pause: 10000, // Slow timer
+        slideMargin: 0,
+        slideSelector: ".lv-hero",
+        minSlides: 1,
+        // nextSelector: ".hero-next",
+        // prevSelector: ".hero-prev",
+        controls: true,
+        infiniteLoop: true,
+        touchEnabled: true,
+        useCSS: true,
+        pager: (TOUCH_ENABLED ? false : true),
+        pagerSelector: '.lv-hero-carousel-bullets',
+        onSliderLoad:  function(){  $('.lv-hero-caption').show().addClass('fadeInLeft');},
+        onSlideBefore: function(){  $('.lv-hero-caption').hide().removeClass('fadeInLeft');},
+        onSlideAfter:  function(){  $('.lv-hero-caption').show().addClass('fadeInLeft');}
+    });
+}
+
+//-----------------------------------------------------------------
+// Carousel
+//-----------------------------------------------------------------
+
+// $('#lv-hero-carousel').slick({
+//     autoplay: false,
+//     autoplaySpeed: 8000,
+//     // dots: true,
+//     infinite: true,
+//     speed: 500,
+//     // fade: true,
+//     slide: '.lv-hero',
+//     cssEase: 'linear',
+//     responsive: [
+//         {
+//           breakpoint: 640,
+//           settings: {
+//             autoplay: false,
+//             swipe: false
+//           }
+//         }
+//       ]
+// });
+
 //-----------------------------------------------------------------
 // Kickstart Foundation / Touch Conditionals
 //-----------------------------------------------------------------
@@ -29,7 +84,7 @@ $(window).load(function() {
 var touchEvent = TOUCH_ENABLED ? "touchstart" : "click";
 
 //Trigger hamburger by touch on mobile - this eliminates glitch with FastClick.js
-$(".hamburger").css({"visibility": "visible"}).bind(touchEvent, function() {
+$(".header-mobile-menu").css({"visibility": "visible"}).bind(touchEvent, function() {
     $("#off-canvas-menu").trigger("open.mm");
 });
 

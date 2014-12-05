@@ -7,25 +7,28 @@ hero_link: /some-link-here/
 
 <div class="homepage">
 
-	<!-- HERO -->
-	<div class="hero">
-	    <div class="row outer-row">
-	        <div class="columns">
-	            <div class="animated fadeInLeft">
-	                <h1>{{ page.banner_header }}</h1>
-	                <p><a href="{{ page.hero_link }}" class="button"></a></p>
-	            </div>
-	        </div> <!-- .columns -->
-	    </div> <!-- .row -->
-	</div> <!-- .hero -->
+	{% include hero.html %}
 
 	<!-- MAIN -->
 	<main class="main">
-		<div class="row outer-row">
-			<div class="columns">
 
-			</div> <!-- .columns -->
-		</div> <!-- .row -->
+		<!-- INTRO CLAIM -->
+        <div class="section has-small-padding claim-section">
+            <div class="row">
+                <div class="medium-8 columns">
+                    <h2>Our Courses</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. Sed nulla orci, suscipit sit amet leo in, venenatis euismod mauris. Donec eu arcu ac arcu suscipit congue eget eu nulla. Praesent blandit, ipsum a facilisis faci...</p>
+                </div> <!-- .columns -->
+                <div class="medium-4 columns">
+                    <div class="divider"></div>
+                    <div class="button-list">
+                        <a href="#" class="button medium swish"><i class="fa fa-play"></i>&nbsp; Apply Today</a>
+                        <a href="#" class="button medium swish"><i class="fa fa-play"></i>&nbsp; Make an Enquiry</a>
+                    </div>
+                </div> <!-- .columns -->
+            </div> <!-- .row -->
+        </div> <!-- .our-courses-section -->
+
 	</main>
 
 </div> <!-- .homepage -->

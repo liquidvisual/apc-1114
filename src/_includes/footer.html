@@ -1,15 +1,17 @@
+{% assign settings = site.data.settings %}
+
 <footer class="footer">
 
     <!-- Footer Top -->
     <section class="footer-top">
         <div class="row">
-            <div class="medium-4 medium-centered columns">
-                <ul class="social-networks text-center small-block-grid-5">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-rss"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <div class="medium-6 large-4 medium-centered columns">
+                <ul class="social-networks small-block-grid-5 text-center">
+                    <li><a href="{{ settings.facebook }}"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="{{ settings.rss }}"><i class="fa fa-rss"></i></a></li>
+                    <li><a href="{{ settings.twitter }}"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="{{ settings.linked_in }}"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="{{ settings.google_plus }}"><i class="fa fa-google-plus"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -25,7 +27,7 @@
                     <li><a href="/terms-and-conditions/">Terms and Conditions</a></li>
                     <li><a href="/contact-us/">Contact Us</a></li>
                 </ul>
-                <p><a class="apc" href="#">Australian Pacific College &copy; 2014</a></p>
+                <p><a class="primary-color" href="#">Australian Pacific College &copy; 2014</a></p>
             </div>
         </div>
     </section> <!-- .footer-bottom -->

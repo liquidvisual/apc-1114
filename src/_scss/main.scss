@@ -1,4 +1,8 @@
 @import "foundation/settings";
+@import "hero";
+@import "mixins";
+@import "foundation-icons";
+@import "sections";
 /*
     MAIN.CSS
 
@@ -9,21 +13,7 @@
 // Variables
 //-----------------------------------------------------------------
 
-$apc_blue: #0c4d9e;
-$apc_smoke: #f1f1f1;
-$apc_grey: #808285;
-$apc_dark_grey: #706d78;
-$apc_dark_blue: #0e3c77;
-
-$english_cat: #4bb1e4;
-$hospitality_cat: #b2a259;
-$accounting_cat: #91ba3f;
-$marketing_cat: #507e95;
-$tourism_cat: #669933;
-$information_tech_cat: #9999cc;
-$business_cat: #d15c1d;
-$management_cat: #993333;
-$tesol_cat: #e6c83a;
+$header-top-height: rem-calc(40);
 
 //-----------------------------------------------------------------
 // Foundation Overrides (Hacks)
@@ -69,6 +59,54 @@ html, body {
 //-----------------------------------------------------------------
 // Header
 //-----------------------------------------------------------------
+
+.header {
+    position: relative;
+
+    .logo {
+        position: relative;
+        display: inline-block;
+        padding: rem-calc(30 0);
+
+        @media #{$medium-up} {
+            top: rem-calc(-10);
+            padding: rem-calc(10 0);
+        }
+    }
+}
+
+.header-top {
+    padding: rem-calc(5 0);
+    overflow: hidden;
+    background: $apc-dark-blue;
+
+    @media #{$medium-up} {
+        padding: rem-calc(20 0 0 0);
+        overflow: visible;
+        background: none;
+    }
+
+    .button {
+        text-transform: uppercase;
+        margin: 0;
+        margin-left: rem-calc(-15);
+
+        @media #{$medium-up} {
+            margin: 0;
+        }
+    }
+}
+
+.header-mobile-menu {
+    position: relative;
+    padding: rem-calc(10);
+    border-top: 1px solid #808285;
+
+    a {
+        color: white;
+    }
+}
+
 //-----------------------------------------------------------------
 // Navigation
 //-----------------------------------------------------------------
@@ -77,12 +115,54 @@ html, body {
     background: $primary-color;
 }
 
+.topbar > ul > li > a {
+    text-transform: uppercase;
+    font-size: rem-calc(12);
+}
+
+
+
 //-----------------------------------------------------------------
 // Off Canvas Menu
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------
 // Hero
 //-----------------------------------------------------------------
+
+.lv-hero {
+    border-bottom: 6px solid $primary-color;
+
+    .lv-hero-caption h1 {
+        display: inline-block;
+        background: $primary-color;
+        color: white;
+        padding: rem-calc(10 30);
+        border-radius: 20px 0 0 0;
+    }
+
+    .lv-hero-caption-body {
+        background: white;
+        padding: rem-calc(20 30);
+        border-radius: 0 0 20px 0;
+        margin-bottom: rem-calc(60);
+
+        p {
+            line-height: 1.5;
+            color: $apc-grey;
+            font-size: rem-calc(19);
+        }
+    }
+
+    .button {
+        text-transform: uppercase;
+    }
+}
+
+.lv-super .slick-prev:before,
+.lv-super .slick-next:before {
+    font-size: rem-calc(37);
+}
+
 //-----------------------------------------------------------------
 // Breadcrumbs
 //-----------------------------------------------------------------
@@ -92,6 +172,17 @@ html, body {
 //-----------------------------------------------------------------
 // Sections
 //-----------------------------------------------------------------
+
+.intro-section {
+    font-size: 14px;
+}
+
+.section .button-list {
+    @media #{$medium-up} {
+        margin-left: rem-calc(60);
+    }
+}
+
 //-----------------------------------------------------------------
 // Media Object
 //-----------------------------------------------------------------
@@ -111,19 +202,25 @@ html, body {
 
     .footer-top {
         background: white;
-    }
-
-    .footer-top {
         border-bottom: 15px solid $apc_blue;
         padding: rem-calc(24);
     }
 
+    .footer-bottom {
+        padding: rem-calc(20);
+    }
+
     a {
-        line-height: 2em;
-        // color: $apc_grey;
-        font-weight: normal;
-        padding: 0 .6em;
-        // &.apc { color: $apc_blue;
+        color: $apc_grey;
+        font-size: rem-calc(13);
+
+        &:hover {
+            color: $primary-color;
+        }
+
+        &.primary-color {
+            color: $primary-color;
+        }
     }
 }
 
@@ -132,54 +229,61 @@ html, body {
 //-----------------------------------------------------------------
 
 .social-networks a {
-    @extend .transition;
     display: inline-block;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
+    width: rem-calc(40);
+    height: rem-calc(40);
+    line-height: rem-calc(40);
     text-align: center;
-    background: #6D6E72;
+    background: $apc-dark-grey;
     color: white;
     border-radius: 100%;
-    font-size: 22px;
+    font-size: rem-calc(22);
 
     &:hover {
-        // color: $primary-color;
+        color: white;
         background: black;
-    }
-
-    i {
-        text-indent: -1px;
     }
 }
 
 //-----------------------------------------------------------------
 // Template Buttons
 //-----------------------------------------------------------------
+
+.button {
+    text-transform: uppercase;
+}
+
+.button.swish {
+    border-radius: 6px 0 6px 0;
+
+    i {
+        font-size: .8em;
+        margin-right: rem-calc(3);
+    }
+}
+
 //-----------------------------------------------------------------
 // Forms
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------
 // Animations
 //-----------------------------------------------------------------
-
-.transition {
-	-webkit-transition: all .2s linear;
-	   -moz-transition: all .2s linear;
-	     -o-transition: all .2s linear;
-	    -ms-transition: all .2s linear;
-	        transition: all .2s linear;
-
-	-webkit-transition-property: opacity, color, background;
-	   -moz-transition-property: opacity, color, background;
-	     -o-transition-property: opacity, color, background;
-	    -ms-transition-property: opacity, color, background;
-            transition-property: opacity, color, background;
-}
-
 //-----------------------------------------------------------------
 // Special / Misc - Refactor Later
 //-----------------------------------------------------------------
+
+.static {
+    position: static;
+}
+
+a {
+    @include transition();
+}
+
+.primary-color {
+    color: $primary-color;
+}
+
 //-----------------------------------------------------------------
 // IE8
 //-----------------------------------------------------------------

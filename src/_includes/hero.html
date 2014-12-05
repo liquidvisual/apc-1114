@@ -1,0 +1,35 @@
+{% assign hero_images = site.data.carousel_slides %}
+
+<!-- HERO MODULE -->
+<div id="lv-hero-carousel" class="lv-hero-module">
+
+    {% for hero in hero_images %}
+
+    <!-- Hero Item -->
+    <div class="lv-hero" style="background-image: url('{{ hero.image | prepend: site.assets }}')" data-background-image="...">
+        <div class="row lv-vertical-center">
+
+            <!-- Left / Right caption alignment -->
+            <div class="medium-8 columns">
+                <div class="lv-hero-caption animated">
+                    <h1>{{ hero.caption_title }}</h1>
+                    <div class="lv-hero-caption-body">
+                        <p>{{ hero.caption_body }}</p>
+                    </div>
+                    <p><a class="button swish medium" href="#"><i class="fa fa-play"></i>&nbsp; Find out more</a></p>
+                </div> <!-- .lv-hero-caption -->
+            </div> <!-- .columns -->
+
+        </div> <!-- .row -->
+    </div> <!-- .lv-hero -->
+
+    {% endfor %}
+
+    <!-- Controls -->
+    <div class="lv-hero-controls">
+        <a href="#" class="lv-hero-next">WOWOWOOWOWOWO</a>
+        <a href="#" class="lv-hero-prev">woow</a>
+    </div>
+
+</div> <!-- .lv-hero-module -->
+

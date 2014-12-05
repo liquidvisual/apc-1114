@@ -1,10 +1,24 @@
 {% comment %}
-    Updated: 15.11.14
+<!--
+    Updated: 24.11.14
     Note: sitemap data is pulled from /data/sitemap.yml
+
+    Basic Output:
+
+        <ul>
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/some-link/">Some Link</a></li>
+            <li class="has-dropdown"><a href="/parent-with-children/">Parent with Children</a>
+                <ul class="dropdown">
+                    <li><a href="/parent-with-children/child-node/">Child Node</a></li>
+                </ul>
+            </li>
+        </ul>
+-->
 {% endcomment %}
 
-{% assign settings = site.data.settings %}
 {% assign sitemap = site.data.sitemap %}
+{% assign url_paths = page.url | downcase | split: '/' %}
 
 <ul>
     {% comment %} Important: leave 'Home' out of the loop {% endcomment %}
@@ -12,7 +26,9 @@
 
     {% comment %} First Level {% endcomment %}
     {% for item in sitemap | offset: 1 %}
-    <li class="{% if item.url == page.url %} active {% endif %}{% if item.children %} has-dropdown {% endif %}">
+    {% assign active_path = item.title | downcase | slugify %}
+
+    <li class="{% for path in url_paths %}{% if path == active_path %}active{% endif %}{% endfor %}{% if item.children %} has-dropdown {% endif %}">
         <a href="{{ item.url }}">{{ item.title }}</a>
 
         {% comment %} Second Level {% endcomment %}
