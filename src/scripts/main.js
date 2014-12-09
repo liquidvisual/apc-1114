@@ -13,16 +13,12 @@ var TOUCH_ENABLED = $(".touch").length;
 
 $(document).ready(function() {
     NProgress.start(); // Start preloader bar
-    setupHero();
+    // setupHero();
 });
 
 $(window).load(function() {
     NProgress.done();
 });
-
-// window.onload = function(){
-//     // NProgress.done();
-// }
 
 //-----------------------------------------------------------------
 // setupHero
@@ -39,9 +35,11 @@ function setupHero() {
         slideMargin: 0,
         slideSelector: ".lv-hero",
         minSlides: 1,
-        // nextSelector: ".hero-next",
-        // prevSelector: ".hero-prev",
-        controls: true,
+        // controls: true,
+        nextSelector: ".lv-hero-next",
+        prevSelector: ".lv-hero-prev",
+        nextText: "",
+        prevText: "",
         infiniteLoop: true,
         touchEnabled: true,
         useCSS: true,
@@ -57,25 +55,25 @@ function setupHero() {
 // Carousel
 //-----------------------------------------------------------------
 
-// $('#lv-hero-carousel').slick({
-//     autoplay: false,
-//     autoplaySpeed: 8000,
-//     // dots: true,
-//     infinite: true,
-//     speed: 500,
-//     // fade: true,
-//     slide: '.lv-hero',
-//     cssEase: 'linear',
-//     responsive: [
-//         {
-//           breakpoint: 640,
-//           settings: {
-//             autoplay: false,
-//             swipe: false
-//           }
-//         }
-//       ]
-// });
+$('#lv-hero-carousel').slick({
+    autoplay: false,
+    autoplaySpeed: 8000,
+    // dots: true,
+    infinite: true,
+    speed: 500,
+    // fade: true,
+    slide: '.lv-hero',
+    cssEase: 'linear',
+    responsive: [
+        {
+          breakpoint: 640,
+          settings: {
+            autoplay: false,
+            swipe: false
+          }
+        }
+      ]
+});
 
 //-----------------------------------------------------------------
 // Kickstart Foundation / Touch Conditionals
