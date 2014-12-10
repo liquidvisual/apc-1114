@@ -1,7 +1,7 @@
 /*
 	LIQUIDVISUAL TOOLBOX :: A Personal Framework
 
-	- updated: 07.07.14
+	- updated: 11.12.14
 	- liquidvisual.com
 	- licensed under MIT Open Source
 
@@ -158,6 +158,19 @@ $include-text-selection-styles: true !default;
 //-----------------------------------------------------------------
 
 @if $include-helper-styles {
+
+	//=========================================
+	// Radius Prefix / Postfix (F5 patch)
+	//=========================================
+
+	.lv-super .prefix.radius {
+		border-radius: $global-radius 0 0 $global-radius;
+		text-align: left;
+	}
+
+	.lv-super .postfix.radius {
+		border-radius: 0 $global-radius $global-radius 0;
+	}
 
 	//=========================================
 	// Box-shadow Classes - for rapid prototyping

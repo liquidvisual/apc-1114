@@ -56,11 +56,13 @@
 
             <!-- HEADER -->
             <header class="header">
+
                 {% if page.site_type == "eu" %}
                     {% include eu/header.html %}
                 {% else %}
                     {% include apc/header.html %}
                 {% endif %}
+
             </header>
 
             <!-- NAVIGATION -->
@@ -68,7 +70,13 @@
                 <div class="row collapse outer-row">
                     <div class="columns">
                         <div class="topbar">
-                            {% include common/navigation.html %}
+
+                            {% if page.site_type == "eu" %}
+                                {% include eu/navigation.html %}
+                            {% else %}
+                                {% include apc/navigation.html %}
+                            {% endif %}
+
                         </div>
                     </div>
                 </div>
@@ -78,11 +86,13 @@
 
             <!-- FOOTER -->
             <footer class="footer">
+
                 {% if page.site_type == "eu" %}
                     {% include eu/footer.html %}
                 {% else %}
                     {% include apc/footer.html %}
                 {% endif %}
+
             </footer>
 
         </div> <!-- .lv-page -->
@@ -90,7 +100,13 @@
 
     <!-- OFF-CANVAS MENU -->
     <nav class="js-off-canvas-menu hide" aria-hidden="true">
-        {% include common/navigation.html %}
+
+        {% if page.site_type == "eu" %}
+            {% include eu/footer.html %}
+        {% else %}
+            {% include apc/footer.html %}
+        {% endif %}
+
     </nav>
 
     <!--[if lt IE 9]>

@@ -1,17 +1,33 @@
-{% assign items = site.data.items %}
+{% comment %}
+<!--
+    Updated: 09.12.14
+    Notes: Accordion is passed the YML data file in the include. It then loops through the
+    nodes and creates the output.
+    ** IF ** the nodes have children, it will display them as a list, instead of plain body text.
+-->
+{% endcomment %}
+
+{% assign items = include.data %}
 
 <!-- Accordion Module -->
 <dl class="accordion" data-accordion>
     {% for item in items %}
-        {% assign id = item.title | downcase | replace: ' ', '-' %}
+        {% assign id = item.id | downcase | replace: ' ', '-' %}
         <dd class="accordion-navigation">
-            <a href="{{ id | prepend: "#"}}"><b>{{ item.title }}</b> <i class="icon-angle-down"></i><i class="icon-angle-up"></i></a>
+            <a href="{{ id | prepend: "#"}}">{{ item.title }} <i class="icon fa fa-angle-down"></i><i class="icon fa fa-angle-up"></i></a>
             <div id="{{ id }}" class="content">
-                <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
-                {% for item in item.children  %}
-                    <li><a href="{{ school.url }}">{{ item.title }}</a></li>
-                {% endfor %}
-                </ul>
+
+				<!-- If the data item has children, display a list. Else, show body text. -->
+                {% if item.children %}
+                	<ul class="no-bullet">
+                		{% for item in item.children  %}
+                	    <li><a href="{{ item.url }}">{{ item.title }} <i class="fa fa-angle-right"></i></a></li>
+                		{% endfor %}
+                	</ul>
+                {% else %}
+                	{{ item.body }}
+                {% endif %}
+
             </div> <!-- .content -->
         </dd> <!-- .accordion-navigation -->
     {% endfor %}

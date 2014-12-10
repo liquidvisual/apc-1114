@@ -1,0 +1,61 @@
+{% assign form_title = include.title %}
+
+<form data-abide novalidate method="post" action="#">
+
+	<fieldset>
+	    <legend>
+	    	{% if form_title %}
+	        	{{ form_title }}
+	    	{% else %}
+				This form needs a title passed in
+			{% endif %}
+	    </legend>
+
+		<!-- Name -->
+		<div class="row">
+			<div class="columns">
+				<label>Your name <!--<small>required</small>-->
+					<input name="name" class="radius" type="text" >
+				</label>
+				<small class="error">Your name is required.</small>
+			</div>
+		</div>
+
+		<!-- Phone (Optional) -->
+		<div class="row">
+			<div class="columns">
+				<label>Phone
+					<input name="phone" class="radius" type="text">
+				</label>
+				<small class="error">Please try again.</small>
+			</div>
+		</div>
+
+		<!-- Email -->
+		<div class="row">
+			<div class="columns">
+				<label>Email <!--<small>required</small>-->
+					<input name="email" class="radius" type="email" required>
+				</label>
+				<small class="error">A valid email address is required.</small>
+			</div>
+		</div>
+
+		<!-- Message -->
+		<div class="row">
+			<div class="columns">
+				<label>Your message <!--<small>required</small></label>-->
+				<textarea rows="10" class="radius" name="message" required></textarea>
+				<small class="error">Please enter a message.</small>
+			</div>
+		</div>
+
+		<!-- Submit -->
+		<div class="row">
+			<div class="columns text-center medium-text-left">
+				<button type="submit" class="button">Submit</button>
+			</div>
+		</div>
+
+	</fieldset>
+</form>
