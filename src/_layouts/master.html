@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="/_bower_components/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="/css/foundation/app.css">
     <link rel="stylesheet" href="/css/incling/apc.css">
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/apc.css">
     <!-- endbuild -->
 
     <!-- build:js(src) /assets/scripts/priority-optimized.js -->
@@ -46,7 +46,11 @@
 
             <!-- HEADER -->
             <header class="header">
-                {% include header.html %}
+                {% if page.site_type == "eu" %}
+                    {% include eu/header.html %}
+                {% else %}
+                    {% include apc/header.html %}
+                {% endif %}
             </header>
 
             <!-- NAVIGATION -->
@@ -54,7 +58,7 @@
                 <div class="row collapse outer-row">
                     <div class="columns">
                         <div class="topbar">
-                            {% include snippets/navigation.html %}
+                            {% include common/navigation.html %}
                         </div>
                     </div>
                 </div>
@@ -64,7 +68,11 @@
 
             <!-- FOOTER -->
             <footer class="footer">
-                {% include footer.html %}
+                {% if page.site_type == "eu" %}
+                    {% include eu/footer.html %}
+                {% else %}
+                    {% include apc/footer.html %}
+                {% endif %}
             </footer>
 
         </div> <!-- .lv-page -->
@@ -72,7 +80,7 @@
 
     <!-- OFF-CANVAS MENU -->
     <nav class="js-off-canvas-menu hide" aria-hidden="true">
-        {% include snippets/navigation.html %}
+        {% include common/navigation.html %}
     </nav>
 
     <!--[if lt IE 9]>

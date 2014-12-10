@@ -3,10 +3,10 @@ layout: master
 hero_link: /some-link-here/
 ---
 
-{% assign settings = site.data.settings  %}
+{% assign settings = site.data.eu.settings  %}
 {% assign news = site.pages | where: "type", "news_item" %}
 {% assign events = site.pages | where: "type", "event_item" %}
-{% assign courses = site.data.navigation[1].children | where: "include_in_homepage", true %}
+{% assign courses = site.data.eu.navigation[1].children | where: "include_in_homepage", true %}
 
 <div class="homepage">
 
@@ -14,7 +14,7 @@ hero_link: /some-link-here/
 	<div id="lv-hero-carousel" class="lv-hero-wrapper">
 
 		<!-- Slide 01 -->
-		<div class="lv-hero animated" style="background-image: url('{{site.assets}}/img/content/banner-2.jpg')" data-background-image="...">
+		<div class="lv-hero animated" style="background-image: url('{{site.assets}}/img/eu/content/banner-2.jpg')" data-background-image="...">
 			<div class="row outer-row collapse center-vertical">
 				<div class="medium-6 columns">
 
@@ -29,7 +29,7 @@ hero_link: /some-link-here/
 		</div> <!-- .lv-hero -->
 
 		<!-- Slide 02 -->
-		<div class="lv-hero animated" style="background-image: url('{{site.assets}}/img/content/banner-1.jpg')" data-background-image="...">
+		<div class="lv-hero animated" style="background-image: url('{{site.assets}}/img/eu/content/banner-1.jpg')" data-background-image="...">
 			<div class="row outer-row collapse center-vertical">
 				<div class="medium-6 medium-offset-6 large-4 large-offset-8 columns text-center">
 
@@ -216,7 +216,7 @@ hero_link: /some-link-here/
 											</div>
 											<div class="medium-9 columns">
 												<h3>John Smith</h3>
-												<h4 class="subheader"><img class="flag-pic" width="30" src="/img/content/flag-example.png" alt="">Australia</h4>
+												<h4 class="subheader"><img class="flag-pic" width="30" src="/img/eu/content/flag-example.png" alt="">Australia</h4>
 												<p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda saepe modi quibusdam tempora, cumque beatae eum culpa commodi ea dolor ex molestias voluptatibus..."</p>
 											</div>
 										</div>
@@ -237,11 +237,11 @@ hero_link: /some-link-here/
 			<div class="row">
 				<div class="large-10 large-centered columns text-center">
 					<ul class="small-block-grid-5">
-						<li><a href="#"><img width="100" src="/img/template/white-bg-sponsors/sp-1.png" alt="Australia Future Unlimited"></a></li>
-						<li><a href="#"><img width="100" src="/img/template/white-bg-sponsors/sp-2.png" alt="NEAS"></a></li>
-						<li><a href="#"><img width="100" src="/img/template/white-bg-sponsors/sp-3.png" alt="Pretesting"></a></li>
-						<li><a href="#"><img width="100" src="/img/template/white-bg-sponsors/sp-4.png" alt="Cambridge English Language Assessment"></a></li>
-						<li><a href="#"><img width="100" src="/img/template/white-bg-sponsors/sp-5.png" alt="English Australia"></a></li>
+						<li><a href="#"><img width="100" src="/img/eu/template/white-bg-sponsors/sp-1.png" alt="Australia Future Unlimited"></a></li>
+						<li><a href="#"><img width="100" src="/img/eu/template/white-bg-sponsors/sp-2.png" alt="NEAS"></a></li>
+						<li><a href="#"><img width="100" src="/img/eu/template/white-bg-sponsors/sp-3.png" alt="Pretesting"></a></li>
+						<li><a href="#"><img width="100" src="/img/eu/template/white-bg-sponsors/sp-4.png" alt="Cambridge English Language Assessment"></a></li>
+						<li><a href="#"><img width="100" src="/img/eu/template/white-bg-sponsors/sp-5.png" alt="English Australia"></a></li>
 					</ul>
 				</div>
 			</div>

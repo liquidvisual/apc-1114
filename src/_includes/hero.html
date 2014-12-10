@@ -1,4 +1,8 @@
-{% assign hero_images = site.data.carousel_slides %}
+{% if page.site_type == "eu" %}
+    {% assign hero_images = site.data.eu.carousel_slides %}
+{% else %}
+    {% assign hero_images = site.data.apc.carousel_slides %}
+{% endif %}
 
 <!-- HERO MODULE -->
 <div class="js-carousel lv-hero-module">

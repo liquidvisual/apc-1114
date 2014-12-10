@@ -1,14 +1,14 @@
 - caption_title: "Lorem Ipsums"
   caption_body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit i..."
   url: /about-us/
-  image: "/img/content/hero-1.jpg"
+  image: "/img/apc/content/hero-1.jpg"
 
 - caption_title: "Seize the Day"
   caption_body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero."
   url: ""
-  image: "/img/content/hero-2.jpg"
+  image: "/img/apc/content/hero-2.jpg"
 
 - caption_title: "Your Time is Now"
   caption_body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum"
   url: ""
-  image: "/img/content/hero-3.jpg"
+  image: "/img/apc/content/hero-3.jpg"
