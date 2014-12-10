@@ -26,15 +26,25 @@
 
     <!-- Google Fonts CDN -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
-    <!-- <link rel="stylesheet" href="/_bower_components/slick.js/slick/slick.css"> -->
 
-    <!-- build:css({src,.tmp}) /assets/css/optimized.css -->
+    {% if page.site_type == "eu" %}
+
+    <!-- build:css({src,.tmp}) /assets/css/optimized-apc.css -->
     <link rel="stylesheet" href="/_bower_components/animate.css/animate.min.css">
     <link rel="stylesheet" href="/_bower_components/font-awesome/css/font-awesome.css">
-    <link rel="stylesheet" href="/css/foundation/app.css">
-    <link rel="stylesheet" href="/css/incling/apc.css">
+    <link rel="stylesheet" href="/_bower_components/slick.js/slick/slick.css">
+    <link rel="stylesheet" href="/css/enu.css">
+    <!-- endbuild -->
+
+    {% else %}
+
+    <!-- build:css({src,.tmp}) /assets/css/optimized-enu.css -->
+    <link rel="stylesheet" href="/_bower_components/animate.css/animate.min.css">
+    <link rel="stylesheet" href="/_bower_components/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="/css/apc.css">
     <!-- endbuild -->
+
+    {% endif %}
 
     <!-- build:js(src) /assets/scripts/priority-optimized.js -->
     <script src="/_bower_components/modernizr/modernizr.js"></script>
@@ -99,6 +109,9 @@
     <script src="/_bower_components/jquery/dist/jquery.min.js"></script>
     <script src="/_bower_components/jquery-placeholder/jquery.placeholder.js"></script>
     <script src="/_bower_components/jQuery.mmenu/src/js/jquery.mmenu.min.all.js"></script>
+
+    <!-- SHARED -->
+    <script src="/_bower_components/slick.js/slick/slick.js"></script>
 
     <script src="/_bower_components/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
     <script src="/_bower_components/bxSlider/jquery.bxslider.min.js"></script>

@@ -1,8 +1,4 @@
-{% if page.site_type == "eu" %}
-    {% assign hero_images = site.data.eu.carousel_slides %}
-{% else %}
-    {% assign hero_images = site.data.apc.carousel_slides %}
-{% endif %}
+{% assign hero_images = site.data.apc.carousel_slides %}
 
 <!-- HERO MODULE -->
 <div class="js-carousel lv-hero-module">
@@ -13,7 +9,7 @@
     <div class="lv-hero" style="background-image: url('{{ hero.image | prepend: site.assets }}')" data-background-image="...">
         <div class="row lv-vertical-center">
 
-            <!-- Left / Right caption alignment -->
+            <!-- Caption -->
             <div class="medium-8 columns">
                 <div class="lv-hero-caption animated">
                     <h1>{{ hero.caption_title }}</h1>

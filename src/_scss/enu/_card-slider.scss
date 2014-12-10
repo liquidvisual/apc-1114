@@ -1,0 +1,63 @@
+/*
+    CARD-SLIDER.CSS
+
+    - Last updated: 10.12.14
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Social Networks
+//-----------------------------------------------------------------
+
+.slick-slide {
+    @extend .transition;
+    opacity: 0.2;
+    width: rem-calc(500);
+}
+
+.lv-super .slick-prev,
+.lv-super .slick-next {
+    height: rem-calc(50);
+    margin-top: rem-calc(-25);
+}
+
+.lv-super .slick-prev:before,
+.lv-super .slick-next:before {
+    content: "\f105";
+    font-family: 'FontAwesome';
+    font-size: rem-calc(50);
+}
+
+.lv-super .slick-prev:before {
+    content: "\f104";
+}
+
+.slick-center {
+    opacity: 1;
+}
+
+.testimonial-block {
+    box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.05);
+    p {
+        font-size: rem-calc(13);
+    }
+
+    .profile-pic {
+        border-radius: 100%;
+    }
+
+    .flag-pic {
+        display: inline-block;
+        margin-right: rem-calc(10);
+    }
+
+    @media #{$medium-up} {
+        margin: rem-calc(20 20 0 20);
+    }
+}
+
+//=========================================
+//
+//=========================================

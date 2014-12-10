@@ -1,0 +1,52 @@
+/** Custom APC **/
+#our_courses { background: #fff; }
+/** #main_hero { min-height: 578px } **/
+#logo { padding: 10px 20px 10px 14px; }
+#map-canvas { height: 100%; margin: 0px 0 2em 0; padding: 0px; height: 200px; }
+#quick-links { margin-top: 20px; margin-bottom: 0; float: right; 
+  li { margin: 0 0 0 8px; }
+}
+.action-block { margin-top: 16%;}
+.image_block { img { margin-bottom: .8em;} }
+.contact ul li strong, li.address strong { color: $apc_blue }
+
+
+.news_block {
+  .content {
+    padding-top: 20px;
+    padding-bottom: 8px;
+    background: #fff;
+    h5 { color: $apc_grey; font-weight: 100 }
+    p { color: $apc_grey; font-size: .8em; font-weight: 100 }
+  }
+}
+
+.anchors {
+  h5 { text-transform: uppercase; font-weight: bold;}
+}
+
+
+table.location_table {
+  width: 100%;
+  margin: 0; background: $apc_blue;
+  padding: .6em .6em .5em;
+  td.weather { height: 50px; width: 50px;}
+  td.temp { font-size: 2em; }
+  td { 
+    font-weight: normal;
+    color: #fff;
+    font-size: 1.2em;
+    padding: 0;
+    small { display: block; clear: both; font-size: .6em}
+  }
+}
+
+.step { 
+  h3, h4, h5 { text-transform: uppercase; font-weight: bold; }
+  padding-top: 1.6em;
+  padding-bottom: 1.4em; 
+  background: #fff; 
+  margin-bottom: 2em;
+}
+
+

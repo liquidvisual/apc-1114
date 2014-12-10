@@ -1,3 +1,4 @@
+@import "foundation/settings";
 /*
 	LIQUIDVISUAL BUTTONS :: A Personal Framework
 
@@ -19,7 +20,7 @@ $warning-color: #f08a24 !default;
 $info-color: #a0d3e8 !default;
 
 // liquidvisual
-$button-radius: 5px !default;
+$button-radius: $global-radius !default;
 $button-round: 1000px !default;
 $button-bg: $primary-color !default;
 $button-bg-hover: lighten($button-bg, 5%) !default;

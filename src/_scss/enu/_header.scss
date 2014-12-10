@@ -1,0 +1,103 @@
+/*
+    HEADER.CSS
+
+    - Last updated: 10.12.14
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+
+$header-height-medium: rem-calc(70) !default; // formerly 90
+$header-height-xlarge: rem-calc(90) !default; // formerly 104
+
+//-----------------------------------------------------------------
+// Header
+//-----------------------------------------------------------------
+
+.header {
+    position: relative;
+    background: $secondary-color;
+    width: 100%; // for fixed
+    height: rem-calc(50);
+    overflow: hidden;
+    z-index: 1;
+
+    @media #{$medium-up} {
+        height: $header-height-medium; // formerly 90
+    }
+
+    @media #{$xlarge-up} {
+        position: fixed;
+        top: 0;
+        height: $header-height-xlarge; // formerly 104
+        background: rgba($secondary-color, 0.85);
+    }
+}
+
+.header .logo {
+    position: relative;
+    top: rem-calc(10);
+
+    img {
+        width: rem-calc(150); // formerly 150
+
+        @media #{$medium-up} {
+            width: rem-calc(220); // formerly 280
+        }
+    }
+
+    @media #{$large-up} {
+        top: rem-calc(14);
+    }
+
+    @media #{$xlarge-up} {
+        top: rem-calc(22);
+    }
+}
+
+.header-links {
+    position: relative;
+    font-weight: bold;
+    font-size: rem-calc(13);
+    text-transform: uppercase;
+
+    a {
+        color: #c1c1c1;
+        padding: rem-calc(10 10);
+    }
+}
+
+.apply-now {
+    @media #{$large-up} {
+        width: rem-calc(100);
+        position: relative;
+    }
+
+    a {
+        @media #{$large-up} {
+            position: absolute;
+            top: -80px;
+            left: 0;
+            background: #E34C79;
+            color: white;
+            width: 100%;
+            height: rem-calc(100);
+            text-align: center;
+            line-height: 1.2;
+            border-radius: 1000px;
+        }
+        .text {
+            @media #{$large-up} {
+                position: absolute;
+                width: 100%;
+                left: 0;
+                bottom: 10px;
+            }
+        }
+    }
+}
+
+//=========================================
+//
+//=========================================

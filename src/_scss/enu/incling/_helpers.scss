@@ -1,0 +1,16 @@
+/** Helper Classes **/
+.no-transform { text-transform: none;}
+.smokey { background: #f5f5f5; }
+.smoked { background: #f5f5f5; padding-top: 3em; padding-bottom: 3em; }
+.not-padded { padding: 0; }
+.top_padded { padding-top: 2em; }
+.bottom_padded { padding-top: 2em; }
+.thumb-left { float: left; margin: 0 20px 20px 0;}
+.thumb-right { float: right; margin: 0 0 20px 20px;}
+.padded { padding-left: 20px; padding-right: 20px;}
+ul.clean, ul.clean li { list-style: none; padding-left: 0; margin-left: 0; color: $apc_grey; }
+ul.spaced-list li { margin-bottom: 2em;}
+.white_back { 
+  background: #fff;
+}
+

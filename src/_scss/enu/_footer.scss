@@ -1,0 +1,55 @@
+/*
+    FOOTER.CSS
+
+    - Last updated: 10.12.14
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Footer
+//-----------------------------------------------------------------
+
+.footer {
+    color: white;
+}
+
+.footer h3 {
+    font-weight: 300;
+    margin-bottom: rem-calc(20);
+}
+
+.footer i {
+    // font-size: rem-calc(18);
+}
+
+.footer a {
+    font-size: rem-calc(14);
+    color: white;
+    word-wrap: break-word;
+}
+
+.footer-top {
+    background: $secondary-color;
+    padding: rem-calc(30 0);
+}
+
+.footer-bottom {
+    background: darken($secondary-color, 10%);
+    padding: rem-calc(20 0);
+
+    a {
+        font-size: rem-calc(13);
+        color: #ccc;
+    }
+}
+
+.footer-legal {
+    color: #999;
+    font-size: rem-calc(11);
+}
+
+//=========================================
+//
+//=========================================

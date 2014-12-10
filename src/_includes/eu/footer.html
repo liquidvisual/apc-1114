@@ -1,4 +1,5 @@
 {% assign settings = site.data.eu.settings %}
+{% assign english_courses = site.data.eu.sitemap[1].children[0].children %}
 
 <!-- Footer Top -->
 <section class="footer-top">
@@ -10,7 +11,7 @@
                 <div class="medium-4 columns show-for-medium-up">
                     <h3>English Courses</h3>
                         <ul class="no-bullet">
-                        {% for item in site.data.navigation[1].children[0].children %}
+                        {% for item in english_courses %}
                             <li><a href="#">{{ item.title }}</a></li>
                         {% endfor %}
                         </ul>

@@ -1,0 +1,31 @@
+/*
+    BREADCRUMBS.CSS
+
+    - Last updated: 10.12.14
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+
+.breadcrumbs-bar {
+    background: white;
+    padding: rem-calc(20 0);
+    border-top: 6px solid $tertiary-color;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.lv-breadcrumbs {
+    border-bottom: 0;
+    padding: 0;
+    margin-bottom: 0;
+    font-size: rem-calc(15);
+    text-transform: capitalize;
+}
+
+//=========================================
+//
+//=========================================

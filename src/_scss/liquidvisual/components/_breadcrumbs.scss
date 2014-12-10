@@ -1,9 +1,8 @@
 /*
 	LIQUIDVISUAL BREADCRUMBS :: A Personal Framework
 
-	- updated: 15.10.14
+	- updated: 23.11.14
 	- liquidvisual.com
-	- licensed under MIT Open Source
 
 	- Notes -
 
@@ -27,19 +26,22 @@
 	li {
 		display: inline-block;
 		line-height: 1;
-		color: #666;
+		color: #888;
 
 		&:after {
-			content: "\203A";
+			font-family: "FontAwesome";
+			// content: "\203A";
+			content: "\f105";
 			display: inline-block;
-			margin: 0 rem-calc(5);
+			margin: 0 rem-calc(8);
 			font-weight: bold;
-			color: #BFBFBF;
+			// color: #BFBFBF;
+			color: #555;
 		}
 
 		&:first-child:after {
-			content: "";
-			margin: 0 rem-calc(15) 0 0;
+			// content: "";
+			// margin: 0 rem-calc(15) 0 0;
 		}
 
 		&:last-child:after {

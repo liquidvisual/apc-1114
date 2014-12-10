@@ -1,0 +1,36 @@
+/*
+    SOCIAL-NETWORKS.CSS
+
+    - Last updated: 10.12.14
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Social Networks
+//-----------------------------------------------------------------
+
+.footer .social-networks a {
+    font-size: rem-calc(20);
+    background: white;
+    color: $secondary-color;
+    display: block;
+    width: rem-calc(30);
+    height: rem-calc(30);
+    line-height: rem-calc(30);
+    text-align: center;
+    border-radius: 100%;
+    margin-bottom: rem-calc(15); // REPLACE THIS
+
+    @media #{$large-up} {
+        font-size: rem-calc(24);
+        width: rem-calc(40);
+        height: rem-calc(40);
+        line-height: rem-calc(40);
+    }
+}
+
+//=========================================
+//
+//=========================================

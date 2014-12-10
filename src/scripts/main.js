@@ -15,6 +15,7 @@ var bxSliderHero;
 $(document).ready(function() {
     NProgress.start(); // Start preloader bar
     setupHero();
+    // setupWow();
 });
 
 $(window).load(function() {
@@ -51,6 +52,62 @@ function setupHero() {
         onSlideAfter:  function(){  $('.lv-hero-caption').show().addClass('fadeInLeft');}
     });
 }
+
+//-----------------------------------------------------------------
+// Setup Wow
+//-----------------------------------------------------------------
+
+// function setupWow() {
+//     // If NOT mobile or touch device, enhance with transition effects
+
+//         var wow = new WOW(
+//           {
+//             boxClass:     'wow',      // default
+//             animateClass: 'animated', // default
+//             offset:       0          // default
+//           }
+//         ).init();
+
+// }
+
+//-----------------------------------------------------------------
+// Testimonial Slider
+//-----------------------------------------------------------------
+
+$('#testimonial-slider').slick({
+  autoplay: true,
+  centerMode: true,
+  slidesToShow: 3,
+  variableWidth: true,
+  slide: '.testimonial-block',
+  arrow: true,
+  speed: 800,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        variableWidth: true,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1,
+        speed: 500,
+      }
+    },
+    {
+      breakpoint: 490,
+      settings: {
+        autoplay: false,
+        arrows: false,
+        centerMode: true,
+        centerPadding: '0',
+        slidesToShow: 1,
+        speed: 500,
+        variableWidth: false,
+      }
+    }
+  ]
+});
 
 //-----------------------------------------------------------------
 // Carousel

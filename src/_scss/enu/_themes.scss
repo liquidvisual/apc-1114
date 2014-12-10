@@ -1,0 +1,65 @@
+/*
+    BREADCRUMBS.CSS
+
+    - Last updated: 10.12.14
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Themes
+//-----------------------------------------------------------------
+
+.theme-light {
+    .header,
+    .navigation {
+        // background: $body-bg;
+        background: white;
+    }
+
+    .hamburger:before,
+    .hamburger:after,
+    .hamburger span {
+        background-color: $secondary-color;
+    }
+
+    .header {
+        // border-bottom: 1px solid;
+        // border-color: rgba(0,0,0,0.2);
+    }
+
+    .header-links a {
+        color: grey;
+    }
+
+    .header-links .button {
+        color: white;
+    }
+
+    .intro-section .inner {
+        background: lighten($secondary-color, 40%);
+        color: white;
+        @media #{$large-up} {
+            background: rgba(0,0,0,0.3);
+        }
+    }
+
+    .intro-section h3 {
+        color: white;
+    }
+
+    .topbar a {
+        color: #222;
+    }
+
+    .topbar a:hover,
+    .topbar a:active,
+    .topbar a.acitve {
+        background: lighten($secondary-color, 50%);
+    }
+}
+
+//=========================================
+//
+//=========================================

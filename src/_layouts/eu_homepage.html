@@ -6,53 +6,11 @@ hero_link: /some-link-here/
 {% assign settings = site.data.eu.settings  %}
 {% assign news = site.pages | where: "type", "news_item" %}
 {% assign events = site.pages | where: "type", "event_item" %}
-{% assign courses = site.data.eu.navigation[1].children | where: "include_in_homepage", true %}
+{% assign courses = site.data.eu.sitemap[1].children | where: "include_in_homepage", true %}
 
 <div class="homepage">
 
-	<!-- HERO -->
-	<div id="lv-hero-carousel" class="lv-hero-wrapper">
-
-		<!-- Slide 01 -->
-		<div class="lv-hero animated" style="background-image: url('{{site.assets}}/img/eu/content/banner-2.jpg')" data-background-image="...">
-			<div class="row outer-row collapse center-vertical">
-				<div class="medium-6 columns">
-
-					<!-- Caption -->
-					<div class="lv-hero-caption animated">
-						<h1>FEEL THE UNLIMITED DIFFERENCE</h1>
-						<!-- <p><a href="#" class="button radius">Learn More</a></p> -->
-					</div> <!-- .lv-hero-caption -->
-
-				</div> <!-- .medium-8 -->
-			</div> <!-- .row -->
-		</div> <!-- .lv-hero -->
-
-		<!-- Slide 02 -->
-		<div class="lv-hero animated" style="background-image: url('{{site.assets}}/img/eu/content/banner-1.jpg')" data-background-image="...">
-			<div class="row outer-row collapse center-vertical">
-				<div class="medium-6 medium-offset-6 large-4 large-offset-8 columns text-center">
-
-					<!-- Caption -->
-					<div class="lv-hero-caption text-center animated">
-						<h1>ENJOY EVERY SECOND</h1>
-						<!-- <p><a href="#" class="button large radius">Learn More</a></p> -->
-					</div> <!-- .lv-hero-caption -->
-
-				</div> <!-- .medium-8 -->
-			</div> <!-- .row -->
-		</div> <!-- .lv-hero -->
-
-	</div> <!-- .lv-hero-wrapper -->
-
-	{% comment %}
-	<!-- Bullets -->
-	<div class="row">
-		<div class="columns">
-			<div class="lv-hero-carousel-bullets show-for-medium-up"></div>
-		</div>
-	</div> <!-- .row -->
-	{% endcomment %}
+	{% include eu/hero.html %}
 
 	<!-- MAIN -->
 	<main class="main">
@@ -122,7 +80,11 @@ hero_link: /some-link-here/
 						{% for i in (1..2) %}
 						<li>
 							<div class="article-card" href="#" data-equalizer-watch>
-								<!-- { % include google_map.html %} -->
+								<div class="google-map">
+								    <!-- <iframe src="{{ settings.google_map }}" width="100%" height="250" frameborder="0" style="border:0"></iframe> -->
+								    <img src="/img/eu/content/google-map.png" alt="">
+								</div>
+
 								<div class="article-card-text">
 									<h3>Location {{forloop.index}}</h3>
 									{{ settings.address_1 | markdownify }}

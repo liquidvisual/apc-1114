@@ -1,0 +1,48 @@
+/*
+    NAVIGATION.CSS
+
+    - Last updated: 10.12.14
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Navigation
+//-----------------------------------------------------------------
+
+.navigation {
+    width: 100%;
+     background: $secondary-color;
+    z-index: 1;
+
+    @media #{$medium-up} {
+        top: $header-height-medium;
+    }
+    @media #{$xlarge-up} {
+        position: fixed;
+        top: $header-height-xlarge;
+        background: rgba($secondary-color, 0.85);
+    }
+}
+
+.navigation .topbar {
+    @media #{$xlarge-up} {
+        position: absolute;
+        right: 0;
+        bottom: rem-calc(-5);
+    }
+}
+
+.navigation .topbar ul {
+    @media #{$xlarge-up} {
+        float: right;
+        width: rem-calc(900);
+
+
+    }
+}
+
+//=========================================
+//
+//=========================================

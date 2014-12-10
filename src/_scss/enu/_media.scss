@@ -1,0 +1,92 @@
+/*
+    MEDIA.CSS
+
+    - Last updated: 10.12.14
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Media
+//-----------------------------------------------------------------
+
+.media-block {
+    background: white;
+    padding: rem-calc(20);
+}
+
+.cardo {
+    background: white;
+    border-bottom: 1px solid #e3e3e3;
+    border-radius: 5px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.course-section .article-card {
+    padding: rem-calc(30);
+}
+
+
+
+.news-module {
+    margin-bottom: rem-calc(10);
+}
+
+.article-card {
+    // box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.05);
+    display: block;
+    background: white;
+}
+
+.article-card h3 {
+    font-weight: 300;
+}
+
+.article-card img {
+    width: 100%;
+}
+
+.article-card-text {
+    // background: white;
+    padding: rem-calc(20);
+    color: #777;
+    border-radius: 0 0 $global-radius $global-radius;
+}
+
+//-----------------------------------------------------------------
+// Promo Tile
+//-----------------------------------------------------------------
+
+.promo-tile {
+    background: white;
+    padding: rem-calc(30);
+    border-radius: $global-radius;
+    box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.05);
+    color: #777;
+}
+
+.promo-tile h3 {
+    font-weight: 300;
+}
+
+.promo-tile a {
+    color: #777;
+}
+
+.promo-tile-badge {
+    background: #8BCBB8;
+    font-size: rem-calc(50);
+    width: rem-calc(170);
+    height: rem-calc(170);
+    line-height: rem-calc(170);
+    margin: 0 auto rem-calc(15) auto;
+    border-radius: 1000px;
+    color: white;
+}
+
+//=========================================
+//
+//=========================================

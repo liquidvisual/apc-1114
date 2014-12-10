@@ -1,0 +1,214 @@
+@import 'variables';
+//@import "compass/css3/transition";
+//@import "compass/css3/box-shadow";
+// @import "compass/css3/border-radius";
+@import "nav";
+// @import "lists";
+// @import "buttons";
+// @import "heroes";
+@import "steps";
+// @import "course";
+@import "blocks";
+@import "teasers";
+@import "course_categories";
+@import "parrallax";
+@import "language_selector";
+@import "helpers";
+@import "custom";
+
+header {  background: $apc_blue; }
+
+/** APC Custom Typography **/
+h1,h2,h3,h4,h5, h6 {
+  color: $apc_blue
+}
+h1, h2, h3, h4, h5 {
+  text-transform: uppercase;
+}
+
+h2 {
+  font-weight: 700;  text-transform: uppercase; letter-spacing: 0px; color: $apc_blue;
+}
+
+h3, h4 {
+  font-weight: bold;
+}
+
+h5.sub_heading {
+  font-weight: bold;
+}
+
+p {
+  color: $apc_grey;
+}
+
+p.spaced {
+  line-height: 1.8em;
+}
+
+a.button:hover {
+  background: $apc_blue !important;
+}
+
+
+
+
+/** Layout Classes **/
+.blue_top_strap { border-top: 6px solid $apc_blue; background: #fff; padding: 3em 0;  }
+.breadcrumbs { padding-left: 24px; }
+.top-bar { padding-left: 4px; }
+.bottom_line { border-bottom: 1px solid #d5d6d8; margin-bottom: 1em; padding-top: 1.2em; }
+.line-block {
+  border-right: 1px solid #ccc;
+  margin-right: 10px;
+  p { color: $apc_grey; }
+}
+.main_content {
+  background: #fff;
+  padding-top: 2.8em;
+  padding-bottom: 2em;
+  h4 { text-transform: uppercase; }
+  ul.dots, ul.dots li { color: $apc_grey; padding: 0; font-weight: normal; }
+}
+
+.headed {
+  background: #fff;
+  color: $apc_grey;
+  margin-bottom: 2em;
+  .heading {
+    background: $apc_blue;
+    padding: .75em 0 .55em;
+    h3 { color: #fff; font-weight: 200; font-size: 1.1em; text-transform: uppercase; }
+  }
+  h4 { font-weight: normal;
+    small { display: block; clear: both; color: $apc_blue; line-height: 1.4em; }
+  }
+  h5.caption { clear: both; font-size: 1em; font-weight: normal; color: $apc_grey; }
+  h5.list-heading { text-transform: uppercase; font-size: .8em; font-weight: bold; }
+  .content { padding-top: 2em; padding-bottom: 2em;
+    img.thumbnail { width: 200px; height: 200px; }
+  }
+}
+.side_content {
+  .details { margin-top: 32px;}
+  .locations ul.triangle li:before { border-color: transparent $apc_blue; }
+  .tips_block { padding: .8em 0; margin: .8em 0; }
+  padding-top: 2.8em;
+  padding-bottom: 2em;
+  background: #d5d6d8;
+  .button { width: 100%; margin: 0 0 .8em 0 }
+  hr { margin: .7em 0 1em; color: #fff; }
+  h4, h5 { text-transform: uppercase; font-weight: bold; }
+  h4 { font-size: 1em;}
+  h5 { font-size: .9em;}
+}
+
+
+input:focus {
+  border: 1px solid $apc_blue !important;
+}
+
+.selected_row {
+  background: url(asset_path('left_arrow.jpg')) 14px 33px no-repeat !important;
+}
+
+.question {
+  margin: 1.2em 0 2.2em;
+}
+
+.filters {
+  font-size: .8em;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.headed .news_teaser {
+  h4 {
+    text-transform: uppercase;
+    font-weight: bold;
+    small.date {
+      color: $apc_grey;
+      font-weight: normal;
+      text-transform: none;
+    }
+  }
+}
+
+.drop_filter {
+  display: inline;
+  a {
+    color: #fff;
+    background: $apc_dark_blue;
+    min-width: 120px;
+    display: inline-block;
+    padding: .4em .8em;
+  }
+  i {
+    padding-right: .4em;
+  }
+}
+
+.history_filter.headed {
+  color: #fff;
+  font-size: .8em;
+  font-weight: normal;
+  i, a.year {
+    padding:10px 8px;
+    color: #fff;
+  }
+}
+
+
+.teacher_block.content {
+  padding-bottom: .7em;
+  border-bottom: 1px solid whitesmoke;
+  h4 {
+    padding-top: 0;
+    line-height: 1em;
+    margin-top: 0px;
+  }
+}
+
+.country {
+  .heading {
+    position: relative;
+    h3 {
+      padding-left: 40px;
+    }
+    img {
+      position: absolute;
+      top: 2px;
+      left: 0;
+    }
+  }
+}
+
+.agent .white_back {
+  .contents {
+  font-size: .8em;
+  color: $apc_grey;
+  .heading {
+    color: $apc_blue;
+    }
+  }
+  padding-bottom: 2em;
+}
+
+ul.slick-dots { margin-top: -22px; }
+button.slick-prev, button.slick-prev:hover { width: 50px; height: 40px; left: 0px; padding-left: 10px;  }
+button.slick-next, button.slick-next:hover  { height: 40px; right: 0px; padding-right: 45px; }
+.slick-slider { margin-bottom: 0px !important;}
+.home_slider .slick-prev:before,.home_slider .slick-next:before {
+    color: #fff !important; font-size: 37px; z-index: 1000;   -webkit-transform-style: preserve-3d;}
+//@import "mobile";
+
+.f-dropdown:focus {
+    outline: none;
+}
+
+li.drop-select a:hover  { background: $apc_blue; }
+
+.tab-bar { border-top: 1px solid $apc_grey; }
+.tab-bar a { color: #fff; font-weight: 200;}
+.right-small { border: none;}

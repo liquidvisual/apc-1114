@@ -1,0 +1,54 @@
+/*
+    HERO.CSS
+
+    - Last updated: 10.12.14
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Hero
+//-----------------------------------------------------------------
+
+.internal .lv-hero-wrapper {
+    max-height: 200px;
+
+    .lv-hero-caption {
+        padding: rem-calc(40 0);
+    }
+
+    h1 {
+        margin-bottom: 0;
+    }
+}
+
+.lv-hero-caption .button {
+    color: #222;
+    // font-size: rem-calc(28);
+    // font-weight: 200;
+}
+
+.homepage .lv-hero-caption h1 {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.09); // place back into liquidvisual?
+    font-size: rem-calc(50); // formerly 50
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: rem-calc(20);
+    // color: white;
+
+    @media #{$medium-up} {
+        font-size: rem-calc(70); // formerly 90
+    }
+}
+
+//=========================================
+// liquidvisual override
+//=========================================
+
+
+.lv-hero .lv-vertical-center {
+    @media #{$medium-up} {
+        top: 35%; // to account for top margins of H1s
+    }
+}

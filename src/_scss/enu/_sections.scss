@@ -1,0 +1,111 @@
+/*
+    SECTIONS.CSS
+
+    - Last updated: 10.12.14
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+
+$intro-section-max-height: rem-calc(128); // the claim inside hero
+
+//-----------------------------------------------------------------
+// Intro Section
+//-----------------------------------------------------------------
+
+.intro-section {
+    position: relative;
+    width: 100%;
+    margin-bottom: rem-calc(30);
+    border-bottom: 1px solid #e1e1e1;
+    // z-index: 1;
+
+    @media #{$large-up} {
+        border-color: white;
+    }
+
+    .button {
+        position: relative;
+        top: rem-calc(20);
+        background: $tertiary-color;
+        color: #222;
+    }
+
+    .inner {
+        padding: rem-calc(15 0);
+        background: white;
+
+        @media #{$large-up} {
+            position: absolute;
+            width: 100%;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.7);
+            bottom: 100%;
+        }
+    }
+
+    p {
+        margin: 0;
+    }
+
+    h2, h3 {
+        color: white;
+        color: $secondary-color;
+    }
+}
+
+//=========================================
+// Testimonial Section
+//=========================================
+
+.lv-super .testimonial-section .button {
+    color: white;
+}
+
+//=========================================
+// Course Section
+//=========================================
+
+.course-section .button {
+    color: $secondary-color;
+    border-color: $secondary-color;
+}
+
+.course-section a {
+    @extend .transition;
+    color: $body-font-color;
+
+    &:hover {
+        color: $primary-color;
+        border-color: $primary-color;
+    }
+}
+
+//=========================================
+// Sponsors Section
+//=========================================
+
+.sponsors-section {
+    // opacity: 0.6;
+    background: white;
+    // border-top: 4px solid $tertiary-color;
+    padding-top: rem-calc(20);
+    margin: 0;
+}
+
+//=========================================
+// Image Section
+//=========================================
+
+.image-section {
+    background-image: url(../img/eu/template/studying.jpg);
+
+    .button:hover {
+        border-color: $primary-color;
+    }
+}
+
+//=========================================
+//
+//=========================================
