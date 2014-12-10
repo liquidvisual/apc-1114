@@ -9,8 +9,6 @@
     <meta name="description" content="{{ page.description }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- <meta content="authenticity_token" name="csrf-param"> -->
-    <!-- <meta content="7FQ7qndXIp9udjC02eCyzTwrwpVgLy5jnP09yYahLdY=" name="csrf-token"> -->
     <title>
         {% comment %} SEO IMPLEMENTATION {% endcomment %}
         {% if page.url == '/' %}
@@ -25,20 +23,15 @@
     </title>
 
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="/_bower_components/slick.js/slick/slick.css">
+    <!-- <link rel="stylesheet" href="/_bower_components/slick.js/slick/slick.css"> -->
 
     <!-- build:css({src,.tmp}) /assets/css/optimized.css -->
     <link rel="stylesheet" href="/_bower_components/animate.css/animate.min.css">
     <link rel="stylesheet" href="/_bower_components/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="/css/foundation/app.css">
     <link rel="stylesheet" href="/css/incling/apc.css">
-    <link rel="stylesheet" href="/css/liquidvisual/liquidvisual.css">
     <link rel="stylesheet" href="/css/main.css">
     <!-- endbuild -->
-
-    <!-- Typekit Fonts
-    <script src="https://use.typekit.net/zfg7awl.js"></script>
-    <script>try{Typekit.load();}catch(e){}</script> -->
 
     <!-- build:js(src) /assets/scripts/priority-optimized.js -->
     <script src="/_bower_components/modernizr/modernizr.js"></script>
@@ -89,26 +82,25 @@
     <!-- **** JAVASCRIPT **** -->
 
     <!-- CDN -->
-    <!-- <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.3.13/slick.css"/> -->
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script> from APC -->
 
     <!-- build:js(src) /assets/scripts/optimized.js -->
     <script src="/_bower_components/jquery/dist/jquery.min.js"></script>
     <script src="/_bower_components/jquery-placeholder/jquery.placeholder.js"></script>
     <script src="/_bower_components/jQuery.mmenu/src/js/jquery.mmenu.min.all.js"></script>
     <script src="/_bower_components/fastclick/lib/fastclick.js"></script>
-    <script src="/_bower_components/foundation/js/foundation/foundation.js"></script>
     <script src="/_bower_components/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
-
-    <script src="/_bower_components/slick.js/slick/slick.js"></script>
+    <script src="/_bower_components/bxSlider/jquery.bxslider.min.js"></script>
     <script src="/_bower_components/nprogress/nprogress.js"></script>
 
+    <script src="/_bower_components/foundation/js/foundation/foundation.js"></script>
+    <script src="/_bower_components/foundation/js/foundation/foundation.equalizer.js"></script>
     <script src="/scripts/main.js"></script>
     <!-- endbuild -->
 
     {% comment %}
         ~~~ DEV REFERENCE ONLY ~~~
-<script src="/_bower_components/slick.js/slick/slick.js"></script>
+
         ** FOUNDATION 5 **
         <script src="/_bower_components/foundation/js/foundation/foundation.js"></script>
         <script src="/_bower_components/foundation/js/foundation/foundation.abide.js"></script>
@@ -132,6 +124,7 @@
         <script src="/_bower_components/bxSlider/jquery.bxslider.min.js"></script>
         <script src="/_bower_components/jquery.scrollTo/jquery.scrollTo.min.js"></script>
         <script src="/_bower_components/WOW/dist/wow.min.js"></script>
+        <script src="/_bower_components/slick.js/slick/slick.js"></script>
     {% endcomment %}
 
     <script>

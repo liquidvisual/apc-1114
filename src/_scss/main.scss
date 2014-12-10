@@ -1,296 +1,57 @@
-@import "foundation/settings";
-@import "hero";
-@import "mixins";
-@import "foundation-icons";
-@import "sections";
+@charset "utf-8";
 /*
     MAIN.CSS
 
-    - Last updated: 00.00.00
+    - Last updated: 10.12.14
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
-// Variables
+// Foundation Settings
 //-----------------------------------------------------------------
 
-$header-top-height: rem-calc(40);
+@import "foundation/settings";
 
 //-----------------------------------------------------------------
-// Foundation Overrides (Hacks)
+// liquidvisual
 //-----------------------------------------------------------------
 
-html, body {
-	//@media #{$small-only} {
-        //font-size: 90%;
-	//}
-}
-
-//=========================================
-// Snap Grid
-//
-// Tells grid to "snap" into each breakpoint.
-// Removes issue of seeing elements super large
-// before falling into place naturally.
-//=========================================
-
-.row {
-	@media #{$medium-up}  { max-width: upper-bound($medium-range);  }
-	@media #{$large-up}   { max-width: upper-bound($large-range);   }
-	@media #{$xlarge-up}  { max-width: upper-bound($xlarge-range);  }
-	@media #{$xxlarge-up} { max-width: upper-bound($xxlarge-range); }
-}
-
-// Add side padding to the page above small
-// .outer-row {
-// 	@media #{$medium-up} {
-// 		padding-left: $page-padding - $column-gutter / 2;
-// 		padding-right: $page-padding - $column-gutter / 2;
-// 	}
-// }
-
-// Ensure images scale to block grid LIs */
-// ul[class*='block-grid'] li img {
-// 	width: 100%;
-// }
+@import "liquidvisual/components/alerts";
+@import "liquidvisual/components/breadcrumbs";
+@import "liquidvisual/components/buttons";
+@import "liquidvisual/components/hero";
+@import "liquidvisual/components/inline-list";
+@import "liquidvisual/components/sections";
+@import "liquidvisual/components/toolbox";
+@import "liquidvisual/components/topbar";
 
 //-----------------------------------------------------------------
-// lv-super: top-most non-visual wrapper | lv-page: visual wrapper
-//-----------------------------------------------------------------
-//-----------------------------------------------------------------
-// Header
+// App Unique
 //-----------------------------------------------------------------
 
-.header {
-    position: relative;
-
-    .logo {
-        position: relative;
-        display: inline-block;
-        padding: rem-calc(30 0);
-
-        @media #{$medium-up} {
-            top: rem-calc(-10);
-            padding: rem-calc(10 0);
-        }
-    }
-}
-
-.header-top {
-    padding: rem-calc(5 0);
-    overflow: hidden;
-    background: $apc-dark-blue;
-
-    @media #{$medium-up} {
-        padding: rem-calc(20 0 0 0);
-        overflow: visible;
-        background: none;
-    }
-
-    .button {
-        text-transform: uppercase;
-        margin: 0;
-        margin-left: rem-calc(-15);
-
-        @media #{$medium-up} {
-            margin: 0;
-        }
-    }
-}
-
-.header-mobile-menu {
-    position: relative;
-    padding: rem-calc(10);
-    border-top: 1px solid #808285;
-
-    a {
-        color: white;
-    }
-}
+@import "app/breadcrumbs";
+@import "app/buttons";
+@import "app/fonts";
+@import "app/footer";
+@import "app/forms";
+@import "app/foundation-icons";
+@import "app/global";
+@import "app/header";
+@import "app/hero";
+@import "app/media";
+@import "app/mixins";
+@import "app/navigation";
+@import "app/sections";
+@import "app/sidebar";
+@import "app/social-networks";
+@import "app/special";
+@import "app/themes";
+@import "app/widgets";
 
 //-----------------------------------------------------------------
-// Navigation
+// Vendor
 //-----------------------------------------------------------------
 
-.navigation {
-    background: $primary-color;
-}
-
-.topbar > ul > li > a {
-    text-transform: uppercase;
-    font-size: rem-calc(12);
-}
-
-
-
-//-----------------------------------------------------------------
-// Off Canvas Menu
-//-----------------------------------------------------------------
-//-----------------------------------------------------------------
-// Hero
-//-----------------------------------------------------------------
-
-.lv-hero {
-    border-bottom: 6px solid $primary-color;
-
-    .lv-hero-caption h1 {
-        display: inline-block;
-        background: $primary-color;
-        color: white;
-        padding: rem-calc(10 30);
-        border-radius: 20px 0 0 0;
-    }
-
-    .lv-hero-caption-body {
-        background: white;
-        padding: rem-calc(20 30);
-        border-radius: 0 0 20px 0;
-        margin-bottom: rem-calc(60);
-
-        p {
-            line-height: 1.5;
-            color: $apc-grey;
-            font-size: rem-calc(19);
-        }
-    }
-
-    .button {
-        text-transform: uppercase;
-    }
-}
-
-.lv-super .slick-prev:before,
-.lv-super .slick-next:before {
-    font-size: rem-calc(37);
-}
-
-//-----------------------------------------------------------------
-// Breadcrumbs
-//-----------------------------------------------------------------
-//-----------------------------------------------------------------
-// Content
-//-----------------------------------------------------------------
-//-----------------------------------------------------------------
-// Sections
-//-----------------------------------------------------------------
-
-.intro-section {
-    font-size: 14px;
-}
-
-.section .button-list {
-    @media #{$medium-up} {
-        margin-left: rem-calc(60);
-    }
-}
-
-//-----------------------------------------------------------------
-// Media Object
-//-----------------------------------------------------------------
-//-----------------------------------------------------------------
-// Modules
-//-----------------------------------------------------------------
-//-----------------------------------------------------------------
-// Sidebar
-//-----------------------------------------------------------------
-//-----------------------------------------------------------------
-// Footer
-//-----------------------------------------------------------------
-
-.footer {
-    // font-size: .8em;
-    // color: #ccc;
-
-    .footer-top {
-        background: white;
-        border-bottom: 15px solid $apc_blue;
-        padding: rem-calc(24);
-    }
-
-    .footer-bottom {
-        padding: rem-calc(20);
-    }
-
-    a {
-        color: $apc_grey;
-        font-size: rem-calc(13);
-
-        &:hover {
-            color: $primary-color;
-        }
-
-        &.primary-color {
-            color: $primary-color;
-        }
-    }
-}
-
-//-----------------------------------------------------------------
-// Social Networks
-//-----------------------------------------------------------------
-
-.social-networks a {
-    display: inline-block;
-    width: rem-calc(40);
-    height: rem-calc(40);
-    line-height: rem-calc(40);
-    text-align: center;
-    background: $apc-dark-grey;
-    color: white;
-    border-radius: 100%;
-    font-size: rem-calc(22);
-
-    &:hover {
-        color: white;
-        background: black;
-    }
-}
-
-//-----------------------------------------------------------------
-// Template Buttons
-//-----------------------------------------------------------------
-
-.button {
-    text-transform: uppercase;
-}
-
-.button.swish {
-    border-radius: 6px 0 6px 0;
-
-    i {
-        font-size: .8em;
-        margin-right: rem-calc(3);
-    }
-}
-
-//-----------------------------------------------------------------
-// Forms
-//-----------------------------------------------------------------
-//-----------------------------------------------------------------
-// Animations
-//-----------------------------------------------------------------
-//-----------------------------------------------------------------
-// Special / Misc - Refactor Later
-//-----------------------------------------------------------------
-
-.static {
-    position: static;
-}
-
-a {
-    @include transition();
-}
-
-.primary-color {
-    color: $primary-color;
-}
-
-//-----------------------------------------------------------------
-// IE8
-//-----------------------------------------------------------------
-//-----------------------------------------------------------------
-// Themes
-//-----------------------------------------------------------------
-
-//=========================================
-//
-//=========================================
+// @import "liquidvisual/vendor/magnific-popup/main";
+// @import "liquidvisual/vendor/mmenu/main";
+@import "liquidvisual/vendor/nprogress";
+// @import "liquidvisual/vendor/prism";

@@ -1,0 +1,44 @@
+/*
+    FOOTER.CSS
+
+    - Last updated: 10.12.14
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+
+.footer {
+    // font-size: .8em;
+    // color: #ccc;
+
+    .footer-top {
+        background: white;
+        border-bottom: 15px solid $apc_blue;
+        padding: rem-calc(24);
+    }
+
+    .footer-bottom {
+        padding: rem-calc(20);
+    }
+
+    a {
+        color: $apc_grey;
+        font-size: rem-calc(13);
+
+        &:hover {
+            color: $primary-color;
+        }
+
+        &.primary-color {
+            color: $primary-color;
+        }
+    }
+}
+
+//=========================================
+//
+//=========================================

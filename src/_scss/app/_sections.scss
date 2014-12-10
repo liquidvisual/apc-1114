@@ -1,0 +1,46 @@
+/*
+    SECTIONS.CSS
+
+    - Last updated: 10.12.14
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+
+.intro-section {
+    font-size: 14px;
+}
+
+.section .button-list {
+    @media #{$medium-up} {
+        margin-left: rem-calc(60);
+    }
+}
+
+.image-section {
+    border-bottom: 6px solid $primary-color;
+}
+
+.image-group-photo {
+    background-image: url(../img/content/heroes/APC_Home_02.jpg);
+    height: 380px;
+    margin-bottom: 0;
+
+    @media #{$medium-up} {
+        background-attachment: fixed;
+    }
+}
+
+.image-bridge-photo {
+    background-image: url(../img/content/heroes/APC_Home_03.jpg);
+    height: 380px;
+    margin-bottom: 0;
+}
+
+//=========================================
+//
+//=========================================

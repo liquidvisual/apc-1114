@@ -1,0 +1,66 @@
+/*
+    HEADER.CSS
+
+    - Last updated: 10.12.14
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+
+$header-top-height: rem-calc(40);
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+
+.header {
+    position: relative;
+
+    .logo {
+        position: relative;
+        display: inline-block;
+        padding: rem-calc(30 0);
+
+        @media #{$medium-up} {
+            top: rem-calc(-10);
+            padding: rem-calc(10 0);
+        }
+    }
+}
+
+.header-top {
+    padding: rem-calc(5 0);
+    overflow: hidden;
+    background: $apc-dark-blue;
+
+    @media #{$medium-up} {
+        padding: rem-calc(20 0 0 0);
+        overflow: visible;
+        background: none;
+    }
+
+    .button {
+        text-transform: uppercase;
+        margin: 0;
+        margin-left: rem-calc(-15);
+
+        @media #{$medium-up} {
+            margin: 0;
+        }
+    }
+}
+
+.header-mobile-menu {
+    position: relative;
+    padding: rem-calc(10);
+    border-top: 1px solid #808285;
+
+    a {
+        color: white;
+    }
+}
+
+//=========================================
+//
+//=========================================

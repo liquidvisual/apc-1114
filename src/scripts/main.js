@@ -7,13 +7,15 @@
 
 var TOUCH_ENABLED = $(".touch").length;
 
+var bxSliderHero;
+
 //-----------------------------------------------------------------
 // Document Ready
 //-----------------------------------------------------------------
 
 $(document).ready(function() {
     NProgress.start(); // Start preloader bar
-    // setupHero();
+    setupHero();
 });
 
 $(window).load(function() {
@@ -25,8 +27,8 @@ $(window).load(function() {
 //-----------------------------------------------------------------
 
 function setupHero() {
-    bxSlider1 = $('#lv-hero-carousel').bxSlider({
-        auto: (TOUCH_ENABLED ? false : true),
+    bxSliderHero = $('#lv-hero-carousel').bxSlider({
+        auto: (TOUCH_ENABLED ? false : false),
         mode: 'horizontal',
         adaptiveHeight: true,
         responsive: true,
@@ -55,25 +57,25 @@ function setupHero() {
 // Carousel
 //-----------------------------------------------------------------
 
-$('#lv-hero-carousel').slick({
-    autoplay: false,
-    autoplaySpeed: 8000,
-    // dots: true,
-    infinite: true,
-    speed: 500,
-    // fade: true,
-    slide: '.lv-hero',
-    cssEase: 'linear',
-    responsive: [
-        {
-          breakpoint: 640,
-          settings: {
-            autoplay: false,
-            swipe: false
-          }
-        }
-      ]
-});
+// $('#lv-hero-carousel').slick({
+//     autoplay: false,
+//     autoplaySpeed: 8000,
+//     // dots: true,
+//     infinite: true,
+//     speed: 500,
+//     // fade: true,
+//     slide: '.lv-hero',
+//     cssEase: 'linear',
+//     responsive: [
+//         {
+//           breakpoint: 640,
+//           settings: {
+//             autoplay: false,
+//             swipe: false
+//           }
+//         }
+//       ]
+// });
 
 //-----------------------------------------------------------------
 // Kickstart Foundation / Touch Conditionals

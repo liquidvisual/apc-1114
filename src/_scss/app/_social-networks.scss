@@ -1,0 +1,33 @@
+/*
+    SOCIAL-NETWORKS.CSS
+
+    - Last updated: 10.12.14
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+
+.social-networks a {
+    display: inline-block;
+    width: rem-calc(40);
+    height: rem-calc(40);
+    line-height: rem-calc(40);
+    text-align: center;
+    background: $apc-dark-grey;
+    color: white;
+    border-radius: 100%;
+    font-size: rem-calc(22);
+
+    &:hover {
+        color: white;
+        background: black;
+    }
+}
+
+//=========================================
+//
+//=========================================

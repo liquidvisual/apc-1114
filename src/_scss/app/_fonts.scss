@@ -1,0 +1,63 @@
+/*
+    FONTS.CSS
+
+    - Last updated: 10.12.14
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Proxima Nova
+//-----------------------------------------------------------------
+
+// REGULAR
+@font-face {
+    font-family: "proxima-nova";
+    src: url('../fonts/proximanova-regular-webfont.eot') format('eot'),
+         url('../fonts/proximanova-regular-webfont.woff') format('woff'),
+         url('../fonts/proximanova-regular-webfont.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+}
+
+// REG ITALIC
+@font-face {
+    font-family: "proxima-nova";
+    src: url('../fonts/proximanova-regitalic-webfont.eot') format('eot'),
+         url('../fonts/proximanova-regitalic-webfont.woff') format('woff'),
+         url('../fonts/proximanova-regitalic-webfont.ttf') format('truetype');
+    font-style: italic;
+    font-weight: 400;
+}
+
+// BOLD
+@font-face {
+    font-family: "proxima-nova";
+    src: url('../fonts/proximanova-bold-webfont.eot') format('eot'),
+         url('../fonts/proximanova-bold-webfont.woff') format('woff'),
+         url('../fonts/proximanova-bold-webfont.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 700;
+}
+
+// BOLD ITALIC
+@font-face {
+    font-family: 'proxima-nova';
+    src: url('../fonts/proximanova-boldit-webfont.eot') format('eot'),
+         url('../fonts/proximanova-boldit-webfont.woff') format('woff'),
+         url('../fonts/proximanova-boldit-webfont.ttf') format('truetype');
+    font-style: italic;
+    font-weight: 700;
+}
+
+// EXTRA BOLD
+@font-face {
+    font-family: 'proxima-nova';
+    src: url('../fonts/proximanova-extrabold-webfont.eot') format('eot'),
+         url('../fonts/proximanova-extrabold-webfont.woff') format('woff'),
+         url('../fonts/proximanova-extrabold-webfont.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 800;
+}
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
