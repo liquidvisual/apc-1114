@@ -1,0 +1,78 @@
+- title: Home
+  url: /
+
+- title: Courses
+  url: /courses/
+  children:
+    - title: English Courses
+      url: /courses/english-courses/
+      icon: fa-graduation-cap
+      include_in_homepage: true
+      children:
+        - title: Business English
+          url: /courses/english-courses/business-english/
+        - title: CAE Preparation
+          url: /courses/english-courses/cae-preparation/
+        - title: English for Academic Purposes
+          url: /courses/english-courses/english-for-academic-purposes/
+        - title: FCE Preparation
+          url: /courses/english-courses/fce-preparation/
+        - title: General English
+          url: /courses/english-courses/general-english-preparation/
+        - title: IELTS Preparation
+          url: /courses/english-courses/ielts-preparation/
+        - title: OET Preparation
+          url: /courses/english-courses/oet-preparation/
+        - title: TOEFL Preparation
+          url: /courses/english-courses/toefl-preparation/
+        - title: Junior English Program
+          url: /courses/english-courses/junior-english-program/
+        - title: Study Tour
+          url: /courses/english-courses/study-tour/
+        - title: English Smart Packages
+          url: /courses/english-courses/english-smart-packages/
+
+    - title: Job Skills Courses
+      url: /courses/job-skills-courses/
+      icon: fa-group
+      include_in_homepage: false
+      children:
+        - title: English Plus Hospitality
+          url: /courses/job-skills-courses/english-plus-hospitality/
+        - title: Barista5
+          url: /courses/job-skills-courses/barista5/
+        - title: RSA
+          url: /courses/job-skills-courses/rsa/
+
+    - title: Direct Entry Pathways
+      url: /courses/direct-entry-pathways/
+      icon: fa-key
+      include_in_homepage: false
+      children:
+        - title: Direct Entry Pathways
+          url: /courses/job-skills-courses/direct-entry-pathways/
+
+- title: Student Life
+  url: /student-life/
+  include_children_in_nav: false
+  children:
+    - title: Your Life in Brisbane
+      url: /student-life/your-life-in-brisbane/
+
+    - title: Our Campuses
+      url: /student-life/our-campuses/
+
+    - title: Visa Application and Conditions
+      url: /student-life/visa-application-and-conditions/
+
+- title: Learn Now
+  url: /learn-now/
+
+- title: Student Care
+  url: /student-care/
+
+- title: "Events &amp; Media"
+  url: /events-and-media/
+
+- title: "Forms &amp; Downloads"
+  url: /forms-and-downloads/

@@ -11,7 +11,8 @@
     "magnific-popup": "https://github.com/dimsemenov/Magnific-Popup.git#master",
     "nprogress": "~0.1.6",
     "WOW": ">=0.1.9",
-    "slick.js": "~1.3.15"
+    "slick.js": "~1.3.15",
+    "foundation-icon-fonts": "zurb/foundation-icon-fonts"
   },
   "devDependencies": {}
 }

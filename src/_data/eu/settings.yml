@@ -1,0 +1,25 @@
+# GLOBAL SITE SETTINGS
+
+# General
+seo_title: ""
+title: ""
+company: ""
+logo: "/img/content/logo.png"
+description: ""
+legal: "English Unlimited Brisbane Pty Ltd trading as English Unlimited | ACN: 144 733 188 | CRICOS Provider Code: 03296K"
+
+# Contact Info
+email: info@englishunlimited.qld.edu.au
+phone: +61 7 3003 0088
+fax: +61 7 3003 1138
+address_1: "Level 3, 115 Queen Street<br>Brisbane QLD 4000<br>Australia"
+address_2: "Level 9, 138 Albert Street<br>Brisbane QLD 4000<br>Australia"
+
+# Social Networks
+facebook: "https://www.facebook.com/englishunlimited.com.au"
+
+# Google Map
+google_map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7699881.368000312!2d145.77374735!3d-19.55415884999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6bd4df247a62dcfd%3A0xf5f2d0227612be99!2sQueensland!5e0!3m2!1sen!2sau!4v1414717719146"
+
+# Google Analytics
+google_analytics: "UA-XXXXXXXX-X"

@@ -1,0 +1,252 @@
+---
+layout: master
+hero_link: /some-link-here/
+---
+
+{% assign settings = site.data.settings  %}
+{% assign news = site.pages | where: "type", "news_item" %}
+{% assign events = site.pages | where: "type", "event_item" %}
+{% assign courses = site.data.navigation[1].children | where: "include_in_homepage", true %}
+
+<div class="homepage">
+
+	<!-- HERO -->
+	<div id="lv-hero-carousel" class="lv-hero-wrapper">
+
+		<!-- Slide 01 -->
+		<div class="lv-hero animated" style="background-image: url('{{site.assets}}/img/content/banner-2.jpg')" data-background-image="...">
+			<div class="row outer-row collapse center-vertical">
+				<div class="medium-6 columns">
+
+					<!-- Caption -->
+					<div class="lv-hero-caption animated">
+						<h1>FEEL THE UNLIMITED DIFFERENCE</h1>
+						<!-- <p><a href="#" class="button radius">Learn More</a></p> -->
+					</div> <!-- .lv-hero-caption -->
+
+				</div> <!-- .medium-8 -->
+			</div> <!-- .row -->
+		</div> <!-- .lv-hero -->
+
+		<!-- Slide 02 -->
+		<div class="lv-hero animated" style="background-image: url('{{site.assets}}/img/content/banner-1.jpg')" data-background-image="...">
+			<div class="row outer-row collapse center-vertical">
+				<div class="medium-6 medium-offset-6 large-4 large-offset-8 columns text-center">
+
+					<!-- Caption -->
+					<div class="lv-hero-caption text-center animated">
+						<h1>ENJOY EVERY SECOND</h1>
+						<!-- <p><a href="#" class="button large radius">Learn More</a></p> -->
+					</div> <!-- .lv-hero-caption -->
+
+				</div> <!-- .medium-8 -->
+			</div> <!-- .row -->
+		</div> <!-- .lv-hero -->
+
+	</div> <!-- .lv-hero-wrapper -->
+
+	{% comment %}
+	<!-- Bullets -->
+	<div class="row">
+		<div class="columns">
+			<div class="lv-hero-carousel-bullets show-for-medium-up"></div>
+		</div>
+	</div> <!-- .row -->
+	{% endcomment %}
+
+	<!-- MAIN -->
+	<main class="main">
+
+		<!-- INTRO -->
+		<div class="intro-section">
+			<div class="inner">
+
+				<div class="row">
+					<div class="large-9X large-centeredX columns text-center medium-text-left">
+						<div class="row">
+							<div class="medium-8 large-9 columns">
+								<h3>WHO ARE WE?</h3>
+								<p>We're an Australian Queensland College that's passionate about teaching English. We're engaging, caring, fun and most importantly understand how to maximise your learning experience to the fullest.</p>
+								<br class="show-for-small-only">
+							</div>
+							<div class="medium-4 large-3 columns">
+								<p><a href="#" class="button large radius">Learn More</a></p>
+							</div>
+						</div> <!-- .row -->
+					</div> <!-- .columns -->
+				</div> <!-- .row -->
+			</div> <!-- .inner -->
+		</div> <!-- .our-courses-section -->
+
+		<!-- COURSES -->
+		<div class="section course-section developerX">
+			<div class="row">
+				<div class="large-11 medium-centered columns">
+				{% for item in courses %}
+					<h2 class="text-center">{{ item.title }}</h2>
+					<br>
+					<div class="row">
+						<div class="medium-8 medium-centered columns">
+							<ul class="protoX article-cardX section small-block-grid-1 medium-block-grid-2">
+							{% for item in item.children %}
+								<li>
+									<h5 class="subheader"><a class="button radius knockout expand" href="#">{{ item.title }}</a></h5>
+								</li>
+							{% endfor %}
+							</ul>
+						</div>
+					</div>
+
+				{% endfor %}
+				</div> <!-- .columns -->
+			</div> <!-- .row -->
+		</div> <!-- .section -->
+
+		<!-- IMAGE SECTION -->
+		<div class="section image-section has-large-padding has-color-overlay">
+			<div class="row">
+				<div class="medium-8 medium-centered text-center columns">
+					<h2>GO BEYOND THE CLASSROOM</h2>
+					<p>Our primary aims are to deliver dynamic, stimulating, relevant courses to prepare students be be a global citizens in the international world of English.</p>
+					<a href="#" class="button radius knockout">Learn Now</a>
+				</div> <!-- .columns -->
+			</div> <!-- .row -->
+		</div> <!-- .section -->
+
+		<!-- CAMPUS LOCATIONS -->
+		<div class="section has-medium-paddingX has-padding">
+			<div class="row">
+				<div class="large-9 medium-centered columns">
+					<h2 class="text-center section">Our Campus Locations</h2>
+					<ul class="small-block-grid-1 medium-block-grid-2" data-equalizer>
+						{% for i in (1..2) %}
+						<li>
+							<div class="article-card" href="#" data-equalizer-watch>
+								<!-- { % include google_map.html %} -->
+								<div class="article-card-text">
+									<h3>Location {{forloop.index}}</h3>
+									{{ settings.address_1 | markdownify }}
+								</div>
+							</div>
+						</li>
+						{% endfor %}
+					</ul>
+
+				</div> <!-- .columns -->
+			</div> <!-- .row -->
+		</div> <!-- .section -->
+
+		<!-- NEWS SECTION -->
+		<div class="section has-no-margin has-medium-padding color-section color-3">
+			<div class="row">
+				<div class="columns">
+					<div class="section text-center">
+						<h2>Latest News</h2>
+					</div>
+					<div class="news-module">
+						<ul class="medium-block-grid-2 large-block-grid-3" data-equalizer>
+						{% for item in news | limit: 3 %}
+							<li class="{% if forloop.last %}show-for-large-up{% endif %}">
+								<a class="article-card" href="#" data-equalizer-watch>
+									<img src="http://lorempixel.com/400/200/nature?{{forloop.index}}" alt="">
+									<div class="article-card-text">
+										<h3>{{ item.title }}</h3>
+										{{ item.content | markdownify | truncate: 200 }}
+									</div>
+								</a>
+							</li>
+						{% endfor %}
+						</ul>
+					</div> <!-- .news-module -->
+					<div class="text-center"><a href="#" class="button radius">See All News</a></div>
+				</div>
+			</div> <!-- .row -->
+		</div> <!-- .color-section -->
+
+		<!-- UPCOMING EVENTS -->
+		<div class="section has-no-margin has-medium-padding">
+			<div class="row">
+				<div class="columns">
+					<div class="section text-center">
+						<h2>Upcoming Events</h2>
+					</div>
+					<div class="news-module">
+						<ul class="medium-block-grid-2 large-block-grid-3" data-equalizer>
+						{% for item in events | limit: 3 %}
+							<li class="{% if forloop.last %}show-for-large-up{% endif %}">
+								<a class="article-card" href="#" data-equalizer-watch>
+									<img src="http://lorempixel.com/400/200/fashion?{{forloop.index}}" alt="">
+									<div class="article-card-text">
+										<h3>{{ item.title }}</h3>
+										<h5 class="subheader"><date><i class="fa fa-calendar"></i>&nbsp; {{ item.date | date: "%d %B %Y" }}</h5>
+										{{ item.content | markdownify | truncate: 200 }}
+									</div>
+								</a>
+							</li>
+						{% endfor %}
+						</ul>
+					</div> <!-- .news-module -->
+					<div class="text-center"><a href="#" class="button radius">See All Events</a></div>
+				</div>
+			</div> <!-- .row -->
+		</div> <!-- .color-section -->
+
+		<!-- COLOR SECTION -->
+		<div class="section color-section light color-4 has-no-margin has-medium-padding">
+			<div class="row">
+				<div class="columns">
+
+					<div class="row">
+						<div class="large-8 large-centered columns text-center">
+							<h2>What They're Saying</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt ab placeat alias ducimus voluptates, quis culpa qui nemo id minima, aliquid sapiente iure mollitia maxime impedit sed magni nesciunt. Doloribus.</p>
+						</div>
+					</div>
+
+					<!-- Testimonials -->
+					<div class="testimonial-section">
+						<div class="row">
+							<div class="columns">
+								<div id="testimonial-slider">
+								{% for i in (1..6) %}
+									<a href="#" class="media-block testimonial-block">
+										<div class="row">
+											<div class="medium-3 columns">
+												<img class="profile-pic" src="http://lorempixel.com/600/600/people?{{forloop.index}}" alt="">
+											</div>
+											<div class="medium-9 columns">
+												<h3>John Smith</h3>
+												<h4 class="subheader"><img class="flag-pic" width="30" src="/img/content/flag-example.png" alt="">Australia</h4>
+												<p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda saepe modi quibusdam tempora, cumque beatae eum culpa commodi ea dolor ex molestias voluptatibus..."</p>
+											</div>
+										</div>
+									</a>
+								{% endfor %}
+								</div> <!-- #testimonial-slider -->
+								<div class="text-center"><a href="#" class="button radius">Contact Us</a></div>
+							</div> <!-- .columns -->
+						</div> <!-- .row -->
+					</div> <!-- .section -->
+
+				</div> <!-- .columns -->
+			</div> <!-- .row -->
+		</div> <!-- .section -->
+
+		<!-- SPONSORS SECTION -->
+		<div class="section sponsors-section">
+			<div class="row">
+				<div class="large-10 large-centered columns text-center">
+					<ul class="small-block-grid-5">
+						<li><a href="#"><img width="100" src="/img/template/white-bg-sponsors/sp-1.png" alt="Australia Future Unlimited"></a></li>
+						<li><a href="#"><img width="100" src="/img/template/white-bg-sponsors/sp-2.png" alt="NEAS"></a></li>
+						<li><a href="#"><img width="100" src="/img/template/white-bg-sponsors/sp-3.png" alt="Pretesting"></a></li>
+						<li><a href="#"><img width="100" src="/img/template/white-bg-sponsors/sp-4.png" alt="Cambridge English Language Assessment"></a></li>
+						<li><a href="#"><img width="100" src="/img/template/white-bg-sponsors/sp-5.png" alt="English Australia"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	</main>
+
+</div> <!-- .homepage -->

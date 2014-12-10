@@ -6,7 +6,6 @@
 //-----------------------------------------------------------------
 
 var TOUCH_ENABLED = $(".touch").length;
-
 var bxSliderHero;
 
 //-----------------------------------------------------------------
@@ -27,7 +26,7 @@ $(window).load(function() {
 //-----------------------------------------------------------------
 
 function setupHero() {
-    bxSliderHero = $('#lv-hero-carousel').bxSlider({
+    bxSliderHero = $('.js-carousel').bxSlider({
         auto: (TOUCH_ENABLED ? false : false),
         mode: 'horizontal',
         adaptiveHeight: true,
@@ -85,7 +84,7 @@ var touchEvent = TOUCH_ENABLED ? "touchstart" : "click";
 
 //Trigger hamburger by touch on mobile - this eliminates glitch with FastClick.js
 $(".header-mobile-menu").css({"visibility": "visible"}).bind(touchEvent, function() {
-    $("#off-canvas-menu").trigger("open.mm");
+    $(".js-off-canvas-menu").trigger("open.mm");
 });
 
 if (TOUCH_ENABLED) {

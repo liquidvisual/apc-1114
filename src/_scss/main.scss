@@ -33,7 +33,6 @@
 @import "app/fonts";
 @import "app/footer";
 @import "app/forms";
-@import "app/foundation-icons";
 @import "app/global";
 @import "app/header";
 @import "app/hero";
@@ -51,7 +50,8 @@
 // Vendor
 //-----------------------------------------------------------------
 
+@import "liquidvisual/vendor/foundation-icons";
 // @import "liquidvisual/vendor/magnific-popup/main";
-// @import "liquidvisual/vendor/mmenu/main";
+@import "liquidvisual/vendor/mmenu/main";
 @import "liquidvisual/vendor/nprogress";
 // @import "liquidvisual/vendor/prism";

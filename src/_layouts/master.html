@@ -23,6 +23,9 @@
     </title>
 
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl }}">
+
+    <!-- Google Fonts CDN -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
     <!-- <link rel="stylesheet" href="/_bower_components/slick.js/slick/slick.css"> -->
 
     <!-- build:css({src,.tmp}) /assets/css/optimized.css -->
@@ -68,7 +71,7 @@
     </div> <!-- .lv-super -->
 
     <!-- OFF-CANVAS MENU -->
-    <nav id="off-canvas-menu" class="hide" aria-hidden="true">
+    <nav class="js-off-canvas-menu hide" aria-hidden="true">
         {% include snippets/navigation.html %}
     </nav>
 
@@ -88,7 +91,7 @@
     <script src="/_bower_components/jquery/dist/jquery.min.js"></script>
     <script src="/_bower_components/jquery-placeholder/jquery.placeholder.js"></script>
     <script src="/_bower_components/jQuery.mmenu/src/js/jquery.mmenu.min.all.js"></script>
-    <script src="/_bower_components/fastclick/lib/fastclick.js"></script>
+
     <script src="/_bower_components/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
     <script src="/_bower_components/bxSlider/jquery.bxslider.min.js"></script>
     <script src="/_bower_components/nprogress/nprogress.js"></script>
@@ -129,7 +132,7 @@
 
     <script>
         $(document).foundation();
-        $("#off-canvas-menu").mmenu({ "offCanvas": { "position": "left" }});
+        $(".js-off-canvas-menu").mmenu({ "offCanvas": { "position": "left" }});
     </script>
 
     <!-- Google Analytics Here -->

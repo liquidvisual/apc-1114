@@ -5,3 +5,7 @@
 
 future: false
 show_drafts: false
+
+# Used on files that can't be prefixed by CDNify
+# Eg. The Hero images - which are inline (or data urls)
+assets: '/assets'
