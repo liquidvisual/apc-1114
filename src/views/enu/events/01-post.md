@@ -1,5 +1,5 @@
 ---
-layout: eu_homepage
+layout: enu_homepage
 title:  "Live Latin Music"
 permalink: /news/live-latin-music/
 type: event_item

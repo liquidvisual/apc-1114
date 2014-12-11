@@ -1,5 +1,5 @@
 ---
-layout: eu_homepage
+layout: enu_homepage
 title:  "Whale Watching August"
 permalink: /news/whale-watching-august/
 type: event_item

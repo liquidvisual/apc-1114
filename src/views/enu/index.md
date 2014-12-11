@@ -1,8 +1,8 @@
 ---
-layout: eu_homepage
+layout: enu_homepage
 title: Home
-permalink: /eu/
-site_type: "eu"
+permalink: /enu/
+site_type: "enu"
 ---
 
 <!--- This child document initializes the page in Jekyll. -->

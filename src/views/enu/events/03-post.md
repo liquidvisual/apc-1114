@@ -1,5 +1,5 @@
 ---
-layout: eu_homepage
+layout: enu_homepage
 title:  "Kayaking Along Brisbane River"
 permalink: /news/kayaking-along-brisbane-river/
 type: event_item

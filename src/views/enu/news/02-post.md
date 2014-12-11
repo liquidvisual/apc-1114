@@ -1,5 +1,5 @@
 ---
-layout: eu_homepage
+layout: enu_homepage
 title:  "What's the Deal with Airline Peanuts?"
 permalink: /news/whats-the-deal-with-airline-peanuts/
 type: news_item

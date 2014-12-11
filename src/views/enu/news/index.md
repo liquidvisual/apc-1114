@@ -1,5 +1,5 @@
 ---
-layout: eu_homepage
+layout: enu_homepage
 title: News
 permalink: /news/
 hero_image: "beach-games"

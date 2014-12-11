@@ -18,6 +18,7 @@ IGNORE THIS COMMENT: Interchange code reference for dev self:
 
 {% assign settings = site.data.apc.settings %}
 {% assign logo = "/img/apc/content/logo.png" %}
+{% assign home_url = "/enu/" %}
 
 <div class="row outer-row">
 	<div class="header-top">
@@ -27,7 +28,7 @@ IGNORE THIS COMMENT: Interchange code reference for dev self:
 		</div>
 	</div>
 	<div class="medium-6 medium-pull-6 columns">
-		<a class="logo" href="/eu/" title="{{ settings.seo_title }}" itemprop="url">
+		<a class="logo" href="{{ home_url }}" title="{{ settings.seo_title }}" itemprop="url">
 		<img src="{{ logo }}" alt="{{ settings.company_title }}" itemprop="logo"></a>
 	</div>
 </div>

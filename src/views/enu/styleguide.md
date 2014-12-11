@@ -1,7 +1,8 @@
 ---
 layout: internal/text_page
 title: Styleguide
-permalink: /eu/styleguide/
+permalink: /enu/styleguide/
+site_type: "enu"
 ---
 
 <!-- ************************************************************************************** -->

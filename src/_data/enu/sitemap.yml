@@ -2,7 +2,7 @@
   url: /
 
 - title: Courses
-  url: /courses/
+  url: /enu/courses/
   children:
     - title: English Courses
       url: /courses/english-courses/
