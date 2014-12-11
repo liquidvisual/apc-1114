@@ -21,7 +21,7 @@
 
 <ul>
 	{% comment %} Important: leave 'Home' out of the loop {% endcomment %}
-	<li class="{% if page.url == "/" %} active {% endif %}"><a href="/">Home</a></li>
+	<li class="{% if page.url == "/enu/" %} active {% endif %}"><a href="/enu/">Home</a></li>
 
 	{% comment %} First Level {% endcomment %}
 	{% for item in sitemap | offset: 1 %}

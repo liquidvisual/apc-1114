@@ -29,7 +29,7 @@
 
     {% if page.site_type == "enu" %}
 
-    <!-- build:css({src,.tmp}) /assets/css/optimized-apc.css -->
+    <!-- build:css({src,.tmp}) /assets/css/optimized-enu.css -->
     <link rel="stylesheet" href="/_bower_components/animate.css/animate.min.css">
     <link rel="stylesheet" href="/_bower_components/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="/_bower_components/slick.js/slick/slick.css">
@@ -38,7 +38,7 @@
 
     {% else %}
 
-    <!-- build:css({src,.tmp}) /assets/css/optimized-enu.css -->
+    <!-- build:css({src,.tmp}) /assets/css/optimized-apc.css -->
     <link rel="stylesheet" href="/_bower_components/animate.css/animate.min.css">
     <link rel="stylesheet" href="/_bower_components/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="/css/apc.css">
@@ -50,7 +50,7 @@
     <script src="/_bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
 </head>
-<body>
+<body id="{{page.site_type}}">
     <div class="lv-super developerX">
         <div class="lv-page">
 
