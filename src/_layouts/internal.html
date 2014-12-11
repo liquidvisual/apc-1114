@@ -2,20 +2,28 @@
 layout: master
 ---
 
+{% assign hero = "/img/apc/content/heroes/APC_2000x360_06.jpg" %}
+
 <div class="internal">
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-header">
-            <div class="row outer-row">
-                <div class="columns">
-                    <div class="animated fadeInLeft">
+    <!-- HERO MODULE -->
+    <div class="lv-hero-module has-auto-height">
+
+        <!-- Hero Item -->
+        <div class="lv-hero" style="background-image: url('{{ hero | prepend: site.assets }}')" data-background-image="...">
+            <div class="row lv-vertical-center">
+
+                <!-- Caption -->
+                <div class="medium-8 columns">
+                    <div class="lv-hero-caption animated">
                         <h1>{{ page.title }}</h1>
-                    </div>
+                    </div> <!-- .lv-hero-caption -->
                 </div> <!-- .columns -->
+
             </div> <!-- .row -->
-        </div> <!-- .hero-header -->
-    </section> <!-- .hero -->
+        </div> <!-- .lv-hero -->
+
+    </div> <!-- .lv-hero-module -->
 
     <!-- BREADCRUMBS -->
     <nav class="breadcrumbs-bar">

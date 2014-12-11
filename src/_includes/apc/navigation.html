@@ -31,6 +31,7 @@
 
 		{% comment %} Second Level {% endcomment %}
 		{% if item.children and item.include_children_in_nav %}
+
 		<ul class="dropdown">
 			{% for item in item.children %}
 			<li class="{% if item.children %} has-dropdown {% endif %}"><a href="{{ item.url }}">{{ item.title }}</a>
