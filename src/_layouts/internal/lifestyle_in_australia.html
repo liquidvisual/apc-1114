@@ -1,0 +1,101 @@
+---
+layout: internal
+---
+
+{% assign nodes = site.data.apc.sitemap[2].children[0].children %}
+
+<!-- OUR CAMPUS LOCATIONS -->
+<div class="section has-medium-padding claim-section">
+    <div class="row">
+        <div class="medium-8 columns">
+            <h2>{{ page.title }}</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. Sed nulla orci, suscipit sit amet leo in, venenatis euismod mauris. Donec eu arcu ac arcu suscipit congue eget eu nulla. Praesent blandit, ipsum a facilisis faci...</p>
+        </div> <!-- .columns -->
+        <div class="medium-4 columns">
+            <div class="divider"></div>
+            <div class="button-list">
+            	<h5>On this Page</h5>
+                <ul class="triangle-list">
+                	{% for item in nodes %}
+                		<li><a href="#{{ item.url }}">{{ item.title }}</a></li>
+                	{% endfor %}
+                </ul>
+            </div>
+        </div> <!-- .columns -->
+    </div> <!-- .row -->
+</div> <!-- .our-courses-section -->
+
+{% for item in nodes %}
+
+<section class="section">
+	<div class="row">
+		<div class="columns">
+			<h3 id="{{ item.url }}">{{ item.title }}</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad sint quod numquam voluptas animi excepturi consectetur iure fugiat magni eveniet inventore eum, dolores quaerat molestiae laboriosam quas eos repudiandae modi.</p>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti accusamus eveniet iure minima neque, illo perspiciatis, voluptatem nobis eum sit necessitatibus, temporibus omnis officia dolorem, porro quo sequi minus in!</p>
+
+			<ul class="triangle-list small-block-grid-1 medium-block-grid-2">
+				{% for course in item.children %}
+				<li><a href="{{ course.url }}">{{ course.title }}</a></li>
+				{% endfor %}
+			</ul>
+
+			<!-- {% if item.children == null %}
+			    <p class="medium-text-right"><a href="{{ course_type.url }}" class="button swish">Find out more</a></p>
+			{% endif %} -->
+
+			{% unless forloop.last %}
+			    <hr>
+			{% endunless %}
+
+		</div> <!-- .columns -->
+	</div> <!-- .row -->
+</section>
+
+{% endfor %}
+
+
+<!-- ************************************************** -->
+
+<div class="row">
+	<div class="columns">
+		<div class="headed teacher">
+			<div class="heading">
+				<div class="padded">
+					<h3>Student Spotlight</h3>
+				</div>
+			</div>
+			{% for i in (1..3) %}
+			<div class="content teacher_block">
+				<div class="padded">
+					<div class="row">
+						<div class="large-3 columns">
+							<img alt="Apc teacher 200x200" class="small-12" src="/img/ui/no-face.png">
+							<br>
+							<br>
+						</div>
+						<div class="large-9 columns">
+
+							<h4 class="no-transform">John Smith<small>Spain</small></h4>
+
+							<div class="row">
+								<div class="small-6 columns">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere fugiat.</p>
+
+									<p>Course: <span class="primary-color">General English</span><br>
+									Occupation: <span class="primary-color">Lorem Ipsum</span><br>
+									Current City: <span class="primary-color">Sydney</span></p>
+								</div>
+								<div class="small-6 columns">
+									<p><em>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque odit totam harum doloremque ut ipsum, blanditiis veritatis labore nemo amet voluptas veniam temporibus, ipsa nulla animi quae consequatur rerum natus!"</em></p>
+								</div>
+							</div>
+
+						</div> <!-- .columns -->
+					</div> <!-- .row -->
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>

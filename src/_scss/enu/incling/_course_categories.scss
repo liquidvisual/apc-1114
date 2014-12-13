@@ -4,11 +4,11 @@
 
 /** Can be applied sitewide **/
 /** English Category **/
-.english_cat { 
+.english_cat {
   .heading { background: $english_cat; }
-  .content { 
+  .content {
     ul {
-      li:before { 
+      li:before {
         border-color: transparent $english_cat;
       }
     }
@@ -22,11 +22,11 @@ ul.triangle li.english_cat:before {
 
 
 /** Hospitality Cat **/
-.hospitality_cat { 
+.hospitality_cat {
   .heading { background: $hospitality_cat; }
-  .content { 
+  .content {
     ul {
-      li:before { 
+      li:before {
         border-color: transparent $hospitality_cat;
       }
     }
@@ -39,11 +39,11 @@ ul.triangle li.hospitality_cat:before {
 .border-bottom.hospitality_cat { border-bottom: 16px solid $hospitality_cat; margin-bottom: 2em; }
 
 /** Accounting Cat **/
-.accounting_cat { 
+.accounting_cat {
   .heading { background: $accounting_cat; }
-  .content { 
+  .content {
     ul {
-      li:before { 
+      li:before {
         border-color: transparent $accounting_cat;
       }
     }
@@ -56,11 +56,11 @@ ul.triangle li.accounting_cat:before {
  .border-bottom.accounting_cat { border-bottom: 16px solid $accounting_cat; margin-bottom: 2em; }
 
 /** Marketing Cat **/
-.marketing_cat { 
+.marketing_cat {
   .heading { background: $marketing_cat; }
-  .content { 
+  .content {
     ul {
-      li:before { 
+      li:before {
         border-color: transparent $marketing_cat;
       }
     }
@@ -73,11 +73,11 @@ ul.triangle li.marketing_cat:before {
  .border-bottom.marketing_cat { border-bottom: 16px solid $marketing_cat; margin-bottom: 2em; }
 
 /** Tourism Cat **/
-.tourism_cat { 
+.tourism_cat {
   .heading { background: $tourism_cat; }
-  .content { 
+  .content {
     ul {
-      li:before { 
+      li:before {
         border-color: transparent $tourism_cat;
       }
     }
@@ -90,11 +90,11 @@ ul.triangle li.tourism_cat:before {
  .border-bottom.tourism_cat { border-bottom: 16px solid $tourism_cat; margin-bottom: 2em; }
 
 /** Info Tech Category **/
-.information_tech_cat { 
+.information_tech_cat {
   .heading { background: $information_tech_cat; }
-  .content { 
+  .content {
     ul {
-      li:before { 
+      li:before {
         border-color: transparent $information_tech_cat;
       }
     }
@@ -107,11 +107,11 @@ ul.triangle li.information_tech_cat:before {
  .border-bottom.information_tech_cat { border-bottom: 16px solid $information_tech_cat; margin-bottom: 2em; }
 
 /** Business Cat **/
-.business_cat { 
+.business_cat {
   .heading { background: $business_cat; }
-  .content { 
+  .content {
     ul {
-      li:before { 
+      li:before {
         border-color: transparent $business_cat;
       }
     }
@@ -124,11 +124,11 @@ ul.triangle li.business_cat:before {
  .border-bottom.business_cat { border-bottom: 16px solid $business_cat; margin-bottom: 2em; }
 
 /** Management Cat **/
-.management_cat { 
+.management_cat {
   .heading { background: $management_cat; }
-  .content { 
+  .content {
     ul {
-      li:before { 
+      li:before {
         border-color: transparent $management_cat;
       }
     }
@@ -141,11 +141,11 @@ ul.triangle li.management_cat:before {
 .border-bottom.management_cat { border-bottom: 16px solid $management_cat; margin-bottom: 2em; }
 
 /** Tesol Cat **/
-.tesol_cat { 
+.tesol_cat {
   .heading { background: $tesol_cat; }
-  .content { 
+  .content {
     ul {
-      li:before { 
+      li:before {
         border-color: transparent $tesol_cat;
       }
     }

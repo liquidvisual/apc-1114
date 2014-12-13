@@ -1,0 +1,54 @@
+/*
+    LISTS.CSS
+
+    - Last updated: 10.12.14
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+
+.triangle-list {
+	list-style: none;
+	margin-left: 0;
+
+	li {
+		padding-left: rem-calc(8);
+
+		a:before {
+			content: "\f0da";
+			// content: "\f04b";
+			font-family: "FontAwesome";
+			position: relative;
+			top: 1px;
+			left: -5px;
+			font-size: rem-calc(17);
+			color: $primary-color;
+		}
+	}
+
+	&[class*='block-grid'] li {
+		padding-bottom: 0; // Let list items set their own inner padding
+	}
+}
+
+.english-cat .triangle-list a:before { color: $english_cat; }
+.hospitality-cat .triangle-list a:before { color: $hospitality_cat; }
+.accounting-cat .triangle-list a:before { color: $accounting_cat; }
+.marketing-cat .triangle-list a:before { color: $marketing_cat; }
+.tourism-cat .triangle-list a:before { color: $tourism_cat; }
+.information-tech-cat .triangle-list a:before { color: $information_tech_cat; }
+.business-cat .triangle-list a:before { color: $business_cat; }
+.management-cat .triangle-list a:before { color: $management_cat; }
+.tesol-cat .triangle-list a:before { color: $tesol_cat; }
+
+.triangle-list li:before {
+
+}
+
+//=========================================
+//
+//=========================================

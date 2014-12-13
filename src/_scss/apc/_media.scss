@@ -23,6 +23,34 @@
         padding: rem-calc(15 30);
     }
 
+    &.english-cat h3 {
+        background: $english_cat;
+    }
+    &.hospitality-cat h3 {
+        background: $hospitality_cat;
+    }
+    &.accounting-cat h3 {
+        background: $accounting_cat;
+    }
+    &.marketing-cat h3 {
+        background: $marketing_cat;
+    }
+    &.tourism-cat h3 {
+        background: $tourism_cat;
+    }
+    &.information-tech-cat h3 {
+        background: $information_tech_cat;
+    }
+    &.business-cat h3 {
+        background: $business_cat;
+    }
+    &.management-cat h3 {
+        background: $management_cat;
+    }
+    &.tesol-cat h3 {
+        background: $tesol_cat;
+    }
+
     .info-tile-body {
 
         padding: rem-calc(30);

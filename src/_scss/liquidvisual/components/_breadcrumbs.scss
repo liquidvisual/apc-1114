@@ -1,7 +1,7 @@
 /*
 	LIQUIDVISUAL BREADCRUMBS :: A Personal Framework
 
-	- updated: 23.11.14
+	- updated: 12.12.14
 	- liquidvisual.com
 
 	- Notes -
@@ -16,12 +16,15 @@
 //-----------------------------------------------------------------
 
 .lv-breadcrumbs {
-	margin: 0 0 rem-calc(15) 0;
-	padding: 0 0 rem-calc(15) 0;
-	border-bottom: 1px solid #ECECEC;
+	margin: 0 0 0 0;
+	// padding: 0 0 rem-calc(15) 0;
+	padding: rem-calc(6 0);
+	// border-bottom: 1px solid #ECECEC;
+	border-bottom: 0;
 	font-size: 0.80em;
 	font-weight: 400;
 	list-style: none;
+	text-transform: capitalize;
 
 	li {
 		display: inline-block;

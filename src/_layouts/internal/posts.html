@@ -1,0 +1,84 @@
+---
+layout: internal
+---
+
+<!-- OUR CAMPUS LOCATIONS -->
+<div class="section has-medium-padding claim-section">
+    <div class="row">
+        <div class="columns">
+            <h2>{{ page.title }}</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. Sed nulla orci, suscipit sit amet leo in, venenatis euismod mauris. Donec eu arcu ac arcu suscipit congue eget eu nulla. Praesent blandit, ipsum a facilisis faci...</p>
+        </div> <!-- .columns -->
+    </div> <!-- .row -->
+</div> <!-- .our-courses-section -->
+
+<div class="row">
+	<div class="columns">
+		<div class="headed">
+
+			<div class="heading">
+				<div class="padded">
+					<div class="row filters">
+						<div class="columns large-4 small-12">
+							Filter by Location
+							<div class="drop_filter">
+								<a data-dropdown="drop1" data-options="is_hover:true" href="#"><i class="fa fa-play"></i> Sydney</a>
+								<ul class="f-dropdown" data-dropdown-content="" id="drop1">
+									<li class="drop-select"><a href="#">This is a link</a></li>
+									<li class="drop-select"><a href="#">This is a link</a></li>
+									<li class="drop-select"><a href="#">This is a link</a></li>
+								</ul>
+							</div>
+						</div> <!-- .columns -->
+						<div class="columns large-4 small-12">
+							Filter by School
+							<div class="drop_filter">
+								<a data-dropdown="drop2" data-options="is_hover:true" href="#"><i class="fa fa-play"></i> Sydney</a>
+								<ul class="f-dropdown" data-dropdown-content="" id="drop2">
+									<li><a href="#">This is a link</a></li>
+									<li><a href="#">This is a link</a></li>
+									<li><a href="#">This is a link</a></li>
+								</ul>
+							</div>
+						</div> <!-- .columns -->
+						<div class="columns large-4 small-12">
+							Filter by Subject
+							<div class="drop_filter">
+								<a data-dropdown="drop3" data-options="is_hover:true" href="#"><i class="fa fa-play"></i> Sydney</a>
+								<ul class="f-dropdown" data-dropdown-content="" id="drop3">
+									<li><a href="#">This is a link</a></li>
+									<li><a href="#">This is a link</a></li>
+									<li><a href="#">This is a link</a></li>
+								</ul>
+							</div>
+						</div> <!-- .columns -->
+					</div> <!-- .row -->
+				</div> <!-- .padded -->
+			</div> <!-- .heading -->
+
+			<div class="content">
+				<div class="padded">
+					{% for i in (1..4) %}
+
+					<div class="news_teaser row">
+						<div class="small-12 large-3 columns">
+							<p><img alt="Apc news 200x200" src="http://placehold.it/200x200"></p>
+						</div>
+						<div class="small-12 large-9 columns">
+							<h4><a href="/news-and-events/news/news-item/">{{ page.title }} Heading<small class="date">Sunday, 1 October 2013</small></a></h4>
+
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. Sed nulla orci, suscipit sit amet leo in, venenatis euismod mauris. Donec eu arcu ac arcu suscipit congue eget eu nulla. Praesent blandit, ipsum a facilisis facilisis, diam sem consectetur lectus, eget efficitur nisi elit nec tellus. Morbi rutrum luctus suscipit. Nam mattis fringilla leo eget vulputa...</p>
+
+							<div class="action_bar text-right">
+								<a class="button medium round swish" href="/news-and-events/news/news-item/"><i class="fa fa-play"></i> Read More</a>
+							</div>
+						</div>
+					</div> <!-- .news_teaser -->
+					{% endfor %}
+				</div> <!-- .padded -->
+			</div> <!-- .content -->
+
+		</div> <!-- .headed -->
+	</div> <!-- .columns -->
+</div> <!-- .row -->
+

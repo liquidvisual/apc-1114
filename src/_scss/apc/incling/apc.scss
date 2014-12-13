@@ -7,7 +7,7 @@
 // @import "buttons";
 // @import "heroes";
 @import "steps";
-// @import "course";
+@import "course";
 @import "blocks";
 @import "teasers";
 @import "course_categories";
@@ -97,7 +97,7 @@ a.button:hover {
   padding-bottom: 2em;
   background: #d5d6d8;
   .button { width: 100%; margin: 0 0 .8em 0 }
-  hr { margin: .7em 0 1em; color: #fff; }
+  // hr { margin: .7em 0 1em; color: #fff; }
   h4, h5 { text-transform: uppercase; font-weight: bold; }
   h4 { font-size: 1em;}
   h5 { font-size: .9em;}

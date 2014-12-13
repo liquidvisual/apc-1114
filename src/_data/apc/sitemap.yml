@@ -3,55 +3,215 @@
 
 - title: Courses
   url: /courses/
-  include_children_in_nav: true
+  include_children_in_nav: false
   children:
     - title: English Courses
-      url: /courses/english/
+      url: "/courses/english-courses/"
+      include_children_in_nav: false
+      children:
+        - title: General English
+          url: /courses/english-courses/course-item/
+          category: English
+
+        - title: English for Academic Purposes
+          url: /courses/english-courses/course-item/
+          category: English
+
+        - title: "English for Tourism & Hospitality"
+          url: /courses/english-courses/course-item/
+          category: English
+
+        - title: Business English
+          url: /courses/english-courses/course-item/
+          category: English
+
+        - title: High School Preparation
+          url: /courses/english-courses/course-item/
+          category: English
+
+        - title: Private English Lessons
+          url: /courses/english-courses/course-item/
+          category: English
+
+        - title: Exams Preparation
+          url: /courses/english-courses/course-item/
+          category: English
+
     - title: Vocational Courses
-      url: /courses/vocational/
+      url: /courses/vocational-courses/
+      include_children_in_nav: false
+      children:
+        - title: Certificate III in Hospitality
+          url: /courses/vocational-courses/course-item/
+          category: Hospitality
+
+        - title: Certificate II in Hospitality
+          url: /courses/vocational-courses/course-item/
+          category: Hospitality
+
+        - title: Diploma of Hospitality
+          url: /courses/vocational-courses/course-item/
+          category: Hospitality
+
+        - title: Certificate IV in Accounting
+          url: /courses/vocational-courses/course-item/
+          category: Accounting
+
+        - title: Diploma of Accounting
+          url: /courses/vocational-courses/course-item/
+          category: Accounting
+
+        - title: Advanced Diploma of Accounting
+          url: /courses/vocational-courses/course-item/
+          category: Accounting
+
+        - title: Certificate IV in Marketing
+          url: /courses/vocational-courses/course-item/
+          category: Marketing
+
+        - title: Diploma of Marketing
+          url: /courses/vocational-courses/course-item/
+          category: Marketing
+
+        - title: Advanced Diploma of Marketing
+          url: /courses/vocational-courses/course-item/
+          category: Marketing
+
+        - title: Certificate III in Tourism
+          url: /courses/vocational-courses/course-item/
+          category: Tourism
+
+        - title: Diploma of Tourism
+          url: /courses/vocational-courses/course-item/
+          category: Tourism
+
+        - title: Diploma of Systems Analysis and Design
+          url: /courses/vocational-courses/course-item/
+          category: Information Tech
+
+        - title: Certificate II in Business
+          url: /courses/vocational-courses/course-item/
+          category: Business
+
+        - title: Certificate III in Business
+          url: /courses/vocational-courses/course-item/
+          category: Business
+
+        - title: Diploma of Management
+          url: /courses/vocational-courses/course-item/
+          category: Management
+
+        - title: Advanced Diploma Management
+          url: /courses/vocational-courses/course-item/
+          category: Management
+
+        - title: Certificate IV in Communicative TESOL
+          url: /courses/vocational-courses/course-item/
+          category: Tesol
+
+        - title: Foundations of Communicative TESOL
+          url: /courses/vocational-courses/course-item/
+          category: Tesol
+
     - title: Direct Entry Pathways
       url: /courses/direct-entry-pathways/
+
     - title: University Pathways
       url: /courses/university-pathways/
 
 - title: Learning Environment
-  url: /learning-environment/
-  include_children_in_nav: true
+  url: /learning-environment/lifestyle-in-australia/
+  include_children_in_nav: false
   children:
     - title: Lifestyle in Australia
       url: /learning-environment/lifestyle-in-australia/
+      include_children_in_nav: false
+      children:
+        - title: Overview
+          url: "/learning-environment/lifestyle-in-australia/#overview"
+        - title: Climate
+          url: "/learning-environment/lifestyle-in-australia/#climate"
+        - title: Cost of Living
+          url: "/learning-environment/lifestyle-in-australia/#cost-of-living"
+        - title: Transportation
+          url: "/learning-environment/lifestyle-in-australia/#transportation"
+
     - title: Campuses
       url: /learning-environment/campuses/
 
 - title: Applications
-  url: /applications/
-  include_children_in_nav: true
+  url: /applications/how-to-apply/
+  include_children_in_nav: false
   children:
     - title: How to Apply
       url: /applications/how-to-apply/
+      include_children_in_nav: false
+      children:
+        - title: Course Fees
+          url: "/applications/how-to-apply/#course-fees"
+        - title: How to Pay
+          url: "/applications/how-to-apply/#how-to-pay"
+
     - title: Forms and Downloads
       url: /applications/forms-and-downloads/
     - title: Apply Now
       url: /applications/apply-now/
 
 - title: Student Services
-  url: /student-services/
-  include_children_in_nav: true
+  url: /student-services/student-support/
+  include_children_in_nav: false
   children:
     - title: Student Support
       url: /student-services/student-support/
-      include_children_in_nav: true
+      include_children_in_nav: false
       children:
+        - title: International Students
+          url: "/student-services/student-support/#international-students"
+          include_children_in_nav: false
+          children:
+            - title: Meet and Greet
+              url: "/student-services/student-support/#meet-and-greet"
+            - title: Visa Applications
+              url: "/student-services/student-support/#visa-applications"
+            - title: Visa Conditions
+              url: "/student-services/student-support/#visa-conditions"
         - title: Accomodation
           url: "/student-services/student-support/#accomodation"
-          include_children_in_nav: true
+          include_children_in_nav: false
+          children:
+            - title: Homestay
+              url: "/student-services/student-support/#homestay"
+            - title: Hostel
+              url: "/student-services/student-support/#hostel"
+            - title: Hotel
+              url: "/student-services/student-support/#hotel"
+        - title: Job Assistance
+          url: "/student-services/student-support/#job-assistance"
+          include_children_in_nav: false
+          children:
+            - title: Overview
+              url: "/student-services/student-support/#overview"
+            - title: Internships
+              url: "/student-services/student-support/#internships"
+        - title: Other Services
+          url: "/student-services/student-support/#other-services"
+          include_children_in_nav: false
+          children:
+            - title: Health Services
+              url: "/student-services/student-support/#health-services"
+            - title: Emergency Services
+              url: "/student-services/student-support/#emergency-services"
+            - title: Legal Services
+              url: "/student-services/student-support/#legal-services"
+        - title: Contact Student Services
+          url: "/student-services/student-support/#contact-student-services"
 
     - title: FAQ
       url: /student-services/faq/
 
 - title: News and Events
-  url: /news-and-events/
-  include_children_in_nav: true
+  url: /news-and-events/news/
+  include_children_in_nav: false
   children:
     - title: News
       url: /news-and-events/news/
@@ -62,7 +222,7 @@
 
 - title: About Us
   url: /about-us/
-  include_children_in_nav: true
+  include_children_in_nav: false
   children:
     - title: History
       url: /about-us/history/
@@ -76,11 +236,11 @@
       url: /about-us/complicance-forms/
 
 - title: Contact Us
-  url: /contact-us/
-  include_children_in_nav: true
+  url: /contact-us/make-an-enquiry/
+  include_children_in_nav: false
   children:
     - title: Enquiry Form
-      url: /contact-us/enquiry-form/
+      url: /contact-us/make-an-enquiry/
     - title: Staff Chat
       url: /contact-us/staff-chat/
     - title: Agents

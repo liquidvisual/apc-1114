@@ -2,13 +2,13 @@
 layout: internal
 ---
 
-{% assign course_types = site.data.apc.sitemap[1].children %}
+{% assign nodes = site.data.apc.sitemap[3].children[0].children %}
 
 <!-- OUR CAMPUS LOCATIONS -->
 <div class="section has-medium-padding claim-section">
     <div class="row">
         <div class="medium-8 columns">
-            <h2>Courses</h2>
+            <h2>{{ page.title }}</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. Sed nulla orci, suscipit sit amet leo in, venenatis euismod mauris. Donec eu arcu ac arcu suscipit congue eget eu nulla. Praesent blandit, ipsum a facilisis faci...</p>
         </div> <!-- .columns -->
         <div class="medium-4 columns">
@@ -16,8 +16,8 @@ layout: internal
             <div class="button-list">
             	<h5>On this Page</h5>
                 <ul class="triangle-list">
-                	{% for course_type in course_types %}
-                		<li><a href="#{{ course_type.url }}">{{ course_type.title }}</a></li>
+                	{% for item in nodes %}
+                		<li><a href="#{{ item.url }}">{{ item.title }}</a></li>
                 	{% endfor %}
                 </ul>
             </div>
@@ -25,39 +25,75 @@ layout: internal
     </div> <!-- .row -->
 </div> <!-- .our-courses-section -->
 
-{% for course_type in course_types %}
+<div class="row">
+	<div class="columns">
+
+		<div id="steps-to-apply">
+			{% for i in (1..5) %}
+			<div class="step">
+				<div class="padded">
+					<div class="row bottom_line">
+						<div class="large-8 columns">
+							<h3>Step 1</h3>
+						</div>
+						<div class="large-4 columns hide-for-small-only">
+							<div class="padded">
+								<h5>Information Links</h5>
+							</div>
+						</div>
+					</div>
+					<br>
+					<div class="row">
+						<div class="large-8 columns">
+							<h4>Some Title</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. Sed nulla orci, suscipit sit amet leo in, venenatis euismod mauris. Donec eu arcu ac arcu suscipit congue eget eu nulla. Praesent blandit, ipsum a facilisis facilisis, diam sem consectetur lectus, eget...</p>
+						</div>
+						<div class="large-4 columns">
+							<div class="padded">
+								<ul class="triangle">
+									<li><a href="/how-to-apply">Some Link</a></li>
+									<li><a href="/how-to-apply">Some Link</a></li>
+									<li><a href="/how-to-apply">Some Link</a></li>
+									<li><a href="/how-to-apply">Some Link</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+
+	</div>
+</div>
+
+
+{% for item in nodes %}
 
 <section class="section">
 	<div class="row">
 		<div class="columns">
-			<h3 id="{{ course_type.url }}">{{ course_type.title }}</h3>
+			<h3 id="{{ item.url }}">{{ item.title }}</h3>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad sint quod numquam voluptas animi excepturi consectetur iure fugiat magni eveniet inventore eum, dolores quaerat molestiae laboriosam quas eos repudiandae modi.</p>
 
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti accusamus eveniet iure minima neque, illo perspiciatis, voluptatem nobis eum sit necessitatibus, temporibus omnis officia dolorem, porro quo sequi minus in!</p>
 
 			<ul class="triangle-list small-block-grid-1 medium-block-grid-2">
-				{% for course in course_type.children %}
+				{% for course in item.children %}
 				<li><a href="{{ course.url }}">{{ course.title }}</a></li>
 				{% endfor %}
 			</ul>
 
-			{% if course_type.children == null %}
+			<!-- {% if item.children == null %}
 			    <p class="medium-text-right"><a href="{{ course_type.url }}" class="button swish">Find out more</a></p>
-			{% endif %}
+			{% endif %} -->
 
 			{% unless forloop.last %}
 			    <hr>
 			{% endunless %}
 
-		</div>
-	</div>
-	<div class="row">
-		<div class="medium-6 columns">
-
-		</div>
-		<div class="medium-6 columns"></div>
-	</div>
-
+		</div> <!-- .columns -->
+	</div> <!-- .row -->
 </section>
 
 {% endfor %}

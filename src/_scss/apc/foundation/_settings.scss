@@ -81,7 +81,7 @@ $include-html-global-classes: $include-html-classes;
 
 // $row-width: rem-calc(1000);
 // $total-columns: 12;
-// $column-gutter: rem-calc(30);
+$column-gutter: rem-calc(30);
 
 // c. Global
 // - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -285,7 +285,7 @@ $paragraph-font-size: rem-calc(14); //1rem;
 // $hr-border-width: 1px;
 // $hr-border-style: solid;
 // $hr-border-color: $gainsboro;
-// $hr-margin: rem-calc(20);
+$hr-margin: rem-calc(30);
 
 // We use these to style lists
 // $list-font-family: $paragraph-font-family;
