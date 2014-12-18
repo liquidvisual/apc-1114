@@ -3,11 +3,11 @@
 
 - title: Courses
   url: /courses/
-  include_children_in_nav: false
+  include_children_in_nav: true
   children:
     - title: English Courses
       url: "/courses/english-courses/"
-      include_children_in_nav: false
+      include_children_in_nav: true
       children:
         - title: General English
           url: /courses/english-courses/course-item/
@@ -39,7 +39,7 @@
 
     - title: Vocational Courses
       url: /courses/vocational-courses/
-      include_children_in_nav: false
+      include_children_in_nav: true
       children:
         - title: Certificate III in Hospitality
           url: /courses/vocational-courses/course-item/
@@ -121,11 +121,11 @@
 
 - title: Learning Environment
   url: /learning-environment/lifestyle-in-australia/
-  include_children_in_nav: false
+  include_children_in_nav: true
   children:
     - title: Lifestyle in Australia
       url: /learning-environment/lifestyle-in-australia/
-      include_children_in_nav: false
+      include_children_in_nav: true
       children:
         - title: Overview
           url: "/learning-environment/lifestyle-in-australia/#overview"
@@ -141,11 +141,11 @@
 
 - title: Applications
   url: /applications/how-to-apply/
-  include_children_in_nav: false
+  include_children_in_nav: true
   children:
     - title: How to Apply
       url: /applications/how-to-apply/
-      include_children_in_nav: false
+      include_children_in_nav: true
       children:
         - title: Course Fees
           url: "/applications/how-to-apply/#course-fees"
@@ -159,15 +159,15 @@
 
 - title: Student Services
   url: /student-services/student-support/
-  include_children_in_nav: false
+  include_children_in_nav: true
   children:
     - title: Student Support
       url: /student-services/student-support/
-      include_children_in_nav: false
+      include_children_in_nav: true
       children:
         - title: International Students
           url: "/student-services/student-support/#international-students"
-          include_children_in_nav: false
+          include_children_in_nav: true
           children:
             - title: Meet and Greet
               url: "/student-services/student-support/#meet-and-greet"
@@ -177,7 +177,7 @@
               url: "/student-services/student-support/#visa-conditions"
         - title: Accomodation
           url: "/student-services/student-support/#accomodation"
-          include_children_in_nav: false
+          include_children_in_nav: true
           children:
             - title: Homestay
               url: "/student-services/student-support/#homestay"
@@ -187,7 +187,7 @@
               url: "/student-services/student-support/#hotel"
         - title: Job Assistance
           url: "/student-services/student-support/#job-assistance"
-          include_children_in_nav: false
+          include_children_in_nav: true
           children:
             - title: Overview
               url: "/student-services/student-support/#overview"
@@ -195,7 +195,7 @@
               url: "/student-services/student-support/#internships"
         - title: Other Services
           url: "/student-services/student-support/#other-services"
-          include_children_in_nav: false
+          include_children_in_nav: true
           children:
             - title: Health Services
               url: "/student-services/student-support/#health-services"
@@ -211,7 +211,7 @@
 
 - title: News and Events
   url: /news-and-events/news/
-  include_children_in_nav: false
+  include_children_in_nav: true
   children:
     - title: News
       url: /news-and-events/news/
@@ -221,8 +221,8 @@
       url: /news-and-events/media/
 
 - title: About Us
-  url: /about-us/
-  include_children_in_nav: false
+  url: /about-us/history/
+  include_children_in_nav: true
   children:
     - title: History
       url: /about-us/history/
@@ -237,7 +237,7 @@
 
 - title: Contact Us
   url: /contact-us/make-an-enquiry/
-  include_children_in_nav: false
+  include_children_in_nav: true
   children:
     - title: Enquiry Form
       url: /contact-us/make-an-enquiry/

@@ -20,35 +20,33 @@
 {% assign url_paths = page.url | downcase | split: '/' %}
 
 <ul>
-	{% comment %} Important: leave 'Home' out of the loop {% endcomment %}
+	<!-- Important: leave 'Home' out of the loop -->
 	<li class="{% if page.url == "/" %} active {% endif %}"><a href="/">Home</a></li>
 
-	{% comment %} First Level {% endcomment %}
+	<!-- FIRST LEVEL -->
 	{% for item in sitemap | offset: 1 %}
 	{% assign active_path = item.title | downcase | slugify %}
 	<li class="{% for path in url_paths %}{% if path == active_path %}active{% endif %}{% endfor %}{% if item.children %} has-dropdown {% endif %}">
 		<a href="{{ item.url }}">{{ item.title }}</a>
 
-		{% comment %} Second Level {% endcomment %}
+		<!-- SECOND LEVEL DROPDOWN -->
 		{% if item.children and item.include_children_in_nav %}
-
-		<ul class="dropdown">
-			{% for item in item.children %}
-			<li class="{% if item.children %} has-dropdown {% endif %}"><a href="{{ item.url }}">{{ item.title }}</a>
-
-				{% comment %} Third Level {% endcomment %}
-				{% if item.children and item.include_children_in_nav %}
-				<ul class="dropdown">
-					{% for item in item.children %}
-						<li><a href="{{ item.url }}">{{ item.title }}</a></li>
-					{% endfor %}
-				</ul>
-				{% endif %}
-
-			</li>
-			{% endfor %}
-		</ul>
+		<div class="dropdown">
+			<ul class="medium-block-grid-3 large-block-grid-4">
+				{% for item in item.children %}
+					<li>
+						<ul class="triangle-listX">
+							<li><h5>{{ item.title }}</h5></li>
+							{% for item in item.children %}
+								<li><a href="{{ item.url }}">{{ item.title }}</a></li>
+							{% endfor %}
+						</ul>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
 		{% endif %}
+
 	</li>
 	{% endfor %}
 </ul>
