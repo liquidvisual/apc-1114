@@ -2,34 +2,35 @@
 layout: internal
 ---
 
-{% assign nodes = site.data.apc.sitemap[4].children[0].children %}
+{% assign page_breaks = site.data.apc.sitemap[4].children[0].children %}
 
-<!-- OUR CAMPUS LOCATIONS -->
-<div class="section has-medium-padding claim-section">
+<!-- CLAIM SECTION -->
+<section class="section claim-section has-medium-padding">
     <div class="row">
-        <div class="medium-8 columns">
-            <h2>{{ page.title }}</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. Sed nulla orci, suscipit sit amet leo in, venenatis euismod mauris. Donec eu arcu ac arcu suscipit congue eget eu nulla. Praesent blandit, ipsum a facilisis faci...</p>
-        </div> <!-- .columns -->
-        <div class="medium-4 columns">
-            <div class="divider"></div>
-            <div class="button-list">
-            	<h5>On this Page</h5>
-                <ul class="triangle-list">
-                	{% for item in nodes %}
-                		<li><a href="#{{ item.url }}">{{ item.title }}</a></li>
-                	{% endfor %}
-                </ul>
+        <div class="columns">
+            <div class="claim-module">
+                <div class="claim-left">
+                    <h2>{{ page.title }}</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio ipsum dolor sit amet.</p>
+                </div>
+                <div class="claim-right">
+                    <h5>On this Page</h5>
+	                <ul class="triangle-list">
+	                	{% for item in page_breaks %}
+	                		<li><a href="#{{ item.url }}">{{ item.title }}</a></li>
+	                	{% endfor %}
+	                </ul>
+                </div>
             </div>
-        </div> <!-- .columns -->
-    </div> <!-- .row -->
-</div> <!-- .our-courses-section -->
+        </div>
+    </div>
+</section> <!-- .claim-section -->
 
 <div class="smoked">
 	<div class="row">
 		<div class="padded">
 
-			{% for item in nodes %}
+			{% for item in page_breaks %}
 			<!-- BLOCK start -->
 			<div class="block section" id="{{ item.url }}">
 				<div class="padded">

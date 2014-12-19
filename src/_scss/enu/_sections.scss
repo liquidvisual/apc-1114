@@ -8,7 +8,7 @@
 // Variables
 //-----------------------------------------------------------------
 
-$intro-section-max-height: rem-calc(128); // the claim inside hero
+// $intro-section-max-height: rem-calc(128); // the claim inside hero
 
 //-----------------------------------------------------------------
 // Intro Section
@@ -37,7 +37,7 @@ $intro-section-max-height: rem-calc(128); // the claim inside hero
         background: white;
 
         @media #{$large-up} {
-            position: absolute;
+            // position: absolute;
             width: 100%;
             overflow: hidden;
             background: rgba(255, 255, 255, 0.7);

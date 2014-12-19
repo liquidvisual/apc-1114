@@ -1,7 +1,7 @@
 /*
 	LIQUIDVISUAL SECTIONS :: A Personal Framework
 
-	- updated: 02.12.14
+	- updated: 19.12.14
 	- liquidvisual.com
 
 	- Notes -
@@ -129,41 +129,61 @@ $color-section-bg-5: aqua !default;
     background: white;
     border-bottom: 1px solid #e1e1e1;
 
-    .divider {
-        @media #{$medium-up} {
-            background: #e1e1e1;
-            width: 1px;
-            height: 130px;
-            position: absolute;
-            top: 50%;
-            left: 15%;
-            margin-top: -65px;
-        }
-        @media #{$large-up} {
-            left: 0;
-        }
-        @media #{$xlarge-up} {
-            left: 10%;
-        }
-    }
+    // &.has-small-padding  { padding: rem-calc(20);  }
+    // &.has-medium-padding { padding: rem-calc(30);  }
+    // &.has-large-padding  { padding: rem-calc(50);  }
+    // &.has-xlarge-padding { padding: rem-calc(100); }
+
+    // @media #{$large-up} {
+    //     &.has-small-padding  { padding: rem-calc(20 0);  }
+    //     &.has-medium-padding { padding: rem-calc(30 0);  }
+    //     &.has-large-padding  { padding: rem-calc(50 0);  }
+    //     &.has-xlarge-padding { padding: rem-calc(100 0); }
+    // }
 }
 
-//=========================================
-//
-//=========================================
+//-----------------------------------------------------------------
+// Claim Module
+//-----------------------------------------------------------------
 
-.claim-section .button-list {
-    position: relative;
-
+.claim-module {
     @media #{$medium-up} {
-        padding: rem-calc(20 0);
+        display: table;
     }
 
-    a {
-        margin: rem-calc(10 0);
+    .claim-left,
+    .claim-right {
+        @media #{$medium-up} {
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+
+    .claim-left {
+        @media #{$medium-up} {
+            position: relative;
+            width: 65%;
+            padding-right: rem-calc(40);
+
+            &:after {
+                content: "";
+                position: absolute;
+                top: 10%;
+                right: 0;
+                width: 1px;
+                height: 80%;
+                background: #ddd;
+            }
+        }
 
         @media #{$large-up} {
-            margin: rem-calc(10 0);
+            width: 70%;
+        }
+    }
+
+    .claim-right {
+        @media #{$medium-up} {
+            padding-left: rem-calc(40);
         }
     }
 }

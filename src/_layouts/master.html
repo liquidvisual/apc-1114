@@ -102,9 +102,9 @@
     <nav class="js-off-canvas-menu hide" aria-hidden="true">
 
         {% if page.site_type == "enu" %}
-            {% include enu/navigation.html %}
+            {% include shared/navigation.html data=site.data.enu.sitemap %}
         {% else %}
-            {% include apc/navigation.html %}
+            {% include shared/navigation.html data=site.data.apc.sitemap %}
         {% endif %}
 
     </nav>
@@ -125,12 +125,10 @@
     <script src="/_bower_components/jquery/dist/jquery.min.js"></script>
     <script src="/_bower_components/jquery-placeholder/jquery.placeholder.js"></script>
     <script src="/_bower_components/jQuery.mmenu/src/js/jquery.mmenu.min.all.js"></script>
-
-    <!-- SHARED -->
     <script src="/_bower_components/slick.js/slick/slick.js"></script>
-
     <script src="/_bower_components/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
     <script src="/_bower_components/bxSlider/jquery.bxslider.min.js"></script>
+    <script src="/_bower_components/fastclick/lib/fastclick.js"></script>
     <script src="/_bower_components/nprogress/nprogress.js"></script>
 
     <script src="/_bower_components/foundation/js/foundation/foundation.js"></script>
@@ -169,7 +167,6 @@
 
     <script>
         $(document).foundation();
-        $(".js-off-canvas-menu").mmenu({ "offCanvas": { "position": "left" }});
     </script>
 
     <!-- Google Analytics Here -->

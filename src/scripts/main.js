@@ -53,7 +53,6 @@ function setupHero() {
         nextText: "",
         prevText: "",
         infiniteLoop: true,
-        touchEnabled: true,
         useCSS: true,
         pager: (TOUCH_ENABLED ? false : true),
         pagerSelector: '.lv-hero-carousel-bullets',
@@ -84,7 +83,7 @@ function setupHero() {
 // Testimonial Slider
 //-----------------------------------------------------------------
 
-$('#testimonial-slider').slick({
+$('.testimonial-slider').slick({
   autoplay: true,
   centerMode: true,
   slidesToShow: 3,
@@ -144,14 +143,20 @@ $('#testimonial-slider').slick({
 // });
 
 //-----------------------------------------------------------------
+// Off Canvas Menu
+//-----------------------------------------------------------------
+
+$(".js-off-canvas-menu").mmenu({ "offCanvas": { "position": "left" }});
+
+//-----------------------------------------------------------------
 // Kickstart Foundation / Touch Conditionals
 //-----------------------------------------------------------------
 
 var touchEvent = TOUCH_ENABLED ? "touchstart" : "click";
 
 //Trigger hamburger by touch on mobile - this eliminates glitch with FastClick.js
-$(".header-mobile-menu").css({"visibility": "visible"}).bind(touchEvent, function() {
-    $(".js-off-canvas-menu").trigger("open.mm");
+$(".header-mobile-menu").bind(touchEvent, function() {
+    $(".js-off-canvas-menu").removeClass('hide').trigger("open.mm");
 });
 
 if (TOUCH_ENABLED) {

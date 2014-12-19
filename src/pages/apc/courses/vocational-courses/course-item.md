@@ -1,5 +1,5 @@
 ---
-layout: internal/course-item
+layout: internal/course_item
 title: Course Item
 permalink: /courses/vocational-courses/course-item/
 ---

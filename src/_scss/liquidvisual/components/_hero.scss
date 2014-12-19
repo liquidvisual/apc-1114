@@ -2,7 +2,7 @@
 /*
     LIQUIDVISUAL HERO :: A Personal Framework
 
-    - updated: 10.12.14
+    - updated: 19.12.14
     - liquidvisual.com
 
     - Notes -
@@ -14,15 +14,16 @@
 //-----------------------------------------------------------------
 
 // Hero
-$hero-height: rem-calc(500);
-$hero-background-attachment: inherit;
+$hero-height: rem-calc(150) !default;
+$hero-height-medium: rem-calc(500) !default;
+$hero-background-attachment: inherit !default;
 
 // Captions
-$hero-caption-header-font-family: $header-font-family;
-$hero-caption-header-font-size: rem-calc(25);
-$hero-caption-header-font-size-medium: $h1-font-size;
-$hero-caption-paragraph-font-size: rem-calc(25);
-$hero-caption-color: white;
+$hero-caption-header-font-family: $header-font-family !default;
+$hero-caption-header-font-size: rem-calc(25) !default;
+$hero-caption-header-font-size-medium: $h1-font-size !default;
+$hero-caption-paragraph-font-size: rem-calc(25) !default;
+$hero-caption-color: white !default;
 
 // Carousel
 $hero-carousel-bullet-size: 12px;
@@ -44,10 +45,14 @@ $hero-carousel-bullet-size: 12px;
 
     &.has-fixed-height {
         height: $hero-height;
+
+        @media #{$medium-up} {
+            height: $hero-height-medium;
+        }
     }
 
     @media #{$medium-up} {
-       height: $hero-height;
+       height: $hero-height-medium;
     }
 }
 

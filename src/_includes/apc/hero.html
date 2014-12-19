@@ -1,7 +1,7 @@
 {% assign hero_images = site.data.apc.carousel_slides %}
 
 <!-- HERO MODULE -->
-<div class="js-carousel lv-hero-module">
+<div class="js-carousel lv-hero-module has-fixed-height">
 
     {% for hero in hero_images %}
 
@@ -10,7 +10,7 @@
         <div class="row lv-vertical-center">
 
             <!-- Caption -->
-            <div class="medium-8 columns">
+            <div class="medium-8 columns show-for-medium-up">
                 <div class="lv-hero-caption animated">
                     <h1>{{ hero.caption_title }}</h1>
                     <div class="lv-hero-caption-body">
