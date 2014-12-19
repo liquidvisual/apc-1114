@@ -30,18 +30,22 @@
 
 .image-group-photo {
     background-image: url(../img/apc/content/heroes/APC_Home_02.jpg);
-    height: 380px;
+    height: rem-calc(570);
     margin-bottom: 0;
 
-    @media #{$medium-up} {
+    @media #{$xxlarge-up} {
         background-attachment: fixed;
     }
 }
 
 .image-bridge-photo {
     background-image: url(../img/apc/content/heroes/APC_Home_03.jpg);
-    height: 380px;
+    height: rem-calc(570);
     margin-bottom: 0;
+
+    @media #{$xxlarge-up} {
+        background-attachment: fixed;
+    }
 }
 
 //=========================================

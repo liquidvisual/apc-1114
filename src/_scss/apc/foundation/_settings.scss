@@ -175,10 +175,10 @@ $global-rounded: 1000px;
 // $xxlarge-range: (120.063em, 99999999em);
 
 $small-range: (0em, 40em);   // 0-640
-$medium-range: (48em, 48em); // 768
-$large-range: (62.500em, 62.500em);  // 980
-$xlarge-range: (61.313em, 80em); // 981 +
-$xxlarge-range: (80.063em); // 980 +
+$medium-range: (40.063em, 48em); // 641-768
+$large-range: (48.063em, 64.375em);  // 769-1030
+$xlarge-range: (64.438em, 80em); // 1031-1280
+$xxlarge-range: (80.063em); // 1281+
 
 $screen: "only screen";
 

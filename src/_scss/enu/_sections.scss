@@ -14,35 +14,16 @@
 // Intro Section
 //-----------------------------------------------------------------
 
-.intro-section {
+.claim-section {
     position: relative;
     width: 100%;
     margin-bottom: rem-calc(30);
     border-bottom: 1px solid #e1e1e1;
     // z-index: 1;
 
-    @media #{$large-up} {
-        border-color: white;
-    }
-
     .button {
-        position: relative;
-        top: rem-calc(20);
         background: $tertiary-color;
         color: #222;
-    }
-
-    .inner {
-        padding: rem-calc(15 0);
-        background: white;
-
-        @media #{$large-up} {
-            // position: absolute;
-            width: 100%;
-            overflow: hidden;
-            background: rgba(255, 255, 255, 0.7);
-            bottom: 100%;
-        }
     }
 
     p {
@@ -50,8 +31,8 @@
     }
 
     h2, h3 {
-        color: white;
         color: $secondary-color;
+        font-weight: 500;
     }
 }
 
