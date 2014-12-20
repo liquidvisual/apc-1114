@@ -16,7 +16,11 @@
 }
 
 .button.swish {
-    border-radius: 6px 0 6px 0;
+    border-radius: $global-radius 0 $global-radius 0;
+
+	&.tiny {
+		border-radius: $global-radius/2 0 $global-radius/2 0;
+	}
 
     i {
         font-size: .8em;

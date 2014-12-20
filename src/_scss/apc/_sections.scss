@@ -48,6 +48,16 @@
     }
 }
 
+.image-girl-smiling {
+    background-image: url(../img/apc/content/heroes/APC_Gallery_07.jpg);
+    height: rem-calc(570);
+    margin-bottom: 0;
+
+    @media #{$xxlarge-up} {
+        background-attachment: fixed;
+    }
+}
+
 //=========================================
 //
 //=========================================

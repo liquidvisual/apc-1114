@@ -157,7 +157,7 @@ $body-font-family: $font-family-sans-serif;
 // $last-child-float: $opposite-direction;
 
 // We use these to make sure border radius matches unless we want it different.
-$global-radius: 6px;
+$global-radius: 10px;
 $global-rounded: 1000px;
 
 // We use these to control inset shadow shiny edges and depressions.
@@ -230,7 +230,7 @@ $xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (m
 // We use these to control header font sizes
 $h1-font-size: rem-calc(44);
 $h2-font-size: rem-calc(35); // 37
-// $h3-font-size: rem-calc(27);
+$h3-font-size: rem-calc(26); //27
 // $h4-font-size: rem-calc(23);
 // $h5-font-size: rem-calc(18);
 // $h6-font-size: 1rem;
@@ -459,7 +459,7 @@ $button-med: rem-calc(10); // 16
 // $button-font-color-alt: $oil;
 // $button-font-tny: rem-calc(11);
 // $button-font-sml: rem-calc(13);
-// $button-font-med: rem-calc(13);
+$button-font-med: rem-calc(14);
 // $button-font-lrg: rem-calc(20);
 // $button-font-weight: $font-weight-normal;
 // $button-font-align: center;

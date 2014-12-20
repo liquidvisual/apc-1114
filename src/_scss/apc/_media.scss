@@ -1,3 +1,4 @@
+@import "foundation/components/block-grid";
 /*
     MEDIA.CSS
 
@@ -13,51 +14,66 @@
 
 .info-tile {
     background: white;
-    border-radius: 20px 0 0 0;
+    border-radius: $global-radius*2 0 0 0;
 
     h3 {
         background: #808285;
         color: white;
         margin-bottom: 0;
-        border-radius: 20px 0 0 0;
-        padding: rem-calc(15 30);
+        border-radius: $global-radius*2 0 0 0;
+        padding: rem-calc(15 20);
     }
 
-    &.english-cat h3 {
-        background: $english_cat;
-    }
-    &.hospitality-cat h3 {
-        background: $hospitality_cat;
-    }
-    &.accounting-cat h3 {
-        background: $accounting_cat;
-    }
-    &.marketing-cat h3 {
-        background: $marketing_cat;
-    }
-    &.tourism-cat h3 {
-        background: $tourism_cat;
-    }
-    &.information-tech-cat h3 {
-        background: $information_tech_cat;
-    }
-    &.business-cat h3 {
-        background: $business_cat;
-    }
-    &.management-cat h3 {
-        background: $management_cat;
-    }
-    &.tesol-cat h3 {
-        background: $tesol_cat;
-    }
+    &.english-cat h3 { background: $english_cat; }
+    &.hospitality-cat h3 { background: $hospitality_cat; }
+    &.accounting-cat h3 { background: $accounting_cat; }
+    &.marketing-cat h3 { background: $marketing_cat; }
+    &.tourism-cat h3 { background: $tourism_cat; }
+    &.information-tech-cat h3 { background: $information_tech_cat; }
+    &.business-cat h3 { background: $business_cat; }
+    &.management-cat h3 { background: $management_cat; }
+    &.tesol-cat h3 { background: $tesol_cat; }
 
     .info-tile-body {
-
-        padding: rem-calc(30);
+        padding: rem-calc(20);
         height: 100%;
     }
 
-    a {
+    li a {
+        color: $apc-grey;
+    }
+}
+
+// Warning: Very specific module - used on homepage
+
+.news-tiles {
+    @media #{$medium-up} {
+        @include block-grid($per-row: 2, $spacing: $block-grid-default-spacing, $base-style: true);
+    }
+    @media #{$xlarge-up} {
+        @include block-grid($per-row: 4, $spacing: $block-grid-default-spacing, $base-style: true);
+    }
+}
+
+.news-tile {
+    position: relative;
+    border-radius: 0;
+    height: rem-calc(250);
+    overflow: hidden;
+
+    .img {
+        line-height: rem-calc(150); // magic
+    }
+
+    .button {
+        position: absolute;
+        bottom: 0;
+        width: rem-calc(140); // magic
+        left: 50%;
+        margin-left: rem-calc(-140/2);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
         color: $apc-grey;
     }
 }

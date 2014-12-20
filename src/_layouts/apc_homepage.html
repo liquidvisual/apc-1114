@@ -76,7 +76,7 @@ hero_link: /some-link-here/
         </div> <!-- .info-tiles -->
 
         <!-- SECTION IMAGE -->
-        <div class="section image-section image-group-photo"></div>
+        <div class="section image-section image-group-photo show-for-medium-up"></div>
 
         <!-- OUR CAMPUS LOCATIONS -->
         <section class="section claim-section has-medium-padding">
@@ -119,7 +119,7 @@ hero_link: /some-link-here/
         </section>
         {% endfor %}
 
-        <div class="section image-section image-bridge-photo"></div>
+        <div class="section image-section image-bridge-photo show-for-medium-up"></div>
 
         <!-- News & Events -->
         <section class="section claim-section has-medium-padding">
@@ -142,20 +142,61 @@ hero_link: /some-link-here/
         <!-- News Blocks -->
         <section class="section show-for-medium-up">
             <div class="row">
-                {% for i in (1..4) %}
-                <div class="medium-3 columns">
-                    <h3>News</h3>
-                    <article class="promo-block info-tile">
-                        <div class="info-tile-body">
-                            <h4>Lorem Ipsum</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea cum fugit numquam sit, impedit beatae officia ipsa, ducimus fugiat odio ratione. Molestiae maxime veniam, impedit veritatis? Numquam inventore, exercitationem error.</p>
-                            <p><a href="#" class="button swish"><i class="fa fa-play"></i>&nbsp; Read More</a></p>
-                        </div>
-                    </article>
+                <div class="columns">
+                    <ul class="news-tiles">
+                        {% for i in (1..3) %}
+                        <li>
+                            <h3>News</h3>
+                            <article class="info-tile news-tile">
+                                <div class="info-tile-body">
+                                    <h5>Lorem Ipsum</h5>
+                                    <!-- TRUNCATE - just do it -->
+                                    <p>{{ "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec..." | truncate: 150 }}</p>
+                                    <br>
+                                    <p class="text-center"><a href="/news-and-events/news/news-item/" class="button swish"><i class="fa fa-play"></i>&nbsp; Read More</a></p>
+                                </div>
+                            </article>
+                        </li>
+                        {% endfor %}
+
+                        <li>
+                            <h3>Connect</h3>
+                            <article class="info-tile news-tile">
+                                <div class="info-tile-body">
+                                    <p class="text-center img">
+                                        <a href="/news-and-events/news/news-item/">
+                                            <img src="/img/apc/template/facebook-stamp.jpg" alt="Facebook">
+                                        </a>
+                                    </p>
+                                    <br>
+                                    <p class="text-center"><a href="/news-and-events/news/news-item/" class="button swish"><i class="fa fa-play"></i>&nbsp; connect</a></p>
+                                </div>
+                            </article>
+                        </li>
+
+                    </ul>
                 </div>
-                {% endfor %}
             </div>
         </section>
+
+        <div class="section image-section image-girl-smiling show-for-medium-up"></div>
+
+        <!-- Student Services -->
+        <section class="section claim-section has-medium-padding">
+            <div class="row">
+                <div class="columns">
+                    <div class="claim-module">
+                        <div class="claim-left">
+                            <h2>Student Services</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. Sed nulla orci, suscipit sit amet leo in, venenatis euismod mauris. Donec eu arcu ac arcu suscipit congue eget eu nulla. Praesent blandit, ipsum a facilisis faci.</p>
+                        </div>
+                        <div class="claim-right">
+                            <a href="#" class="button medium swish"><i class="fa fa-play"></i>&nbsp; Student Services</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> <!-- .claim-section -->
 
 
 
