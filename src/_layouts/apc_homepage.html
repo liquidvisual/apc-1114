@@ -31,7 +31,7 @@ hero_link: /some-link-here/
         </section> <!-- .claim-section -->
 
         <!-- INFO TILES -->
-        <div class="info-tiles">
+        <section class="section info-tiles">
             <div class="row">
                 <div class="columns">
 
@@ -73,10 +73,10 @@ hero_link: /some-link-here/
 
                 </div> <!-- .columns -->
             </div> <!-- .row -->
-        </div> <!-- .info-tiles -->
+        </section> <!-- .info-tiles -->
 
         <!-- SECTION IMAGE -->
-        <div class="section image-section image-group-photo show-for-medium-up"></div>
+        <section class="section image-section image-group-photo show-for-medium-up"></section>
 
         <!-- OUR CAMPUS LOCATIONS -->
         <section class="section claim-section has-medium-padding">
@@ -119,7 +119,7 @@ hero_link: /some-link-here/
         </section>
         {% endfor %}
 
-        <div class="section image-section image-bridge-photo show-for-medium-up"></div>
+        <section class="section image-section image-bridge-photo show-for-medium-up"></section>
 
         <!-- News & Events -->
         <section class="section claim-section has-medium-padding">
@@ -144,7 +144,6 @@ hero_link: /some-link-here/
             <div class="row">
                 <div class="columns">
                     <ul class="news-tiles">
-                        {% for i in (1..3) %}
                         <li>
                             <h3>News</h3>
                             <article class="info-tile news-tile">
@@ -153,12 +152,34 @@ hero_link: /some-link-here/
                                     <!-- TRUNCATE - just do it -->
                                     <p>{{ "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec..." | truncate: 150 }}</p>
                                     <br>
-                                    <p class="text-center"><a href="/news-and-events/news/news-item/" class="button swish"><i class="fa fa-play"></i>&nbsp; Read More</a></p>
+                                    <div class="news-tile-button"><a href="/news-and-events/news/news-item/" class="button swish"><i class="fa fa-play"></i>&nbsp; Read More</a></div>
                                 </div>
                             </article>
                         </li>
-                        {% endfor %}
-
+                        <li>
+                            <h3>Events</h3>
+                            <article class="info-tile news-tile">
+                                <div class="info-tile-body">
+                                    <h5>Lorem Ipsum</h5>
+                                    <!-- TRUNCATE - just do it -->
+                                    <p>{{ "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec..." | truncate: 150 }}</p>
+                                    <br>
+                                    <div class="news-tile-button"><a href="/news-and-events/news/news-item/" class="button swish"><i class="fa fa-play"></i>&nbsp; Read More</a></div>
+                                </div>
+                            </article>
+                        </li>
+                        <li>
+                            <h3>Media</h3>
+                            <article class="info-tile news-tile">
+                                <div class="info-tile-body">
+                                    <h5>Lorem Ipsum</h5>
+                                    <!-- TRUNCATE - just do it -->
+                                    <p>{{ "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec..." | truncate: 150 }}</p>
+                                    <br>
+                                    <div class="news-tile-button"><a href="/news-and-events/news/news-item/" class="button swish"><i class="fa fa-play"></i>&nbsp; Read More</a></div>
+                                </div>
+                            </article>
+                        </li>
                         <li>
                             <h3>Connect</h3>
                             <article class="info-tile news-tile">
@@ -169,17 +190,16 @@ hero_link: /some-link-here/
                                         </a>
                                     </p>
                                     <br>
-                                    <p class="text-center"><a href="/news-and-events/news/news-item/" class="button swish"><i class="fa fa-play"></i>&nbsp; connect</a></p>
+                                    <div class="news-tile-button"><a href="/news-and-events/news/news-item/" class="button swish"><i class="fa fa-play"></i>&nbsp; connect</a></div>
                                 </div>
                             </article>
                         </li>
-
                     </ul>
                 </div>
             </div>
         </section>
 
-        <div class="section image-section image-girl-smiling show-for-medium-up"></div>
+        <section class="section image-section image-girl-smiling show-for-medium-up"></section>
 
         <!-- Student Services -->
         <section class="section claim-section has-medium-padding">
@@ -198,7 +218,66 @@ hero_link: /some-link-here/
             </div>
         </section> <!-- .claim-section -->
 
+        <!-- News Blocks -->
+        <section class="section show-for-medium-up">
+            <div class="row">
+                <div class="large-6 columns">
+                    <h3>Students Online</h3>
+                    <ul class="news-tiles news-tiles-pair">
+                        <li>
+                            <article class="info-tile news-tile">
+                                <div class="info-tile-body">
+                                    <h5>Timetable</h5>
+                                    <!-- TRUNCATE - just do it -->
+                                    <p>{{ "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec..." | truncate: 150 }}</p>
+                                    <br>
+                                    <div class="news-tile-button"><a href="/news-and-events/news/news-item/" class="button swish"><i class="fa fa-play"></i>&nbsp; Student Login</a></div>
+                                </div>
+                            </article>
+                        </li>
+                        <li>
+                            <article class="info-tile news-tile">
+                                <div class="info-tile-body">
+                                    <h5>Subject Portal</h5>
+                                    <!-- TRUNCATE - just do it -->
+                                    <p>{{ "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec..." | truncate: 150 }}</p>
+                                    <br>
+                                    <div class="news-tile-button"><a href="/news-and-events/news/news-item/" class="button swish"><i class="fa fa-play"></i>&nbsp; Student Login</a></div>
+                                </div>
+                            </article>
+                        </li>
+                    </ul>
+                </div> <!-- .medium-6 -->
 
+                <div class="large-6 columns">
+                    <h3>Getting Started</h3>
+                    <ul class="news-tiles news-tiles-pair">
+                        <li>
+                            <article class="info-tile news-tile">
+                                <div class="info-tile-body">
+                                    <h5>Online Assessment</h5>
+                                    <!-- TRUNCATE - just do it -->
+                                    <p>{{ "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec..." | truncate: 150 }}</p>
+                                    <br>
+                                    <div class="news-tile-button"><a href="/news-and-events/news/news-item/" class="button swish"><i class="fa fa-play"></i>&nbsp; Start Assessment</a></div>
+                                </div>
+                            </article>
+                        </li>
+                        <li>
+                            <article class="info-tile news-tile">
+                                <div class="info-tile-body">
+                                    <h5>Enquiries</h5>
+                                    <!-- TRUNCATE - just do it -->
+                                    <p>{{ "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec..." | truncate: 150 }}</p>
+                                    <br>
+                                    <div class="news-tile-button"><a href="/news-and-events/news/news-item/" class="button swish"><i class="fa fa-play"></i>&nbsp; Make an Enquiry</a></div>
+                                </div>
+                            </article>
+                        </li>
+                    </ul>
+                </div>
+            </div> <!-- .row -->
+        </section>
 
 	</main>
 

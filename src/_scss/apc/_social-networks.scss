@@ -11,6 +11,10 @@
 //
 //-----------------------------------------------------------------
 
+.social-networks li {
+    padding-bottom: 0;
+}
+
 .social-networks a {
     display: inline-block;
     width: rem-calc(40);

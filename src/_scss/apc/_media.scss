@@ -55,22 +55,32 @@
     }
 }
 
+.news-tiles-pair {
+    @media #{$medium-up} {
+        @include block-grid($per-row: 1, $spacing: $block-grid-default-spacing, $base-style: true);
+    }
+    @media #{$xlarge-up} {
+        @include block-grid($per-row: 2, $spacing: $block-grid-default-spacing, $base-style: true);
+    }
+}
+
 .news-tile {
     position: relative;
     border-radius: 0;
-    height: rem-calc(250);
+    height: rem-calc(260);
     overflow: hidden;
 
     .img {
         line-height: rem-calc(150); // magic
     }
 
-    .button {
+    // Special widths
+    .news-tile-button {
         position: absolute;
+        left: 0;
         bottom: 0;
-        width: rem-calc(140); // magic
-        left: 50%;
-        margin-left: rem-calc(-140/2);
+        width: 100%;
+        text-align: center;
     }
 
     h1, h2, h3, h4, h5, h6 {

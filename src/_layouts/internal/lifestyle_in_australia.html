@@ -26,39 +26,28 @@ layout: internal
     </div>
 </section> <!-- .claim-section -->
 
-{% for item in page_breaks %}
-
+<!-- CONTENT BREAKS -->
 <section class="section">
-	<div class="row">
-		<div class="columns">
-			<h3 id="{{ item.url }}">{{ item.title }}</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad sint quod numquam voluptas animi excepturi consectetur iure fugiat magni eveniet inventore eum, dolores quaerat molestiae laboriosam quas eos repudiandae modi.</p>
+	{% for item in page_breaks %}
+		<div class="row">
+			<div class="columns">
+				<h3 id="{{ item.url }}">{{ item.title }}</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad sint quod numquam voluptas animi excepturi consectetur iure fugiat magni eveniet inventore eum, dolores quaerat molestiae laboriosam quas eos repudiandae modi.</p>
 
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti accusamus eveniet iure minima neque, illo perspiciatis, voluptatem nobis eum sit necessitatibus, temporibus omnis officia dolorem, porro quo sequi minus in!</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti accusamus eveniet iure minima neque, illo perspiciatis, voluptatem nobis eum sit necessitatibus, temporibus omnis officia dolorem, porro quo sequi minus in!</p>
 
-			<ul class="triangle-list small-block-grid-1 medium-block-grid-2">
-				{% for course in item.children %}
-				<li><a href="{{ course.url }}">{{ course.title }}</a></li>
-				{% endfor %}
-			</ul>
+				{% unless forloop.last %}
+				<hr>
+				{% endunless %}
 
-			<!-- {% if item.children == null %}
-			    <p class="medium-text-right"><a href="{{ course_type.url }}" class="button swish">Find out more</a></p>
-			{% endif %} -->
-
-			{% unless forloop.last %}
-			    <hr>
-			{% endunless %}
-
-		</div> <!-- .columns -->
-	</div> <!-- .row -->
+			</div> <!-- .columns -->
+		</div> <!-- .row -->
+	{% endfor %}
 </section>
 
-{% endfor %}
+<br>
 
-
-<!-- ************************************************** -->
-
+<!-- STUDENT SPOTLIGHT -->
 <div class="row">
 	<div class="columns">
 		<div class="headed teacher">
@@ -95,6 +84,11 @@ layout: internal
 
 						</div> <!-- .columns -->
 					</div> <!-- .row -->
+
+					{% unless forloop.last %}
+                    <hr>
+                    {% endunless %}
+
 				</div>
 			</div>
 			{% endfor %}

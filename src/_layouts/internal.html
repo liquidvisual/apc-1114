@@ -25,7 +25,13 @@ layout: master
                 <!-- Caption -->
                 <div class="medium-8 columns">
                     <div class="lv-hero-caption animated">
-                        <h1>{{ page.title }}</h1>
+                        <h1>
+                            {% if page.hero_header_override %}
+                                {{ page.hero_header_override }}
+                            {% else %}
+                                {{ page.title }}
+                            {% endif %}
+                        </h1>
                     </div> <!-- .lv-hero-caption -->
                 </div> <!-- .columns -->
 
