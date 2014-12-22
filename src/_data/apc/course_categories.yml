@@ -1,9 +1,28 @@
+# Each category has a fixed color class
+
 - title: English
+  color_class: english_cat
+
 - title: Hospitality
+  color_class: hospitality_cat
+
 - title: Accounting
+  color_class: accounting_cat
+
 - title: Marketing
+  color_class: marketing_cat
+
 - title: Tourism
+  color_class: tourism_cat
+
 - title: Information Tech
+  color_class: info_tech_cat
+
 - title: Business
+  color_class: business_cat
+
 - title: Management
+  color_class: management_cat
+
 - title: Tesol
+  color_class: tesol_cat

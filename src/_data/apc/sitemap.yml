@@ -138,6 +138,20 @@
 
     - title: Campuses
       url: /learning-environment/campuses/
+      include_children_in_nav: true
+      children:
+        - title: Sydney CBD Kent Street
+          url: "/learning-environment/campuses/#sydney-cbd-kent-street"
+        - title: Sydney CBD Clarence Street
+          url: "/learning-environment/campuses/#sydney-cbd-clarence-street"
+        - title: Sydney CBD York Street
+          url: "/learning-environment/campuses/#sydney-cbd-york-street"
+        - title: Bondi Junction
+          url: "/learning-environment/campuses/#bondi-junction"
+        - title: Manly
+          url: "/learning-environment/campuses/#manly"
+        - title: Brisbane
+          url: "/learning-environment/campuses/#brisbane"
 
 - title: Applications
   url: /applications/how-to-apply/
@@ -154,6 +168,17 @@
 
     - title: Forms and Downloads
       url: /applications/forms-and-downloads/
+      include_children_in_nav: true
+      children:
+        - title: Application Forms
+          url: "/applications/forms-and-downloads/#application-forms"
+        - title: Other Forms
+          url: "/applications/forms-and-downloads/#other-forms"
+        - title: Terms and Conditions
+          url: "/applications/forms-and-downloads/#terms-and-conditions"
+        - title: Policies and Procedures
+          url: "/applications/forms-and-downloads/#policies-and-procedures"
+
     - title: Apply Now
       url: /applications/apply-now/
     - title: Find a Course
@@ -195,6 +220,14 @@
               url: "/student-services/student-support/#overview"
             - title: Internships
               url: "/student-services/student-support/#internships"
+        - title: Student Counselling
+          url: "/student-services/student-support/#counselling"
+          include_children_in_nav: true
+          children:
+            - title: Academic
+              url: "/student-services/student-support/#academic"
+            - title: Counselling
+              url: "/student-services/student-support/#counselling"
         - title: Other Services
           url: "/student-services/student-support/#other-services"
           include_children_in_nav: true
@@ -210,6 +243,16 @@
 
     - title: FAQ
       url: /student-services/faq/
+      include_children_in_nav: true
+      children:
+        - title: Courses
+          url: "/student-services/faq/#courses"
+        - title: Applications
+          url: "/student-services/faq/#applications"
+        - title: Fees
+          url: "/student-services/faq/#fees"
+        - title: Australia
+          url: "/student-services/faq/#australia"
 
 - title: News and Events
   url: /news-and-events/news/
@@ -230,8 +273,13 @@
       url: /about-us/history/
     - title: Staff Profiles
       url: /about-us/staff-profiles/
-    - title: Alumni Heros
-      url: /about-us/alumni-heros/
+    - title: Alumni Heroes
+      url: /about-us/alumni-heroes/
+      include_children_in_nav: true
+      children:
+        - title: Meet the Alumni Profiles
+          url: "/about-us/alumni-heroes/#meet-the-alumni-profiles"
+
     - title: Jobs at APC
       url: /about-us/jobs-at-apc/
     - title: Compliance Forms

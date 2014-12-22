@@ -2,7 +2,7 @@
 layout: internal
 ---
 
-{% assign page_breaks = site.data.apc.sitemap[3].children[0].children %}
+{% assign page_breaks = site.data.apc.sitemap[3].children[1].children %}
 
 <!-- CLAIM SECTION -->
 <section class="section claim-section has-medium-padding">
@@ -26,62 +26,17 @@ layout: internal
     </div>
 </section> <!-- .claim-section -->
 
-<div class="row">
-	<div class="columns">
-
-		<div id="steps-to-apply">
-			{% for i in (1..5) %}
-			<div class="step">
-				<div class="padded">
-					<div class="row">
-						<div class="large-8 columns">
-							<h3>Step {{ forloop.index }}</h3>
-						</div>
-						<div class="large-4 columns hide-for-small-only">
-							<div class="padded">
-								<h5>Information Links</h5>
-							</div>
-						</div>
-					</div>
-					<hr>
-					<div class="row">
-						<div class="large-8 columns">
-							<h4>Some Title</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. Sed nulla orci, suscipit sit amet leo in, venenatis euismod mauris. Donec eu arcu ac arcu suscipit congue eget eu nulla. Praesent blandit, ipsum a facilisis facilisis, diam sem consectetur lectus, eget...</p>
-						</div>
-						<div class="large-4 columns">
-							<div class="padded">
-								<ul class="triangle-list">
-									<li><a href="/how-to-apply">Some Link</a></li>
-									<li><a href="/how-to-apply">Some Link</a></li>
-									<li><a href="/how-to-apply">Some Link</a></li>
-									<li><a href="/how-to-apply">Some Link</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			{% endfor %}
-		</div>
-
-	</div>
-</div>
-
-<br>
-
 <section class="section">
 	{% for item in page_breaks %}
 	<div class="row">
 		<div class="columns">
 			<h3 id="{{ item.url }}">{{ item.title }}</h3>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad sint quod numquam voluptas animi excepturi consectetur iure fugiat magni eveniet inventore eum, dolores quaerat molestiae laboriosam quas eos repudiandae modi.</p>
-
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti accusamus eveniet iure minima neque, illo perspiciatis, voluptatem nobis eum sit necessitatibus, temporibus omnis officia dolorem, porro quo sequi minus in!</p>
 
 			<ul class="triangle-list small-block-grid-1 medium-block-grid-2">
-				{% for course in item.children %}
-				<li><a href="{{ course.url }}">{{ course.title }}</a></li>
+				{% for i in (1..4) %}
+				<li><a target="_blank" href="{{ item.url }}">Some link here</a></li>
 				{% endfor %}
 			</ul>
 
@@ -89,7 +44,9 @@ layout: internal
 			<hr>
 			{% endunless %}
 
-		</div> <!-- .columns -->
-	</div> <!-- .row -->
+		</div>
+	</div>
 	{% endfor %}
 </section>
+
+<br>

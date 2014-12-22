@@ -1,0 +1,49 @@
+---
+layout: internal
+---
+
+{% assign page_breaks = site.data.apc.sitemap[4].children[1].children %}
+
+<!-- CLAIM SECTION -->
+<section class="section claim-section has-medium-padding">
+    <div class="row">
+        <div class="columns">
+            <div class="claim-module">
+                <div class="claim-left">
+                    <h2>{{ page.title }}</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. Sed nulla orci, suscipit sit amet leo in, venenatis euismod mauris. Donec eu arcu ac arcu suscipit congue eget eu nulla. Praesent blandit, ipsum a facilisis faci...</p>
+                </div>
+                <div class="claim-right">
+                    <h5>On this Page</h5>
+	                <ul class="triangle-list">
+	                	{% for item in page_breaks %}
+	                		<li><a href="#{{ item.url }}">{{ item.title }}</a></li>
+	                	{% endfor %}
+	                </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> <!-- .claim-section -->
+
+<!-- BEGIN CONTENT HERE -->
+<section class="section">
+	<div class="row">
+		<div class="columns">
+			{% for item in page_breaks %}
+				<h3 id="{{ item.url }}" class="section">{{ item.title }}</h3>
+				{% for i in (1..2) %}
+					<h5>Q: Question Title</h5>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam itaque tempore debitis, explicabo. Nemo, illo voluptates veniam molestias molestiae cum possimus modi. Odio deleniti, officia, harum ducimus facilis enim in.</p>
+					<h5>A: Answer Title</h5>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam itaque tempore debitis, explicabo. Nemo, illo voluptates veniam</p>
+				{% endfor %}
+
+				{% unless forloop.last %}
+				    <hr>
+				{% endunless %}
+
+			{% endfor %}
+		</div>
+	</div>
+</section>

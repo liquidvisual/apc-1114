@@ -1,5 +1,5 @@
 ---
-layout: internal/second_level_promos
+layout: internal/second_level_news
 title: News and Media
 permalink: /news-and-events/
 ---

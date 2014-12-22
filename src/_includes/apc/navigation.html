@@ -36,7 +36,7 @@
 				{% for item in item.children %}
 					<li>
 						<ul class="triangle-listX">
-							<li><h5>{{ item.title }}</h5></li>
+							<li><h5><a href="{{ item.url }}">{{ item.title }}</a></h5></li>
 							{% for item in item.children %}
 								<li><a href="{{ item.url }}">{{ item.title }}</a></li>
 							{% endfor %}

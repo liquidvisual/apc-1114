@@ -11,7 +11,7 @@ layout: internal
             <div class="claim-module">
                 <div class="claim-left">
                     <h2>{{ page.title }}</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. Sed nulla orci, suscipit sit amet leo in, venenatis euismod mauris. Donec eu arcu ac arcu suscipit congue eget eu nulla. Praesent blandit, ipsum a facilisis faci...</p>
                 </div>
                 <div class="claim-right">
                     <h5>On this Page</h5>
@@ -26,50 +26,49 @@ layout: internal
     </div>
 </section> <!-- .claim-section -->
 
-<div class="smoked">
-	<div class="row">
-		<div class="padded">
+<!-- CONTENT BEGIN -->
+<div class="row">
+	<div class="padded">
 
-			{% for item in page_breaks %}
-			<!-- BLOCK start -->
-			<div class="block section" id="{{ item.url }}">
-				<div class="padded">
-					<h3>{{ item.title }}</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. Sed nulla orci, suscipit sit amet leo in, venenatis euismod mauris. Donec eu arcu ac arcu suscipit congue eget eu nulla. Praesent blandit, ipsum a facilisis facilisis, diam sem consectetur lectus, eget...</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. S</p>
+		{% for item in page_breaks %}
+		<!-- BLOCK start -->
+		<div class="block section" id="{{ item.url }}">
+			<div class="padded">
+				<h3>{{ item.title }}</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. Sed nulla orci, suscipit sit amet leo in, venenatis euismod mauris. Donec eu arcu ac arcu suscipit congue eget eu nulla. Praesent blandit, ipsum a facilisis facilisis, diam sem consectetur lectus, eget...</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. S</p>
 
-					<img alt="Apc news 200x200" class="thumb-left large-3 small-12" src="http://placehold.it/200x200">
+				<img alt="Apc news 200x200" class="thumb-left large-3 small-12" src="http://placehold.it/200x200">
 
-					{% for item in item.children %}
-						<h5 class="sub_heading">{{ item.title }}</h5>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. Sed nulla orci, suscipit sit amet leo in, venenatis euismod mauris. Donec eu arcu ac arcu suscipit congue eget eu nulla. Praesent blandit, ipsum a facilisis facilisis, diam sem consectetur lectus, eget efficitur nisi elit...</p>
-					{% endfor %}
+				{% for item in item.children %}
+					<h5 class="sub_heading">{{ item.title }}</h5>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. Sed nulla orci, suscipit sit amet leo in, venenatis euismod mauris. Donec eu arcu ac arcu suscipit congue eget eu nulla. Praesent blandit, ipsum a facilisis facilisis, diam sem consectetur lectus, eget efficitur nisi elit...</p>
+				{% endfor %}
 
-					{% if item.title == "Contact Student Services" %}
-					    <div class="row">
-					    	{% for i in (1..2) %}
-						    <div class="large-3 columns">
-							    <ul class="spaced-list clean">
-							    	{% for i in (1..3) %}
-								    <li class="address">
-								    	<strong>121 Abc Street, Queensland</strong>
-								    	<br>
-								    	Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-								    </li>
-								    {% endfor %}
-								</ul>
-							</div>
-							{% endfor %}
-					    </div>
-					{% endif %}
+				{% if item.title == "Contact Student Services" %}
+				    <div class="row">
+				    	{% for i in (1..2) %}
+					    <div class="large-4 columns">
+						    <ul class="spaced-list clean">
+						    	{% for i in (1..3) %}
+							    <li class="address">
+							    	<strong>121 Abc Street, Queensland</strong>
+							    	<br>
+							    	Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							    </li>
+							    {% endfor %}
+							</ul>
+						</div>
+						{% endfor %}
+				    </div>
+				{% endif %}
 
-					{% unless forloop.last %}
-					<hr>
-					{% endunless %}
+				{% unless forloop.last %}
+				<hr>
+				{% endunless %}
 
-				</div>
 			</div>
-			{% endfor %}
 		</div>
+		{% endfor %}
 	</div>
 </div>
