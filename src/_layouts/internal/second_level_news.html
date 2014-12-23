@@ -2,7 +2,29 @@
 layout: internal
 ---
 
-<br>
+{% assign page_breaks = site.data.apc.sitemap[5].children %}
+
+<!-- CLAIM SECTION -->
+<section class="section claim-section has-medium-padding">
+    <div class="row">
+        <div class="columns">
+            <div class="claim-module">
+                <div class="claim-left">
+                    <h2>{{ page.title }}</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio ipsum dolor sit amet.</p>
+                </div>
+                <div class="claim-right">
+                    <h5>On this Page</h5>
+                    <ul class="triangle-list">
+                        {% for item in page_breaks %}
+                            <li><a href="#{{ item.url }}">{{ item.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> <!-- .claim-section -->
 
 <!-- News Blocks -->
 <section class="section show-for-medium-up">

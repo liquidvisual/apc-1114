@@ -1,0 +1,83 @@
+---
+layout: internal
+---
+
+{% assign page_breaks = site.data.apc.sitemap[6].children[1].children %}
+
+<!-- CLAIM SECTION -->
+<section class="section claim-section has-medium-padding">
+    <div class="row">
+        <div class="columns">
+            <div class="claim-module">
+                <div class="claim-left">
+                    <h2>{{ page.title }}</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus temporibus, vero beatae quisquam asperiores debitis perferendis maxime, corporis veniam soluta excepturi est quis amet. Natus consequatur, qui, nesciunt temporibus molestias provident officiis nisi voluptate atque modi totam nostrum soluta eos expedita necessitatibus quae error.</p>
+                </div>
+                <div class="claim-right">
+                    <h5>Staff by Campus</h5>
+                    <ul class="triangle-list">
+                        {% for item in page_breaks %}
+                            <li><a href="#{{ item.url }}">{{ item.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> <!-- .claim-section -->
+
+{% for item in page_breaks %}
+<div class='row'>
+    <div class="columns">
+        <div class='headed standard' id='{{ item.url }}'>
+            <div class='heading'>
+                <div class='padded'>
+                    <h3>{{ item.title }}</h3>
+                </div>
+            </div>
+
+            {% for i in (1..2) %}
+            <div class='content'>
+                <div class='padded'>
+                    <div class='row'>
+                        <div class='small-12 large-3 columns'>
+                            <img alt="Apc teacher 200x200" class="small-12" src="http://placehold.it/200x200">
+                            <br>
+                            <br>
+                        </div>
+                        <div class='small-12 large-9 columns'>
+                            <h4 class='no-transform'>Persons Name<small>Persons Position</small></h4>
+                            <h5 class='caption no-transform'>Certificate IV in Accounting Etc</h5>
+                            <div class='row hide-for-small-only'>
+                                <div class='small-3 large-3 columns'></div>
+                                <div class='small-6 large-6 columns'>
+                                    <h5 class='list-heading'>Industry Experience</h5>
+                                    <ul>
+                                        {% for i in (1..6) %}
+                                        <li>Some list item</li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                                <div class='small-6 large-6 columns'>
+                                    <h5 class='list-heading'>Qualifications</h5>
+                                    <ul>
+                                        {% for i in (1..6) %}
+                                        <li>Some list item</li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% unless forloop.last %}
+                    <hr>
+                    {% endunless %}
+                </div>
+            </div>
+            {% endfor %}
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}

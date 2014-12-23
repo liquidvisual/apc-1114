@@ -23,6 +23,26 @@ a {
     color: $primary-color;
 }
 
+.lv-super .no-margin {
+	margin: 0;
+}
+
+.collapse-left {
+	@media #{$large-up} {
+	    padding-left: 0;
+	}
+}
+
+.weather-widget {
+	background: $primary-color;
+	color: white;
+	padding: rem-calc(15);
+
+	.temp {
+		font-size: rem-calc(30);
+	}
+}
+
 //=========================================
 //
 //=========================================

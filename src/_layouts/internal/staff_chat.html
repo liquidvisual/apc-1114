@@ -1,0 +1,109 @@
+---
+layout: internal
+---
+
+{% assign page_breaks = site.data.apc.sitemap[7].children[1].children %}
+
+<!-- CLAIM SECTION -->
+<section class="section claim-section has-medium-padding">
+    <div class="row">
+        <div class="columns">
+            <div class="claim-module">
+                <div class="claim-left">
+                    <h2>{{ page.title }}</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus temporibus, vero beatae quisquam asperiores debitis perferendis maxime, corporis veniam soluta excepturi est quis amet. Natus consequatur, qui, nesciunt temporibus molestias provident officiis nisi voluptate atque modi totam nostrum soluta eos expedita necessitatibus quae error.</p>
+                </div>
+                <div class="claim-right">
+                    <h5>Listing</h5>
+                    <ul class="triangle-list">
+                        {% for item in page_breaks %}
+                            <li><a href="#{{ item.url }}">{{ item.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> <!-- .claim-section -->
+
+{% for item in page_breaks %}
+<div class="row">
+    <div class="columns">
+        <div class="headed standard" id="{{ item.url }}">
+
+            <div class="heading">
+                <div class="padded">
+                    <h3>{{ item.title }}</h3>
+                </div>
+            </div>
+
+            {% for i in (1..2) %}
+            <div class="content">
+                <div class="padded">
+                    <div class="row">
+
+                        <div class="large-3 columns section">
+                            <img alt="Apc teacher 200x200" class="small-12" src="/img/ui/no-face.png">
+                        </div>
+
+                        <div class="large-9 columns">
+                            <h4 class="no-transform">Persons Name<small>Persons Position</small></h4>
+                            <h5 class="caption no-transform">Brisbane Office</h5>
+                            <br>
+
+                            <ul class="no-bullet">
+                                <li>
+                                    <div class="row">
+                                        <div class="medium-3 columns">
+                                            <strong class="primary-color"><i class="fa fa-envelope"></i>&nbsp; Email: </strong>
+                                        </div>
+                                        <div class="medium-8 end columns">
+                                            <a href="mailto:">edasilva@apc.edu.au</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="row">
+                                        <div class="medium-3 columns">
+                                            <strong class="primary-color"><i class="fa fa-envelope"></i>&nbsp; Phone: </strong>
+                                        </div>
+                                        <div class="medium-8 end columns">
+                                            <a href="tel:">(05) 555 555</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="row">
+                                        <div class="medium-3 columns">
+                                            <strong class="primary-color"><i class="fa fa-skype"></i>&nbsp; Skype: </strong>
+                                        </div>
+                                        <div class="medium-8 end columns">
+                                            username.skype
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="row">
+                                        <div class="medium-3 columns">
+                                            <strong class="primary-color"><i class="fa fa-flag"></i>&nbsp; Languages: </strong>
+                                        </div>
+                                        <div class="medium-8 end columns">
+                                            Spanish, Portuguese, Spanish, Portuguese, Spanish, Portuguese
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                        </div> <!-- .large-9 -->
+                    </div> <!-- .row -->
+                    {% unless forloop.last %}
+                    <hr>
+                    {% endunless %}
+                </div>
+            </div>
+            {% endfor %}
+
+        </div> <!-- .headed -->
+    </div> <!-- .columns -->
+</div> <!-- .row -->
+{% endfor %}

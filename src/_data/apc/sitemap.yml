@@ -271,8 +271,24 @@
   children:
     - title: History
       url: /about-us/history/
+
     - title: Staff Profiles
       url: /about-us/staff-profiles/
+      include_children_in_nav: true
+      children:
+        - title: Sydney CBD Kent Street
+          url: "/about-us/staff-profiles/#sydney-cbd-kent-street"
+        - title: Sydney CBD Clarence Street
+          url: "/about-us/staff-profiles/#sydney-cbd-clarence-street"
+        - title: Sydney CBD York Street
+          url: "/about-us/staff-profiles/#sydney-cbd-york-street"
+        - title: Bondi Junction
+          url: "/about-us/staff-profiles/#bondi-junction"
+        - title: Manly
+          url: "/about-us/staff-profiles/#manly"
+        - title: Brisbane
+          url: "/ dabout-us/staff-profiles/#brisbane"
+
     - title: Alumni Heroes
       url: /about-us/alumni-heroes/
       include_children_in_nav: true
@@ -283,7 +299,15 @@
     - title: Jobs at APC
       url: /about-us/jobs-at-apc/
     - title: Compliance Forms
-      url: /about-us/complicance-forms/
+      url: /about-us/compliance-forms/
+      include_children_in_nav: true
+      children:
+        - title: Terms and Conditions
+          url: "/about-us/compliance-forms/#terms-and-conditions"
+        - title: Privacy Statement
+          url: "/about-us/compliance-forms/#privacy-statement"
+        - title: Government Compliance
+          url: "/about-us/compliance-forms/#government-compliance"
 
 - title: Contact Us
   url: /contact-us/make-an-enquiry/
@@ -291,7 +315,19 @@
   children:
     - title: Enquiry Form
       url: /contact-us/make-an-enquiry/
+      include_children_in_nav: true
+      children:
+        - title: Enquiry Form
+          url: "/contact-us/make-an-enquiry/#enquiry-form"
+
     - title: Staff Chat
       url: /contact-us/staff-chat/
+      include_children_in_nav: true
+      children:
+        - title: Australia
+          url: "/contact-us/staff-chat/#australia"
+        - title: Overseas
+          url: "/contact-us/staff-chat/#overseas"
+
     - title: Agents
       url: /contact-us/agents/

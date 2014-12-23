@@ -1,0 +1,46 @@
+---
+layout: internal
+---
+
+{% assign page_breaks = site.data.apc.sitemap[6].children[4].children %}
+
+<!-- CLAIM SECTION -->
+<section class="section claim-section has-medium-padding">
+    <div class="row">
+        <div class="columns">
+            <div class="claim-module">
+                <div class="claim-left">
+                    <h2>{{ page.title }}</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio ipsum dolor sit amet.</p>
+                </div>
+                <div class="claim-right">
+                    <h5>On this Page</h5>
+	                <ul class="triangle-list">
+	                	{% for item in page_breaks %}
+	                		<li><a href="#{{ item.url }}">{{ item.title }}</a></li>
+	                	{% endfor %}
+	                </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> <!-- .claim-section -->
+
+<!-- CONTENT BREAKS -->
+<section class="section">
+	{% for item in page_breaks %}
+		<div class="row">
+			<div class="columns">
+				<h3 id="{{ item.url }}">{{ item.title }}</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum deserunt rem incidunt quis, quo, nulla sed earum velit, adipisci amet culpa quam obcaecati reprehenderit saepe facere hic, cumque asperiores! Impedit totam veritatis, animi porro repellat dolores odio laudantium a praesentium culpa, quasi excepturi natus minima. Eveniet similique, deleniti eum. Praesentium repellat ducimus distinctio. Nesciunt facilis, sunt. Consectetur quibusdam delectus assumenda numquam velit necessitatibus esse nulla odit libero, incidunt modi nostrum molestiae dolorum, non placeat soluta magni nesciunt vitae. Debitis voluptatibus consequatur architecto illum quidem, recusandae, dolor! Modi, voluptatem, provident. Minima ad dolores asperiores culpa fugit assumenda, nesciunt voluptas error amet hic distinctio aliquam, possimus libero ab numquam nostrum deserunt porro dolor officia iure repudiandae ducimus. Iure culpa cumque dicta pariatur, assumenda. Corporis, enim, quisquam. Doloribus eos asperiores at, quia soluta natus beatae nostrum? Voluptates amet, ad consequatur in aut nihil atque quo culpa voluptatum provident quae quam, deserunt illum, quas expedita, rerum et eveniet voluptatem ullam quaerat. Consequatur ipsum tempore architecto, vitae laboriosam ducimus minus quia pariatur esse, minima praesentium sit, voluptatum aut voluptatibus recusandae velit dolorem ipsam laborum totam officia quisquam. Omnis esse numquam sed earum, at blanditiis repellendus, itaque a incidunt unde, voluptas autem recusandae non, amet iusto.</p>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti accusamus eveniet iure minima neque, illo perspiciatis, voluptatem nobis eum sit necessitatibus, temporibus omnis officia dolorem, porro quo sequi minus in!</p>
+
+				{% unless forloop.last %}
+				<hr>
+				{% endunless %}
+
+			</div> <!-- .columns -->
+		</div> <!-- .row -->
+	{% endfor %}
+</section>
