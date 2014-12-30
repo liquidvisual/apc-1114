@@ -87,11 +87,12 @@ a {
 
 			a:after {
 				@media #{$large-up} {
+					position: absolute;
+					right: rem-calc(8);
 				    content: "\f04b";
 				    font-family: 'FontAwesome';
 				    font-size: rem-calc(9);
-				    float: right;
-				    margin-right: rem-calc(2);
+				    // margin-right: rem-calc(2);
 				}
 			}
 		}
