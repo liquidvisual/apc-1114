@@ -166,7 +166,8 @@ $('.slider-nav').slick({
 // Off Canvas Menu
 //-----------------------------------------------------------------
 
-$(".js-off-canvas-menu").mmenu({ "offCanvas": { "position": "left" }});
+$(".js-off-canvas-menu-left").mmenu({ "offCanvas": { "position": "left" }});
+$(".js-off-canvas-menu-right").mmenu({ "offCanvas": { "position": "right" }});
 
 //-----------------------------------------------------------------
 // Kickstart Foundation / Touch Conditionals
@@ -175,8 +176,14 @@ $(".js-off-canvas-menu").mmenu({ "offCanvas": { "position": "left" }});
 var touchEvent = TOUCH_ENABLED ? "touchstart" : "click";
 
 //Trigger hamburger by touch on mobile - this eliminates glitch with FastClick.js
-$(".header-mobile-menu").bind(touchEvent, function() {
-    $(".js-off-canvas-menu").removeClass('hide').trigger("open.mm");
+$(".header-mobile-menu").bind(touchEvent, function(e) {
+    e.preventDefault();
+    $(".js-off-canvas-menu-left").removeClass('hide').trigger("open.mm");
+});
+
+$(".language-selector .mobile-menu-trigger").bind(touchEvent, function(e) {
+    e.preventDefault();
+    $(".js-off-canvas-menu-right").removeClass('hide').trigger("open.mm");
 });
 
 if (TOUCH_ENABLED) {

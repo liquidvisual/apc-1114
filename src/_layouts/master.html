@@ -100,7 +100,7 @@
     </div> <!-- .lv-super -->
 
     <!-- OFF-CANVAS MENU -->
-    <nav class="js-off-canvas-menu hide" aria-hidden="true">
+    <nav class="js-off-canvas-menu-left hide" aria-hidden="true">
 
         {% if page.site_type == "enu" %}
             {% include shared/navigation.html data=site.data.enu.sitemap %}
@@ -109,6 +109,11 @@
         {% endif %}
 
     </nav>
+
+    <!-- LANGUAGE SELECTOR -->
+    <aside class="js-off-canvas-menu-right hide" aria-hidden="true">
+        {% include shared/languages.html %}
+    </aside>
 
     <!--[if lt IE 9]>
     <div class="lv-alert lv-unselectable">

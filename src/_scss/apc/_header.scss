@@ -41,12 +41,13 @@ $header-top-height: rem-calc(40);
     }
 
     .button {
-        text-transform: uppercase;
-        margin: 0;
-        margin-left: rem-calc(-15);
+        margin: rem-calc(0 2);
+        // text-transform: uppercase;
+        // margin: 0;
+        // margin-left: rem-calc(-15);
 
         @media #{$medium-up} {
-            margin: 0;
+            // margin: 0;
         }
     }
 }
