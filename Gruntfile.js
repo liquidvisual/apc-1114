@@ -6,13 +6,13 @@ module.exports = function (grunt) {
   // Show elapsed time after tasks run
   require('time-grunt')(grunt);
 
-  // FASTER
+  // FASTER YOU BEAST, FASTER
   // https://medium.com/@lmartins/faster-grunt-workflow-ced193c2900b
   require('jit-grunt')(grunt, {
     buildcontrol: 'grunt-build-control',
-    takana: 'grunt-takana',
     cdnify: 'grunt-cdnify',
     sass: 'grunt-sass', // does this add speed? Who knows
+    browsersync: 'grunt-browser-sync',
     useminPrepare: 'grunt-usemin' // plugin can't be resolved in automatic mapping
   });
 
@@ -46,58 +46,77 @@ module.exports = function (grunt) {
           '!<%= yeoman.app %>/_bower_components/**/*'
         ],
         tasks: ['jekyll:server']
-      },
-      livereload: {
-        options: {
-          livereload: '<%= connect.options.livereload %>'
-        },
-        files: [
-          '.jekyll/**/*.html',
-          '{.tmp,<%= yeoman.app %>}/css/**/*.css',
-          '{.tmp,<%= yeoman.app %>}/<%= js %>/**/*.js',
-          '<%= yeoman.app %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}'
-        ]
       }
     },
     //-----------------------------------------------------
     // CONNECT
     //-----------------------------------------------------
-    connect: {
-      options: {
-        port: '<%= yeoman.port %>',
-        livereload: 35729,
-        // change this to '0.0.0.0' to access the server from outside
-        hostname: '0.0.0.0'
-      },
-      livereload: {
-        options: {
-          open: true,
-          base: [
-            '.tmp',
-            '.jekyll',
-            '<%= yeoman.app %>'
+    browserSync: {
+      server: {
+        bsFiles: {
+          src: [
+            '.jekyll/**/*.html',
+            '{.tmp,<%= yeoman.app %>}/css/**/*.css',
+            '{.tmp,<%= yeoman.app %>}/scripts/**/*.js',
+            '<%= yeoman.app %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}'
           ]
+        },
+        options: {
+          notify: false,
+          // Here you can disable/enable each feature individually
+          ghostMode: {
+              clicks: true,
+              forms: true,
+              scroll: true
+          },
+          // Don't send any file-change events to browsers
+          codeSync: true,
+          // Open the site in Chrome & Firefox
+          // browser: ["google chrome", "firefox"]
+          port: 9292,
+          host: '0.0.0.0',
+          server: {
+            baseDir: [
+              ".jekyll",
+              ".tmp",
+              "<%= yeoman.app %>"
+            ]
+          },
+          watchTask: true
         }
       },
       dist: {
         options: {
-          open: true,
-          base: [
-            '<%= yeoman.dist %>'
-          ]
+          server: {
+            baseDir: "<%= yeoman.dist %>"
+          }
         }
       },
       test: {
-        options: {
-          base: [
-            '.tmp',
-            '.jekyll',
-            'test',
-            '<%= yeoman.app %>'
+        bsFiles: {
+          src: [
+            '.jekyll/**/*.html',
+            '.tmp/css/**/*.css',
+            '{.tmp,<%= yeoman.app %>}/scripts/**/*.js',
+            '{<%= yeoman.app %>}/_bower_components/**/*.js',
+            '<%= yeoman.app %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}'
           ]
+        },
+        options: {
+          server: {
+            baseDir: [
+              ".jekyll",
+              ".tmp",
+              "<%= yeoman.app %>"
+            ]
+          },
+          watchTask: true
         }
       }
     },
+    //-----------------------------------------------------
+    // CLEAN
+    //-----------------------------------------------------
     clean: {
       dist: {
         files: [{
@@ -411,13 +430,13 @@ module.exports = function (grunt) {
 
   grunt.registerTask('serve', function (target) {
     if (target === 'dist') {
-      return grunt.task.run(['build', 'connect:dist:keepalive']);
+      return grunt.task.run(['build', 'browserSync:dist']);
     }
 
     grunt.task.run([
       'clean:server',
       'concurrent:server',
-      'connect:livereload',
+      'browserSync:server',
       'watch'
     ]);
   });
@@ -476,8 +495,8 @@ module.exports = function (grunt) {
     //'check',
     //'test',
     'build',
-    //'buildcontrol:master'
-    'buildcontrol:pages',
+    'buildcontrol:master'
+    //'buildcontrol:pages',
     ]);
 
   //=======================================
