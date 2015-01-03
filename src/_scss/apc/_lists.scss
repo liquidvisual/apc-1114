@@ -1,7 +1,7 @@
 /*
     LISTS.CSS
 
-    - Last updated: 10.12.14
+    - Last updated: 02.01.15
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -17,20 +17,28 @@ ul li {
 
 .triangle-list {
 	list-style: none;
-	margin-left: 0;
+	margin-left: rem-calc(15);
+
+	ul {
+		list-style: none;
+	}
 
 	li {
-		padding-left: rem-calc(8);
-		margin-bottom: rem-calc(5);
+		padding-left: rem-calc(0);
 
-		a:before {
-			content: "\f0da";
-			// content: "\f04b";
-			font-family: "FontAwesome";
+		:before {
 			position: relative;
-			top: 1px;
-			left: -5px;
-			font-size: rem-calc(17);
+			top: 3px;
+			// top: 0.9em;
+			left: -15px;
+			width: 0;
+			height: 0;
+			content: "\f04b";
+			// content: "\f0da";
+			display: block;
+			font-family: "FontAwesome";
+			// font-size: rem-calc(17);
+			font-size: rem-calc(9);
 			color: $primary-color;
 		}
 	}
@@ -49,10 +57,6 @@ ul li {
 .business-cat .triangle-list a:before { color: $business_cat; }
 .management-cat .triangle-list a:before { color: $management_cat; }
 .tesol-cat .triangle-list a:before { color: $tesol_cat; }
-
-.triangle-list li:before {
-
-}
 
 //=========================================
 //

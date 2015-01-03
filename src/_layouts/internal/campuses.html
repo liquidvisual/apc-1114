@@ -74,16 +74,30 @@ layout: internal
 							<div class="padded">
 								<!--  -->
 
+								<script>
+								    // Docs at http://simpleweatherjs.com
+								    $(document).ready(function() {
+								      $.simpleWeather({
+								        location: 'Sydney',
+								        woeid: '',
+								        unit: 'c',
+								        success: function(weather) {
+								          html = '<h2><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;<small><sup>'+weather.units.temp+'</sup></small></h2>';
+								          html += '<h5>'+weather.city+' | '+weather.forecast[0].date+'</h5>';
+
+								          $("#weather").html(html);
+								        },
+								        error: function(error) {
+								          $("#weather").html('<p>'+error+'</p>');
+								        }
+								      });
+								    });
+								</script>
+
 								<div class="weather-widget">
 									<div class="row">
-										<div class="small-4 columns">
-											<strong class="location">{{ "Sydney" }}<br><small>{{ "13:42 PM" }}</small></strong>
-										</div>
-										<div class="small-4 columns">
-											<p class="weather"><img alt="1" src="/assets/weather/1-010bf201908eeb9f4f893068734982f2.png"></p>
-										</div>
-										<div class="small-4 columns">
-											<p class="temp">27&nbsp;°</p>
+										<div class="columns">
+											<div id="weather"></div>
 										</div>
 									</div>
 								</div> <!-- .weather-widget -->

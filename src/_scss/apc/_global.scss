@@ -18,6 +18,10 @@ html, body {
 	//}
 }
 
+ol ol ul, ol ul ul, ul ol ul, ul ul ul {
+    list-style: circle;
+}
+
 //=========================================
 // Snap Grid
 //

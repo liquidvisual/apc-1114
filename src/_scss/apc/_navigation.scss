@@ -50,6 +50,11 @@
 	display: table-cell;
 }
 
+.topbar > ul > li {
+	border: 1px solid $primary-color; // invisible border - use it for dropdown
+	// z-index: 20;
+}
+
 // Illusion
 .topbar > ul > li > a {
 	margin-bottom: rem-calc(10);
@@ -60,12 +65,14 @@
 //=========================================
 
 .topbar a {
+	position: relative; // keep? - placed for mega menu test
 	display: block;
 	padding: rem-calc(5 12);
 	margin: rem-calc(0 2);
 	// margin: rem-calc(10 0);
 	color: white;
 	font-weight: 500;
+	z-index: 10;
 
 	@media #{$large-up} {
 		color: white;
@@ -92,13 +99,22 @@
 	height: auto;
 	overflow: visible;
 	border: 1px solid #5A5760;
+	top: 100%;
 }
 
-.no-touch .topbar .has-dropdown:hover > a {
-	color: white;
-	// background: #222;
-	background: rgba(0, 0, 0, .5);
-	border-radius: $global-radius 0 $global-radius 0;
+.no-touch .topbar .has-dropdown:hover > a:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	height: 43px; // magic
+	display: block;
+	background: $primary-color;
+	z-index: -1;
+	border: 1px solid #5A5760;
+	border-bottom-color: $primary-color;
 }
 
 .no-touch .topbar .dropdown .has-dropdown:hover > .dropdown {
@@ -106,29 +122,32 @@
 	height: auto;
 }
 
+//=========================================
+
 .topbar .dropdown {
+	// @include transition(opacity);
 	position: absolute;
-	// opacity: 0;
-	height: 0; // so hit areas aren't triggered
-	overflow: hidden; // so hit areas aren't triggered
-	top: 100%;
+	opacity: 0;
+	// top: 100%;
+	top: -10000px;
 	left: 0;
 	width: 100%;
 
 	margin: 0;
+	padding: rem-calc(20);
 
 	z-index: 1;
 	// background: lighten($primary-color, 20%);
-	// background: $primary-color;
-	background: rgba($primary-color, .98);
+	background: $primary-color;
+	// background: rgba($primary-color, .98);
 
-	h5 {
+	a {
+		color: #ccc;
+	}
+
+	h5 a {
 		color: white;
 	}
-}
-
-.topbar .dropdown > ul {
-	padding: rem-calc(20);
 }
 
 /* Third level nesting */

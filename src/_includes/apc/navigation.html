@@ -1,6 +1,6 @@
-{% comment %}
+`{% comment %}
 <!--
-	Updated: 11.12.14
+	Updated: 02.01.15
 	Note: sitemap data is pulled from /data/sitemap.yml
 
 	Basic Output:
@@ -29,17 +29,73 @@
 	<li class="{% for path in url_paths %}{% if path == active_path %}active{% endif %}{% endfor %}{% if item.children %} has-dropdown {% endif %}">
 		<a href="{{ item.url }}">{{ item.title }}</a>
 
+		<!-- *** DEFAULT ROUTINE *** -->
+
+
 		<!-- SECOND LEVEL DROPDOWN -->
-		{% if item.children and item.include_children_in_nav %}
+		{% if item.children and item.include_children_in_nav and item.routine == null %}
 		<div class="dropdown">
 			<ul class="medium-block-grid-3 large-block-grid-4">
 				{% for item in item.children %}
-					<li>
-						<ul class="triangle-listX">
-							<li><h5><a href="{{ item.url }}">{{ item.title }}</a></h5></li>
+					<li class="english-cat">
+						<h5><a href="{{ item.url }}">{{ item.title }}</a></h5>
+						<ul class="triangle-list">
 							{% for item in item.children %}
 								<li><a href="{{ item.url }}">{{ item.title }}</a></li>
 							{% endfor %}
+						</ul>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+		{% endif %}
+
+		{% comment %}
+		<!-- *** DEEP NESTED ROUTINE *** -->
+		<!-- SECOND LEVEL DROPDOWN -->
+		{% if item.children and item.include_children_in_nav and item.routine == "deep_nesting" %}
+		<div class="dropdown">
+			<ul class="medium-block-grid-3 large-block-grid-4X">
+				{% for item in item.children[0].children %}
+					<li class="english-cat">
+						<h5><a href="{{ item.url }}">{{ item.title }}</a></h5>
+						<ul class="triangle-list">
+							{% for item in item.children %}
+								<li><a href="{{ item.url }}">{{ item.title }}</a></li>
+							{% endfor %}
+						</ul>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+		{% endif %}
+		{% endcomment %}
+
+		<!-- *** 'BY CATEGORY' ROUTINE *** -->
+
+		<!-- SECOND LEVEL DROPDOWN -->
+		{% assign courses = site.data.apc.sitemap[1] %}
+		{% assign course_categories = site.data.apc.course_categories %}
+
+		{% if item.routine == "course_categories" %}
+		<div class="dropdown">
+			<ul class="medium-block-grid-3 large-block-grid-4">
+				{% for category in course_categories %}
+					<!-- Important: Applies color class to item -->
+					<li class="{{ category.color_class }}">
+						<h5><a href="{{ item.url }}#{{ category.title | slugify }}">{{ category.title }}</a></h5>
+						<ul class="triangle-list">
+
+							<!-- Drill down into children -->
+							{% for course_types in courses.children %}
+							    {% for course in course_types.children %}
+							        <!-- If category title matches the loop category -->
+							        {% if course.category == category.title %}
+							            <li><a href="{{ course.url }}">{{ course.title }}</a></li>
+							        {% endif %}
+							    {% endfor %}
+							{% endfor %}
+
 						</ul>
 					</li>
 				{% endfor %}

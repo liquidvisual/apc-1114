@@ -61,6 +61,7 @@ a {
 	margin-left: rem-calc(6); // magic
 	width: rem-calc(34); // larger flag width
 	min-height: rem-calc(26); // magic
+	z-index: 100;
 
 	@media #{$large-up} {
 		width: $language-selector-width;

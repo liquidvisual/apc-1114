@@ -4,6 +4,7 @@
 - title: Courses
   url: /courses/
   include_children_in_nav: true
+  routine: "course_categories"
   children:
     - title: English Courses
       url: "/courses/english-courses/"
@@ -186,6 +187,7 @@
 
 - title: Student Services
   url: /student-services/student-support/
+  #routine: "deep_nesting"
   include_children_in_nav: true
   children:
     - title: Student Support
@@ -331,3 +333,7 @@
 
     - title: Agents
       url: /contact-us/agents/
+      include_children_in_nav: true
+      children:
+        - title: Listing
+          url: "/contact-us/agents/#listing"

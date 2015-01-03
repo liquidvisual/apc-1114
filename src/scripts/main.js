@@ -16,7 +16,20 @@ $(document).ready(function() {
     NProgress.start(); // Start preloader bar
     setupHero();
     // setupWow();
+
+    //==================================================
+    // Masonry for Dropdowns
+    //==================================================
+
+    $('.topbar .dropdown > ul').masonry({
+        itemSelector: '.topbar .dropdown > ul > li'
+    });
+
 });
+
+//-----------------------------------------------------------------
+// Window Loaded
+//-----------------------------------------------------------------
 
 $(window).load(function() {
     NProgress.done();
