@@ -2,17 +2,6 @@
 layout: internal
 ---
 
-<script>
-    $(document).ready(function(){
-        var options = {
-          valueNames: [ 'country', 'etc' ],
-          listClass: 'agent-list'
-        };
-
-        var userList = new List('agent-listing', options);
-    });
-</script>
-
 <!-- CLAIM SECTION -->
 <section class="section claim-section has-medium-padding">
     <div class="row">
@@ -51,107 +40,100 @@ layout: internal
     </div>
 </div>
 
-<!-- AGENT LISTING WRAPPER -->
-<div id="agent-listing">
+<!-- SEARCH FOR AN AGENT FILTER -->
+<div class="row">
+    <div class="columns">
 
-    <!-- SEARCH FOR AN AGENT FILTER -->
-    <div class="row">
-        <div class="columns">
-            <h4>Search for an Agent</h4>
+        <h4>Search for an Agent</h4>
 
-            <div class="headed">
-                <div class="heading">
-                    <div class="padded">
+        <div class="headed">
+            <div class="heading filter-bar">
+                <div class="padded">
+                    <div class="row">
+                        <div class="large-4 columns">
+                            <div class="drop-filter">
 
-                       <div class="row">
+                                <label>Filter by Country</label>
+                                <div class="custom-select">
+                                    <select class="js-filter-select" name="Country Filter" data-filter-group="country">
+                                        <option selected data-filter-value="">All</option>
+                                        <option data-filter-value=".argentina">Argentina</option>
+                                        <option data-filter-value=".bangladesh">Bangladesh</option>
+                                        <option data-filter-value=".belgium">Belgium</option>
+                                        <option data-filter-value=".egypt">Egypt</option>
+                                    </select>
+                                </div>
 
-                           <div class="large-4 columns">
-                               <div class="drop-filter">
+                            </div> <!-- .drop-filter -->
+                        </div> <!-- .columns -->
 
-                                   <label>Sort by</label>
-                                   <button class="sort" data-sort="country">Country</button>
+                    </div> <!-- .row -->
+                </div> <!-- .padded -->
+            </div> <!-- .heading -->
+        </div> <!-- .headed -->
+    </div> <!-- .columns -->
+</div> <!-- .row -->
 
-                               </div> <!-- .drop-filter -->
-                           </div> <!-- .large-4 -->
+<br>
 
-                           <div class="large-5 end columns">
-                               <div class="drop-filter">
+<!-- LISTING -->
+<section class="filter-list">
+    {% for country in site.data.apc.agents %}
+    <div class="filter-item {{ country.groups }}" data-myorder="{{forloop.index}}">
 
-                                   <label>Filter by Country</label>
-                                   <input class="search" placeholder="Search">
-
-                               </div> <!-- .drop-filter -->
-                           </div> <!-- .large-5 -->
-
-                        </div> <!-- .row -->
-                    </div> <!-- .padded -->
-                </div> <!-- .heading -->
-            </div> <!-- .headed -->
-        </div> <!-- .columns -->
-    </div> <!-- .row -->
-
-    <br>
-
-    <!-- LISTING -->
-    <section class="agent-list">
-        {% for country in site.data.apc.agents %}
-        <div>
-
-            <div class="section">
-                <div class="row">
-                    <div class="columns">
-                        <!-- User should be able to select flag in CMS to accompany country -->
-                        <h3>
-                            <img alt="Argentina" src="{{ country.flag_image }}">&nbsp;
-                            <span class="country">{{ country.title }}</span>
-                        </h3>
-                    </div>
+        <div class="section">
+            <div class="row">
+                <div class="columns">
+                    <!-- User should be able to select flag in CMS to accompany country -->
+                    <h3>
+                        <img alt="Argentina" src="{{ country.flag_image }}">&nbsp;
+                        <span class="country">{{ country.title }}</span>
+                    </h3>
                 </div>
             </div>
-
-            {% for item in country.children %}
-            <div class="agent">
-                <div class="row">
-                    <div class="columns">
-
-                        <div class="padded white_back">
-                            <div class="bottom_line">
-                                <h4>{{ item.title }}</h4>
-                            </div>
-                            <div class="contents tk-proxima-nova">
-                                <div class="row">
-                                    <div class="large-3 columns">
-                                        <div class="heading"><b>Website</b></div>
-                                        <p><a href="http://www.someurl.com">www.someurl.com</a></p>
-                                    </div>
-                                    <div class="large-3 columns">
-                                        <div class="heading"><b>Contact</b></div>
-                                        <p>Bob Longname</p>
-                                    </div>
-                                    <div class="large-3 columns">
-                                        <div class="heading"><b>Email</b></div>
-                                        <p><a href="mailto:email@email.com">email@email.com</a></p>
-                                    </div>
-                                    <div class="large-3 columns">
-                                        <div class="heading"><b>Address</b></div>
-
-                                        <p>Some Address Line 1<br>
-                                        Some Address Line 2<br>
-                                        Some Address Line 3</p>
-                                    </div>
-                                </div> <!-- .row -->
-                            </div> <!-- .contents -->
-                        </div> <!-- .padded.white_back -->
-
-                    </div> <!-- .columns -->
-                </div> <!-- .row -->
-            </div> <!-- .agent -->
-            <br>
-            {% endfor %}
-
         </div>
+
+        {% for item in country.children %}
+        <div class="agent">
+            <div class="row">
+                <div class="columns">
+
+                    <div class="padded white_back">
+                        <div class="bottom_line">
+                            <h4>{{ item.title }}</h4>
+                        </div>
+                        <div class="contents tk-proxima-nova">
+                            <div class="row">
+                                <div class="large-3 columns">
+                                    <div class="heading"><b>Website</b></div>
+                                    <p><a href="http://www.someurl.com">www.someurl.com</a></p>
+                                </div>
+                                <div class="large-3 columns">
+                                    <div class="heading"><b>Contact</b></div>
+                                    <p>Bob Longname</p>
+                                </div>
+                                <div class="large-3 columns">
+                                    <div class="heading"><b>Email</b></div>
+                                    <p><a href="mailto:email@email.com">email@email.com</a></p>
+                                </div>
+                                <div class="large-3 columns">
+                                    <div class="heading"><b>Address</b></div>
+
+                                    <p>Some Address Line 1<br>
+                                    Some Address Line 2<br>
+                                    Some Address Line 3</p>
+                                </div>
+                            </div> <!-- .row -->
+                        </div> <!-- .contents -->
+                    </div> <!-- .padded.white_back -->
+
+                </div> <!-- .columns -->
+            </div> <!-- .row -->
+        </div> <!-- .agent -->
+        <br>
         {% endfor %}
 
-    </section> <!-- .agent-list -->
+    </div>
+    {% endfor %}
 
-</div> <!-- #agents-listing -->
+</section> <!-- .filter-list -->

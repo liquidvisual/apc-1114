@@ -1,0 +1,118 @@
+---
+layout: internal
+---
+
+{% capture type_link %}
+	{% if page.type == "media" %}
+	    /news-and-events/media/media-item/
+	{% else %}
+		/news-and-events/events/events-item/
+	{% endif %}
+{% endcapture %}
+
+<!-- CLAIM SECTION -->
+<section class="section claim-section has-medium-padding">
+    <div class="row">
+        <div class="columns">
+	        <h2>{{ page.title }}</h2>
+	        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio ipsum dolor sit amet.</p>
+        </div>
+    </div>
+</section> <!-- .claim-section -->
+
+<!-- FILTER CONTROLS -->
+<div class="row">
+	<div class="columns">
+		<div class="headed">
+			<div class="heading filter-bar">
+				<div class="padded">
+					<div class="row">
+						<div class="large-4 columns">
+						    <div class="drop-filter">
+
+						        <label>Filter by Country</label>
+						        <div class="custom-select">
+							        <select class="js-filter-select" name="Country Filter" data-filter-group="country">
+							        	<option selected data-filter-value="">All</option>
+							        	<option data-filter-value=".australia">Australia</option>
+							        	<option data-filter-value=".china">China</option>
+							        	<option data-filter-value=".indonesia">Indonesia</option>
+							        </select>
+						        </div>
+
+						    </div> <!-- .drop-filter -->
+						</div> <!-- .columns -->
+
+						<div class="large-4 end columns">
+						    <div class="drop-filter">
+
+						        <label>Filter by School</label>
+						        <div class="custom-select">
+							        <select class="js-filter-select" name="School Filter" data-filter-group="school">
+							        	<option selected data-filter-value="">All</option>
+							        	<option data-filter-value=".school-a">School A</option>
+							        	<option data-filter-value=".school-b">School B</option>
+							        </select>
+						        </div>
+
+						    </div> <!-- .drop-filter -->
+						</div> <!-- .columns -->
+
+						<div class="large-4 end columns">
+						    <div class="drop-filter">
+
+						        <label>Filter by Subject</label>
+						        <div class="custom-select">
+							        <select class="js-filter-select" name="Subject Filter" data-filter-group="subject">
+							        	<option selected data-filter-value="">All</option>
+							        	<option data-filter-value=".subject-a">Subject A</option>
+							        	<option data-filter-value=".subject-b">Subject B</option>
+							        </select>
+						        </div>
+
+						    </div> <!-- .drop-filter -->
+						</div> <!-- .columns -->
+					</div>
+				</div> <!-- .padded -->
+			</div> <!-- .heading -->
+
+			<div class="content">
+				<div class="padded">
+					<div class="filter-list">
+						{% for item in site.data.apc.events %}
+						<div class="filter-item news_teaser {{ item.groups }}" data-myorder="{{forloop.index}}">
+							<div class="row">
+								<div class="medium-3 columns">
+									<p><img width="100%" alt="Apc news 200x200" src="http://placehold.it/200x200"></p>
+								</div>
+								<div class="medium-9 columns">
+									<h4><a href="{{ type_link }}">{{ item.title }} <small class="date">Sunday, 1 October 2013</small></a></h4>
+
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. Sed nulla orci, suscipit sit amet leo in, venenatis euismod mauris. Donec eu arcu ac arcu suscipit congue eget eu nulla. Praesent blandit, ipsum a facilisis facilisis, diam sem consectetur lectus, eget efficitur nisi elit nec tellus. Morbi rutrum luctus suscipit. Nam mattis fringilla leo eget vulputa...</p>
+
+									<div class="action_bar text-center medium-text-right">
+										<a style="margin-bottom: 0;" class="button medium round swish" href="{{ type_link }}"><i class="fa fa-play"></i> Read More</a>
+									</div>
+								</div>
+							</div> <!-- .row -->
+							<!-- Divider -->
+							<div class="row">
+								<div class="columns">
+									<hr>
+								</div>
+							</div>
+						</div> <!-- .news_teaser -->
+						{% endfor %}
+					</div> <!-- .filter-list -->
+				</div> <!-- .padded -->
+			</div> <!-- .content -->
+
+			<div class="pagination-centered">
+				{% include shared/pagination.html %}
+			</div>
+
+			<br>
+
+		</div> <!-- .headed -->
+	</div> <!-- .columns -->
+</div> <!-- .row -->

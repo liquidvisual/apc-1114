@@ -1,0 +1,50 @@
+---
+layout: internal
+---
+
+{% assign body_image = page.body_image %}
+
+<br>
+
+<section class="section">
+	<div class="row">
+		<div class="columns">
+				<div class="content">
+
+					<div class="row">
+						<div class="medium-3 columns">
+
+							<!-- Side Nav -->
+							<ul class="side-nav">
+							  <li><a href="/news/">News</a></li>
+							  <li><a href="/events/">Events</a></li>
+							  <li><a href="/media/">Media</a></li>
+							</ul>
+						</div>
+						<div class="medium-9 columns">
+							<h1 style="text-transform: none;">There's Nothing Finer than Being in Your Diner<small class="date"><br>Sunday, 1 October 2013</small></h1>
+							<p><i class="fa fa-pencil"></i> Posted by <a href="#">Australian Pacific College</a></p>
+
+							<p><iframe width="560" height="315" src="//www.youtube.com/embed/ScMzIvxBSi4" frameborder="0" allowfullscreen></iframe></p>
+
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. Sed nulla orci, suscipit sit amet leo in, venenatis euismod mauris. Donec eu arcu ac arcu suscipit congue eget eu nulla. Praesent blandit, ipsum a facilisis facilisis, diam sem consectetur lectus, eget efficitur nisi elit nec tellus. Morbi rutrum luctus suscipit. Nam mattis fringilla leo eget vulputa.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam atque quia iste, ullam suscipit quam, odit debitis nam voluptates! Minima saepe tenetur porro quas voluptate. Enim porro eligendi temporibus asperiores</p>
+
+							<hr>
+
+							<ul class="lv-inline-list">
+								<li><i class="fa fa-tags"></i>&nbsp; <b>Tags:</b></li>
+								{% for i in (1..5) %}
+									<li><a href="#">loremip</a>,</li>
+								{% endfor %}
+							</ul>
+
+							<p><a class="right" href="#next">Next Article &nbsp;<i class="fa fa-angle-right"></i></a></p>
+
+						</div>
+					</div> <!-- .row -->
+
+			</div> <!-- .content -->
+		</div> <!-- .columns -->
+	</div> <!-- .row -->
+</section>

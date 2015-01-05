@@ -76,6 +76,42 @@ function setupHero() {
 }
 
 //-----------------------------------------------------------------
+// Isotope Filtering
+//-----------------------------------------------------------------
+
+$(function() {
+    var $container = $('.filter-list'),
+        $select = $('.js-filter-select');
+
+    filters = {};
+
+    $container.isotope({
+        itemSelector: '.filter-item'
+    });
+
+    $select.change(function() {
+        var $this = $(this);
+        var $optionSet = $this;
+        var group = $optionSet.attr('data-filter-group');
+
+        filters[group] = $this.find('option:selected').attr('data-filter-value');
+
+        var isoFilters = [];
+        for (var prop in filters) {
+            isoFilters.push(filters[prop])
+        }
+
+        var selector = isoFilters.join('');
+
+        $container.isotope({
+            filter: selector
+        });
+
+        return false;
+    });
+});
+
+//-----------------------------------------------------------------
 // Setup Wow
 //-----------------------------------------------------------------
 

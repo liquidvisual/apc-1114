@@ -15,6 +15,10 @@ $language-selector-width: rem-calc(115);
 //
 //-----------------------------------------------------------------
 
+.filter-item {
+	width: 100%; // isotope - who knows
+}
+
 .static {
     position: static;
 }

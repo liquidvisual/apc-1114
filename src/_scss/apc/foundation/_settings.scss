@@ -284,7 +284,7 @@ $paragraph-font-size: rem-calc(14); //1rem;
 // We use these to style the <hr> element
 // $hr-border-width: 1px;
 // $hr-border-style: solid;
-// $hr-border-color: $gainsboro;
+$hr-border-color: #eee; //$gainsboro;
 $hr-margin: rem-calc(30);
 
 // We use these to style lists

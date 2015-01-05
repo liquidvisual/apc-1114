@@ -1,24 +1,28 @@
 # Dummy Data - Agents by Country
 
 - title: Argentina
+  groups: argentina
   flag_image: "/img/shared/flags/32/Argentina.png"
   children:
     - title: "Australian & New Zealand group"
     - title: "ABC Group"
 
 - title: Bangladesh
+  groups: bangladesh
   flag_image: "/img/shared/flags/32/Bangladesh.png"
   children:
     - title: "Active group international CO LTD"
     - title: "DEF Group"
 
 - title: Belgium
+  groups: belgium
   flag_image: "/img/shared/flags/32/Belgium.png"
   children:
     - title: "Information Planet"
     - title: "GHI Group"
 
 - title: Egypt
+  groups: egypt
   flag_image: "/img/shared/flags/32/Egypt.png"
   children:
     - title: "Information Planet"

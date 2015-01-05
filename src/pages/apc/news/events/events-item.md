@@ -1,8 +1,7 @@
 ---
-layout: internal/events
+layout: internal/events_item
 title: Events
-permalink: /news-and-events/events/
-type: event
+permalink: /news-and-events/events/events-item/
 body_image: http://placehold.it/200x200
 ---
 

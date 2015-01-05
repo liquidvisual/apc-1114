@@ -285,6 +285,10 @@
   children:
     - title: History
       url: /about-us/history/
+      include_children_in_nav: true
+      children:
+        - title: Overview
+          url: "/about-us/history/#overview/"
 
     - title: Staff Profiles
       url: /about-us/staff-profiles/
@@ -312,6 +316,15 @@
 
     - title: Jobs at APC
       url: /about-us/jobs-at-apc/
+      include_children_in_nav: true
+      children:
+        - title: Overview
+          url: "/about-us/jobs-at-apc/#overview/"
+        - title: Elcos
+          url: "/about-us/jobs-at-apc/#elcos/"
+        - title: Vocational
+          url: "/about-us/jobs-at-apc/#vocational/"
+
     - title: Compliance Forms
       url: /about-us/compliance-forms/
       include_children_in_nav: true
