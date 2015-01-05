@@ -1,4 +1,4 @@
-`{% comment %}
+{% comment %}
 <!--
 	Updated: 02.01.15
 	Note: sitemap data is pulled from /data/sitemap.yml
@@ -30,7 +30,6 @@
 		<a href="{{ item.url }}">{{ item.title }}</a>
 
 		<!-- *** DEFAULT ROUTINE *** -->
-
 
 		<!-- SECOND LEVEL DROPDOWN -->
 		{% if item.children and item.include_children_in_nav and item.routine == null %}

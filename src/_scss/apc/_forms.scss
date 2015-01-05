@@ -22,6 +22,46 @@ form label {
 	margin-top: rem-calc(10);
 }
 
+//-----------------------------------------------------------------
+// Filters
+//-----------------------------------------------------------------
+
+.drop-filter {
+	display: table;
+
+	label, select, button {
+		margin: 0;
+		text-transform: uppercase;
+
+		@media #{$medium-up} {
+			padding-right: rem-calc(15);
+		}
+	}
+
+	label {
+		color: white;
+		display: table-cell;
+	}
+
+	input {
+		line-height: 35px; // magic but who cares
+		border: 0;
+	}
+
+	.custom-select, button, input {
+		display: table-cell;
+		overflow: hidden;
+	}
+
+	select {
+		width: 110%;
+		background: $apc-dark-blue;
+		border: none;
+		color: white;
+		padding: rem-calc(0 15);
+	}
+}
+
 //=========================================
 //
 //=========================================

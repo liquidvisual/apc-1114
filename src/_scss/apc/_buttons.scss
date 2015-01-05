@@ -1,7 +1,7 @@
 /*
     BUTTONS.CSS
 
-    - Last updated: 10.12.14
+    - Last updated: 03.01.15
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -15,6 +15,10 @@
     text-transform: uppercase;
 }
 
+//=========================================
+// Swish
+//=========================================
+
 .button.swish {
     border-radius: $global-radius 0 $global-radius 0;
 
@@ -26,6 +30,14 @@
         font-size: .8em;
         margin-right: rem-calc(3);
     }
+}
+
+//=========================================
+// Muted
+//=========================================
+
+a.button.muted {
+    background-color: $apc_grey !important;
 }
 
 //=========================================

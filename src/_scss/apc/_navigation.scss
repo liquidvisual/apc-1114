@@ -79,7 +79,6 @@
 	}
 }
 
-.topbar a:active,
 .topbar .active > a {
 	background: darken($primary-color, 10%);
 	border-radius: $global-radius 0 $global-radius 0;
@@ -143,6 +142,10 @@
 
 	a {
 		color: #ccc;
+
+		&:hover {
+			color: white;
+		}
 	}
 
 	h5 a {

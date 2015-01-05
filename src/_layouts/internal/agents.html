@@ -1,0 +1,156 @@
+---
+layout: internal
+---
+
+<script>
+    $(document).ready(function(){
+        var options = {
+          valueNames: [ 'country', 'etc' ],
+          listClass: 'agent-list'
+        };
+
+        var userList = new List('agent-listing', options);
+    });
+</script>
+
+<!-- CLAIM SECTION -->
+<section class="section claim-section has-medium-padding">
+    <div class="row">
+        <div class="columns">
+            <h2>{{ page.title }}</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio ipsum dolor sit amet.</p>
+        </div>
+    </div>
+</section> <!-- .claim-section -->
+
+<!-- DECORATIVE AGENT MAP -->
+<div class="row">
+    <div class="columns">
+        <div class="step padded">
+            <div class="bottom_line">
+                <div class="row">
+                    <div class="large-8 columns">
+                        <h4>Representative offices all over the world</h4>
+                    </div>
+                    <div class="large-4 columns">
+                        <div class="text-right">
+                            <!-- Mailto Link -->
+                            <a class="button medium round swish muted" href="mailto:become-an-agent@apc.com.au"><i class="fa fa-play"></i> Become an Agent</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="columns">
+                    <div class="text-center">
+                        <img width="100%" src="/img/apc/template/worldmap.jpg" alt="Worldmap">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- AGENT LISTING WRAPPER -->
+<div id="agent-listing">
+
+    <!-- SEARCH FOR AN AGENT FILTER -->
+    <div class="row">
+        <div class="columns">
+            <h4>Search for an Agent</h4>
+
+            <div class="headed">
+                <div class="heading">
+                    <div class="padded">
+                        <div class="row">
+
+                            <div class="large-4 columns">
+                                <div class="drop-filter">
+
+                                    <label>Sort by</label>
+                                    <button class="sort" data-sort="country">Country</button>
+
+                                </div> <!-- .drop-filter -->
+                            </div> <!-- .large-4 -->
+
+                            <div class="large-5 end columns">
+                                <div class="drop-filter">
+
+                                    <label>Filter by Country</label>
+                                    <input class="search" placeholder="Search">
+
+                                </div> <!-- .drop-filter -->
+                            </div> <!-- .large-5 -->
+
+                        </div> <!-- .row -->
+                    </div> <!-- .padded -->
+                </div> <!-- .heading -->
+            </div> <!-- .headed -->
+        </div> <!-- .columns -->
+    </div> <!-- .row -->
+
+    <br>
+
+    <!-- LISTING -->
+    <section class="agent-list">
+        {% for country in site.data.apc.agents %}
+        <div>
+
+            <div class="section">
+                <div class="row">
+                    <div class="columns">
+                        <!-- User should be able to select flag in CMS to accompany country -->
+                        <h3>
+                            <img alt="Argentina" src="{{ country.flag_image }}">&nbsp;
+                            <span class="country">{{ country.title }}</span>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+            {% for item in country.children %}
+            <div class="agent">
+                <div class="row">
+                    <div class="columns">
+
+                        <div class="padded white_back">
+                            <div class="bottom_line">
+                                <h4>{{ item.title }}</h4>
+                            </div>
+                            <div class="contents tk-proxima-nova">
+                                <div class="row">
+                                    <div class="large-3 columns">
+                                        <div class="heading"><b>Website</b></div>
+                                        <p><a href="http://www.someurl.com">www.someurl.com</a></p>
+                                    </div>
+                                    <div class="large-3 columns">
+                                        <div class="heading"><b>Contact</b></div>
+                                        <p>Bob Longname</p>
+                                    </div>
+                                    <div class="large-3 columns">
+                                        <div class="heading"><b>Email</b></div>
+                                        <p><a href="mailto:email@email.com">email@email.com</a></p>
+                                    </div>
+                                    <div class="large-3 columns">
+                                        <div class="heading"><b>Address</b></div>
+
+                                        <p>Some Address Line 1<br>
+                                        Some Address Line 2<br>
+                                        Some Address Line 3</p>
+                                    </div>
+                                </div> <!-- .row -->
+                            </div> <!-- .contents -->
+                        </div> <!-- .padded.white_back -->
+
+                    </div> <!-- .columns -->
+                </div> <!-- .row -->
+            </div> <!-- .agent -->
+            <br>
+            {% endfor %}
+
+        </div>
+        {% endfor %}
+
+    </section> <!-- .agent-list -->
+
+</div> <!-- #agents-listing -->

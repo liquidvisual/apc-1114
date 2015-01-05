@@ -262,10 +262,22 @@
   children:
     - title: News
       url: /news-and-events/news/
+      include_children_in_nav: true
+      children:
+        - title: Blog
+          url: "/news-and-events/news/#blog"
     - title: Events
       url: /news-and-events/events/
+      include_children_in_nav: true
+      children:
+        - title: Calendar
+          url: "/news-and-events/news/#calendar"
     - title: Media
       url: /news-and-events/media/
+      include_children_in_nav: true
+      children:
+        - title: Videos
+          url: "/news-and-events/news/#videos"
 
 - title: About Us
   url: /about-us/history/
