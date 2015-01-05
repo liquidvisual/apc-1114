@@ -271,13 +271,13 @@
       include_children_in_nav: true
       children:
         - title: Calendar
-          url: "/news-and-events/news/#calendar"
+          url: "/news-and-events/events/#calendar"
     - title: Media
       url: /news-and-events/media/
       include_children_in_nav: true
       children:
         - title: Videos
-          url: "/news-and-events/news/#videos"
+          url: "/news-and-events/media/#videos"
 
 - title: About Us
   url: /about-us/history/

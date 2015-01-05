@@ -1,7 +1,7 @@
 /*
     FORMS.CSS
 
-    - Last updated: 10.12.14
+    - Last updated: 05.01.15
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -16,6 +16,10 @@ form label {
 	text-transform: uppercase;
 }
 
+input {
+	border-radius: 0;
+}
+
 .lv-super form input,
 .lv-super form textarea {
 	font-weight: normal;
@@ -26,42 +30,70 @@ form label {
 // Filters
 //-----------------------------------------------------------------
 
+.lv-super .filter-bar {
+	padding: rem-calc(20 0);
+
+	@media #{$medium-up} {
+	    padding: rem-calc(10 0);
+	}
+}
+
 .drop-filter {
-	display: table;
-
-	label, select, button {
-		margin: 0;
-		text-transform: uppercase;
-
-		@media #{$medium-up} {
-			padding-right: rem-calc(15);
-		}
+	@media #{$large-up} {
+	    display: table; // stack on mobile
 	}
 
 	label {
+		max-width: rem-calc(190);
+	}
+
+	label, select, button {
+		display: table-cell;
+		vertical-align: middle;
+		margin: 0 0 5 0;
+		padding: rem-calc(0 15 5 0);
+		text-transform: uppercase;
+		font-weight: normal;
+		font-size: rem-calc(14);
 		color: white;
-		display: table-cell;
+
+		@media #{$large-up} {
+		    margin: 0;
+		    padding: rem-calc(0 15 0 0);
+		}
 	}
 
-	input {
-		line-height: 35px; // magic but who cares
-		border: 0;
-	}
-
-	.custom-select, button, input {
-		display: table-cell;
+	.custom-select, button {
+		position: relative;
 		overflow: hidden;
+
+		@media #{$large-up} {
+		    width: 130px;
+		}
 	}
 
 	select {
-		width: 110%;
+		width: 135%; // attack ugly select arrow
 		background: $apc-dark-blue;
 		border: none;
 		color: white;
-		padding: rem-calc(0 15);
+		padding-left: rem-calc(10);
+		text-transform: none;
+		text-overflow: ellipsis;
+		overflow: hidden;
 	}
 }
 
 //=========================================
 //
 //=========================================
+
+.custom-select:after {
+	content: "\f0d7";
+	font-family: "FontAwesome";
+	position: absolute;
+	right: rem-calc(10);
+	top: 0;
+	color: white;
+	line-height: 40px;
+}

@@ -1,0 +1,49 @@
+# Dummy Data - Events and Media
+
+- title: Heading 01
+  date: Wednesday, 1 October 2014
+  groups: "australia subject-a school-b"
+
+- title: Heading 02
+  date: Tuesday, 30 September 2014
+  groups: "australia subject-a"
+
+- title: Heading 03
+  date: Monday, 29 September 2014
+  groups: "china subject-a"
+
+- title: Heading 04
+  date: Sunday, 28 September 2014
+  groups: "china subject-b"
+
+- title: Heading 05
+  date: Saturday, 27 September 2014
+  groups: "china subject-b"
+
+- title: Heading 06
+  date: Friday, 26 September 2014
+  groups: "china subject-a"
+
+- title: Heading 07
+  date: Thursday, 25 September 2014
+  groups: "indonesia subject-b"
+
+- title: Heading 08
+  date: Wednesday, 24 September 2014
+  groups: "indonesia china"
+
+- title: Heading 09
+  date: Tuesday, 23 September 2014
+  groups: "indonesia"
+
+- title: Heading 10
+  date: Monday, 22 September 2014
+  groups: "china subject-a"
+
+- title: Heading 11
+  date: Sunday, 21 September 2014
+  groups: "china"
+
+- title: Heading 12
+  date: Saturday, 20 September 2014
+  groups: "indonesia school-a"

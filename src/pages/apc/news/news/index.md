@@ -1,5 +1,5 @@
 ---
-layout: internal/posts
+layout: internal/posts_no_filter
 title: News
 permalink: /news-and-events/news/
 ---
