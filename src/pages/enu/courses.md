@@ -1,8 +1,8 @@
 ---
 layout: internal
+site_type: "enu"
 title: Kitchen Sink Test
 permalink: /enu/courses/
-site_type: "enu"
 ---
 
 <!--- This child document initializes the page in Jekyll. -->

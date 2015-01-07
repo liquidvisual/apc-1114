@@ -9,6 +9,32 @@ var TOUCH_ENABLED = $(".touch").length;
 var bxSliderHero;
 
 //-----------------------------------------------------------------
+// Site Switcher (DEV ONLY)
+//-----------------------------------------------------------------
+
+$(function(){
+    $('.logo').click(function(e){
+        var protocol = location.protocol; // http:
+        var host = location.host; // localhost:9292/
+        var href = location.href; // localhost:9292/enu/path/to
+        var path = location.pathname; // /enu/path/to
+        var isAPC = href.indexOf('enu') == -1;
+
+        e.preventDefault();
+
+        // If we're in APC - GO TO ENU
+        if (isAPC) {
+            var newPath = protocol + "//" + host + "/enu" + path;
+        } else {
+            // Remove /enu from url string
+            path = path.replace('/enu','');
+            var newPath = protocol + "//" + host + path;
+        }
+        window.open(newPath, '_self', false);
+    });
+});
+
+//-----------------------------------------------------------------
 // Document Ready
 //-----------------------------------------------------------------
 

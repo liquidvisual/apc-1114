@@ -29,7 +29,7 @@
 
     {% if page.site_type == "enu" %}
 
-    <!-- build:css({src,.tmp}) /assets/css/optimized-enu.css -->
+    <!-- build:css({src,.tmp}) /assets/css/minified-enu.css -->
     <link rel="stylesheet" href="/_bower_components/animate.css/animate.min.css">
     <link rel="stylesheet" href="/_bower_components/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="/_bower_components/slick.js/slick/slick.css">
@@ -38,7 +38,7 @@
 
     {% else %}
 
-    <!-- build:css({src,.tmp}) /assets/css/optimized-apc.css -->
+    <!-- build:css({src,.tmp}) /assets/css/minified-apc.css -->
     <link rel="stylesheet" href="/_bower_components/animate.css/animate.min.css">
     <link rel="stylesheet" href="/_bower_components/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="/_bower_components/slick.js/slick/slick.css">
@@ -59,13 +59,7 @@
 
             <!-- HEADER -->
             <header class="header">
-
-                {% if page.site_type == "enu" %}
-                    {% include enu/header.html %}
-                {% else %}
-                    {% include apc/header.html %}
-                {% endif %}
-
+                {% include {{page.site_type}}/header.html %}
             </header>
 
             <!-- NAVIGATION -->
@@ -73,13 +67,7 @@
                 <div class="row collapse outer-row">
                     <div class="columns">
                         <div class="topbar">
-
-                            {% if page.site_type == "enu" %}
-                                {% include enu/navigation.html %}
-                            {% else %}
-                                {% include apc/navigation.html %}
-                            {% endif %}
-
+                            {% include {{page.site_type}}/navigation.html %}
                         </div>
                     </div>
                 </div>
@@ -89,27 +77,19 @@
 
             <!-- FOOTER -->
             <footer class="footer">
-
-                {% if page.site_type == "enu" %}
-                    {% include enu/footer.html %}
-                {% else %}
-                    {% include apc/footer.html %}
-                {% endif %}
-
+                {% include {{page.site_type}}/footer.html %}
             </footer>
 
         </div> <!-- .lv-page -->
     </div> <!-- .lv-super -->
 
-    <!-- OFF-CANVAS MENU -->
+    <!-- OFF-CANVAS MENU - Uses 'simplified' navigation include for MMenu compatibility -->
     <nav class="js-off-canvas-menu-left hide" aria-hidden="true">
-
         {% if page.site_type == "enu" %}
             {% include shared/navigation.html data=site.data.enu.sitemap %}
         {% else %}
-            {% include shared/navigation.html data=site.data.apc.sitemap %}
+            {% include shared/navigation.html data="site.data.sitemap" %}
         {% endif %}
-
     </nav>
 
     <!-- LANGUAGE SELECTOR -->
@@ -129,11 +109,7 @@
     <!-- CDN -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.0.2/jquery.simpleWeather.min.js"></script>
 
-    <!-- <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script> from APC -->
-    <!-- // <script src="/_bower_components/jquery/dist/jquery.min.js"></script> -->
-
-    <!-- build:js(src) /assets/scripts/optimized.js -->
-
+    <!-- build:js(src) /assets/scripts/minified.js -->
     <script src="/_bower_components/jquery-placeholder/jquery.placeholder.js"></script>
     <script src="/_bower_components/jQuery.mmenu/src/js/jquery.mmenu.min.all.js"></script>
     <script src="/_bower_components/slick.js/slick/slick.js"></script>

@@ -1,5 +1,6 @@
 ---
 layout: enu_homepage
+site_type: "enu"
 title:  "Nothing's Finer Than Being in Your Diner"
 permalink: /news/nothings-finer-than-being-in-your-diner/
 type: news_item

@@ -1,5 +1,6 @@
 ---
 layout: internal/text_page
+site_type: "apc"
 title: Styleguide
 permalink: /styleguide/
 ---

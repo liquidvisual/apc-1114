@@ -1,5 +1,6 @@
 ---
 layout: enu_homepage
+site_type: "enu"
 title:  "Live Latin Music"
 permalink: /news/live-latin-music/
 type: event_item

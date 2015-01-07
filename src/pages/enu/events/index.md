@@ -1,5 +1,6 @@
 ---
 layout: homepage
+site_type: "enu"
 title: Events
 permalink: /events/
 hero_image: "beach-games"

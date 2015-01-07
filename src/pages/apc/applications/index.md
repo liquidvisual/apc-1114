@@ -1,5 +1,6 @@
 ---
 layout: internal/promo_tiles
+site_type: "apc"
 title: Applications
 permalink: /applications/
 hero: /img/apc/content/hero-3.jpg

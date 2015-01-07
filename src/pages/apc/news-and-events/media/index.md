@@ -1,5 +1,6 @@
 ---
 layout: internal/events
+site_type: "apc"
 title: Media
 permalink: /news-and-events/media/
 type: media

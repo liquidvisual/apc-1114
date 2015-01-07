@@ -1,5 +1,6 @@
 ---
 layout: internal/promo_tiles
+site_type: "apc"
 title: News and Media
 permalink: /news-and-events/
 sitemap_index: 5

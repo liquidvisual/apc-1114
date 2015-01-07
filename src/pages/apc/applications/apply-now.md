@@ -1,5 +1,6 @@
 ---
 layout: internal/apply_now
+site_type: "apc"
 title: Apply Now
 permalink: /applications/apply-now/
 exclude_hero: true

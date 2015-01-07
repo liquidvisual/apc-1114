@@ -1,5 +1,6 @@
 ---
 layout: enu_homepage
+site_type: "enu"
 title:  "Whale Watching August"
 permalink: /news/whale-watching-august/
 type: event_item

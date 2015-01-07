@@ -1,5 +1,6 @@
 ---
 layout: internal/promo_tiles
+site_type: "apc"
 title: About Us
 permalink: /about-us/
 sitemap_index: 6

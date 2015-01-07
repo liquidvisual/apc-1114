@@ -1,5 +1,6 @@
 ---
 layout: internal/second_level_promos
+site_type: "apc"
 title: English Courses
 permalink: /courses/english-courses/
 ---

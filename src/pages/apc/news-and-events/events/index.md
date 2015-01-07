@@ -1,5 +1,6 @@
 ---
 layout: internal/events
+site_type: "apc"
 title: Events
 permalink: /news-and-events/events/
 type: event

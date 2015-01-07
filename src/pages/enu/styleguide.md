@@ -1,8 +1,8 @@
 ---
 layout: internal/text_page
+site_type: "enu"
 title: Styleguide
 permalink: /enu/styleguide/
-site_type: "enu"
 ---
 
 <!-- ************************************************************************************** -->
