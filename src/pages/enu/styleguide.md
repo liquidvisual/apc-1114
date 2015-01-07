@@ -11,7 +11,7 @@ permalink: /enu/styleguide/
 <header>
    <nav role="navigation" class="breadcrumb-nav">
       <br>
-      <!-- <a href="../">Barebones</a> / -->
+      <a href="../">Barebones</a> /
    </nav>
    <h1>Style Guide</h1>
    <p class="lede">Basic markup and typographic styles</p>

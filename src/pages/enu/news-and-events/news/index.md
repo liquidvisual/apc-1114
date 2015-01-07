@@ -1,9 +1,9 @@
 ---
-layout: enu_homepage
+layout: internal/news
 site_type: "enu"
 title: News
-permalink: /news/
-hero_image: "beach-games"
+permalink: /enu/news-and-events/news/
+exclude_hero: true
 ---
 
 <!--- This child document initializes the page in Jekyll. -->

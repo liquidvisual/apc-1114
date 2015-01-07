@@ -1,10 +1,9 @@
 ---
-layout: internal/promo_tiles
-site_type: "apc"
-title: About Us
-permalink: /about-us/
+layout: internal/jobs
+site_type: "enu"
+title: Jobs at APC
+permalink: /enu/about-us/jobs-at-apc/
 hero: /img/apc/content/hero-6.jpg
-sitemap_index: 6
 ---
 
 <!--- This child document initializes the page in Jekyll. -->

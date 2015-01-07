@@ -1,8 +1,8 @@
 ---
 layout: internal/promo_tiles
-site_type: "apc"
+site_type: "enu"
 title: Learning Environment
-permalink: /learning-environment/
+permalink: /enu/learning-environment/
 hero: /img/apc/content/hero-7.jpg
 sitemap_index: 2
 ---

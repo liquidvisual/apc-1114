@@ -9,7 +9,7 @@ var TOUCH_ENABLED = $(".touch").length;
 var bxSliderHero;
 
 //-----------------------------------------------------------------
-// Site Switcher (DEV ONLY)
+// Site Switcher *** REMOVE ON DEPLOY ***
 //-----------------------------------------------------------------
 
 $(function(){
@@ -33,6 +33,13 @@ $(function(){
         window.open(newPath, '_self', false);
     });
 });
+
+// Site switcher assets
+if ($("#enu").length) {
+    $('link[href*="/css/apc"], link[href*="/assets/css/minified-apc"]').remove();
+} else {
+    $('link[href*="/css/enu.css"], link[href*="/assets/css/minified-enu"]').remove();
+}
 
 //-----------------------------------------------------------------
 // Document Ready
@@ -60,16 +67,6 @@ $(document).ready(function() {
 $(window).load(function() {
     NProgress.done();
 });
-
-//-----------------------------------------------------------------
-// Remove on Deploy
-//-----------------------------------------------------------------
-
-if ($("#enu").length) {
-    $('link[href*="/css/apc"], link[href*="/assets/css/optimized-apc"]').remove();
-} else {
-    $('link[href*="/css/enu.css"], link[href*="/assets/css/optimized-enu"]').remove();
-}
 
 //-----------------------------------------------------------------
 // setupHero

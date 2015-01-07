@@ -1,8 +1,8 @@
 ---
 layout: internal/promo_tiles
-site_type: "apc"
+site_type: "enu"
 title: About Us
-permalink: /about-us/
+permalink: /enu/about-us/
 hero: /img/apc/content/hero-6.jpg
 sitemap_index: 6
 ---

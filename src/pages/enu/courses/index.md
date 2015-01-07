@@ -1,8 +1,8 @@
 ---
-layout: internal
-site_type: "apc"
-title: English Courses
-permalink: /courses/english-courses/
+layout: internal/courses
+site_type: "enu"
+title: Courses
+permalink: /enu/courses/
 hero: /img/apc/content/hero-2.jpg
 ---
 

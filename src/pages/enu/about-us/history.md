@@ -1,10 +1,9 @@
 ---
-layout: internal/promo_tiles
-site_type: "apc"
-title: About Us
-permalink: /about-us/
+layout: internal/history
+site_type: "enu"
+title: History
+permalink: /enu/about-us/history/
 hero: /img/apc/content/hero-6.jpg
-sitemap_index: 6
 ---
 
 <!--- This child document initializes the page in Jekyll. -->
