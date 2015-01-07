@@ -189,8 +189,10 @@
       icon: fa-check-square
       include_children_in_nav: true
       children:
-        - title: Application Form
-          url: "/applications/apply-now/#application-form"
+        - title: Start a New Application
+          url: "/applications/apply-now/#start-a-new-application"
+        - title: Continue a Saved Application
+          url: "/applications/apply-now/#continue-a-saved-application"
     - title: Find a Course
       url: /applications/find-a-course/
       icon: fa-sort-alpha-asc
