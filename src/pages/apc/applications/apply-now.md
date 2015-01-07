@@ -1,7 +1,7 @@
 ---
-layout: internal/media_item
-title: Media
-permalink: /news-and-events/media/media-item/
+layout: internal/apply_now
+title: Apply Now
+permalink: /applications/apply-now/
 exclude_hero: true
 ---
 

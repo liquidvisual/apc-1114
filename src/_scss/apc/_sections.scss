@@ -14,8 +14,12 @@
 //
 //-----------------------------------------------------------------
 
-.intro-section {
-    font-size: 14px;
+// .intro-section {
+//     font-size: 14px;
+// }
+
+.claim-section {
+    border-top: 6px solid $primary-color;
 }
 
 .section .button-list {
@@ -24,9 +28,9 @@
     }
 }
 
-.image-section {
-    border-bottom: 6px solid $primary-color;
-}
+// .image-section {
+//     border-bottom: 6px solid $primary-color;
+// }
 
 .image-group-photo {
     background-image: url(../img/apc/content/heroes/APC_Home_02.jpg);

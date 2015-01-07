@@ -15,7 +15,7 @@ layout: internal
                 <ul class="medium-block-grid-2 large-block-grid-3" data-equalizer>
                     {% for item in page_breaks %}
                         <li>
-                            <a class="article-card" href="#" data-equalizer-watch>
+                            <a class="article-card" href="{{ item.url }}" data-equalizer-watch>
 
                                 <!-- <img src="http://lorempixel.com/400/200/fashion?{{forloop.index}}" alt="..."> -->
                                 <span class="img"><i class="fa {{ item.icon }}"></i></span>

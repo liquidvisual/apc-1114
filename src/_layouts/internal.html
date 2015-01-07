@@ -2,7 +2,7 @@
 layout: master
 ---
 
-{% assign hero = "/img/apc/content/heroes/APC_2000x360_06.jpg" %}
+{% assign hero = page.hero %}
 
 <div class="internal">
 
@@ -15,36 +15,37 @@ layout: master
         </div> <!-- .row -->
     </nav> <!-- .breadcrumbs-wrapper -->
 
-    <!-- HERO MODULE -->
-    <div class="lv-hero-module has-auto-height">
+    {% unless page.exclude_hero %}
 
-        <!-- Hero Item -->
-        <div class="lv-hero" style="background-image: url('{{ hero | prepend: site.assets }}')" data-background-image="...">
-            <div class="row lv-vertical-center">
+        <!-- HERO MODULE -->
+        <div class="lv-hero-module has-auto-height">
 
-                <!-- Caption -->
-                <div class="medium-8 columns">
-                    <div class="lv-hero-caption animated">
-                        <h1>
-                            {% if page.hero_header_override %}
-                                {{ page.hero_header_override }}
-                            {% else %}
-                                {{ page.title }}
-                            {% endif %}
-                        </h1>
-                    </div> <!-- .lv-hero-caption -->
-                </div> <!-- .columns -->
+            <!-- Hero Item -->
+            <div class="lv-hero" style="background-image: url('{{ hero | prepend: site.assets }}')" data-background-image="...">
+                <div class="row lv-vertical-center">
 
-            </div> <!-- .row -->
-        </div> <!-- .lv-hero -->
+                    {% comment %}
+                    <!-- Caption -->
+                    <div class="medium-8 columns">
+                        <div class="lv-hero-caption animated">
+                            <h1>
+                                {% if page.hero_header_override %}
+                                    {{ page.hero_header_override }}
+                                {% else %}
+                                    {{ page.title }}
+                                {% endif %}
+                            </h1>
+                        </div> <!-- .lv-hero-caption -->
+                    </div> <!-- .columns -->
+                    {% endcomment %}
 
-    </div> <!-- .lv-hero-module -->
+                </div> <!-- .row -->
+            </div> <!-- .lv-hero -->
 
+        </div> <!-- .lv-hero-module -->
 
+    {% endunless %}
 
-    <!-- CONTENT -->
-    <div class="">
-        {{ content }}
-    </div> <!-- .row -->
+    {{ content }}
 
 </div> <!-- .internal -->

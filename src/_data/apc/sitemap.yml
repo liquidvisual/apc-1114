@@ -121,7 +121,7 @@
       url: /courses/university-pathways/
 
 - title: Learning Environment
-  url: /learning-environment/
+  url: /learning-environment/lifestyle-in-australia/
   include_children_in_nav: true
   children:
     - title: Lifestyle in Australia
@@ -139,7 +139,7 @@
           url: "/learning-environment/lifestyle-in-australia/#transportation"
 
     - title: Campuses
-      url: /learning-environment/
+      url: /learning-environment/campuses/
       include_children_in_nav: true
       icon: fa-university
       children:
@@ -157,7 +157,7 @@
           url: "/learning-environment/campuses/#brisbane"
 
 - title: Applications
-  url: /applications/
+  url: /applications/how-to-apply/
   include_children_in_nav: true
   children:
     - title: How to Apply
@@ -187,12 +187,20 @@
     - title: Apply Now
       url: /applications/apply-now/
       icon: fa-check-square
+      include_children_in_nav: true
+      children:
+        - title: Application Form
+          url: "/applications/apply-now/#application-form"
     - title: Find a Course
       url: /applications/find-a-course/
       icon: fa-sort-alpha-asc
+      include_children_in_nav: true
+      children:
+        - title: Course Finder
+          url: "/applications/find-a-course/#course-finder"
 
 - title: Student Services
-  url: /student-services/
+  url: /student-services/student-support/
   #routine: "deep_nesting"
   include_children_in_nav: true
   children:
@@ -265,7 +273,7 @@
           url: "/student-services/faq/#australia"
 
 - title: News and Events
-  url: /news-and-events/
+  url: /news-and-events/news/
   include_children_in_nav: true
   children:
     - title: News
@@ -291,7 +299,7 @@
           url: "/news-and-events/media/#videos"
 
 - title: About Us
-  url: /about-us/
+  url: /about-us/history/
   include_children_in_nav: true
   children:
     - title: History
@@ -353,7 +361,7 @@
           url: "/about-us/compliance-forms/#government-compliance"
 
 - title: Contact Us
-  url: /contact-us/
+  url: /contact-us/make-an-enquiry/
   include_children_in_nav: true
   children:
     - title: Enquiry Form

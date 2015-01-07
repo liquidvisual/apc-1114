@@ -1,0 +1,161 @@
+---
+layout: internal
+---
+
+{% assign page_breaks = site.data.apc.sitemap[4].children[5].children %}
+
+<!-- CLAIM SECTION -->
+<section class="section claim-section has-medium-padding">
+    <div class="row">
+        <div class="columns">
+            <div class="claim-module">
+                <div class="claim-left">
+                    <h2>{{ page.title }}</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio ipsum dolor sit amet.</p>
+                </div>
+                <div class="claim-right">
+                    <h5>On this Page</h5>
+	                <ul class="triangle-list">
+	                	{% for item in page_breaks %}
+	                		<li><a href="#{{ item.url }}">{{ item.title }}</a></li>
+	                	{% endfor %}
+	                </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> <!-- .claim-section -->
+
+<div class="smoked">
+	<div class="row wizard hide-for-small-only">
+		<div class="columns small-2 large-2">
+			<div class="step-tab">
+				<h3>
+				Step 1
+				<small class="hide-for-small-only">
+				Personal Details
+				</small>
+				</h3>
+			</div>
+		</div>
+		<div class="columns small-2 large-2">
+			<div class="step-tab">
+				<h3>
+				Step 2
+				<small class="hide-for-small-only">
+				Visa Details
+				</small>
+				</h3>
+			</div>
+		</div>
+		<div class="columns small-2 large-2">
+			<div class="step-tab">
+				<h3>
+				Step 3
+				<small class="hide-for-small-only">
+				Education Details
+				</small>
+				</h3>
+			</div>
+		</div>
+		<div class="columns small-2 large-2">
+			<div class="step-tab">
+				<h3>
+				Step 4
+				<small class="hide-for-small-only">
+				Select Course
+				</small>
+				</h3>
+			</div>
+		</div>
+		<div class="columns small-2 large-2">
+			<div class="step-tab">
+				<h3>
+				Step 5
+				<small class="hide-for-small-only">
+				Documents
+				</small>
+				</h3>
+			</div>
+		</div>
+		<div class="columns small-2 large-2">
+			<div class="step-tab">
+				<h3>
+				Step 6
+				<small class="hide-for-small-only">
+				Submission
+				</small>
+				</h3>
+			</div>
+		</div>
+	</div>
+	<div class="row form">
+		<div class="padded">
+			<div class="row bottom_line">
+				<h3>Start a New Application</h3>
+			</div>
+			<div class="row">
+				<div class="columns small-12 large-6">
+					<div class="main_content">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. Sed nulla orci, suscipit sit amet leo in, venenatis euismod mauris. Donec eu arcu ac arcu suscipit co...</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra ...</p>
+					</div>
+				</div>
+				<div class="columns small-12 large-6">
+					<div class="main_content">
+						<div class="padded">
+							<a class="button medium round swish small-12" href=""><i class="fa fa-play" id="start-a-new-application"></i> Start a New Application
+							</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row form">
+			<div class="padded">
+				<div class="row bottom_line">
+					<h3>Continue a Saved Application</h3>
+				</div>
+				<div class="row">
+					<div class="columns small-12 large-6">
+						<div class="main_content">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. Sed nulla orci, suscipit sit amet leo in, venenatis euismod mauris. Donec eu arcu ac arcu suscipit congue eget eu nulla. Praesent blandit, ipsum a facilisis facilisis, diam sem consectetur lectus, eget efficitur nisi elit nec tellus. Morbi rutrum luctus suscipit. Nam mattis fringilla leo eget vulputate. Nunc auctor laoreet metus, in posuere justo finibus eu. Etiam commodo augue a magna malesuada so...</p>
+						</div>
+					</div>
+					<div class="columns small-12 large-6">
+						<div class="main_content">
+							<!-- Application Form START -->
+							<form id="application_form">
+								<div class="row">
+									<div class="large-12 columns">
+										<label>Email Address
+											<input type="text" placeholder="Email Address">
+										</label>
+									</div>
+								</div>
+								<div class="row">
+									<div class="large-12 columns">
+										<label>Date of Birth
+											<input type="text" placeholder="00/00/1900">
+										</label>
+									</div>
+								</div>
+								<div class="row action-links">
+									<div class="large-8 small-12 columns text-left">
+										<a class="button medium round swish small-12" href="">
+											<i class="fa fa-play"></i> Open a Saved Application
+										</a>    </div>
+										<div class="large-6 small-12 columns text-right">
+										</div>
+										<!--
+										<button class="button round swish">Save Application</button>
+										-->
+									</div>
+								</form>
+								<!-- /Application Form END -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>

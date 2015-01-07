@@ -2,6 +2,7 @@
 layout: internal/promo_tiles
 title: Applications
 permalink: /applications/
+hero: /img/apc/content/hero-3.jpg
 sitemap_index: 3
 ---
 
