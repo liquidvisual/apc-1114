@@ -38,6 +38,13 @@
 // Gallery Slider
 //-----------------------------------------------------------------
 
-.gallery-slider .slick-slide {
-	padding: 5px;
+.gallery-slider {
+	.slider {
+		margin-bottom: 0;
+	}
+
+	.slick-slide {
+		padding: 5px;
+		cursor: pointer;
+	}
 }

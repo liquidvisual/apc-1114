@@ -2,10 +2,47 @@
 layout: internal
 ---
 
+{% assign page_breaks = site.data.apc.sitemap[{{page.sitemap_index}}].children %}
+
+<!-- PROMO TILES -->
+<div class="section has-no-margin has-medium-padding">
+    <div class="row">
+        <div class="columns">
+            <div class="section text-center">
+                <!-- <h2>{{ page.title }}</h2> -->
+            </div>
+            <div class="news-module">
+                <ul class="medium-block-grid-2 large-block-grid-3" data-equalizer>
+                    {% for item in page_breaks %}
+                        <li>
+                            <a class="article-card" href="#" data-equalizer-watch>
+
+                                <!-- <img src="http://lorempixel.com/400/200/fashion?{{forloop.index}}" alt="..."> -->
+                                <span class="img"><i class="fa {{ item.icon }}"></i></span>
+
+                                <div class="article-card-text">
+                                    <h3>{{ item.title }}</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse ipsam corrupti dolores.</p>
+                                    <!-- { { item.content | markdownify | truncate: 200 }} -->
+                                </div>
+
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div> <!-- .news-module -->
+            <!-- <div class="text-center"><a href="#" class="button radius">Return Home</a></div> -->
+        </div>
+    </div> <!-- .row -->
+</div> <!-- .section -->
+
+
+
+
+
+
+
 {% comment %}
-{% assign courses = site.data.apc.sitemap[1] %}
-{% assign course_categories = site.data.apc.course_categories %}
-{% assign rows = course_categories.size | divided_by: 3 %}
 
 <div class="row">
     <div class="columns">
@@ -53,5 +90,4 @@ layout: internal
         </div> <!-- .columns -->
     </div> <!-- .row -->
 </div> <!-- .info-tiles -->
-
 {% endcomment %}

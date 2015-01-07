@@ -1,7 +1,8 @@
 ---
-layout: internal/second_level_news
+layout: internal/promo_tiles
 title: News and Media
 permalink: /news-and-events/
+sitemap_index: 5
 ---
 
 <!--- This child document initializes the page in Jekyll. -->

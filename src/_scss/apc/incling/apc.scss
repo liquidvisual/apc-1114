@@ -2,7 +2,7 @@
 //@import "compass/css3/transition";
 //@import "compass/css3/box-shadow";
 // @import "compass/css3/border-radius";
-@import "nav";
+//@import "nav"; // removed 06.01.15
 // @import "lists";
 // @import "buttons";
 // @import "heroes";
@@ -11,8 +11,8 @@
 @import "blocks";
 @import "teasers";
 @import "course_categories";
-@import "parrallax";
-@import "language_selector";
+// @import "parrallax";
+// @import "language_selector";
 @import "helpers";
 @import "custom";
 
@@ -204,12 +204,12 @@ input:focus {
   padding-bottom: 2em;
 }
 
-ul.slick-dots { margin-top: -22px; }
-button.slick-prev, button.slick-prev:hover { width: 50px; height: 40px; left: 0px; padding-left: 10px;  }
-button.slick-next, button.slick-next:hover  { height: 40px; right: 0px; padding-right: 45px; }
-.slick-slider { margin-bottom: 0px !important;}
-.home_slider .slick-prev:before,.home_slider .slick-next:before {
-    color: #fff !important; font-size: 37px; z-index: 1000;   -webkit-transform-style: preserve-3d;}
+// ul.slick-dots { margin-top: -22px; }
+// button.slick-prev, button.slick-prev:hover { width: 50px; height: 40px; left: 0px; padding-left: 10px;  }
+// button.slick-next, button.slick-next:hover  { height: 40px; right: 0px; padding-right: 45px; }
+// .slick-slider { margin-bottom: 0px !important;}
+// .home_slider .slick-prev:before,.home_slider .slick-next:before {
+//     color: #fff !important; font-size: 37px; z-index: 1000;   -webkit-transform-style: preserve-3d;}
 //@import "mobile";
 
 .f-dropdown:focus {

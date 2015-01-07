@@ -19,6 +19,69 @@ $language-selector-width: rem-calc(115);
 	width: 100%; // isotope - who knows
 }
 
+//-----------------------------------------------------------------
+// Timeline Controls
+//-----------------------------------------------------------------
+
+.timeline-controls {
+	margin-bottom: 0;
+
+	button {
+		background: $primary-color;
+	}
+
+	.year {
+		padding: 10px 8px;
+		display: inline-block;
+		cursor: pointer;
+	}
+
+	.slick-list {
+		// background: red;
+		margin: 0 15px;
+	}
+
+	.slick-prev:before,
+	.slick-next:before {
+		font-family: 'FontAwesome';
+		font-size: rem-calc(14);
+	}
+
+	.slick-prev {
+		left: -10px;
+
+		&:before {
+			content: "\f04a";
+		}
+	}
+
+	.slick-next {
+		right: -10px;
+
+		&:before {
+			content: "\f04e";
+		}
+	}
+
+	.year {
+		display: inline-block;
+		border-radius: $global-radius/2;
+
+		&:hover {
+			background: darken($primary-color, 10%);
+		}
+	}
+}
+
+// refactor
+.timeline-controls .active .year {
+	background: darken($primary-color, 10%);
+}
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+
 .static {
     position: static;
 }

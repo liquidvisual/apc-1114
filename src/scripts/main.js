@@ -133,7 +133,7 @@ $(function() {
 //-----------------------------------------------------------------
 
 $('.testimonial-slider').slick({
-  autoplay: true,
+  autoplay: false,
   centerMode: true,
   slidesToShow: 3,
   variableWidth: true,
@@ -171,20 +171,28 @@ $('.testimonial-slider').slick({
 // Gallery Slider
 //-----------------------------------------------------------------
 
-$('.slider-for').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    fade: true,
-    asNavFor: '.slider-nav'
-});
-$('.slider-nav').slick({
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    asNavFor: '.slider-for',
-    dots: false,
-    centerMode: false,
-    focusOnSelect: true
+$(".gallery-slider").each(function(){
+
+    var $this = $(this);
+    var $sliderNav = $('.slider-nav', $this);
+    var $sliderFor = $('.slider-for', $this);
+
+    $sliderFor.slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: $sliderNav
+    });
+
+    $sliderNav.slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        asNavFor: $sliderFor,
+        dots: false,
+        centerMode: false,
+        focusOnSelect: true
+    });
 });
 
 //-----------------------------------------------------------------

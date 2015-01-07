@@ -3,6 +3,7 @@ layout: internal
 ---
 
 {% assign page_breaks = site.data.apc.sitemap[6].children[3].children %}
+{% assign jobs_tabs = site.data.apc.jobs_tabs %}
 
 <!-- CLAIM SECTION -->
 <section class="section claim-section has-medium-padding">
@@ -25,6 +26,24 @@ layout: internal
         </div>
     </div>
 </section> <!-- .claim-section -->
+
+<!-- TABS -->
+<div class="row">
+	<div class="columns">
+		<dl class="tabs" data-tab data-options="deep-linking: true">
+			{% for item in jobs_tabs %}
+				<dd class="{% if forloop.first %}active{% endif %}"><a href="#{{ item.title | slugify }}">{{ item.title }}</a></dd>
+			{% endfor %}
+		</dl>
+		<div class="tabs-content">
+			{% for item in jobs_tabs %}
+				<div class="content {% if forloop.first %}active{% endif %}" id="{{ item.title | slugify }}">
+				    {{ item.body | markdownify }}
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
 
 <!-- FILTER CONTROLS -->
 <div class="row">
@@ -108,82 +127,3 @@ layout: internal
 		</div> <!-- .headed -->
 	</div> <!-- .columns -->
 </div> <!-- .row -->
-
-<!-- CONTENT BEGIN -->
-<div class="row">
-	<div class="padded">
-
-		<!-- BLOCK start -->
-		<div class="block section" id="{{ item.url }}">
-			<div class="padded">
-				<h3>Overview</h3>
-				<h5>Teaching Opportunities at APC</h5>
-
-				<h6>English Teachers</h6>
-				<p>Please email resumes and your working with children check clearance number to the ELICOS Academic Manager: jobs@apc.edu.au</
-
-				<p>Vocational Trainers (Accounting, Business, Marketing, Management, Hospitality, Tourism)
-				Please email resumes and your working with children check clearance number to the Principal Academic Director: jobs.vet@apc.edu.au</p>
-
-				<h6>Administration employment opportunities at APC</h6>
-
-				<ul>
-					<li>Reception & General Administration Officers</li>
-					<li>Student Services Officers</li>
-					<li>Data entry clerks</li>
-					<li>Filing clerks</li>
-				</ul>
-
-				<p>Please email resumes and your working with children check clearance number to the Director of Administration: jobs@apc.edu.au</p>
-			</div>
-		</div>
-
-		<!-- BLOCK start -->
-		<div class="block section" id="{{ item.url }}">
-			<div class="padded">
-				<h3>Elicos</h3>
-				<p>Qualifications required for teaching in our ELICOS College can be found on the NEAS Australia website <a href="http://www.NEAS.org.au/teachers/elt.php">http://www.NEAS.org.au/teachers/elt.php</a></p>
-			</div>
-		</div>
-
-		<!-- BLOCK start -->
-		<div class="block section" id="{{ item.url }}">
-			<div class="padded">
-				<h3>Vocational</h3>
-
-				<p>Australian Pacific College (APC) is governed by several acts which decide how we operate as a Registered Training Organisation (RTO). APC is required to ensure that all our training is done by suitably qualified trainers who are maintaining the correct level of professional development. Therefore we have provided this guide and checklist to assist our trainers in fulfilling and maintaining their qualifications. In addition to the official requirements APC has also added some supplementary requirements which need to be met.</p>
-
-				<h5>VET College Trainer requirements and Checklist</h5>
-
-				<p><strong>1. Standards for NVR Registered Training Organisations 2011
-				These requirements can be viewed in full at <a href="http://www.training.com.au">www.training.com.au</a> but can be condensed into the following statements;</strong></p>
-
-				<p>15.4 Training and assessment is delivered by trainers and assessors who:</p>
-
-				<ul>
-					<li><b>(a)</b> have the necessary training and assessment competencies as determined by the National Quality Council or its successors, and</li>
-					<li><b>(b)</b> have the relevant vocational competencies at least to the level being delivered or assessed, and</li>
-					<li><b>(c)</b> can demonstrate current industry skills directly relevant to the training/assessment being undertaken, and</li>
-					<li><b>(d)</b> continue to develop their Vocational Education and Training (VET) knowledge and skills as well as their industry currency and trainer/assessor competence.</li>
-				</ul>
-
-				<p><strong>2. APC requirements</strong></p>
-
-				<ul>
-					<li>Certificate IV in Training and Assessment (TAE40110)</li>
-					<li>Successful completion of a recognised course of study which covers the content area, at an equivalent or higher level of the competency to be taught (NVR standard 15.4).</li>
-					<li>Current industry experience (obtained in Australia) in field of subjects to be taught Experience in training large groups of overseas students in Australia</li>
-					<li>Full residency</li>
-					<li>ABN</li>
-					<li>Operate under a Pty Ltd company</li>
-					<li>Workers’ compensation declaration form</li>
-				</ul>
-
-				<p>If you do not have a TAE40110, we encourage you to upgrade as soon as possible. The National Quality Council (NQC) has stated that effective from 17 June 2012, trainers must hold the TAE40110 Certificate IV in Training and Assessment or be able to demonstrate equivalent competencies to the TAE40110 Certificate IV in Training and Assessment from the TAE10 Training and Education Training Package. In addition, as of July 2014 the current elective unit TAELLN401A Address adult language, literacy and numeracy skills will become a core unit in the TAE40110 Certificate IV in Training & Assessment. All trainers currently holding a TAE40110 that does not include this unit will be required to complete the unit and provide evidence of its completion.</p>
-
-				<p>Similarly if you do not have the relevant vocational competencies for the level in which you are training we can also assist you in getting these at a reasonable cost. Please note that if you do not have these competencies you MUST demonstrate that you are taking steps to address this prior to the start of the next term. The NVR requires that these conditions have been met. Trainers who have not met these requirements may not have their contracts renewed for the next term.</p>
-			</div>
-		</div>
-
-	</div>
-</div>

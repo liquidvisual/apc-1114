@@ -121,11 +121,12 @@
       url: /courses/university-pathways/
 
 - title: Learning Environment
-  url: /learning-environment/lifestyle-in-australia/
+  url: /learning-environment/
   include_children_in_nav: true
   children:
     - title: Lifestyle in Australia
       url: /learning-environment/lifestyle-in-australia/
+      icon: fa-child
       include_children_in_nav: true
       children:
         - title: Overview
@@ -138,8 +139,9 @@
           url: "/learning-environment/lifestyle-in-australia/#transportation"
 
     - title: Campuses
-      url: /learning-environment/campuses/
+      url: /learning-environment/
       include_children_in_nav: true
+      icon: fa-university
       children:
         - title: Sydney CBD Kent Street
           url: "/learning-environment/campuses/#sydney-cbd-kent-street"
@@ -155,11 +157,12 @@
           url: "/learning-environment/campuses/#brisbane"
 
 - title: Applications
-  url: /applications/how-to-apply/
+  url: /applications/
   include_children_in_nav: true
   children:
     - title: How to Apply
       url: /applications/how-to-apply/
+      icon: fa-laptop
       include_children_in_nav: true
       children:
         - title: Course Fees
@@ -169,6 +172,7 @@
 
     - title: Forms and Downloads
       url: /applications/forms-and-downloads/
+      icon: fa-copy
       include_children_in_nav: true
       children:
         - title: Application Forms
@@ -182,16 +186,19 @@
 
     - title: Apply Now
       url: /applications/apply-now/
+      icon: fa-check-square
     - title: Find a Course
       url: /applications/find-a-course/
+      icon: fa-sort-alpha-asc
 
 - title: Student Services
-  url: /student-services/student-support/
+  url: /student-services/
   #routine: "deep_nesting"
   include_children_in_nav: true
   children:
     - title: Student Support
       url: /student-services/student-support/
+      icon: fa-child
       include_children_in_nav: true
       children:
         - title: International Students
@@ -245,6 +252,7 @@
 
     - title: FAQ
       url: /student-services/faq/
+      icon: fa-question-circle
       include_children_in_nav: true
       children:
         - title: Courses
@@ -257,34 +265,38 @@
           url: "/student-services/faq/#australia"
 
 - title: News and Events
-  url: /news-and-events/news/
+  url: /news-and-events/
   include_children_in_nav: true
   children:
     - title: News
       url: /news-and-events/news/
+      icon: fa-newspaper-o
       include_children_in_nav: true
       children:
         - title: Blog
           url: "/news-and-events/news/#blog"
     - title: Events
       url: /news-and-events/events/
+      icon: fa-thumbs-o-up
       include_children_in_nav: true
       children:
         - title: Calendar
           url: "/news-and-events/events/#calendar"
     - title: Media
       url: /news-and-events/media/
+      icon: fa-youtube-square
       include_children_in_nav: true
       children:
         - title: Videos
           url: "/news-and-events/media/#videos"
 
 - title: About Us
-  url: /about-us/history/
+  url: /about-us/
   include_children_in_nav: true
   children:
     - title: History
       url: /about-us/history/
+      icon: fa-history
       include_children_in_nav: true
       children:
         - title: Overview
@@ -292,6 +304,7 @@
 
     - title: Staff Profiles
       url: /about-us/staff-profiles/
+      icon: fa-users
       include_children_in_nav: true
       children:
         - title: Sydney CBD Kent Street
@@ -309,6 +322,7 @@
 
     - title: Alumni Heroes
       url: /about-us/alumni-heroes/
+      icon: fa-graduation-cap
       include_children_in_nav: true
       children:
         - title: Meet the Alumni Profiles
@@ -316,17 +330,19 @@
 
     - title: Jobs at APC
       url: /about-us/jobs-at-apc/
+      icon: fa-thumb-tack
       include_children_in_nav: true
       children:
         - title: Overview
           url: "/about-us/jobs-at-apc/#overview/"
-        - title: Elcos
+        - title: Elicos
           url: "/about-us/jobs-at-apc/#elicos/"
         - title: Vocational
           url: "/about-us/jobs-at-apc/#vocational/"
 
     - title: Compliance Forms
       url: /about-us/compliance-forms/
+      icon: fa-edit
       include_children_in_nav: true
       children:
         - title: Terms and Conditions
@@ -337,11 +353,12 @@
           url: "/about-us/compliance-forms/#government-compliance"
 
 - title: Contact Us
-  url: /contact-us/make-an-enquiry/
+  url: /contact-us/
   include_children_in_nav: true
   children:
     - title: Enquiry Form
       url: /contact-us/make-an-enquiry/
+      icon: fa-file-o
       include_children_in_nav: true
       children:
         - title: Enquiry Form
@@ -349,6 +366,7 @@
 
     - title: Staff Chat
       url: /contact-us/staff-chat/
+      icon: fa-comment-o
       include_children_in_nav: true
       children:
         - title: Australia
@@ -358,6 +376,7 @@
 
     - title: Agents
       url: /contact-us/agents/
+      icon: fa-group
       include_children_in_nav: true
       children:
         - title: Listing
