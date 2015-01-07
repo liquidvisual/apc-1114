@@ -495,8 +495,8 @@ module.exports = function (grunt) {
     //'check',
     //'test',
     'build',
-    'buildcontrol:master'
-    //'buildcontrol:pages',
+    //'buildcontrol:master'
+    'buildcontrol:pages',
     ]);
 
   //=======================================
