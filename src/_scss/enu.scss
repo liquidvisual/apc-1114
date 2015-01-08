@@ -8,6 +8,7 @@
 //-----------------------------------------------------------------
 // Foundation Settings
 //-----------------------------------------------------------------
+
 @import "enu/incling/apc";
 @import "enu/foundation/app";
 
@@ -32,7 +33,13 @@
 @import "liquidvisual/components/inline-list";
 @import "liquidvisual/components/sections";
 @import "liquidvisual/components/toolbox";
-@import "liquidvisual/components/topbar";
+// @import "liquidvisual/components/topbar";
+
+//-----------------------------------------------------------------
+// Shared
+//-----------------------------------------------------------------
+
+@import "shared/weather-icons";
 
 //-----------------------------------------------------------------
 // App Unique

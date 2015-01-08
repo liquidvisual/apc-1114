@@ -152,11 +152,17 @@ $global-radius: 5px;
 // d. Media Query Ranges
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-$small-range: (0em, 40em);   // 0-640 // Prev: (0em, 40em);
-$medium-range: (48em, 48em); // 768 // Prev: (40.063em, 64em);
-$large-range: (62.500em, 62.500em);  // 1024 // Prev: (64.063em, 90em);
-$xlarge-range: (80em, 80em); // 1200 + 40 padding // Prev: (90.063em, 120em);
-$xxlarge-range: (80em, 80em); //(90.000em, 90.000em); // 1440 // Prev:(120.063em, 99999999em);
+$small-breakpoint:   40em; // 640
+$medium-breakpoint:  48em; // 768
+$large-breakpoint:   64em; // 1024
+$xlarge-breakpoint:  80em; // 1280
+$xxlarge-breakpoint: 80em; // 1280
+
+$small-range: (0em, 47.938em);    // 0 - 767
+$medium-range: (48em, 63.938em);  // 768 - 1023
+$large-range: (64em, 70.563em);   // 1024 - 1129
+$xlarge-range: (70.625em, 80em);  // 1130 - 1280
+$xxlarge-range: (80.063em);       // 1280+
 
 $screen: "only screen";
 

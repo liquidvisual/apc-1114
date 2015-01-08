@@ -1,7 +1,7 @@
 /*
     BUTTONS.CSS
 
-    - Last updated: 10.12.14
+    - Last updated: 08.01.15
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -11,11 +11,18 @@
 // Buttons
 //-----------------------------------------------------------------
 
+.button i {
+	font-size: .9em;
+}
+
+//=========================================
+// Context
+//=========================================
+
 .header .button {
     margin-top: rem-calc(10);
-    // padding: rem-calc(4 10);
     color: white;
-    text-transform: capitalize;
+    text-transform: capitalize; // decision
     font-weight: bold;
 }
 

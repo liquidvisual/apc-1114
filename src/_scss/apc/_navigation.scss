@@ -1,37 +1,42 @@
 /*
     NAVIGATION.CSS
 
-    - Last updated: 19.12.14
+    - Last updated: 08.01.15
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
 // Variables
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------
-//
+// Navigation
 //-----------------------------------------------------------------
 
 .navigation {
+    display: none;
     background: $primary-color;
-    // background: orange;
+
+    @media #{$xlarge-up} {
+        display: block;
+    }
 }
 
+// Presentable Links
 .topbar > ul > li > a {
     text-transform: uppercase;
     font-size: rem-calc(13);
-    font-family: "Helvetica Neue", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    // Because Proxima Nova is hard to read at this size
+    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
 }
 
 //=========================================
-//
+// Topbar
 //=========================================
 
 .topbar {
-	z-index: 1;
+	// z-index: 1; Need?
 }
 
 .topbar > ul {
-	// position: relative;
 	margin: 0;
 
 	@media #{$medium-up} {
@@ -131,14 +136,10 @@
 	top: -10000px;
 	left: 0;
 	width: 100%;
-
 	margin: 0;
 	padding: rem-calc(20);
-
 	z-index: 2; // fix for tabs
-	// background: lighten($primary-color, 20%);
 	background: $primary-color;
-	// background: rgba($primary-color, .98);
 
 	a {
 		color: #ccc;
@@ -154,15 +155,6 @@
 	}
 }
 
-/* Third level nesting */
-// .topbar .dropdown .dropdown {
-// 	position: absolute;
-// 	top: 0;
-// 	left: 100%;
-
-// 	display: none;
-// }
-
 .topbar .dropdown li {
 	position: relative;
 	display: block;
@@ -175,11 +167,3 @@
 	margin: 0;
 	padding: 0;
 }
-
-// .topbar .dropdown li:last-child a {
-// 	border-bottom: 0;
-// }
-
-// .topbar .dropdown a:hover {
-// 	background: #4A757E;
-// }

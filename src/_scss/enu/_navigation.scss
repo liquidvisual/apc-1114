@@ -1,7 +1,7 @@
 /*
     NAVIGATION.CSS
 
-    - Last updated: 10.12.14
+    - Last updated: 08.01.15
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -12,37 +12,192 @@
 //-----------------------------------------------------------------
 
 .navigation {
+    display: none;
     width: 100%;
-     background: $secondary-color;
+    background: $secondary-color;
     z-index: 1;
 
     @media #{$medium-up} {
-        top: $header-height-medium;
+        // top: $header-height-medium;
     }
-    @media #{$xlarge-up} {
-        position: fixed;
-        top: $header-height-xlarge;
-        background: rgba($secondary-color, 0.85);
+
+    @media #{$large-up} {
+        display: block;
+    }
+
+    // Re-enable on re-stitch
+    @media #{$xxlarge-up} {
+        // position: fixed;
+        // top: $header-height-xlarge;
+        // background: rgba($secondary-color, 0.85);
     }
 }
 
+//=========================================
+// Topbar
+//=========================================
+
+// Re-enable on re-stitch
 .navigation .topbar {
-    @media #{$xlarge-up} {
-        position: absolute;
-        right: 0;
-        bottom: rem-calc(-5);
+    @media #{$xxlarge-up} {
+        // position: absolute;
+        // right: -15px;
+        // bottom: rem-calc(-5);
     }
 }
 
+// Re-enable on re-stitch
 .navigation .topbar ul {
-    @media #{$xlarge-up} {
-        float: right;
-        width: rem-calc(900);
-
-
+    @media #{$xxlarge-up} {
+        // float: right;
+        // width: rem-calc(900);
     }
+}
+
+//=========================================
+// Topbar (APC) VVVVVV
+//=========================================
+
+.topbar {
+    // z-index: 1; Need?
+}
+
+.topbar > ul {
+    margin: 0;
+
+    @media #{$medium-up} {
+        width: 100%;
+        display: table;
+        text-align: center;
+    }
+}
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+
+.topbar li {
+    display: inline-block;
+    display: table-cell;
+}
+
+.topbar > ul > li {
+    border: 1px solid $secondary-color; // invisible border - use it for dropdown
+    // z-index: 20;
+}
+
+// Illusion
+.topbar > ul > li > a {
+    margin-bottom: rem-calc(10);
 }
 
 //=========================================
 //
 //=========================================
+
+.topbar a {
+    position: relative; // keep? - placed for mega menu test
+    display: block;
+    padding: rem-calc(5 12);
+    margin: rem-calc(0 2);
+    // margin: rem-calc(10 0);
+    color: white;
+    font-weight: 500;
+    z-index: 10;
+
+    @media #{$large-up} {
+        color: white;
+    }
+}
+
+.topbar .active > a {
+    background: darken($secondary-color, 10%);
+    border-radius: $global-radius 0 $global-radius 0;
+}
+
+.topbar li.active:first-child > a {
+    background: none;
+}
+
+//=========================================
+// Nested Dropdowns
+//=========================================
+
+/* UX decision, dropdowns are fiddly on tablets */
+.no-touch .topbar .has-dropdown:hover > .dropdown {
+    opacity: 1;
+    height: auto;
+    overflow: visible;
+    border: 1px solid #5A5760;
+    top: 100%;
+}
+
+.no-touch .topbar .has-dropdown:hover > a {
+    background: darken($secondary-color, 10%);
+    border-radius: $global-radius;
+}
+
+// Creates the glue-border-thing between target and dropdown menu (apc)
+
+// .no-touch .topbar .has-dropdown:hover > a:after {
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     height: 40px; // magic
+//     display: block;
+//     background: darken($secondary-color, 5%);
+//     z-index: -1;
+//     border: 1px solid #5A5760;
+//     border-bottom-color: $secondary-color;
+//     border-radius: $global-radius;
+// }
+
+.no-touch .topbar .dropdown .has-dropdown:hover > .dropdown {
+    opacity: 1;
+    height: auto;
+}
+
+//=========================================
+
+.topbar .dropdown {
+    // @include transition(opacity);
+    position: absolute;
+    opacity: 0;
+    // top: 100%;
+    top: -10000px;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: rem-calc(20);
+    z-index: 2; // fix for tabs
+    background: darken($secondary-color, 5%);
+
+    a {
+        color: #ccc;
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    h5 a {
+        color: white;
+        text-transform: uppercase;
+    }
+}
+
+.topbar .dropdown li {
+    position: relative;
+    display: block;
+    text-align: left;
+    // float: none;
+}
+
+.topbar .dropdown a {
+    // border-bottom: 1px solid rgba(255,255,255,.1);
+    margin: 0;
+    padding: 0;
+}

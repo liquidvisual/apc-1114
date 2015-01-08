@@ -1,22 +1,17 @@
 /*
     HERO.CSS
 
-    - Last updated: 19.12.14
+    - Last updated: 01.08.15
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
 // Variables
 //-----------------------------------------------------------------
-
-
-
 //-----------------------------------------------------------------
-//
+// Hero
 //-----------------------------------------------------------------
 
 .lv-hero {
-    // border-bottom: 6px solid $primary-color;
-
     .lv-hero-caption h1 {
         display: inline-block;
         background: $primary-color;
@@ -44,11 +39,6 @@
         text-transform: uppercase;
     }
 }
-
-// .lv-super .slick-prev:before,
-// .lv-super .slick-next:before {
-//     font-size: rem-calc(37);
-// }
 
 //=========================================
 // Internal

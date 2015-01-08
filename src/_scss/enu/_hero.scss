@@ -1,7 +1,7 @@
 /*
     HERO.CSS
 
-    - Last updated: 10.12.14
+    - Last updated: 01.08.15
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -10,24 +10,6 @@
 //-----------------------------------------------------------------
 // Hero
 //-----------------------------------------------------------------
-
-.internal .lv-hero-wrapper {
-    max-height: 200px;
-
-    .lv-hero-caption {
-        padding: rem-calc(40 0);
-    }
-
-    h1 {
-        margin-bottom: 0;
-    }
-}
-
-.lv-hero-caption .button {
-    color: #222;
-    // font-size: rem-calc(28);
-    // font-weight: 200;
-}
 
 .homepage .lv-hero-caption h1 {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.09); // place back into liquidvisual?
@@ -43,9 +25,29 @@
 }
 
 //=========================================
-// liquidvisual override
+// Internal
 //=========================================
 
+.internal .lv-hero {
+    height: rem-calc(360);
+
+    .lv-hero-caption {
+        padding: rem-calc(40 0);
+    }
+
+    h1 {
+        margin-bottom: 0; // just incase
+    }
+}
+
+.lv-hero-controls {
+    position: absolute;
+    top: rem-calc(300);
+}
+
+//=========================================
+// liquidvisual override
+//=========================================
 
 .lv-hero .lv-vertical-center {
     @media #{$medium-up} {

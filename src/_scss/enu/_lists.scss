@@ -1,0 +1,63 @@
+/*
+    LISTS.CSS
+
+    - Last updated: 08.01.15
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+
+ul li {
+    margin-bottom: rem-calc(5);
+}
+
+.triangle-list {
+    list-style: none;
+    margin-left: rem-calc(15);
+
+    ul {
+        list-style: none;
+    }
+
+    li {
+        padding-left: rem-calc(0);
+
+        :before {
+            position: relative;
+            top: 3px;
+            // top: 0.9em;
+            left: -15px;
+            width: 0;
+            height: 0;
+            content: "\f04b";
+            // content: "\f0da";
+            display: block;
+            font-family: "FontAwesome";
+            // font-size: rem-calc(17);
+            font-size: rem-calc(9);
+            color: $primary-color;
+        }
+    }
+
+    &[class*='block-grid'] li {
+        padding-bottom: 0; // Let list items set their own inner padding
+    }
+}
+
+// .english-cat .triangle-list a:before { color: $english_cat; }
+// .hospitality-cat .triangle-list a:before { color: $hospitality_cat; }
+// .accounting-cat .triangle-list a:before { color: $accounting_cat; }
+// .marketing-cat .triangle-list a:before { color: $marketing_cat; }
+// .tourism-cat .triangle-list a:before { color: $tourism_cat; }
+// .information-tech-cat .triangle-list a:before { color: $information_tech_cat; }
+// .business-cat .triangle-list a:before { color: $business_cat; }
+// .management-cat .triangle-list a:before { color: $management_cat; }
+// .tesol-cat .triangle-list a:before { color: $tesol_cat; }
+
+//=========================================
+//
+//=========================================

@@ -1,7 +1,7 @@
 /*
     HEADER.CSS
 
-    - Last updated: 10.12.14
+    - Last updated: 08.01.15
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -27,13 +27,18 @@ $header-height-xlarge: rem-calc(90) !default; // formerly 104
         height: $header-height-medium; // formerly 90
     }
 
-    @media #{$xlarge-up} {
-        position: fixed;
-        top: 0;
-        height: $header-height-xlarge; // formerly 104
-        background: rgba($secondary-color, 0.85);
+    // Re-enable on re-stitch
+    @media #{$xxlarge-up} {
+        // position: fixed;
+        // top: 0;
+        // height: $header-height-xlarge; // formerly 104
+        // background: rgba($secondary-color, 0.85);
     }
 }
+
+//=========================================
+// Header Logo
+//=========================================
 
 .header .logo {
     position: relative;
@@ -51,10 +56,15 @@ $header-height-xlarge: rem-calc(90) !default; // formerly 104
         top: rem-calc(14);
     }
 
+    // Re-enable on re-stitch
     @media #{$xlarge-up} {
-        top: rem-calc(22);
+        // top: rem-calc(22);
     }
 }
+
+//=========================================
+// Header Links
+//=========================================
 
 .header-links {
     position: relative;
@@ -67,6 +77,10 @@ $header-height-xlarge: rem-calc(90) !default; // formerly 104
         padding: rem-calc(10 10);
     }
 }
+
+//=========================================
+// Apply Now
+//=========================================
 
 .apply-now {
     @media #{$large-up} {

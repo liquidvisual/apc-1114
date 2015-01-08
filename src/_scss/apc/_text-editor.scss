@@ -1,42 +1,33 @@
-///////////////////////////////////////////////////////////////////
-//
-// LIQUIDVISUAL TEXT EDITOR :: A Personal Framework
-//
-//	- updated: 27.06.14
-//	- liquidvisual.com
-//	- licensed under MIT Open Source
-//
-// - Notes -
-//
-//  - UNDER CONSTRUCTION *******
-//	- Point your CMS' text editor to this compiled stylesheet.
-//	- Any new styles created for the user, add in here too.
-//
-///////////////////////////////////////////////////////////////////
+/*
+    TEXT-EDITOR.CSS
 
-/* ------------------------------------------------------------- */
-/* Text Editor Classes
-/* ------------------------------------------------------------- */
+    - Last updated: 08.08.15
+    - hello@liquidvisual.com
 
-// .lv-anchor-arrow	{/**/} // from buttons
-// .lv-button			{/**/} // from buttons
-// .example				{/**/} // from helpers
-// .lv-polaroid		{/**/} // from images
-// .cursive				{/**/} // from typography
-// .lead					{/**/} // from typography
-// .subheader			{/**/} // from typography
-// .content-list		{/**/} // from lists
+    - Notes -
 
-/* ------------------------------------------------------------- */
-/* Styles
-/* ------------------------------------------------------------- */
+    - Point your CMS' text editor to this compiled stylesheet.
+    - Any new styles created for the user, add in here too.
+*/
+//-----------------------------------------------------------------
+// Imports
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Text Editor Classes examples only
+//-----------------------------------------------------------------
 
-// @import "../settings";
-// @import "../components/buttons";
-// @import "../components/helpers";
-// @import "../components/images";
-// @import "../components/typography";
-// @import "../components/lists";
+// .lv-anchor-arrow
+// .lv-button
+// .example
+// .lv-polaroid
+// .cursive
+// .lead
+// .subheader
+// .content-list
+
+//-----------------------------------------------------------------
+// Styles
+//-----------------------------------------------------------------
 
 .image-left {
 	float: left;
@@ -47,3 +38,7 @@
 	float: right:
 	padding: rem-calc(10 0 10 10);
 }
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
