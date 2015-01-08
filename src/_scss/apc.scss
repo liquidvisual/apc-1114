@@ -40,6 +40,8 @@
 // Shared
 //-----------------------------------------------------------------
 
+@import "shared/language-selector";
+@import "shared/mixins";
 @import "shared/weather-icons";
 
 //-----------------------------------------------------------------
@@ -47,7 +49,6 @@
 //-----------------------------------------------------------------
 
 @import "apc/global";
-@import "apc/mixins";
 
 //=========================================
 
@@ -58,7 +59,7 @@
 @import "apc/forms";
 @import "apc/header";
 @import "apc/hero";
-@import "apc/lists"; // unique to APC
+@import "apc/lists";
 @import "apc/media";
 @import "apc/navigation";
 @import "apc/sections";

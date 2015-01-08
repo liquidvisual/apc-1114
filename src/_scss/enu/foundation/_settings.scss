@@ -104,6 +104,12 @@ $tertiary-color: #F4D760;
 // $warning-color: #f08a24;
 // $info-color: #a0d3e8;
 
+$apc_blue: $primary-color;
+$apc_smoke: #f1f1f1;
+$apc_grey: #808285;
+$apc_dark_grey: #706d78;
+$apc_dark_blue: darken($primary-color, 5%);
+
 // $white       : #FFFFFF;
 // $ghost       : #FAFAFA;
 // $snow        : #F9F9F9;

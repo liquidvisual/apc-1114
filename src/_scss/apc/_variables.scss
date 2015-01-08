@@ -1,7 +1,7 @@
 /*
     VARIABLES.CSS
 
-    - Last updated: 19.12.14
+    - Last updated: 09.01.15
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -14,6 +14,9 @@
 // Hero - targeting liquidvisual component hero
 $hero-height: rem-calc(150);
 $hero-height-medium: rem-calc(570);
+
+$language-selector-height: 25px; // magic - match button height
+$language-selector-bg: $apc-dark-blue;
 
 //=========================================
 //

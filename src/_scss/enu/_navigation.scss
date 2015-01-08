@@ -201,3 +201,7 @@
     margin: 0;
     padding: 0;
 }
+
+.topbar .dropdown .triangle-list li ::before {
+    color: $tertiary-color;
+}

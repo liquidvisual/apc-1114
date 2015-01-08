@@ -1,27 +1,62 @@
 {% comment %}
     IGNORE THIS COMMENT: Interchange code reference for dev self:
     <img width="200" data-interchange="[/ImageGen.ashx?width=200&image=@logo.Url, (default)], [@logo.Url, (retina)]" alt="@logo.Name">
-
-    {{ settings.logo }}
 {% endcomment %}
 
 {% assign settings = site.data.enu.settings %}
 {% assign logo = "/img/enu/content/logo@2x.png" %}
 
 <div class="row outer-row">
-    <div class="large-4 columns">
+    <div class="header-top">
+        <div class="medium-7 medium-push-5 columns medium-text-right">
+
+            <!-- Buttons Wrapper -->
+            <div class="buttons-wrapper">
+                <a class="button tiny radius minimal" href="#"><i class="fa fa-lock"></i>&nbsp; Login</a>
+                <a class="button tiny radius show-for-medium-up" href="#"><i class="fa fa-play"></i>&nbsp; Contact Us</a>
+                <a class="button tiny radius" href="#"><i class="fa fa-play"></i>&nbsp; Apply Now</a>
+            </div>
+
+            <!-- Language Selector -->
+            <div class="language-selector right">
+                <a href="#" class="mobile-menu-trigger"></a>
+                {% include shared/languages.html %}
+            </div>
+
+        </div>
+    </div> <!-- .header-top -->
+    <div class="medium-5 medium-pull-7 columns">
         <a class="logo" href="/" title="{{ settings.seo_title }}" itemprop="url">
-        <img src="{{ logo }}" width="280" alt="{{ settings.company_title }}" itemprop="logo"></a>
+        <img src="{{ logo }}" alt="{{ settings.company_title }}" itemprop="logo"></a>
     </div>
-    <div class="large-8 columns">
-        <ul class="header-links lv-inline-list medium-text-right show-for-large-up">
+</div> <!-- .row -->
+
+<!-- Important: Hamburger outside of row -->
+<div class="header-mobile-menu hide-for-large-up">
+    <a href="#" class="hide-for-xlarge-upX">MENU <span class="hamburger"><span class="hamburger-icon"></span></span></a>
+</div>
+
+{% comment %}
+<div class="row outer-row">
+    <div class="header-top">
+        <div class="large-4 columns">
+            <a class="logo" href="/" title="{{ settings.seo_title }}" itemprop="url">
+            <img src="{{ logo }}" width="280" alt="{{ settings.company_title }}" itemprop="logo"></a>
+        </div>
+    </div> <!-- .header-top -->
+    <div class="large-8 columns medium-text-right">
+        <!-- <ul class="header-links lv-inline-list medium-text-right show-for-large-up">
+
             <li class="language-switcher"><a href="#"><i class="flag-icon flag-icon-gb"></i>&nbsp; English <i class="fa fa-angle-down fa-lg"></i></a></li>
             <li><a href="#"><i class="fa fa-lock"></i>&nbsp; Login</a></li>
             <li><a class="button tiny radius" href="#"><i class="fa fa-play"></i>&nbsp; Contact Us</a></li>
             <li><a class="button tiny radius" href="#"><i class="fa fa-play"></i>&nbsp; Apply Now</a></li>
-        </ul>
+        </ul> -->
+
+        <!-- Buttons -->
+        <a class="button tiny radius minimal" href="#"><i class="fa fa-lock"></i>&nbsp; Login</a>
+        <a class="button tiny radius" href="#"><i class="fa fa-play"></i>&nbsp; Contact Us</a>
+        <a class="button tiny radius" href="#"><i class="fa fa-play"></i>&nbsp; Apply Now</a>
     </div>
 </div>
-
-<!-- Important: Hamburger outside of row -->
-<a href="#open" class="hamburger hide-for-large-up"><span></span></a>
+{% endcomment %}

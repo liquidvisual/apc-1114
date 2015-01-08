@@ -24,6 +24,18 @@
     color: white;
     text-transform: capitalize; // decision
     font-weight: bold;
+
+    &.show-for-medium-up {
+    	@media #{$medium-up} {
+    	    display: inline-block !important; // override annoying Foundation default
+    	}
+    }
+
+    &.minimal {
+    	background: none;
+    	text-transform: uppercase;
+    	color: #c1c1c1;
+    }
 }
 
 //=========================================

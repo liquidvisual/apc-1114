@@ -1,6 +1,6 @@
 @import "foundation/settings";
 /*
-    LIQUIDVISUAL MIXINS :: A Personal Framework
+    MIXINS.CSS
 
     - updated: 01.12.14
     - liquidvisual.com
@@ -23,19 +23,20 @@
             transition-property: $property;
 }
 
-// REMOVE ASAP
-.transition {
-    -webkit-transition: all .2s linear;
-       -moz-transition: all .2s linear;
-         -o-transition: all .2s linear;
-        -ms-transition: all .2s linear;
-            transition: all .2s linear;
+//=========================================
+// Cheating here
+//=========================================
 
-    -webkit-transition-property: opacity, color, background;
-       -moz-transition-property: opacity, color, background;
-         -o-transition-property: opacity, color, background;
-        -ms-transition-property: opacity, color, background;
-            transition-property: opacity, color, background;
+.float-right-for-medium-up {
+    @media #{$medium-up} {
+        float: right;
+    }
+}
+
+.float-left-for-medium-up {
+    @media #{$medium-up} {
+        float: left;
+    }
 }
 
 //=========================================

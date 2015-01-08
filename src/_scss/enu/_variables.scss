@@ -1,7 +1,7 @@
 /*
     VARIABLES.CSS
 
-    - Last updated: 10.12.14
+    - Last updated: 09.01.15
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -10,6 +10,9 @@
 
 $header-height-medium: rem-calc(70); // formerly 90
 $header-height-xlarge: rem-calc(90); // formerly 104
+
+$language-selector-height: 31px; // magic
+$language-selector-bg: darken($secondary-color, 5%);
 
 //=========================================
 //

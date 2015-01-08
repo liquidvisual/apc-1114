@@ -15,6 +15,10 @@
     color: $primary-color;
 }
 
+.headed .heading {
+    background: lighten($secondary-color, 20%); // shouldn't have to do this
+}
+
 //-----------------------------------------------------------------
 //
 //-----------------------------------------------------------------
@@ -48,56 +52,6 @@ h1, h2 {
         margin-top: -100px;
         background: #e1e1e1;
     }
-}
-
-//-----------------------------------------------------------------
-// Remove ASAP
-//-----------------------------------------------------------------
-
-.hamburger {
-    position: absolute;
-    visibility: hidden;
-    top: 50%;
-    right: rem-calc(15);
-    display: block;
-    width: rem-calc(28);
-    height: rem-calc(24);
-    z-index: 2;
-
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-
-    @media #{$medium-up} {
-        right: rem-calc(30);
-    }
-}
-
-.hamburger:before,
-.hamburger:after,
-.hamburger span {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: rem-calc(4);
-    background: white;
-}
-.hamburger:before {
-    top: 0;
-}
-.hamburger:after {
-    bottom: 0;
-}
-.hamburger span {
-    top: 50%;
-    margin-top: rem-calc(-2);
-}
-
-html.mm-opening .hamburger:before,
-html.mm-opening .hamburger:after {
-    display: none;
 }
 
 //=========================================

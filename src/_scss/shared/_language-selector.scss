@@ -1,0 +1,148 @@
+@import "foundation/settings";
+/*
+    LANGUAGE-SELECTOR.CSS
+
+    - updated: 09.01.15
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+
+$language-selector-width: rem-calc(115) !default;
+$language-selector-height: 25px !default; // magic
+$language-selector-bg: $apc-dark-blue !default;
+
+//-----------------------------------------------------------------
+// Language Selector
+//-----------------------------------------------------------------
+
+.language-selector {
+    position: relative;
+    margin-left: rem-calc(6); // magic
+    width: rem-calc(34); // larger flag width
+    min-height: rem-calc(26); // magic - required for the floating crap
+    z-index: 100;
+
+    @media #{$large-up} {
+        width: $language-selector-width;
+    }
+
+    ul {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        margin: 0;
+        list-style: none;
+        color: white;
+        text-align: left;
+        z-index: 1;
+    }
+
+    li {
+        margin: 0;
+        display: none; // **
+
+        &.active {
+            display: block;
+
+            a:after {
+                @media #{$large-up} {
+                    // position: absolute;
+                    // right: rem-calc(8);
+                    // content: "\f04b";
+                    content: "\f107";
+                    font-family: 'FontAwesome';
+                    // font-size: rem-calc(9);
+                    font-size: rem-calc(12);
+                    margin-left: rem-calc(5);
+                }
+            }
+        }
+    }
+
+    // MMenu ("English" etc)
+    li.Label {
+        display: none !important;
+    }
+
+    //=========================================
+    // Button Itself
+    //=========================================
+
+    a {
+        display: block;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: $language-selector-width;
+        overflow: hidden;
+
+        font-size: rem-calc(11);
+        text-transform: uppercase;
+        line-height: $language-selector-height;
+        padding: rem-calc(0 5);
+        color: white;
+        border-radius: 4px 0 4px 0; //********************************
+
+        @media #{$large-up} {
+            // background: //$apc_dark_blue;
+        }
+
+        &:hover {
+            background: lighten($language-selector-bg, 10%);
+            border-radius: 0;
+        }
+    }
+
+    .text {
+        display: none;
+        @media #{$large-up} {
+            display: inline;
+        }
+    }
+
+    img {
+        width: 26px;
+    }
+}
+
+//=========================================
+// Trigger - cover over
+//=========================================
+
+.language-selector .mobile-menu-trigger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: none !important;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+
+    @media #{$large-up} {
+        display: none;
+    }
+}
+
+//=========================================
+// States
+//=========================================
+
+.language-selector:hover {
+    @media #{$large-up} {
+        ul {
+            background: $language-selector-bg;
+            // border: 1px solid #5A5760;
+        }
+
+        li {
+            display: block;
+        }
+    }
+}
+
+//=========================================
+//
+//=========================================
+

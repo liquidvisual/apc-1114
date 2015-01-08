@@ -8,6 +8,7 @@
 // Variables
 //-----------------------------------------------------------------
 
+$header-top-height: rem-calc(40);
 $header-height-medium: rem-calc(70) !default; // formerly 90
 $header-height-xlarge: rem-calc(90) !default; // formerly 104
 
@@ -18,98 +19,135 @@ $header-height-xlarge: rem-calc(90) !default; // formerly 104
 .header {
     position: relative;
     background: $secondary-color;
-    width: 100%; // for fixed
-    height: rem-calc(50);
-    overflow: hidden;
-    z-index: 1;
 
-    @media #{$medium-up} {
-        height: $header-height-medium; // formerly 90
-    }
+    .logo {
+        position: relative;
+        display: inline-block;
+        padding: rem-calc(20 0);
 
-    // Re-enable on re-stitch
-    @media #{$xxlarge-up} {
-        // position: fixed;
-        // top: 0;
-        // height: $header-height-xlarge; // formerly 104
-        // background: rgba($secondary-color, 0.85);
+        @media #{$medium-up} {
+            top: rem-calc(-10);
+            padding: rem-calc(10 0);
+        }
+
+        img {
+            width: rem-calc(200);
+
+            @media #{$medium-up} {
+                width: rem-calc(220); // formerly 280
+            }
+        }
     }
 }
+
+//=========================================
+// Buttons
+//=========================================
+
+.header .buttons-wrapper {
+    float: left;
+    @media #{$medium-up} {
+        float: right;
+    }
+}
+
+//=========================================
+// Header Top
+//=========================================
+
+.header-top {
+    padding: rem-calc(5 0);
+    overflow: hidden;
+    background: darken($secondary-color, 10%);
+
+    @media #{$medium-up} {
+        padding: rem-calc(20 0 0 0);
+        overflow: visible;
+        background: none;
+    }
+
+    .button {
+        margin: rem-calc(0 2);
+        // text-transform: uppercase;
+        // margin: 0;
+        // margin-left: rem-calc(-15);
+
+        @media #{$medium-up} {
+            // margin: 0;
+        }
+    }
+}
+
+.header-mobile-menu {
+    position: relative;
+    padding: rem-calc(10 15);
+    border-top: 1px solid #808285;
+
+    a {
+        color: white;
+    }
+}
+
+//=========================================
+//
+//=========================================
+
+// .header {
+//     position: relative;
+//     background: $secondary-color;
+//     width: 100%; // for fixed
+//     height: rem-calc(50);
+//     // overflow: hidden;
+//     z-index: 1;
+
+//     @media #{$medium-up} {
+//         height: $header-height-medium; // formerly 90
+//     }
+
+//     // Re-enable on re-stitch
+//     @media #{$xxlarge-up} {
+//         // position: fixed;
+//         // top: 0;
+//         // height: $header-height-xlarge; // formerly 104
+//         // background: rgba($secondary-color, 0.85);
+//     }
+// }
 
 //=========================================
 // Header Logo
 //=========================================
 
-.header .logo {
-    position: relative;
-    top: rem-calc(10);
+// .header .logo {
+//     position: relative;
+//     top: rem-calc(10);
 
-    img {
-        width: rem-calc(150); // formerly 150
+//     img {
+//         width: rem-calc(150); // formerly 150
 
-        @media #{$medium-up} {
-            width: rem-calc(220); // formerly 280
-        }
-    }
+//         @media #{$medium-up} {
+//             width: rem-calc(220); // formerly 280
+//         }
+//     }
 
-    @media #{$large-up} {
-        top: rem-calc(14);
-    }
+//     @media #{$large-up} {
+//         // top: rem-calc(14);
+//     }
 
-    // Re-enable on re-stitch
-    @media #{$xlarge-up} {
-        // top: rem-calc(22);
-    }
-}
+//     // Re-enable on re-stitch
+//     @media #{$xlarge-up} {
+//         // top: rem-calc(22);
+//     }
+// }
 
 //=========================================
 // Header Links
 //=========================================
 
-.header-links {
-    position: relative;
+.language-selector a {
     font-weight: bold;
     font-size: rem-calc(13);
     text-transform: uppercase;
-
-    a {
-        color: #c1c1c1;
-        padding: rem-calc(10 10);
-    }
-}
-
-//=========================================
-// Apply Now
-//=========================================
-
-.apply-now {
-    @media #{$large-up} {
-        width: rem-calc(100);
-        position: relative;
-    }
-
-    a {
-        @media #{$large-up} {
-            position: absolute;
-            top: -80px;
-            left: 0;
-            background: #E34C79;
-            color: white;
-            width: 100%;
-            height: rem-calc(100);
-            text-align: center;
-            line-height: 1.2;
-            border-radius: 1000px;
-        }
-        .text {
-            @media #{$large-up} {
-                position: absolute;
-                width: 100%;
-                left: 0;
-                bottom: 10px;
-            }
-        }
-    }
+    color: #c1c1c1;
 }
 
 //=========================================

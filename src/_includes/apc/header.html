@@ -3,44 +3,30 @@ IGNORE THIS COMMENT: Interchange code reference for dev self:
 <img width="200" data-interchange="[/ImageGen.ashx?width=200&image=@logo.Url, (default)], [@logo.Url, (retina)]" alt="@logo.Name">
 {% endcomment %}
 
-{% comment %}
-<ul class='f-dropdown' data-dropdown-content id='language_selections'>
-	<li><a href="australia"><img alt="Australia" class="map" src="/img/template/flags/32/Australia.png" />English&nbsp;<i class='fa fa-caret-down'></i></a></li>
-	<li><a href="southkorea"><img alt="Southkorea" class="map" src="/img/template/flags/32/Southkorea.png" />Korean</a></li>
-	<li><a href="china"><img alt="China" class="map" src="/img/template/flags/32/China.png" />Chinese</a></li>
-	<li><a href="thailand"><img alt="Thailand" class="map" src="/img/template/flags/32/Thailand.png" />Thai</a></li>
-	<li><a href="spain"><img alt="Spain" class="map" src="/img/template/flags/32/Spain.png" />Spanish</a></li>
-	<li><a href="japan"><img alt="Japan" class="map" src="/img/template/flags/32/Japan.png" />Japanese</a></li>
-	<li><a href="poland"><img alt="Poland" class="map" src="/img/template/flags/32/Poland.png" />Polish</a></li>
-	<li><a href="portugal"><img alt="Portugal" class="map" src="/img/template/flags/32/Portugal.png" />Portugal</a></li>
-</ul>
-{% endcomment %}
-
 {% assign settings = site.data.apc.settings %}
 {% assign logo = "/img/apc/content/logo.png" %}
-{% assign home_url = "/enu/" %}
 
 <div class="row outer-row">
 	<div class="header-top">
 		<div class="medium-6 medium-push-6 columns medium-text-right">
 
 			<!-- Buttons -->
-			<a class="button tiny round swish" href=""><i class="fa fa-play"></i> Apply Now</a>
-			<a class="button tiny round swish" href=""><i class="fa fa-play"></i> Student Login</a>
+			<a class="button tiny swish" href="#"><i class="fa fa-play"></i> Apply Now</a>
+			<a class="button tiny swish" href="#"><i class="fa fa-play"></i> Student Login</a>
 
 			<!-- Language Selector -->
-			<div class="language-selector">
+			<div class="language-selector right">
 				<a href="#" class="mobile-menu-trigger"></a>
 				{% include shared/languages.html %}
 			</div>
 
 		</div>
-	</div>
+	</div> <!-- .header-top -->
 	<div class="medium-6 medium-pull-6 columns">
-		<a class="logo" href="{{ home_url }}" title="{{ settings.seo_title }}" itemprop="url">
+		<a class="logo" href="/" title="{{ settings.seo_title }}" itemprop="url">
 		<img src="{{ logo }}" alt="{{ settings.company_title }}" itemprop="logo"></a>
 	</div>
-</div>
+</div> <!-- .row -->
 
 <!-- Important: Hamburger outside of row -->
 <div class="header-mobile-menu hide-for-xlarge-up">

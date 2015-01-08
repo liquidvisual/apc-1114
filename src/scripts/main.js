@@ -32,6 +32,21 @@ $(function(){
         }
         window.open(newPath, '_self', false);
     });
+
+    // Make sure you can browse with the ENU prefix - switch by pressing logo
+    $('a').mousedown(function(e){
+        //e.preventDefault();
+
+        var $this = $(this);
+        var href = location.href; // localhost:9292/enu/path/to
+        var isENU = href.indexOf('enu') !== -1;
+        var link = $this.attr('href');
+
+        // replace current link with ENU prefix
+        if (isENU) link = "/enu"+link;
+
+        $this.attr('href', link);
+    });
 });
 
 // Site switcher assets
