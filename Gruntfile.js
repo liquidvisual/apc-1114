@@ -49,7 +49,7 @@ module.exports = function (grunt) {
       }
     },
     //-----------------------------------------------------
-    // CONNECT
+    // BROWSER SYNC
     //-----------------------------------------------------
     browserSync: {
       server: {
@@ -287,11 +287,11 @@ module.exports = function (grunt) {
             'img/**/*',
             'fonts/**/*',
             // Like Jekyll, exclude files & folders prefixed with an underscore.
-            '!**/_*{,/**}'
+            '!**/_*{,/**}',
             // Explicitly add any files your site needs for distribution here.
             //'_bower_components/jquery/jquery.js',
-            //'favicon.ico',
-            //'apple-touch*.png'
+            'favicon.ico',
+            'apple-touch*.png'
           ],
           dest: '<%= yeoman.assets %>'
         }]
@@ -407,7 +407,7 @@ module.exports = function (grunt) {
       },
       dist: {
         src: '<%= yeoman.assets %>/css/*.css',
-        dest: '<%= yeoman.assets %>/css/ie8-optimised.css'
+        dest: '<%= yeoman.assets %>/css/minified-ie8.css'
       }
     },
     //-----------------------------------------------------
