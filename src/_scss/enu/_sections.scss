@@ -15,19 +15,20 @@
 //-----------------------------------------------------------------
 
 .claim-section {
-    position: relative;
-    width: 100%;
-    margin-bottom: rem-calc(30);
-    border-bottom: 1px solid #e1e1e1;
+    // position: relative;
+    // width: 100%;
+    // margin-bottom: rem-calc(30);
+    // border-bottom: 1px solid #e1e1e1;
     // z-index: 1;
 
     .button {
         background: $tertiary-color;
         color: #222;
+        margin-bottom: 0;
     }
 
     p {
-        margin: 0;
+        // margin: 0;
     }
 
     h2, h3 {

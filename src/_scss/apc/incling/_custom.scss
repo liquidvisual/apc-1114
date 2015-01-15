@@ -3,12 +3,12 @@
 /** #main_hero { min-height: 578px } **/
 #logo { padding: 10px 20px 10px 14px; }
 #map-canvas { height: 100%; margin: 0px 0 2em 0; padding: 0px; height: 200px; }
-#quick-links { margin-top: 20px; margin-bottom: 0; float: right; 
+#quick-links { margin-top: 20px; margin-bottom: 0; float: right;
   li { margin: 0 0 0 8px; }
 }
 .action-block { margin-top: 16%;}
 .image_block { img { margin-bottom: .8em;} }
-.contact ul li strong, li.address strong { color: $apc_blue }
+// .contact ul li strong, li.address strong { color: $apc_blue }
 
 
 .news_block {
@@ -32,7 +32,7 @@ table.location_table {
   padding: .6em .6em .5em;
   td.weather { height: 50px; width: 50px;}
   td.temp { font-size: 2em; }
-  td { 
+  td {
     font-weight: normal;
     color: #fff;
     font-size: 1.2em;
@@ -41,11 +41,11 @@ table.location_table {
   }
 }
 
-.step { 
+.step {
   h3, h4, h5 { text-transform: uppercase; font-weight: bold; }
   padding-top: 1.6em;
-  padding-bottom: 1.4em; 
-  background: #fff; 
+  padding-bottom: 1.4em;
+  background: #fff;
   margin-bottom: 2em;
 }
 

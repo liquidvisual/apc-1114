@@ -42,6 +42,7 @@
 @import "shared/language-selector";
 @import "shared/mixins";
 @import "shared/weather-icons";
+@import "shared/widgets";
 
 //-----------------------------------------------------------------
 // App Unique
@@ -66,7 +67,7 @@
 @import "enu/sidebar";
 @import "enu/social-networks";
 @import "enu/special";
-@import "enu/widgets";
+// @import "enu/widgets";
 @import "enu/themes";
 
 //-----------------------------------------------------------------

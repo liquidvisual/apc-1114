@@ -1,5 +1,5 @@
 /*
-    MAIN SCRIPTS - Last updated: 00-00-00
+    MAIN SCRIPTS - Last updated: 15-01-15
 */
 //-----------------------------------------------------------------
 // Variables
@@ -81,6 +81,36 @@ $(document).ready(function() {
 
 $(window).load(function() {
     NProgress.done();
+});
+
+//-----------------------------------------------------------------
+// Weather Widget
+//
+// Usage: <div class="weather-widget" data-city="PLACE CITY HERE"></div>
+//-----------------------------------------------------------------
+
+// Docs at http://simpleweatherjs.com
+$(function(){
+    $('.weather-widget[data-city]').each(function(){
+
+      var $this = $(this);
+      var $city = $this.attr('data-city');
+
+      $.simpleWeather({
+        location: $city,
+        woeid: '',
+        unit: 'c',
+        success: function(weather) {
+          html = '<h2><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;<small><sup>'+weather.units.temp+'</sup></small></h2>';
+          html += '<h5>'+weather.city+' | '+weather.forecast[0].date+'</h5>';
+
+          $('.weather-widget-content', $this).html(html);
+        },
+        error: function(error) {
+          $('.weather-widget-content', $this).html('<p>'+error+'</p>');
+        }
+      });
+    });
 });
 
 //-----------------------------------------------------------------

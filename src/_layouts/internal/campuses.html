@@ -77,31 +77,11 @@ layout: internal
 						<div class="side_content" data-equalizer-watch>
 							<div class="padded">
 
-								<!-- WEATHER WIDGET JS  -->
-								<script>
-								    // Docs at http://simpleweatherjs.com
-								    $(document).ready(function() {
-								      $.simpleWeather({
-								        location: 'Queensland',
-								        woeid: '',
-								        unit: 'c',
-								        success: function(weather) {
-								          html = '<h2><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;<small><sup>'+weather.units.temp+'</sup></small></h2>';
-								          html += '<h5>'+weather.city+' | '+weather.forecast[0].date+'</h5>';
-
-								          $("#weather").html(html);
-								        },
-								        error: function(error) {
-								          $("#weather").html('<p>'+error+'</p>');
-								        }
-								      });
-								    });
-								</script>
-
-								<div class="weather-widget">
+								<!-- Weather Widget -->
+								<div class="weather-widget" data-city="{{ item.title }}"> <!-- place each location as data-city attribute EG. "Sydney" -->
 									<div class="row">
 										<div class="columns">
-											<div id="weather"></div>
+											<div class="weather-widget-content"></div>
 										</div>
 									</div>
 								</div> <!-- .weather-widget -->
@@ -111,36 +91,34 @@ layout: internal
 
 								<br>
 
+								<!-- Address -->
 								<div class="address">
 									<h5>Address</h5>
-									<p>Some Address<br>More Address</p>
+									<p><a target="_blank" href="#"><i class="fa fa-map-marker"></i>&nbsp; 123 Apple Street, NSW</a></p>
 								</div>
 
 								<hr>
 
+								<!-- Contact -->
 								<div class="contact">
 									<h5>Contact</h5>
-									<ul class="clean spaced-list">
-										<li>
-											<strong>Administration</strong>
-											<br>
-											T (612) 9251 9002
-										</li>
-										<li>
-											<strong>Student Services</strong>
-											<br>
-											T (612) 9251 9000
-										</li>
-									</ul>
+									<strong>Administration</strong><br>
+									<p><a href="tel:"><i class="fa fa-phone"></i>&nbsp; (612) 9251 9002</a></p>
+									<strong>Student Services</strong><br>
+									<p><a href="tel:"><i class="fa fa-phone"></i>&nbsp; (612) 9251 9000</a></p>
 								</div>
+
 								<hr>
+
+								<!-- Hours -->
 								<div class="hours">
 									<h5>Hours</h5>
-									<ul class="clean">
-										<li>7:30 AM to 10:00 PM</li>
-									</ul>
+									<p>7:30 AM to 10:00 PM</p>
 								</div>
+
 								<hr>
+
+								<!-- Campus Links -->
 								<div class="campus_links">
 									<h5>Campus Links</h5>
 									<ul class="triangle">
@@ -149,8 +127,9 @@ layout: internal
 										<li><a href="#">Getting There</a></li>
 									</ul>
 								</div>
+
 								<hr>
-								<!--  -->
+
 							</div>
 						</div>
 					</div>

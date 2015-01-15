@@ -43,6 +43,7 @@
 @import "shared/language-selector";
 @import "shared/mixins";
 @import "shared/weather-icons";
+@import "shared/widgets";
 
 //-----------------------------------------------------------------
 // App Unique
@@ -67,7 +68,7 @@
 @import "apc/tabs"; // unique
 @import "apc/social-networks";
 @import "apc/special";
-@import "apc/widgets";
+// @import "apc/widgets";
 @import "apc/themes";
 
 //-----------------------------------------------------------------

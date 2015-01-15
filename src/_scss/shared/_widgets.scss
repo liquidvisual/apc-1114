@@ -1,7 +1,7 @@
 /*
     WIDGETS.CSS
 
-    - Last updated: 03.01.15
+    - Last updated: 15.01.15
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -11,7 +11,13 @@
 // Weather
 //-----------------------------------------------------------------
 
-#weather {
+.weather-widget {
+	background: $primary-color;
+	color: white;
+	padding: rem-calc(15);
+}
+
+.weather-widget-content {
 	text-align: center;
 
 	h2, h3, h4, h5, h6, small {
@@ -27,6 +33,10 @@
 
 	i {
 		font-size: rem-calc(44);
+	}
+
+	.temp {
+		font-size: rem-calc(30);
 	}
 }
 
