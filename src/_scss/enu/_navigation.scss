@@ -112,7 +112,8 @@
 
 .topbar .active > a {
     background: darken($secondary-color, 10%);
-    border-radius: $global-radius 0 $global-radius 0;
+    border-radius: $global-radius;
+    // border-radius: $global-radius 0 $global-radius 0;
 }
 
 .topbar li.active:first-child > a {
@@ -128,7 +129,8 @@
     opacity: 1;
     height: auto;
     overflow: visible;
-    border: 1px solid #5A5760;
+    // border: 1px solid #5A5760;
+    // border: 1px solid darken(#505D66, 10%);
     top: 100%;
 }
 

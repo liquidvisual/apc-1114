@@ -4,7 +4,7 @@ hero_link: /some-link-here/
 ---
 
 {% assign settings = site.data.enu.settings  %}
-{% assign news = site.pages | where: "type", "news_item" %}
+{% assign news = site.data.enu.news %}
 {% assign events = site.pages | where: "type", "event_item" %}
 {% assign courses = site.data.enu.sitemap[1].children | where: "include_in_homepage", true %}
 
@@ -151,7 +151,7 @@ hero_link: /some-link-here/
 									<div class="article-card-text">
 										<h3>{{ item.title }}</h3>
 										<h5 class="subheader"><date><i class="fa fa-calendar"></i>&nbsp; {{ item.date | date: "%d %B %Y" }}</h5>
-										{{ item.content | markdownify | truncate: 200 }}
+										{{ item.body | markdownify | truncate: 200 }}
 									</div>
 								</a>
 							</li>

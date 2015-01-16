@@ -16,12 +16,12 @@
 -->
 {% endcomment %}
 
-{% assign sitemap = include.data %}
+{% assign sitemap = site.data.apc.sitemap %}
 {% assign url_paths = page.url | downcase | split: '/' %}
 
 <ul>
 	{% comment %} Important: leave 'Home' out of the loop {% endcomment %}
-	<li class="{% if page.url == "/apc/" %} active {% endif %}"><a href="/apc/">Home</a></li>
+	<li class="{% if page.url == "/" %} active {% endif %}"><a href="/">Home</a></li>
 
 	{% comment %} First Level {% endcomment %}
 	{% for item in sitemap | offset: 1 %}

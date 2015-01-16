@@ -16,39 +16,42 @@
 @import "helpers";
 @import "custom";
 
-header {  background: $apc_blue; }
+// header {  background: $apc_blue; }
 
-/** APC Custom Typography **/
-h1,h2,h3,h4,h5, h6 {
-  color: $apc_blue
-}
-h1, h2, h3, h4, h5 {
-  text-transform: uppercase;
-}
+// /** APC Custom Typography **/
+// h1,h2,h3,h4,h5, h6 {
+//   color: $apc_blue;
+// }
+// h1, h2, h3, h4, h5 {
+//   text-transform: uppercase;
+// }
 
-h2 {
-  font-weight: 700;  text-transform: uppercase; letter-spacing: 0px; color: $apc_blue;
-}
+// h2 {
+//   font-weight: 700;
+//   text-transform: uppercase;
+//   letter-spacing: 0px;
+//   color: $apc_blue;
+// }
 
-h3, h4 {
-  font-weight: bold;
-}
+// h3, h4 {
+//   font-weight: bold;
+// }
 
-h5.sub_heading {
-  font-weight: bold;
-}
+// h5.sub_heading {
+//   font-weight: bold;
+// }
 
-p {
-  color: $apc_grey;
-}
+// p {
+//   color: $apc_grey;
+// }
 
-p.spaced {
-  line-height: 1.8em;
-}
+// p.spaced {
+//   line-height: 1.8em;
+// }
 
-a.button:hover {
-  background: $apc_blue !important;
-}
+// a.button:hover {
+//   background: $apc_blue !important;
+// }
 
 
 
@@ -94,7 +97,8 @@ a.button:hover {
     small {
       display: block;
       clear: both;
-      color: $apc_blue;
+      font-weight: 600;
+      // color: $apc_blue;
       line-height: 1.4em;
     }
 }
@@ -137,11 +141,6 @@ height: 200px;
   h4, h5 { text-transform: uppercase; font-weight: bold; }
   h4 { font-size: 1em;}
   h5 { font-size: .9em;}
-}
-
-
-input:focus {
-  border: 1px solid $apc_blue !important;
 }
 
 .selected_row {

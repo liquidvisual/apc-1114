@@ -18,6 +18,10 @@ form label {
 
 input {
 	border-radius: 0;
+
+	&:focus {
+		border: 1px solid $apc_blue !important;
+	}
 }
 
 .lv-super form input,

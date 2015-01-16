@@ -1,22 +1,40 @@
 /*
-    FORMS.CSS
+    TYPE.CSS
 
-    - Last updated: 10.12.14
+    - Last updated: 15.01.15
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
 // Variables
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------
-// Forms
+// Typography
 //-----------------------------------------------------------------
 
-.lv-super input,
-.lv-super textarea {
-	@include transition();
-	border-radius: $global-radius;
+header {
+    background: $apc_blue;
 }
 
 //=========================================
-//
+// Headings
 //=========================================
+
+h1, h2, h3, h4, h5, h6 {
+  color: $primary-color;
+}
+
+h1, h2, h3 {
+  text-transform: uppercase;
+}
+
+h2 {
+  font-weight: 700;
+}
+
+h5.sub_heading {
+  font-weight: bold;
+}
+
+p.spaced {
+  line-height: 1.8em;
+}

@@ -1,36 +1,45 @@
 .wizard {
-  .step-tab { 
-    text-align: center; 
+  .step-tab {
+    text-align: center;
     background: #d5d6d8;
     padding: .8em 0 1em;
     border-bottom: 1.2em solid whitesmoke;
-    &.active { background: #fff; border-bottom: 1.2em solid #fff; } 
-    h3 { text-transform: uppercase; color: $apc_blue; } 
+    &.active { background: #fff; border-bottom: 1.2em solid #fff; }
+    h3 { text-transform: uppercase; color: $apc_blue; }
     small { font-size: .5em; display: block; clear: both; text-transform: none; font-weight: normal;}
   }
 }
-.form { background: #fff;
+
+.form {
+  background: #fff;
   margin-bottom: 2em;
+
   form {
     .row {
       padding: 0 0 0 2em;
-      }
-    input, textarea, select  { 
+    }
+
+    input, textarea, select  {
       border: none;
       margin-top: 6px;
-      font-family: 'Helvetica'; 
+      font-family: 'Helvetica';
       font-size: .8em;
-      font-weight: normal; 
-      background: #e5e5e5; 
+      font-weight: normal;
+      background: #e5e5e5;
       color: $apc_grey;
       padding: 20px;
     }
-    option { color: $apc_grey !important;}
-    label { 
-      text-transform: uppercase; 
-      font-weight: bold; 
+
+    option {
+      color: $apc_grey !important;
+    }
+
+    label {
+      text-transform: uppercase;
+      font-weight: bold;
       color: $apc_blue;
     }
   }
+
   .action-links { margin-top: 2em;}
 }

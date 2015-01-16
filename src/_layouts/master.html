@@ -86,11 +86,7 @@
 
     <!-- OFF-CANVAS MENU - Uses 'simplified' navigation include for MMenu compatibility -->
     <nav class="js-off-canvas-menu-left hide" aria-hidden="true">
-        {% if page.site_type == "enu" %}
-            {% include shared/navigation.html data=site.data.enu.sitemap %}
-        {% else %}
-            {% include shared/navigation.html data="site.data.sitemap" %}
-        {% endif %}
+        {% include shared/navigation.html %}
     </nav>
 
     <!-- LANGUAGE SELECTOR -->

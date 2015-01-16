@@ -11,6 +11,10 @@
 // Buttons
 //-----------------------------------------------------------------
 
+.button {
+    border-radius: $global-radius;
+}
+
 .button i {
 	font-size: .9em;
 }
