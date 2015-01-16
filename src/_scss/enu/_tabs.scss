@@ -1,0 +1,109 @@
+/*
+    TABS.CSS (tabs.css)
+
+    - Last updated: 06.01.15
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+
+.tabs-content .content {
+    // background: white;
+    // padding: rem-calc(20);
+}
+
+.lv-super .tabs .active a {
+    // background: pink;
+    // border-radius: $global-radius 0 0 0;
+}
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+
+.tabs {
+    position: relative;
+    margin-bottom: rem-calc(15) !important;
+    overflow: hidden;
+
+    &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 1px;
+        width: 100%;
+        background: #ccc;
+    }
+
+    @media #{$small-only} {
+        display: table;
+        width: 100%;
+    }
+}
+
+.tabs dd {
+    @media #{$small-only} {
+        position: relative;
+        top: -1px;
+        display: table-cell;
+        float: none;
+        text-align: center;
+    }
+}
+
+.tabs a {
+    text-align: center;
+}
+
+.tabs dd.active {
+    @media #{$small-only} {
+        top: 0;
+    }
+}
+
+.tabs dd {
+    z-index: 1;
+}
+
+.tabs dd.active .text {
+    position: relative;
+    top: -1px;
+}
+
+.tabs .active {
+    border: 1px solid #ccc;
+    border-bottom: 0;
+}
+
+.tabs dd a {
+    padding-left: rem-calc(40);
+    padding-right: rem-calc(40);
+
+    @media #{$small-only} {
+        padding-left: rem-calc(10);
+        padding-right: rem-calc(10);
+    }
+}
+
+/* What gives, Webkit?! */
+.lv-super .accordion,
+.lv-super .accordion *,
+.lv-super .accordion a,
+.lv-super .tabs-content .content,
+.lv-super .tabs-content .content *,
+.lv-super .tabs a,
+.lv-super .tabs *,
+.lv-super {
+    outline: none !important;
+}
+
+//=========================================
+//
+//=========================================

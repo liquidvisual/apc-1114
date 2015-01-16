@@ -15,30 +15,30 @@
 //     margin-bottom: rem-calc(30) !important;
 // }
 
-.slick-slide {
+.card-slider .slick-slide {
     @extend .transition;
     opacity: 0.2;
     width: rem-calc(500);
 }
 
-.lv-super .slick-prev,
-.lv-super .slick-next {
+.lv-super .card-slider .slick-prev,
+.lv-super .card-slider .slick-next {
     height: rem-calc(50);
     margin-top: rem-calc(-25);
 }
 
-.lv-super .slick-prev:before,
-.lv-super .slick-next:before {
+.lv-super .card-slider .slick-prev:before,
+.lv-super .card-slider .slick-next:before {
     content: "\f105";
     font-family: 'FontAwesome';
     font-size: rem-calc(50);
 }
 
-.lv-super .slick-prev:before {
+.lv-super .card-slider .slick-prev:before {
     content: "\f104";
 }
 
-.slick-center {
+.card-slider .slick-center {
     opacity: 1;
 }
 

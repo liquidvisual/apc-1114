@@ -2,13 +2,8 @@
 layout: internal
 ---
 
-{% capture type_link %}
-	{% if page.type == "media" %}
-	    /news-and-events/media/media-item/
-	{% else %}
-		/news-and-events/events/events-item/
-	{% endif %}
-{% endcapture %}
+<!-- Ignore this - just for plugging in links to item pages -->
+{% capture type_link %}{% if page.type == "media" %}/news-and-events/media/media-item/{% else %}/news-and-events/events/events-item/{% endif %}{% endcapture %}
 
 <!-- CLAIM SECTION -->
 <section class="section claim-section has-medium-padding">

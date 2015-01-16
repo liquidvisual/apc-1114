@@ -20,6 +20,90 @@
 }
 
 //-----------------------------------------------------------------
+// Wizard
+//-----------------------------------------------------------------
+
+.wizard .step-tab {
+    background: #D5D6D8;
+    display: block;
+    margin-bottom: 0;
+    border-bottom: 0;
+    opacity: 0.4;
+
+    h3 {
+        color: $primary-color; // not in APC
+    }
+}
+
+//-----------------------------------------------------------------
+// Filter Item
+//-----------------------------------------------------------------
+
+.filter-item {
+    width: 100%; // isotope - who knows
+}
+
+//-----------------------------------------------------------------
+// Timeline Controls (refactor to shared)
+//-----------------------------------------------------------------
+
+.timeline-controls {
+    margin-bottom: 0;
+
+    button {
+        // background: $primary-color;
+    }
+
+    .year {
+        padding: 10px 8px;
+        display: inline-block;
+        cursor: pointer;
+        color: white;
+    }
+
+    .slick-list {
+        // background: red;
+        margin: 0 15px;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+        font-family: 'FontAwesome';
+        font-size: rem-calc(14);
+    }
+
+    .slick-prev {
+        left: -10px;
+
+        &:before {
+            content: "\f04a";
+        }
+    }
+
+    .slick-next {
+        right: -10px;
+
+        &:before {
+            content: "\f04e";
+        }
+    }
+
+    .year {
+        display: inline-block;
+        border-radius: $global-radius/2;
+
+        &:hover {
+            background: lighten($secondary-color, 8%);
+        }
+    }
+}
+
+// refactor
+.timeline-controls .active .year {
+    background: lighten($secondary-color, 8%);
+}
+
+//-----------------------------------------------------------------
 //
 //-----------------------------------------------------------------
 
@@ -30,6 +114,11 @@ i.greyed {
 h1, h2 {
     font-weight: 700;
     text-transform: uppercase;
+}
+
+// On Blog item
+h1 .date {
+    font-weight: 200;
 }
 
 .subheader {
