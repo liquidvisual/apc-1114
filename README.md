@@ -3,8 +3,8 @@ apc-1114
 
 ## To Run
 
-    git clone git@github.com:liquidvisual/jekyllrb-foundation-test.git
-    bundler install
+    git clone git@github.com:liquidvisual/apc-1114.git
+    bundle install
     npm install
     bower install
     grunt serve
