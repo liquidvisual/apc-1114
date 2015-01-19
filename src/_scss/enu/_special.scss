@@ -121,27 +121,9 @@ h1 .date {
     font-weight: 200;
 }
 
-.subheader {
-    color: grey;
-}
-
-.proto {
-    overflow:hidden;
-    position: relative;
-}
-
-.proto:after {
-    @media #{$large-up} {
-        content: "";
-        width: 1px;
-        height: 200px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-top: -100px;
-        background: #e1e1e1;
-    }
-}
+// .subheader {
+//     color: grey;
+// }
 
 //=========================================
 //

@@ -43,13 +43,13 @@
                 </div> <!-- .medium-4 -->
 
                 <!-- Site Map -->
+
                 <div class="medium-4 columns show-for-medium-up">
                     <h3>Site Map</h3>
                     <ul class="no-bullet">
-                    {% for item in site.data.navigation %}
-                        <li><a href="#">{{ item.title }}</a></li>
+                    {% for item in site.data.apc.sitemap %}
+                        <li><a href="{{ item.url }}">{{ item.title }}</a></li>
                     {% endfor %}
-                    <li><a href="#">Contact Us</a></li>
                     <li><a href="#">Student Login</a></li>
                     </ul>
                 </div> <!-- .medium-4 -->
@@ -78,9 +78,9 @@
                 <ul class="social-networks lv-inline-list small-only-text-center">
                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                    <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
                     <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="#"><i class="fa fa-rss"></i></a></li>
                 </ul>
             </div> <!-- .social-networks -->
 

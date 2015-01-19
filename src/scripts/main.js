@@ -13,6 +13,9 @@ var bxSliderHero;
 //-----------------------------------------------------------------
 
 $(function(){
+
+    $('.lv-breadcrumbs a[href="/enu/"]').parent().remove(); // remove cruft '/enu/' in breadcrumbs
+
     $('.logo').click(function(e){
         var protocol = location.protocol; // http:
         var host = location.host; // localhost:9292/
@@ -34,13 +37,16 @@ $(function(){
     });
 
     // Make sure you can browse with the ENU prefix - switch by pressing logo
-    $('a').mousedown(function(e){
-        //e.preventDefault();
+    $('a').click(function(e){
+        // e.preventDefault();
 
         var $this = $(this);
         var href = location.href; // localhost:9292/enu/path/to
         var isENU = href.indexOf('enu') !== -1;
         var link = $this.attr('href');
+
+        // prevent breadcrumbs issue first
+        link = link.replace('/enu/', '/');
 
         // replace current link with ENU prefix
         if (isENU) link = "/enu"+link;

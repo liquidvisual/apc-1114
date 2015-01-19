@@ -49,6 +49,19 @@
     width: 100%;
 }
 
+.article-card .img {
+    display: block;
+    width: 100%;
+    background: lighten($primary-color, 20%);
+    text-align: center;
+
+    i {
+        font-size: rem-calc(80);
+        line-height: 200px;
+        color: white;
+    }
+}
+
 .article-card-text {
     // background: white;
     padding: rem-calc(20);

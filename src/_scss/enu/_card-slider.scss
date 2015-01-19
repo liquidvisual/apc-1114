@@ -16,7 +16,7 @@
 // }
 
 .card-slider .slick-slide {
-    @extend .transition;
+    @include transition();
     opacity: 0.2;
     width: rem-calc(500);
 }

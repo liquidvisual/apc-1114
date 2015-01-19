@@ -26,6 +26,10 @@
         background: $tertiary-color;
         color: #222;
         margin-bottom: 0;
+
+        &:hover {
+            background: lighten($tertiary-color, 10%);
+        }
     }
 
     p {
@@ -50,9 +54,28 @@
 // Course Section
 //=========================================
 
-.course-section .button {
-    color: $secondary-color;
-    border-color: $secondary-color;
+.course-section .course-tile {
+    display: table;
+    font-size: rem-calc(20);
+    text-align: center;
+    width: 100%;
+    margin-bottom: 0;
+
+    a {
+        @include transition();
+        display: table-cell;
+        vertical-align: middle;
+        background: lighten($secondary-color, 50%);
+        height: rem-calc(100);
+        padding: rem-calc(15);
+        text-transform: none;
+        // color: white;
+        border: 1px solid lighten($secondary-color, 45%);
+    }
+}
+
+.no-touch .course-tile a:hover {
+    background: none;
 }
 
 .course-section a {
@@ -75,6 +98,11 @@
     // border-top: 4px solid $tertiary-color;
     padding-top: rem-calc(20);
     margin: 0;
+
+    img {
+        // @include transition();
+        // @include grayscale();
+    }
 }
 
 //=========================================

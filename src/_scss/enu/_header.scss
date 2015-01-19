@@ -40,6 +40,10 @@ $header-height-xlarge: rem-calc(90) !default; // formerly 104
     }
 }
 
+.no-touch .header .button:hover {
+    // color: $secondary-color;
+}
+
 //=========================================
 // Buttons
 //=========================================

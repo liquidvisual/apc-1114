@@ -21,12 +21,18 @@
 
     p {
         color: white;
+        font-size: rem-calc(14);
     }
 
     a {
+        @include transition();
         font-size: rem-calc(14);
         color: white;
         word-wrap: break-word;
+
+        &:hover {
+            color: $primary-color;
+        }
     }
 
     //=========================================
