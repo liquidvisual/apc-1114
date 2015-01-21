@@ -5,6 +5,7 @@
 
 future: false
 show_drafts: false
+status: "deployed" #used in master for CSS switching
 
 # Used on files that can't be prefixed by CDNify
 # Eg. The Hero images - which are inline (or data urls)

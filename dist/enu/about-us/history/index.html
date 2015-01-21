@@ -23,9 +23,9 @@
     <!-- Google Fonts CDN -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
 
-    
-
     <link rel="stylesheet" href="/assets/css/minified-enu.css">
+
+    <link rel="stylesheet" href="/assets/css/minified-apc.css">
 
     
 
@@ -59,7 +59,8 @@
             <!-- Language Selector -->
             <div class="language-selector right">
                 <a href="#" class="mobile-menu-trigger"></a>
-                <ul>
+                <!-- Used also in the MMenu -->
+<ul>
 	<li class="Label">Choose a language</li>
 	<li class="active"><a href="#australia"><img alt="Australia" src="/assets/img/shared/flags/32/Australia.png">&nbsp; <span class="text">English</span></a></li>
 	<li><a href="#southkorea"><img alt="Southkorea" src="/assets/img/shared/flags/32/Southkorea.png">&nbsp; <span class="text">Korean</span></a></li>
@@ -1470,42 +1471,6 @@
 
     
 
-<script>
-$(function(){
-	$('.timeline-controls').slick({
-	  infinite: true,
-	  slidesToShow: 9,
-	  slidesToScroll: 1,
-	  initialSlide: 0,
-	  asNavFor: '.timeline-slides',
-	  focusOnSelect: true,
-	  // centerMode: true,
-	  responsive: [
-	      {
-	        breakpoint: 480,
-	        settings: {
-	          slidesToShow: 3,
-	          slidesToScroll: 3,
-	        }
-	      }
-	    ],
-	    onAfterChange:function(slickSlider,i){
-	    	$('.timeline-controls .active').removeClass('active');
-	    	$('.timeline-controls .slick-active').eq(0).addClass('active');
-	    }
-	});
-	// --
-
-	 $('.timeline-slides').slick({
-	    slidesToShow: 1,
-	    slidesToScroll: 1,
-	    arrows: false,
-	    fade: true,
-	    asNavFor: '.timeline-controls'
-	});
-});
-</script>
-
 <!-- CLAIM SECTION -->
 <section class="section claim-section has-medium-padding">
     <div class="row">
@@ -1566,36 +1531,35 @@ $(function(){
 					<div class="padded">
 						<div class="columns large-6">
 							<div class="gallery-slider section">
+								<!-- Images carousel -->
 								<div class="slider slider-for">
 									
-										<!-- http://kenwheeler.github.io/slick/img/fonz1.png -->
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?12005-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?12005-heading" alt="..."></div>
 									
-										<!-- http://kenwheeler.github.io/slick/img/fonz1.png -->
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?22005-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?22005-heading" alt="..."></div>
 									
-										<!-- http://kenwheeler.github.io/slick/img/fonz1.png -->
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?32005-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?32005-heading" alt="..."></div>
 									
-										<!-- http://kenwheeler.github.io/slick/img/fonz1.png -->
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?42005-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?42005-heading" alt="..."></div>
 									
 								</div>
+								<!-- Images mirrored -->
 								<div class="slider slider-nav">
 									
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?12005-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?12005-heading" alt="..."></div>
 									
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?22005-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?22005-heading" alt="..."></div>
 									
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?32005-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?32005-heading" alt="..."></div>
 									
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?42005-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?42005-heading" alt="..."></div>
 									
 								</div>
 							</div>
 						</div>
 						<div class="columns large-6">
 							<h4>2005 Heading</h4>
+							<!-- WYSIWYG -->
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. S...</p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. Sed nulla orci, suscipit sit am...</p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. S...</p>
@@ -1614,36 +1578,35 @@ $(function(){
 					<div class="padded">
 						<div class="columns large-6">
 							<div class="gallery-slider section">
+								<!-- Images carousel -->
 								<div class="slider slider-for">
 									
-										<!-- http://kenwheeler.github.io/slick/img/fonz1.png -->
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?12006-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?12006-heading" alt="..."></div>
 									
-										<!-- http://kenwheeler.github.io/slick/img/fonz1.png -->
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?22006-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?22006-heading" alt="..."></div>
 									
-										<!-- http://kenwheeler.github.io/slick/img/fonz1.png -->
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?32006-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?32006-heading" alt="..."></div>
 									
-										<!-- http://kenwheeler.github.io/slick/img/fonz1.png -->
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?42006-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?42006-heading" alt="..."></div>
 									
 								</div>
+								<!-- Images mirrored -->
 								<div class="slider slider-nav">
 									
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?12006-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?12006-heading" alt="..."></div>
 									
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?22006-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?22006-heading" alt="..."></div>
 									
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?32006-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?32006-heading" alt="..."></div>
 									
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?42006-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?42006-heading" alt="..."></div>
 									
 								</div>
 							</div>
 						</div>
 						<div class="columns large-6">
 							<h4>2006 Heading</h4>
+							<!-- WYSIWYG -->
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. S...</p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. Sed nulla orci, suscipit sit am...</p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. S...</p>
@@ -1662,36 +1625,35 @@ $(function(){
 					<div class="padded">
 						<div class="columns large-6">
 							<div class="gallery-slider section">
+								<!-- Images carousel -->
 								<div class="slider slider-for">
 									
-										<!-- http://kenwheeler.github.io/slick/img/fonz1.png -->
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?12007-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?12007-heading" alt="..."></div>
 									
-										<!-- http://kenwheeler.github.io/slick/img/fonz1.png -->
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?22007-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?22007-heading" alt="..."></div>
 									
-										<!-- http://kenwheeler.github.io/slick/img/fonz1.png -->
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?32007-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?32007-heading" alt="..."></div>
 									
-										<!-- http://kenwheeler.github.io/slick/img/fonz1.png -->
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?42007-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?42007-heading" alt="..."></div>
 									
 								</div>
+								<!-- Images mirrored -->
 								<div class="slider slider-nav">
 									
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?12007-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?12007-heading" alt="..."></div>
 									
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?22007-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?22007-heading" alt="..."></div>
 									
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?32007-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?32007-heading" alt="..."></div>
 									
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?42007-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?42007-heading" alt="..."></div>
 									
 								</div>
 							</div>
 						</div>
 						<div class="columns large-6">
 							<h4>2007 Heading</h4>
+							<!-- WYSIWYG -->
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. S...</p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. Sed nulla orci, suscipit sit am...</p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. S...</p>
@@ -1710,36 +1672,35 @@ $(function(){
 					<div class="padded">
 						<div class="columns large-6">
 							<div class="gallery-slider section">
+								<!-- Images carousel -->
 								<div class="slider slider-for">
 									
-										<!-- http://kenwheeler.github.io/slick/img/fonz1.png -->
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?12008-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?12008-heading" alt="..."></div>
 									
-										<!-- http://kenwheeler.github.io/slick/img/fonz1.png -->
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?22008-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?22008-heading" alt="..."></div>
 									
-										<!-- http://kenwheeler.github.io/slick/img/fonz1.png -->
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?32008-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?32008-heading" alt="..."></div>
 									
-										<!-- http://kenwheeler.github.io/slick/img/fonz1.png -->
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?42008-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?42008-heading" alt="..."></div>
 									
 								</div>
+								<!-- Images mirrored -->
 								<div class="slider slider-nav">
 									
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?12008-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?12008-heading" alt="..."></div>
 									
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?22008-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?22008-heading" alt="..."></div>
 									
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?32008-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?32008-heading" alt="..."></div>
 									
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?42008-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?42008-heading" alt="..."></div>
 									
 								</div>
 							</div>
 						</div>
 						<div class="columns large-6">
 							<h4>2008 Heading</h4>
+							<!-- WYSIWYG -->
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. S...</p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. Sed nulla orci, suscipit sit am...</p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. S...</p>
@@ -1758,36 +1719,35 @@ $(function(){
 					<div class="padded">
 						<div class="columns large-6">
 							<div class="gallery-slider section">
+								<!-- Images carousel -->
 								<div class="slider slider-for">
 									
-										<!-- http://kenwheeler.github.io/slick/img/fonz1.png -->
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?12009-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?12009-heading" alt="..."></div>
 									
-										<!-- http://kenwheeler.github.io/slick/img/fonz1.png -->
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?22009-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?22009-heading" alt="..."></div>
 									
-										<!-- http://kenwheeler.github.io/slick/img/fonz1.png -->
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?32009-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?32009-heading" alt="..."></div>
 									
-										<!-- http://kenwheeler.github.io/slick/img/fonz1.png -->
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?42009-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?42009-heading" alt="..."></div>
 									
 								</div>
+								<!-- Images mirrored -->
 								<div class="slider slider-nav">
 									
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?12009-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?12009-heading" alt="..."></div>
 									
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?22009-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?22009-heading" alt="..."></div>
 									
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?32009-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?32009-heading" alt="..."></div>
 									
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?42009-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?42009-heading" alt="..."></div>
 									
 								</div>
 							</div>
 						</div>
 						<div class="columns large-6">
 							<h4>2009 Heading</h4>
+							<!-- WYSIWYG -->
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. S...</p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. Sed nulla orci, suscipit sit am...</p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. S...</p>
@@ -1806,36 +1766,35 @@ $(function(){
 					<div class="padded">
 						<div class="columns large-6">
 							<div class="gallery-slider section">
+								<!-- Images carousel -->
 								<div class="slider slider-for">
 									
-										<!-- http://kenwheeler.github.io/slick/img/fonz1.png -->
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?12010-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?12010-heading" alt="..."></div>
 									
-										<!-- http://kenwheeler.github.io/slick/img/fonz1.png -->
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?22010-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?22010-heading" alt="..."></div>
 									
-										<!-- http://kenwheeler.github.io/slick/img/fonz1.png -->
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?32010-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?32010-heading" alt="..."></div>
 									
-										<!-- http://kenwheeler.github.io/slick/img/fonz1.png -->
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?42010-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?42010-heading" alt="..."></div>
 									
 								</div>
+								<!-- Images mirrored -->
 								<div class="slider slider-nav">
 									
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?12010-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?12010-heading" alt="..."></div>
 									
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?22010-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?22010-heading" alt="..."></div>
 									
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?32010-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?32010-heading" alt="..."></div>
 									
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?42010-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?42010-heading" alt="..."></div>
 									
 								</div>
 							</div>
 						</div>
 						<div class="columns large-6">
 							<h4>2010 Heading</h4>
+							<!-- WYSIWYG -->
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. S...</p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. Sed nulla orci, suscipit sit am...</p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. S...</p>
@@ -1854,36 +1813,35 @@ $(function(){
 					<div class="padded">
 						<div class="columns large-6">
 							<div class="gallery-slider section">
+								<!-- Images carousel -->
 								<div class="slider slider-for">
 									
-										<!-- http://kenwheeler.github.io/slick/img/fonz1.png -->
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?12011-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?12011-heading" alt="..."></div>
 									
-										<!-- http://kenwheeler.github.io/slick/img/fonz1.png -->
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?22011-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?22011-heading" alt="..."></div>
 									
-										<!-- http://kenwheeler.github.io/slick/img/fonz1.png -->
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?32011-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?32011-heading" alt="..."></div>
 									
-										<!-- http://kenwheeler.github.io/slick/img/fonz1.png -->
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?42011-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?42011-heading" alt="..."></div>
 									
 								</div>
+								<!-- Images mirrored -->
 								<div class="slider slider-nav">
 									
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?12011-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?12011-heading" alt="..."></div>
 									
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?22011-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?22011-heading" alt="..."></div>
 									
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?32011-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?32011-heading" alt="..."></div>
 									
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?42011-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?42011-heading" alt="..."></div>
 									
 								</div>
 							</div>
 						</div>
 						<div class="columns large-6">
 							<h4>2011 Heading</h4>
+							<!-- WYSIWYG -->
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. S...</p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. Sed nulla orci, suscipit sit am...</p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. S...</p>
@@ -1902,36 +1860,35 @@ $(function(){
 					<div class="padded">
 						<div class="columns large-6">
 							<div class="gallery-slider section">
+								<!-- Images carousel -->
 								<div class="slider slider-for">
 									
-										<!-- http://kenwheeler.github.io/slick/img/fonz1.png -->
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?12012-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?12012-heading" alt="..."></div>
 									
-										<!-- http://kenwheeler.github.io/slick/img/fonz1.png -->
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?22012-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?22012-heading" alt="..."></div>
 									
-										<!-- http://kenwheeler.github.io/slick/img/fonz1.png -->
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?32012-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?32012-heading" alt="..."></div>
 									
-										<!-- http://kenwheeler.github.io/slick/img/fonz1.png -->
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?42012-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?42012-heading" alt="..."></div>
 									
 								</div>
+								<!-- Images mirrored -->
 								<div class="slider slider-nav">
 									
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?12012-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?12012-heading" alt="..."></div>
 									
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?22012-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?22012-heading" alt="..."></div>
 									
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?32012-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?32012-heading" alt="..."></div>
 									
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?42012-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?42012-heading" alt="..."></div>
 									
 								</div>
 							</div>
 						</div>
 						<div class="columns large-6">
 							<h4>2012 Heading</h4>
+							<!-- WYSIWYG -->
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. S...</p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. Sed nulla orci, suscipit sit am...</p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. S...</p>
@@ -1950,36 +1907,35 @@ $(function(){
 					<div class="padded">
 						<div class="columns large-6">
 							<div class="gallery-slider section">
+								<!-- Images carousel -->
 								<div class="slider slider-for">
 									
-										<!-- http://kenwheeler.github.io/slick/img/fonz1.png -->
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?12013-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?12013-heading" alt="..."></div>
 									
-										<!-- http://kenwheeler.github.io/slick/img/fonz1.png -->
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?22013-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?22013-heading" alt="..."></div>
 									
-										<!-- http://kenwheeler.github.io/slick/img/fonz1.png -->
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?32013-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?32013-heading" alt="..."></div>
 									
-										<!-- http://kenwheeler.github.io/slick/img/fonz1.png -->
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?42013-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?42013-heading" alt="..."></div>
 									
 								</div>
+								<!-- Images mirrored -->
 								<div class="slider slider-nav">
 									
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?12013-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?12013-heading" alt="..."></div>
 									
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?22013-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?22013-heading" alt="..."></div>
 									
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?32013-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?32013-heading" alt="..."></div>
 									
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?42013-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?42013-heading" alt="..."></div>
 									
 								</div>
 							</div>
 						</div>
 						<div class="columns large-6">
 							<h4>2013 Heading</h4>
+							<!-- WYSIWYG -->
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. S...</p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. Sed nulla orci, suscipit sit am...</p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. S...</p>
@@ -1998,36 +1954,35 @@ $(function(){
 					<div class="padded">
 						<div class="columns large-6">
 							<div class="gallery-slider section">
+								<!-- Images carousel -->
 								<div class="slider slider-for">
 									
-										<!-- http://kenwheeler.github.io/slick/img/fonz1.png -->
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?12014-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?12014-heading" alt="..."></div>
 									
-										<!-- http://kenwheeler.github.io/slick/img/fonz1.png -->
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?22014-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?22014-heading" alt="..."></div>
 									
-										<!-- http://kenwheeler.github.io/slick/img/fonz1.png -->
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?32014-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?32014-heading" alt="..."></div>
 									
-										<!-- http://kenwheeler.github.io/slick/img/fonz1.png -->
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?42014-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?42014-heading" alt="..."></div>
 									
 								</div>
+								<!-- Images mirrored -->
 								<div class="slider slider-nav">
 									
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?12014-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?12014-heading" alt="..."></div>
 									
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?22014-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?22014-heading" alt="..."></div>
 									
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?32014-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?32014-heading" alt="..."></div>
 									
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?42014-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?42014-heading" alt="..."></div>
 									
 								</div>
 							</div>
 						</div>
 						<div class="columns large-6">
 							<h4>2014 Heading</h4>
+							<!-- WYSIWYG -->
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. S...</p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. Sed nulla orci, suscipit sit am...</p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. S...</p>
@@ -2046,36 +2001,35 @@ $(function(){
 					<div class="padded">
 						<div class="columns large-6">
 							<div class="gallery-slider section">
+								<!-- Images carousel -->
 								<div class="slider slider-for">
 									
-										<!-- http://kenwheeler.github.io/slick/img/fonz1.png -->
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?12015-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?12015-heading" alt="..."></div>
 									
-										<!-- http://kenwheeler.github.io/slick/img/fonz1.png -->
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?22015-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?22015-heading" alt="..."></div>
 									
-										<!-- http://kenwheeler.github.io/slick/img/fonz1.png -->
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?32015-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?32015-heading" alt="..."></div>
 									
-										<!-- http://kenwheeler.github.io/slick/img/fonz1.png -->
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?42015-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?42015-heading" alt="..."></div>
 									
 								</div>
+								<!-- Images mirrored -->
 								<div class="slider slider-nav">
 									
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?12015-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?12015-heading" alt="..."></div>
 									
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?22015-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?22015-heading" alt="..."></div>
 									
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?32015-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?32015-heading" alt="..."></div>
 									
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?42015-heading" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?42015-heading" alt="..."></div>
 									
 								</div>
 							</div>
 						</div>
 						<div class="columns large-6">
 							<h4>2015 Heading</h4>
+							<!-- WYSIWYG -->
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. S...</p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. Sed nulla orci, suscipit sit am...</p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. S...</p>
@@ -2734,7 +2688,8 @@ $(function(){
 
     <!-- LANGUAGE SELECTOR -->
     <aside class="js-off-canvas-menu-right hide" aria-hidden="true">
-        <ul>
+        <!-- Used also in the MMenu -->
+<ul>
 	<li class="Label">Choose a language</li>
 	<li class="active"><a href="#australia"><img alt="Australia" src="/assets/img/shared/flags/32/Australia.png">&nbsp; <span class="text">English</span></a></li>
 	<li><a href="#southkorea"><img alt="Southkorea" src="/assets/img/shared/flags/32/Southkorea.png">&nbsp; <span class="text">Korean</span></a></li>

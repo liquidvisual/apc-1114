@@ -27,21 +27,25 @@
     <!-- Google Fonts CDN -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
 
-    {% if page.site_type == "enu" %}
-
     <!-- build:css({src,.tmp}) /assets/css/minified-enu.css -->
     <link rel="stylesheet" href="/_bower_components/animate.css/animate.min.css">
     <link rel="stylesheet" href="/css/enu.css">
     <!-- endbuild -->
-
-    {% else %}
 
     <!-- build:css({src,.tmp}) /assets/css/minified-apc.css -->
     <link rel="stylesheet" href="/_bower_components/animate.css/animate.min.css">
     <link rel="stylesheet" href="/css/apc.css">
     <!-- endbuild -->
 
-    {% endif %}
+    {% comment %}
+    *** HINT: HOW IT SHOULD APPEAR IN BACK-END ***
+
+        {% if page.site_type == "enu" %}
+            <link rel="stylesheet" href="/assets/css/minified-apc.css">
+        {% else if page.site_type == "apc" %}
+            <link rel="stylesheet" href="/assets/css/minified-enu.css">
+        {% endif %}
+    {% endcomment %}
 
     <!-- Priority Scripts -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
