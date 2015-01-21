@@ -9,7 +9,7 @@ var TOUCH_ENABLED = $(".touch").length;
 var bxSliderHero;
 
 //-----------------------------------------------------------------
-// Site Switcher *** REMOVE ON DEPLOY ***
+// Site Switcher - Works if an ID is placed high up
 //-----------------------------------------------------------------
 
 if ($("#enu, #apc").length) {
@@ -307,12 +307,12 @@ $(".js-off-canvas-menu-right").mmenu({ "offCanvas": { "position": "right" }});
 var touchEvent = TOUCH_ENABLED ? "touchstart" : "click";
 
 //Trigger hamburger by touch on mobile - this eliminates glitch with FastClick.js
-$(".header-mobile-menu").bind(touchEvent, function(e) {
+$(".header-mobile-menu").bind("click", function(e) {
     e.preventDefault();
     $(".js-off-canvas-menu-left").removeClass('hide').trigger("open.mm");
 });
 
-$(".language-selector .mobile-menu-trigger").bind(touchEvent, function(e) {
+$(".language-selector .mobile-menu-trigger").bind("click", function(e) {
     e.preventDefault();
     $(".js-off-canvas-menu-right").removeClass('hide').trigger("open.mm");
 });
