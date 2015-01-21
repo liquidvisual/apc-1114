@@ -32,9 +32,11 @@ layout: internal
 		<div class="columns">
 			{% for item in page_breaks %}
 				<h3 id="{{ item.url }}" class="section">{{ item.title }}</h3>
+				<!-- Loop for demo purposes only -->
 				{% for i in (1..2) %}
 					<h5>Q: Question Title</h5>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam itaque tempore debitis, explicabo. Nemo, illo voluptates veniam molestias molestiae cum possimus modi. Odio deleniti, officia, harum ducimus facilis enim in.</p>
+
 					<h5>A: Answer Title</h5>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam itaque tempore debitis, explicabo. Nemo, illo voluptates veniam</p>
 				{% endfor %}

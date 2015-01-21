@@ -8,8 +8,8 @@ layout: internal
 <div class="section has-no-margin has-medium-padding">
     <div class="row">
         <div class="columns">
-            <div class="section text-center">
-                <!-- <h2>{{ page.title }}</h2> -->
+            <div class="section">
+                <h2>{{ page.title }}</h2>
             </div>
             <div class="news-module">
                 <ul class="medium-block-grid-2 large-block-grid-3" data-equalizer>
@@ -31,63 +31,6 @@ layout: internal
                     {% endfor %}
                 </ul>
             </div> <!-- .news-module -->
-            <!-- <div class="text-center"><a href="#" class="button radius">Return Home</a></div> -->
         </div>
     </div> <!-- .row -->
 </div> <!-- .section -->
-
-
-
-
-
-
-
-{% comment %}
-
-<div class="row">
-    <div class="columns">
-        <h1></h1>
-    </div>
-</div>
-
-<!-- INFO TILES -->
-<div class="info-tiles">
-    <div class="row">
-        <div class="columns">
-
-            <!-- Draw in rows of 3 -->
-            {% for i in (0..rows) %}
-
-                <!-- Create offset -->
-                {% assign offset_num = rows | times: i %}
-
-                <ul class="small-block-grid-1 large-block-grid-3" data-equalizer>
-                    {% for category in course_categories | limit: rows | offset: offset_num %}
-                    <li>
-                        <!-- Hint: slugify replaces spaces with "-" and converts to lowercase -->
-                        <div class="info-tile {{ category.title | slugify }}-cat" data-equalizer-watch>
-                            <h3>{{ category.title }}</h3>
-                            <div class="info-tile-body">
-                                <ul class="triangle-list">
-                                    <!-- Drill down into children -->
-                                    {% for course_types in courses.children %}
-                                        {% for course in course_types.children %}
-                                            <!-- If category title matches the loop category -->
-                                            {% if course.category == category.title %}
-                                                <li><a href="{{ course.url }}">{{ course.title }}</a></li>
-                                            {% endif %}
-                                        {% endfor %}
-                                    {% endfor %}
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                    {% endfor %}
-                </ul>
-
-            {% endfor %}
-
-        </div> <!-- .columns -->
-    </div> <!-- .row -->
-</div> <!-- .info-tiles -->
-{% endcomment %}

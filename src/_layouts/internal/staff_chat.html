@@ -27,6 +27,7 @@ layout: internal
 </section> <!-- .claim-section -->
 
 {% for item in page_breaks %}
+
 <div class="row">
     <div class="columns">
         <div class="headed standard" id="{{ item.url }}">
@@ -37,6 +38,7 @@ layout: internal
                 </div>
             </div>
 
+            <!-- Demo loop only -->
             {% for i in (1..2) %}
             <div class="content">
                 <div class="padded">
@@ -96,9 +98,11 @@ layout: internal
 
                         </div> <!-- .large-9 -->
                     </div> <!-- .row -->
+
                     {% unless forloop.last %}
                     <hr>
                     {% endunless %}
+
                 </div>
             </div>
             {% endfor %}

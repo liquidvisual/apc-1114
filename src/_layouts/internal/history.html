@@ -4,42 +4,6 @@ layout: internal
 
 {% assign years = site.data.apc.history %}
 
-<script>
-$(function(){
-	$('.timeline-controls').slick({
-	  infinite: true,
-	  slidesToShow: 9,
-	  slidesToScroll: 1,
-	  initialSlide: 0,
-	  asNavFor: '.timeline-slides',
-	  focusOnSelect: true,
-	  // centerMode: true,
-	  responsive: [
-	      {
-	        breakpoint: 480,
-	        settings: {
-	          slidesToShow: 3,
-	          slidesToScroll: 3,
-	        }
-	      }
-	    ],
-	    onAfterChange:function(slickSlider,i){
-	    	$('.timeline-controls .active').removeClass('active');
-	    	$('.timeline-controls .slick-active').eq(0).addClass('active');
-	    }
-	});
-	// --
-
-	 $('.timeline-slides').slick({
-	    slidesToShow: 1,
-	    slidesToScroll: 1,
-	    arrows: false,
-	    fade: true,
-	    asNavFor: '.timeline-controls'
-	});
-});
-</script>
-
 <!-- CLAIM SECTION -->
 <section class="section claim-section has-medium-padding">
     <div class="row">
@@ -80,21 +44,23 @@ $(function(){
 					<div class="padded">
 						<div class="columns large-6">
 							<div class="gallery-slider section">
+								<!-- Images carousel -->
 								<div class="slider slider-for">
 									{% for i in (1..4) %}
-										<!-- http://kenwheeler.github.io/slick/img/fonz1.png -->
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?{{i}}{{item.title|slugify}}" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?{{i}}{{item.title|slugify}}" alt="..."></div>
 									{% endfor %}
 								</div>
+								<!-- Images mirrored -->
 								<div class="slider slider-nav">
 									{% for i in (1..4) %}
-										<div><img width="100%" src="http://lorempixel.com/560/400/sports?{{i}}{{item.title|slugify}}" alt=""></div>
+										<div><img width="100%" src="http://lorempixel.com/560/400/sports?{{i}}{{item.title|slugify}}" alt="..."></div>
 									{% endfor %}
 								</div>
 							</div>
 						</div>
 						<div class="columns large-6">
 							<h4>{{ item.title }}</h4>
+							<!-- WYSIWYG -->
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. S...</p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. Sed nulla orci, suscipit sit am...</p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. S...</p>

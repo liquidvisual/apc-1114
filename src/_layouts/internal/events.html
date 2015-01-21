@@ -74,7 +74,9 @@ layout: internal
 			<div class="content">
 				<div class="padded">
 					<div class="filter-list">
+
 						{% for item in site.data.apc.events %}
+
 						<div class="filter-item news_teaser {{ item.groups }}" data-myorder="{{forloop.index}}">
 							<div class="row">
 								<div class="medium-3 columns">
@@ -90,14 +92,18 @@ layout: internal
 									</div>
 								</div>
 							</div> <!-- .row -->
+
 							<!-- Divider -->
 							<div class="row">
 								<div class="columns">
 									<hr>
 								</div>
 							</div>
+
 						</div> <!-- .news_teaser -->
+
 						{% endfor %}
+
 					</div> <!-- .filter-list -->
 				</div> <!-- .padded -->
 			</div> <!-- .content -->

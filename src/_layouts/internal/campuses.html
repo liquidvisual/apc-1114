@@ -30,7 +30,9 @@ layout: internal
 <section class="section">
 	<div class="row">
 		<div class="columns">
+
 			{% for item in page_breaks %}
+
 			<div class="campus headed no-margin" id="{{ item.url }}">
 
 				<div class="heading no-margin">
@@ -46,20 +48,18 @@ layout: internal
 
 							<div class="gallery-slider section">
 								<div class="slider slider-for">
-									<div><img width="100%" src="http://kenwheeler.github.io/slick/img/fonz1.png" alt=""></div>
-									<div><img width="100%" src="http://kenwheeler.github.io/slick/img/fonz1.png" alt=""></div>
-									<div><img width="100%" src="http://kenwheeler.github.io/slick/img/fonz1.png" alt=""></div>
-									<div><img width="100%" src="http://kenwheeler.github.io/slick/img/fonz1.png" alt=""></div>
-									<div><img width="100%" src="http://kenwheeler.github.io/slick/img/fonz1.png" alt=""></div>
-									<div><img width="100%" src="http://kenwheeler.github.io/slick/img/fonz1.png" alt=""></div>
+
+									<!-- Campus images -->
+									{% for i in (1..6) %}
+										<div><img width="100%" src="http://kenwheeler.github.io/slick/img/fonz1.png" alt=""></div>
+									{% endfor %}
 								</div>
 								<div class="slider slider-nav">
-									<div><img src="http://kenwheeler.github.io/slick/img/fonz1.png" alt=""></div>
-									<div><img src="http://kenwheeler.github.io/slick/img/fonz1.png" alt=""></div>
-									<div><img src="http://kenwheeler.github.io/slick/img/fonz1.png" alt=""></div>
-									<div><img src="http://kenwheeler.github.io/slick/img/fonz1.png" alt=""></div>
-									<div><img src="http://kenwheeler.github.io/slick/img/fonz1.png" alt=""></div>
-									<div><img src="http://kenwheeler.github.io/slick/img/fonz1.png" alt=""></div>
+
+									<!-- Campus images mirrored exactly -->
+									{% for i in (1..6) %}
+										<div><img width="100%" src="http://kenwheeler.github.io/slick/img/fonz1.png" alt=""></div>
+									{% endfor %}
 								</div>
 							</div>
 

@@ -26,14 +26,18 @@ layout: internal
     </div>
 </section> <!-- .claim-section -->
 
+<!-- SECTION -->
 <section class="section">
 	{% for item in page_breaks %}
 	<div class="row">
 		<div class="columns">
 			<h3 id="{{ item.url }}">{{ item.title }}</h3>
+
+			<!-- WYSIWYG -->
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad sint quod numquam voluptas animi excepturi consectetur iure fugiat magni eveniet inventore eum, dolores quaerat molestiae laboriosam quas eos repudiandae modi.</p>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti accusamus eveniet iure minima neque, illo perspiciatis, voluptatem nobis eum sit necessitatibus, temporibus omnis officia dolorem, porro quo sequi minus in!</p>
 
+			<!-- Form Links -->
 			<ul class="triangle-list small-block-grid-1 medium-block-grid-2">
 				{% for i in (1..4) %}
 				<li><a target="_blank" href="{{ item.url }}">Some link here</a></li>

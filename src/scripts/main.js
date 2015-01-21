@@ -203,6 +203,44 @@ $(function() {
 // }
 
 //-----------------------------------------------------------------
+// Timeline controls (History)
+//-----------------------------------------------------------------
+
+$(function(){
+    $('.timeline-controls').slick({
+      infinite: true,
+      slidesToShow: 9,
+      slidesToScroll: 1,
+      initialSlide: 0,
+      asNavFor: '.timeline-slides',
+      focusOnSelect: true,
+      // centerMode: true,
+      responsive: [
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+            }
+          }
+        ],
+        onAfterChange:function(slickSlider,i){
+            $('.timeline-controls .active').removeClass('active');
+            $('.timeline-controls .slick-active').eq(0).addClass('active');
+        }
+    });
+    // --
+
+     $('.timeline-slides').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.timeline-controls'
+    });
+});
+
+//-----------------------------------------------------------------
 // Testimonial Slider
 //-----------------------------------------------------------------
 

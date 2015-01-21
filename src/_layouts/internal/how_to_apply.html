@@ -26,6 +26,7 @@ layout: internal
     </div>
 </section> <!-- .claim-section -->
 
+<!-- STEPS -->
 <div class="row">
 	<div class="columns">
 
@@ -52,10 +53,9 @@ layout: internal
 						<div class="large-4 columns">
 							<div class="padded">
 								<ul class="triangle-list">
-									<li><a href="/how-to-apply">Some Link</a></li>
-									<li><a href="/how-to-apply">Some Link</a></li>
-									<li><a href="/how-to-apply">Some Link</a></li>
-									<li><a href="/how-to-apply">Some Link</a></li>
+									{% for i in (1..4) %}
+										<li><a href="/how-to-apply">Some Link</a></li>
+									{% endfor %}
 								</ul>
 							</div>
 						</div>
@@ -70,20 +70,14 @@ layout: internal
 
 <br>
 
+<!-- COURSE FEES SECTION -->
 <section class="section">
 	{% for item in page_breaks %}
 	<div class="row">
 		<div class="columns">
 			<h3 id="{{ item.url }}">{{ item.title }}</h3>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad sint quod numquam voluptas animi excepturi consectetur iure fugiat magni eveniet inventore eum, dolores quaerat molestiae laboriosam quas eos repudiandae modi.</p>
-
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti accusamus eveniet iure minima neque, illo perspiciatis, voluptatem nobis eum sit necessitatibus, temporibus omnis officia dolorem, porro quo sequi minus in!</p>
-
-			<ul class="triangle-list small-block-grid-1 medium-block-grid-2">
-				{% for course in item.children %}
-				<li><a href="{{ course.url }}">{{ course.title }}</a></li>
-				{% endfor %}
-			</ul>
 
 			{% unless forloop.last %}
 			<hr>

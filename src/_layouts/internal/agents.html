@@ -2,6 +2,8 @@
 layout: internal
 ---
 
+{% assign agents = site.data.apc.agents %}
+
 <!-- CLAIM SECTION -->
 <section class="section claim-section has-medium-padding">
     <div class="row">
@@ -78,7 +80,7 @@ layout: internal
 
 <!-- LISTING -->
 <section class="filter-list">
-    {% for country in site.data.apc.agents %}
+    {% for country in agents %}
     <div class="filter-item {{ country.groups }}" data-myorder="{{forloop.index}}">
 
         <div class="section">
