@@ -77,11 +77,11 @@
 // Vendor
 //-----------------------------------------------------------------
 
-// @import "../_bower_components/animate.css/animate.min";
-// @import "../_bower_components/font-awesome/css/font-awesome";
-// @import "../_bower_components/slick.js/slick/slick";
+// @import "../_bower_components/animate.css/animate.min.css";
+@import "../_bower_components/font-awesome/scss/font-awesome";
+@import "../_bower_components/slick.js/slick/slick";
 
-@import "liquidvisual/vendor/flag-icons"; // unique to ENU
+//@import "liquidvisual/vendor/flag-icons"; // unique to ENU
 @import "liquidvisual/vendor/foundation-icons";
 // @import "liquidvisual/vendor/magnific-popup/main";
 @import "liquidvisual/vendor/mmenu/main";

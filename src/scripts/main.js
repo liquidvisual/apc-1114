@@ -12,7 +12,7 @@ var bxSliderHero;
 // Site Switcher *** REMOVE ON DEPLOY ***
 //-----------------------------------------------------------------
 
-$(function(){
+if ($("#enu, #apc").length) {
 
     $('.lv-breadcrumbs a[href="/enu/"]').parent().remove(); // remove cruft '/enu/' in breadcrumbs
 
@@ -53,7 +53,7 @@ $(function(){
 
         $this.attr('href', link);
     });
-});
+}
 
 // Site switcher assets
 if ($("#enu").length) {

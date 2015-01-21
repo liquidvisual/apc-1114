@@ -8,15 +8,8 @@ permalink: /styleguide/
 <!-- ************************************************************************************** -->
 <!-- https://github.com/paulrobertlloyd/barebones/blob/master/_styleguide.php -->
 <!-- ************************************************************************************** -->
-<header>
-   <nav role="navigation" class="breadcrumb-nav">
-      <br>
-      <a href="../">Barebones</a> /
-   </nav>
-   <h1>Style Guide</h1>
-   <p class="lede">Basic markup and typographic styles</p>
-   <hr>
-</header>
+
+<br>
 
 <h2>Sections <a href="#">Linked</a></h2>
 <p>The main page header of this guide is an <code>h1</code> element. Any header elements may include links, as depicted in the example.</p>

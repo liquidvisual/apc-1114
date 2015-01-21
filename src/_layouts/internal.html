@@ -8,40 +8,19 @@ layout: master
 
     <!-- BREADCRUMBS -->
     <nav class="breadcrumbs-bar">
-        <div class="row outer-row">
+        <div class="row">
             <div class="columns">
                 {% include shared/breadcrumbs.html %}
-            </div> <!-- .columns -->
-        </div> <!-- .row -->
-    </nav> <!-- .breadcrumbs-wrapper -->
+            </div>
+        </div>
+    </nav>
 
     {% unless page.exclude_hero %}
 
         <!-- HERO MODULE -->
         <div class="lv-hero-module has-auto-height">
-
             <!-- Hero Item -->
-            <div class="lv-hero" style="background-image: url('{{ hero | prepend: site.assets }}')" data-background-image="...">
-                <div class="row lv-vertical-center">
-
-                    {% comment %}
-                    <!-- Caption -->
-                    <div class="medium-8 columns">
-                        <div class="lv-hero-caption animated">
-                            <h1>
-                                {% if page.hero_header_override %}
-                                    {{ page.hero_header_override }}
-                                {% else %}
-                                    {{ page.title }}
-                                {% endif %}
-                            </h1>
-                        </div> <!-- .lv-hero-caption -->
-                    </div> <!-- .columns -->
-                    {% endcomment %}
-
-                </div> <!-- .row -->
-            </div> <!-- .lv-hero -->
-
+            <div class="lv-hero" style="background-image: url('{{ hero | prepend: site.assets }}')" data-background-image="{{ hero | prepend: site.assets }}"></div> <!-- .lv-hero -->
         </div> <!-- .lv-hero-module -->
 
     {% endunless %}

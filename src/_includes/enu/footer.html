@@ -12,7 +12,7 @@
                     <h3>English Courses</h3>
                         <ul class="no-bullet">
                         {% for item in english_courses %}
-                            <li><a href="#">{{ item.title }}</a></li>
+                            <li><a href="/courses/english-courses/course-item/">{{ item.title }}</a></li>
                         {% endfor %}
                         </ul>
                 </div> <!-- .medium-4 -->
@@ -43,27 +43,25 @@
                 </div> <!-- .medium-4 -->
 
                 <!-- Site Map -->
-
                 <div class="medium-4 columns show-for-medium-up">
                     <h3>Site Map</h3>
                     <ul class="no-bullet">
                     {% for item in site.data.apc.sitemap %}
                         <li><a href="{{ item.url }}">{{ item.title }}</a></li>
                     {% endfor %}
-                    <li><a href="#">Student Login</a></li>
+                    <li><a href="#where-does-this-go">Student Login</a></li>
                     </ul>
                 </div> <!-- .medium-4 -->
             </div> <!-- .row -->
         </div> <!-- .medium-8 -->
 
         <!-- Newsletter Signup -->
-
         <div class="medium-4 columns">
             <h3>Join our Newsletter</h3>
             <form class="search-form" action="/search/" method="get">
                 <div class="row collapse">
                     <div class="small-8 medium-9 columns">
-                        <input class="prefix radius" type="text" name="q" name="search" placeholder="">
+                        <input class="prefix radius" type="text" name="q" name="search" placeholder="Please enter your email">
                     </div>
                     <div class="small-4 medium-3 columns">
                         <button class="button radius postfix">Submit</button>
@@ -72,15 +70,14 @@
             </form> <!-- .search-form -->
 
             <!-- Social Networks -->
-
             <div class="social-networks">
                 <h3>Connect with Us</h3>
                 <ul class="social-networks lv-inline-list small-only-text-center">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                    <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                    <li><a href="{{ settings.facebook }}"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="{{ settings.twitter }}"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="{{ settings.youtube }}"><i class="fa fa-youtube"></i></a></li>
+                    <li><a href="{{ settings.google-plus }}"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="{{ settings.rss }}"><i class="fa fa-rss"></i></a></li>
                 </ul>
             </div> <!-- .social-networks -->
 
@@ -97,9 +94,9 @@
         <div class="medium-7 columns">
             <ul class="lv-inline-list medium-text-right">
                 <li><a href="#">Sitemap</a></li>
-                <li><a href="#">Privacy Statement</a></li>
-                <li><a href="#">Terms and Conditions</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="/compliance-forms/#privacy-statement">Privacy Statement</a></li>
+                <li><a href="/compliance-forms/#terms-and-conditions">Terms and Conditions</a></li>
+                <li><a href="/contact-us/make-an-enquiry/#enquiry-form">Contact Us</a></li>
             </ul>
         </div> <!-- .columns -->
     </div> <!-- .row -->

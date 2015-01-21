@@ -6,8 +6,8 @@
     {% for hero in hero_images %}
 
     <!-- Hero Item -->
-    <div class="lv-hero" style="background-image: url('{{ hero.image | prepend: site.assets }}')" data-background-image="...">
-        <div class="row row-outer collapse lv-vertical-center">
+    <div class="lv-hero" style="background-image: url('{{ hero.image | prepend: site.assets }}')" data-background-image="{{ hero.image | prepend: site.assets }}">
+        <div class="row collapse lv-vertical-center">
 
             <!-- Left / Right caption alignment -->
             {% if hero.caption_align == "left" %}
@@ -34,6 +34,7 @@
 </div> <!-- .lv-hero-module -->
 
 {% comment %}
+<!-- Taken Out by request - keep around incase -->
 <!-- Bullets -->
 <div class="row">
 	<div class="columns">
@@ -46,5 +47,4 @@
     <span href="#" class="lv-hero-next"></span>
     <span href="#" class="lv-hero-prev"></span>
 </div>
-
 {% endcomment %}

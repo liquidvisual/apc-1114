@@ -36,7 +36,7 @@ $language-selector-width: rem-calc(115);
 //-----------------------------------------------------------------
 
 .timeline-controls {
-	margin-bottom: 0;
+	margin-bottom: 0 !important; // Needed to override Slick which is compiled last in scss compile
 
 	button {
 		background: $primary-color;

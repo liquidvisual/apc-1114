@@ -17,6 +17,7 @@
   "devDependencies": {
     "masonry": "~3.2.2",
     "simpleWeather": "~3.0.2",
-    "list.js": "~1.1.1"
+    "list.js": "~1.1.1",
+    "isotope": "~2.1.0"
   }
 }

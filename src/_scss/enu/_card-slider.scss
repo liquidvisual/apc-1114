@@ -11,9 +11,9 @@
 // Social Networks
 //-----------------------------------------------------------------
 
-// .testimonial-slider {
-//     margin-bottom: rem-calc(30) !important;
-// }
+.lv-super .testimonial-slider {
+    margin-bottom: rem-calc(10);
+}
 
 .card-slider .slick-slide {
     @include transition();

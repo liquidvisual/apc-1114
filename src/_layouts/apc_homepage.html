@@ -1,284 +1,286 @@
 ---
 layout: master
-hero_link: /some-link-here/
 ---
 
-{% assign settings = site.data.settings  %}
+{% assign settings = site.data.settings %}
+{% assign courses = site.data.apc.sitemap[1] %}
+{% assign course_categories = site.data.apc.course_categories %}
+{% assign course_rows_total = course_categories.size | divided_by: 3 %}
 
 <div class="homepage">
 
-	{% include apc/hero.html %}
+    {% include apc/hero.html %}
 
-	<!-- MAIN -->
-	<main class="main">
-
-        <!-- INTRO CLAIM -->
-        <section class="section claim-section has-medium-padding">
-            <div class="row">
-                <div class="columns">
-                    <div class="claim-module">
-                        <div class="claim-left">
-                            <h2>Our Courses</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio ipsum dolor sit amet.</p>
-                        </div>
-                        <div class="claim-right">
-                            <a href="#" class="button expand-for-small-only swish"><i class="fa fa-play"></i>&nbsp; Apply Today</a>
-                            <a href="#" class="button expand-for-small-only swish"><i class="fa fa-play"></i>&nbsp; Make an Enquiry</a>
-                        </div>
+    <!-- CLAIM SECTION: INTRO CLAIM -->
+    <section class="section claim-section has-medium-padding">
+        <div class="row">
+            <div class="columns">
+                <div class="claim-module">
+                    <div class="claim-left">
+                        <h2>Our Courses</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="claim-right">
+                        <a href="/applications/how-to-apply/" class="button expand-for-small-only swish"><i class="fa fa-play"></i>&nbsp; Apply Today</a>
+                        <a href="/contact-us/make-an-enquiry/#enquiry-form" class="button expand-for-small-only swish"><i class="fa fa-play"></i>&nbsp; Make an Enquiry</a>
                     </div>
                 </div>
             </div>
-        </section> <!-- .claim-section -->
+        </div>
+    </section> <!-- .claim-section -->
 
-        <!-- INFO TILES -->
-        <section class="section info-tiles">
-            <div class="row">
-                <div class="columns">
+    <!-- INFO TILES -->
+    <section class="section info-tiles">
+        <div class="row">
+            <div class="columns">
 
-                    {% assign courses = site.data.apc.sitemap[1] %}
-                    {% assign course_categories = site.data.apc.course_categories %}
-                    {% assign rows = course_categories.size | divided_by: 3 %}
+                <!-- Draw in course_rows_total of 3 -->
+                {% for i in (0..course_rows_total) %}
 
-                    <!-- Draw in rows of 3 -->
-                    {% for i in (0..rows) %}
+                    <!-- Create offset -->
+                    {% assign offset_num = course_rows_total | times: i %}
 
-                        <!-- Create offset -->
-                        {% assign offset_num = rows | times: i %}
+                    <ul class="small-block-grid-1 large-block-grid-3" data-equalizer>
+                        {% for category in course_categories | limit: course_rows_total | offset: offset_num %}
+                        <li>
+                            <!-- Hint: slugify replaces spaces with "-" and converts to lowercase -->
+                            <div class="info-tile {{ category.title | slugify }}-cat" data-equalizer-watch>
+                                <h3>{{ category.title }}</h3>
+                                <div class="info-tile-body">
+                                    <ul class="triangle-list">
 
-                        <ul class="small-block-grid-1 large-block-grid-3" data-equalizer>
-                            {% for category in course_categories | limit: rows | offset: offset_num %}
-                            <li>
-                                <!-- Hint: slugify replaces spaces with "-" and converts to lowercase -->
-                                <div class="info-tile {{ category.title | slugify }}-cat" data-equalizer-watch>
-                                    <h3>{{ category.title }}</h3>
-                                    <div class="info-tile-body">
-                                        <ul class="triangle-list">
-                                            <!-- Drill down into children -->
-                                            {% for course_types in courses.children %}
-                                                {% for course in course_types.children %}
-                                                    <!-- If category title matches the loop category -->
-                                                    {% if course.category == category.title %}
-                                                        <li><a href="{{ course.url }}">{{ course.title }}</a></li>
-                                                    {% endif %}
-                                                {% endfor %}
+                                        <!-- Drill down into children -->
+                                        {% for course_types in courses.children %}
+                                            {% for course in course_types.children %}
+                                                <!-- If category title matches the loop category -->
+                                                {% if course.category == category.title %}
+                                                    <li><a href="{{ course.url }}">{{ course.title }}</a></li>
+                                                {% endif %}
                                             {% endfor %}
-                                        </ul>
-                                    </div>
+                                        {% endfor %}
+                                    </ul>
                                 </div>
-                            </li>
-                            {% endfor %}
-                        </ul>
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
 
+                {% endfor %}
+
+            </div> <!-- .columns -->
+        </div> <!-- .row -->
+    </section> <!-- .info-tiles -->
+
+    <!-- IMAGE SECTION -->
+    <section class="section image-section image-group-photo show-for-medium-up"></section>
+
+    <!-- CLAIM SECTION: OUR CAMPUS LOCATIONS -->
+    <section class="section claim-section has-medium-padding">
+        <div class="row">
+            <div class="columns">
+                <div class="claim-module">
+                    <div class="claim-left">
+                        <h2>Our Campus Locations</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. Sed nulla orci, suscipit sit amet leo in, venenatis euismod mauris. Donec eu arcu ac arcu suscipit congue eget eu nulla. Praesent blandit, ipsum a facilisis faci.</p>
+                    </div>
+                    <div class="claim-right">
+                        <a href="/learning-environment/campuses/" class="button medium swish"><i class="fa fa-play"></i>&nbsp; View Locations</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> <!-- .claim-section -->
+
+    <!-- CAMPUSES -->
+    {% for i in (1..2) %}
+    <section class="section">
+        <div class="row">
+            <div class="columns">
+                <h4>Campus Name</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="medium-9 columns">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. Sed nulla orci, suscipit sit amet leo in, venenatis euismod mauris. Donec eu arcu ac arcu suscipit congue eget eu nulla. ...</p>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat susc...</p>
+            </div>
+            <div class="medium-3 columns">
+                <!-- Arbitary links - wysiwyg maybe? -->
+                <ul class="triangle-list">
+                    {% for i in (1..3) %}
+                        <li><a href="#">Something</a></li>
                     {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </section>
+    {% endfor %}
 
-                </div> <!-- .columns -->
-            </div> <!-- .row -->
-        </section> <!-- .info-tiles -->
+    <!-- IMAGE SECTION -->
+    <section class="section image-section image-bridge-photo show-for-medium-up"></section>
 
-        <!-- SECTION IMAGE -->
-        <section class="section image-section image-group-photo show-for-medium-up"></section>
-
-        <!-- OUR CAMPUS LOCATIONS -->
-        <section class="section claim-section has-medium-padding">
-            <div class="row">
-                <div class="columns">
-                    <div class="claim-module">
-                        <div class="claim-left">
-                            <h2>Our Campus Locations</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. Sed nulla orci, suscipit sit amet leo in, venenatis euismod mauris. Donec eu arcu ac arcu suscipit congue eget eu nulla. Praesent blandit, ipsum a facilisis faci.</p>
-                        </div>
-                        <div class="claim-right">
-                            <a href="#" class="button medium swish"><i class="fa fa-play"></i>&nbsp; View Locations</a>
-                        </div>
+    <!-- CLAIM SECTION: NEWS AND EVENTS -->
+    <section class="section claim-section has-medium-padding">
+        <div class="row">
+            <div class="columns">
+                <div class="claim-module">
+                    <div class="claim-left">
+                        <h2>News and Events</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. Sed nulla orci, suscipit sit amet leo in, venenatis euismod mauris. Donec eu arcu ac arcu suscipit congue eget eu nulla. Praesent blandit, ipsum a facilisis faci.</p>
+                    </div>
+                    <div class="claim-right">
+                        <a href="/news-and-events/news/" class="button medium swish"><i class="fa fa-play"></i>&nbsp; Latest News</a>
+                        <a href="/news-and-events/events/#calendar" class="button medium swish"><i class="fa fa-play"></i>&nbsp; Latest Events</a>
                     </div>
                 </div>
             </div>
-        </section> <!-- .claim-section -->
+        </div>
+    </section> <!-- .claim-section -->
 
-        {% for i in (1..2) %}
-        <section class="section">
-            <div class="row">
-                <div class="columns">
-                    <h4>Campus Name</h4>
-                </div>
+    <!-- NEWS BLOCKS -->
+    <section class="section show-for-medium-up">
+        <div class="row">
+            <div class="columns">
+                <ul class="news-tiles">
+                    <li>
+                        <h3>News</h3>
+                        <article class="info-tile news-tile">
+                            <div class="info-tile-body">
+                                <h6>{{ "What's the Deal with Airline peanuts?" | truncate: 50 }}</h6>
+                                <!-- TRUNCATE - must do it -->
+                                <p>{{ "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec..." | truncate: 120 }}</p>
+                                <br>
+                                <div class="news-tile-button"><a target="_blank" href="#off-site-rss-link" class="button swish"><i class="fa fa-play"></i>&nbsp; Read More</a></div>
+                            </div>
+                        </article>
+                    </li>
+                    <li>
+                        <h3>Events</h3>
+                        <article class="info-tile news-tile">
+                            <div class="info-tile-body">
+                                <h6>{{ "That's Pie Country. They Do a lot of Baking Up there." | truncate: 50 }}</h6>
+                                <!-- TRUNCATE - must do it -->
+                                <p>{{ "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec..." | truncate: 120 }}</p>
+                                <br>
+                                <div class="news-tile-button"><a href="/news-and-events/events/events-item/" class="button swish"><i class="fa fa-play"></i>&nbsp; Read More</a></div>
+                            </div>
+                        </article>
+                    </li>
+                    <li>
+                        <h3>Media</h3>
+                        <article class="info-tile news-tile">
+                            <div class="info-tile-body">
+                                <h6>{{ "There's Nothing Finer than Being in Your Diner." | truncate: 50 }}</h6>
+                                <!-- TRUNCATE - must do it -->
+                                <p>{{ "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec..." | truncate: 120 }}</p>
+                                <br>
+                                <div class="news-tile-button"><a href="/news-and-events/media/media-item/" class="button swish"><i class="fa fa-play"></i>&nbsp; Read More</a></div>
+                            </div>
+                        </article>
+                    </li>
+                    <li>
+                        <h3>Connect</h3>
+                        <article class="info-tile news-tile">
+                            <div class="info-tile-body">
+                                <p class="text-center img">
+                                    <a href="{{ settings.facebook }}">
+                                        <img src="/img/apc/template/facebook-stamp.jpg" alt="Facebook">
+                                    </a>
+                                </p>
+                                <br>
+                                <div class="news-tile-button"><a href="{{ settings.facebook }}" class="button swish"><i class="fa fa-play"></i>&nbsp; connect</a></div>
+                            </div>
+                        </article>
+                    </li>
+                </ul>
             </div>
-            <div class="row">
-                <div class="medium-9 columns">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. Sed nulla orci, suscipit sit amet leo in, venenatis euismod mauris. Donec eu arcu ac arcu suscipit congue eget eu nulla. ...</p>
+        </div>
+    </section>
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat susc...</p>
-                </div>
-                <div class="medium-3 columns">
-                    <ul class="triangle-list">
-                        <li><a href="#">Something</a></li>
-                        <li><a href="#">Something</a></li>
-                        <li><a href="#">Something</a></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        {% endfor %}
+    <!-- IMAGE SECTION -->
+    <section class="section image-section image-girl-smiling show-for-medium-up"></section>
 
-        <section class="section image-section image-bridge-photo show-for-medium-up"></section>
-
-        <!-- News & Events -->
-        <section class="section claim-section has-medium-padding">
-            <div class="row">
-                <div class="columns">
-                    <div class="claim-module">
-                        <div class="claim-left">
-                            <h2>News and Events</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. Sed nulla orci, suscipit sit amet leo in, venenatis euismod mauris. Donec eu arcu ac arcu suscipit congue eget eu nulla. Praesent blandit, ipsum a facilisis faci.</p>
-                        </div>
-                        <div class="claim-right">
-                            <a href="#" class="button medium swish"><i class="fa fa-play"></i>&nbsp; Latest News</a>
-                            <a href="#" class="button medium swish"><i class="fa fa-play"></i>&nbsp; Latest Events</a>
-                        </div>
+    <!-- CLAIM SECTION: STUDENT SERVICES -->
+    <section class="section claim-section has-medium-padding">
+        <div class="row">
+            <div class="columns">
+                <div class="claim-module">
+                    <div class="claim-left">
+                        <h2>Student Services</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. Sed nulla orci, suscipit sit amet leo in, venenatis euismod mauris. Donec eu arcu ac arcu suscipit congue eget eu nulla. Praesent blandit, ipsum a facilisis faci.</p>
+                    </div>
+                    <div class="claim-right">
+                        <a href="/student-services/student-support/" class="button medium swish"><i class="fa fa-play"></i>&nbsp; Student Services</a>
                     </div>
                 </div>
             </div>
-        </section> <!-- .claim-section -->
+        </div>
+    </section> <!-- .claim-section -->
 
-        <!-- News Blocks -->
-        <section class="section show-for-medium-up">
-            <div class="row">
-                <div class="columns">
-                    <ul class="news-tiles">
-                        <li>
-                            <h3>News</h3>
-                            <article class="info-tile news-tile">
-                                <div class="info-tile-body">
-                                    <h6>{{ "What's the Deal with Airline peanuts?" | truncate: 50 }}</h6>
-                                    <!-- TRUNCATE - just do it -->
-                                    <p>{{ "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec..." | truncate: 120 }}</p>
-                                    <br>
-                                    <div class="news-tile-button"><a href="/news-and-events/news/news-item/" class="button swish"><i class="fa fa-play"></i>&nbsp; Read More</a></div>
-                                </div>
-                            </article>
-                        </li>
-                        <li>
-                            <h3>Events</h3>
-                            <article class="info-tile news-tile">
-                                <div class="info-tile-body">
-                                    <h6>{{ "That's Pie Country. They Do a lot of Baking Up there." | truncate: 50 }}</h6>
-                                    <!-- TRUNCATE - just do it -->
-                                    <p>{{ "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec..." | truncate: 120 }}</p>
-                                    <br>
-                                    <div class="news-tile-button"><a href="/news-and-events/news/news-item/" class="button swish"><i class="fa fa-play"></i>&nbsp; Read More</a></div>
-                                </div>
-                            </article>
-                        </li>
-                        <li>
-                            <h3>Media</h3>
-                            <article class="info-tile news-tile">
-                                <div class="info-tile-body">
-                                    <h6>{{ "There's Nothing Finer than Being in Your Diner." | truncate: 50 }}</h6>
-                                    <!-- TRUNCATE - just do it -->
-                                    <p>{{ "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec..." | truncate: 120 }}</p>
-                                    <br>
-                                    <div class="news-tile-button"><a href="/news-and-events/news/news-item/" class="button swish"><i class="fa fa-play"></i>&nbsp; Read More</a></div>
-                                </div>
-                            </article>
-                        </li>
-                        <li>
-                            <h3>Connect</h3>
-                            <article class="info-tile news-tile">
-                                <div class="info-tile-body">
-                                    <p class="text-center img">
-                                        <a href="/news-and-events/news/news-item/">
-                                            <img src="/img/apc/template/facebook-stamp.jpg" alt="Facebook">
-                                        </a>
-                                    </p>
-                                    <br>
-                                    <div class="news-tile-button"><a href="/news-and-events/news/news-item/" class="button swish"><i class="fa fa-play"></i>&nbsp; connect</a></div>
-                                </div>
-                            </article>
-                        </li>
-                    </ul>
-                </div>
+    <!-- NEWS BLOCKS - PAIRS (Warning: alternate arrangement) -->
+    <section class="section show-for-medium-up">
+        <div class="row">
+
+            <!-- Pair #1 -->
+            <div class="large-6 columns">
+                <h3>Students Online</h3>
+                <ul class="news-tiles news-tiles-pair">
+                    <li>
+                        <article class="info-tile news-tile">
+                            <div class="info-tile-body">
+                                <h5>Timetable</h5>
+                                <!-- TRUNCATE - must do it -->
+                                <p>{{ "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec..." | truncate: 150 }}</p>
+                                <br>
+                                <div class="news-tile-button"><a href="#where-does-this-go" class="button swish"><i class="fa fa-play"></i>&nbsp; Student Login</a></div>
+                            </div>
+                        </article>
+                    </li>
+
+                    <li>
+                        <article class="info-tile news-tile">
+                            <div class="info-tile-body">
+                                <h5>Subject Portal</h5>
+                                <!-- TRUNCATE - must do it -->
+                                <p>{{ "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec..." | truncate: 150 }}</p>
+                                <br>
+                                <div class="news-tile-button"><a href="#where-does-this-go" class="button swish"><i class="fa fa-play"></i>&nbsp; Student Login</a></div>
+                            </div>
+                        </article>
+                    </li>
+                </ul>
+            </div> <!-- .medium-6 -->
+
+            <!-- Pair #2 -->
+            <div class="large-6 columns">
+                <h3>Getting Started</h3>
+                <ul class="news-tiles news-tiles-pair">
+                    <li>
+                        <article class="info-tile news-tile">
+                            <div class="info-tile-body">
+                                <h5>Online Assessment</h5>
+                                <!-- TRUNCATE - must do it -->
+                                <p>{{ "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec..." | truncate: 150 }}</p>
+                                <br>
+                                <div class="news-tile-button"><a href="#where-does-this-go" class="button swish"><i class="fa fa-play"></i>&nbsp; Start Assessment</a></div>
+                            </div>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="info-tile news-tile">
+                            <div class="info-tile-body">
+                                <h5>Enquiries</h5>
+                                <!-- TRUNCATE - must do it -->
+                                <p>{{ "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec..." | truncate: 150 }}</p>
+                                <br>
+                                <div class="news-tile-button"><a href="/contact-us/make-an-enquiry/" class="button swish"><i class="fa fa-play"></i>&nbsp; Make an Enquiry</a></div>
+                            </div>
+                        </article>
+                    </li>
+                </ul>
             </div>
-        </section>
-
-        <section class="section image-section image-girl-smiling show-for-medium-up"></section>
-
-        <!-- Student Services -->
-        <section class="section claim-section has-medium-padding">
-            <div class="row">
-                <div class="columns">
-                    <div class="claim-module">
-                        <div class="claim-left">
-                            <h2>Student Services</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio. Sed nulla orci, suscipit sit amet leo in, venenatis euismod mauris. Donec eu arcu ac arcu suscipit congue eget eu nulla. Praesent blandit, ipsum a facilisis faci.</p>
-                        </div>
-                        <div class="claim-right">
-                            <a href="#" class="button medium swish"><i class="fa fa-play"></i>&nbsp; Student Services</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> <!-- .claim-section -->
-
-        <!-- News Blocks -->
-        <section class="section show-for-medium-up">
-            <div class="row">
-                <div class="large-6 columns">
-                    <h3>Students Online</h3>
-                    <ul class="news-tiles news-tiles-pair">
-                        <li>
-                            <article class="info-tile news-tile">
-                                <div class="info-tile-body">
-                                    <h5>Timetable</h5>
-                                    <!-- TRUNCATE - just do it -->
-                                    <p>{{ "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec..." | truncate: 150 }}</p>
-                                    <br>
-                                    <div class="news-tile-button"><a href="/news-and-events/news/news-item/" class="button swish"><i class="fa fa-play"></i>&nbsp; Student Login</a></div>
-                                </div>
-                            </article>
-                        </li>
-                        <li>
-                            <article class="info-tile news-tile">
-                                <div class="info-tile-body">
-                                    <h5>Subject Portal</h5>
-                                    <!-- TRUNCATE - just do it -->
-                                    <p>{{ "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec..." | truncate: 150 }}</p>
-                                    <br>
-                                    <div class="news-tile-button"><a href="/news-and-events/news/news-item/" class="button swish"><i class="fa fa-play"></i>&nbsp; Student Login</a></div>
-                                </div>
-                            </article>
-                        </li>
-                    </ul>
-                </div> <!-- .medium-6 -->
-
-                <div class="large-6 columns">
-                    <h3>Getting Started</h3>
-                    <ul class="news-tiles news-tiles-pair">
-                        <li>
-                            <article class="info-tile news-tile">
-                                <div class="info-tile-body">
-                                    <h5>Online Assessment</h5>
-                                    <!-- TRUNCATE - just do it -->
-                                    <p>{{ "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec..." | truncate: 150 }}</p>
-                                    <br>
-                                    <div class="news-tile-button"><a href="/news-and-events/news/news-item/" class="button swish"><i class="fa fa-play"></i>&nbsp; Start Assessment</a></div>
-                                </div>
-                            </article>
-                        </li>
-                        <li>
-                            <article class="info-tile news-tile">
-                                <div class="info-tile-body">
-                                    <h5>Enquiries</h5>
-                                    <!-- TRUNCATE - just do it -->
-                                    <p>{{ "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec..." | truncate: 150 }}</p>
-                                    <br>
-                                    <div class="news-tile-button"><a href="/news-and-events/news/news-item/" class="button swish"><i class="fa fa-play"></i>&nbsp; Make an Enquiry</a></div>
-                                </div>
-                            </article>
-                        </li>
-                    </ul>
-                </div>
-            </div> <!-- .row -->
-        </section>
-
-	</main>
+        </div> <!-- .row -->
+    </section> <!-- .section -->
 
 </div> <!-- .homepage -->

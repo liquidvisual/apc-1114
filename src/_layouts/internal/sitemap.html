@@ -1,0 +1,25 @@
+---
+layout: internal
+site_type: "apc"
+exclude_hero: true
+---
+
+{% assign apc_pages = site.pages | where: "site_type", "apc" %}
+{% assign enu_pages = site.pages | where: "site_type", "enu" %}
+
+<div class="row">
+	<div class="columns">
+		<br>
+		<h1>All Available Pages for APC</h1>
+		<br>
+
+		<section class="section has-padding">
+			<ul class="small-block-grid-2 medium-block-grid-4">
+				{% for item in apc_pages %}
+					<li><a href="{{ item.url }}">{{ item.title }}</a></li>
+				{% endfor %}
+			</ul>
+		</section>
+
+	</div>
+</div>
