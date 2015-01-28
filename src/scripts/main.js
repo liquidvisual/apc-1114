@@ -125,7 +125,7 @@ $(function(){
 
 function setupHero() {
     bxSliderHero = $('.js-carousel').bxSlider({
-        auto: (TOUCH_ENABLED ? false : false),
+        auto: (TOUCH_ENABLED ? false : true),
         mode: 'horizontal',
         adaptiveHeight: true,
         responsive: true,

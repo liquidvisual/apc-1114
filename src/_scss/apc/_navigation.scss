@@ -97,8 +97,8 @@
 // Nested Dropdowns
 //=========================================
 
-/* UX decision, dropdowns are fiddly on tablets */
-.no-touch .topbar .has-dropdown:hover > .dropdown {
+/* UX decision, dropdowns are fiddly on tablets - formerly no-touch - 28.01.15 */
+.topbar .has-dropdown:hover > .dropdown {
 	opacity: 1;
 	height: auto;
 	overflow: visible;
@@ -106,7 +106,7 @@
 	top: 100%;
 }
 
-.no-touch .topbar .has-dropdown:hover > a:after {
+.topbar .has-dropdown:hover > a:after {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -121,7 +121,7 @@
 	border-bottom-color: $primary-color;
 }
 
-.no-touch .topbar .dropdown .has-dropdown:hover > .dropdown {
+.topbar .dropdown .has-dropdown:hover > .dropdown {
 	opacity: 1;
 	height: auto;
 }
