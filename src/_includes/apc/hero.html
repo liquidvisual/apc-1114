@@ -6,7 +6,7 @@
     {% for hero in hero_images %}
 
     <!-- Hero Item -->
-    <div class="lv-hero" style="background-image: url('{{ hero.image | prepend: site.assets }}')" data-background-image="...">
+    <div class="lv-hero" style="background-image: url('{{ hero.image | prepend: site.assets }}')" data-background-image="{{ hero.image | prepend: site.assets }}">
         <div class="row lv-vertical-center">
 
             <!-- Caption -->
