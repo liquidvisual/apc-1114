@@ -1,3 +1,4 @@
+@import "foundation/components/buttons";
 /*
     TEXT-EDITOR.CSS
 
@@ -37,6 +38,12 @@
 .image-right {
 	float: right;
 	padding: rem-calc(5 0 20 20);
+}
+
+.wysiwyg-button a {
+    @include button();
+    text-transform: uppercase;
+    border-radius: $global-radius 0 $global-radius 0;
 }
 
 //-----------------------------------------------------------------
