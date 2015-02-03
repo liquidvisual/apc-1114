@@ -165,15 +165,15 @@ $color-section-bg-5: aqua !default;
             width: 65%;
             padding-right: rem-calc(40);
 
-            &:after {
-                content: "";
-                position: absolute;
-                top: 10%;
-                right: 0;
-                width: 1px;
-                height: 80%;
-                background: #ddd;
-            }
+            // &:after {
+            //     content: "";
+            //     position: absolute;
+            //     top: 10%;
+            //     right: 0;
+            //     width: 1px;
+            //     height: 80%;
+            //     background: #ddd;
+            // }
         }
 
         @media #{$large-up} {
@@ -182,8 +182,19 @@ $color-section-bg-5: aqua !default;
     }
 
     .claim-right {
+        position: relative;
         @media #{$medium-up} {
             padding-left: rem-calc(40);
+
+            &:after {
+                content: "";
+                position: absolute;
+                top: 10%;
+                left: 0;
+                width: 1px;
+                height: 80%;
+                background: #ddd;
+            }
         }
     }
 }
