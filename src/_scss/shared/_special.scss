@@ -1,0 +1,55 @@
+@import "foundation/settings";
+/*
+    SPECIAL.CSS
+
+    - updated: 04.02.15
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+//=========================================
+//
+//=========================================
+
+.accordion {
+    margin-left: 0;
+    border: 1px solid #E1E1E1;
+
+    > li {
+        border-bottom: 1px solid #E1E1E1;
+    }
+
+    li:last-child {
+        border: 0;
+    }
+
+    // Icon
+    li > a:before {
+        content: "\f0dd";
+        font-family: 'FontAwesome';
+        padding-right: 10px;
+        float: right;
+    }
+
+    li.active a:before {
+        content: "\f0de";
+    }
+}
+
+.accordion-header {
+    background: $primary-color;
+    margin-bottom: rem-calc(30);
+    padding: rem-calc(5 10);
+
+    h5 {
+        color: white;
+        text-transform: uppercase;
+        font-size: rem-calc(14);
+        font-weight: bold;
+        margin: 0;
+    }
+}

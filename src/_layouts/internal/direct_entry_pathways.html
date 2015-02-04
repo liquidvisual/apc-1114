@@ -1,0 +1,128 @@
+---
+layout: internal
+---
+
+<!-- IN PROGRESS - Need to add pathways etc -->
+
+<!-- CLAIM SECTION: INTRO CLAIM -->
+<section class="section claim-section has-medium-padding">
+    <div class="row">
+        <div class="columns">
+            <div class="claim-module">
+                <div class="claim-left">
+                    <h2>Direct Entry Pathways</h2>
+                    <p>Student visa holders can choose from over 250 courses from Certificate to Advanced Diploma level, as well as Bachelor, Master Degree. Popular course areas can be found <a href="/courses/">here</a>.</p>
+                </div>
+                <div class="claim-right">
+                    <h5>On this Page</h5>
+                    <ul class="triangle-list">
+                        <li><a href="#apc-direct-entry">APC Direct Entry</a></li>
+                        <li><a href="#apcs-pathway-institutions">APC's Pathway Institutions</a></li>
+                    </ul>
+                    <!-- <a href="/applications/apply-now/" class="button expand-for-small-only swish"><i class="fa fa-play"></i>&nbsp; All Courses</a> -->
+                    <!-- <a href="/contact-us/make-an-enquiry/#enquiry-form" class="button expand-for-small-only swish"><i class="fa fa-play"></i>&nbsp; Make an Enquiry</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section> <!-- .claim-section -->
+
+<!-- CONTENT BREAKS -->
+<section class="section">
+    <div class="row">
+        <div class="columns">
+            <h3 id="apc-direct-entry">APC Direct Entry</h3>
+
+            <span class="image-left"><img src="http://placehold.it/200x200"></span>
+            <p>Students who graduate from Australian Pacific College will be accepted by the institutions below without having to provide results of English examinations such as IELTS or TOEFL. This is conditional upon students meeting the academic requirements of these institutions and is subject to vacancies and the availability of programs at these institutions.</p>
+
+            <p>Students who are interested in continuing studies in Australia at University and/or College are encouraged to seek advice from the EAP Coordinator as early as possible.</p>
+
+            <p>APC has established direct entry arrangements with a number of Australian Universities such as the UNSW Foundation Year, Macquarie University, University of Western Sydney (UWS), Central Queensland University (CQU) and many more, as well as with TAFE NSW. These enable students who have successfully completed the EAP course and met the English language and academic requirements to enter university and TAFE courses without completing an IELTS examination. More information in relation to this can be obtained by contacting the college.</p>
+
+            <ul class="triangle-list">
+                <li><a href="http://apc.edu.au/pdfs/EAP_Direct_Entry_List.pdf">EAP Entry List</a></li>
+                <li><a href="http://apc.edu.au/images/vocational/APCVETArticulationChart.png">APC Articulations and Direct Entry Chart</a></li>
+            </ul>
+
+            <hr>
+
+            <h3 id="apcs-pathway-institutions">APC’s Pathway Institutions <small>Area of Study:</small></h3>
+            <br>
+
+            <ul class="accordion" data-accordion>
+                <li class="accordion-navigation">
+                    <a href="#panel1a">Business / Commerce</a>
+                    <div id="panel1a" class="content">
+
+                        <div class="accordion-header">
+                            <div class="row collapse">
+                                <div class="small-4 columns"><h5>Institution</h5></div>
+                                <div class="small-6 columns"><h5>Institution Profile</h5></div>
+                                <div class="small-2 columns"><h5>Relevant Course</h5></div>
+                            </div>
+                        </div>
+
+                        {% for i in (1..4) %}
+                            <div class="row">
+                                <div class="medium-4 columns">
+                                    <p><strong><a href="#">Central Queensland University (CQU)</a></strong></p>
+                                    <p><img src="http://apc.edu.au/images/logos/cqu_.jpg" alt="..."></p>
+                                    <p>CRICOS Provider No: 00121B</p>
+                                    <p><a href="http://unisa.edu.au">www.unisa.edu.au</a></p>
+                                </div>
+                                <div class="medium-6 columns">
+                                    <p>CQU is one of Australia’s most dynamic universities with a rich cultural diversity. Students earn quality degrees and benefit from increased job opportunities. Courses and programs are modelled on teaching and learning excellence, flexibility and personal service. CQU was recently awarded the 2005 National Exporter of the Year (Education), the second time that CQU has won this prestigious national award.</p>
+                                </div>
+                                <div class="medium-2 columns">
+                                    Bachelor of Business
+                                </div>
+                            </div> <!-- .row -->
+
+                            {% unless forloop.last %}
+                            <div class="row">
+                                <div class="columns">
+                                    <hr>
+                                </div>
+                            </div>
+                            {% endunless %}
+
+                        {% endfor %}
+
+                    </div>
+                </li>
+                <li class="accordion-navigation">
+                    <a href="#panel2a">Education / TESOL</a>
+                    <div id="panel2a" class="content">
+                        Panel 1. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </div>
+                </li>
+                <li class="accordion-navigation">
+                    <a href="#panel3a">Health / Nursing</a>
+                    <div id="panel3a" class="content">
+                        Panel 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </div>
+                </li>
+                <li class="accordion-navigation">
+                    <a href="#panel4a">Hospitality / Cookery</a>
+                    <div id="panel4a" class="content">
+                        Panel 3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </div>
+                </li>
+                <li class="accordion-navigation">
+                    <a href="#panel4a">IT / Graphic Design</a>
+                    <div id="panel4a" class="content">
+                        Panel 3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </div>
+                </li>
+                <li class="accordion-navigation">
+                    <a href="#panel4a">Travel and Tourism</a>
+                    <div id="panel4a" class="content">
+                        Panel 3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </div>
+                </li>
+            </ul>
+
+        </div> <!-- .columns -->
+    </div> <!-- .row -->
+</section>

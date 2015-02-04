@@ -183,6 +183,7 @@ $color-section-bg-5: aqua !default;
 
     .claim-right {
         position: relative;
+
         @media #{$medium-up} {
             padding-left: rem-calc(40);
 
