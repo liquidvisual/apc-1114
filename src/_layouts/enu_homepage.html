@@ -35,11 +35,13 @@ layout: master
 				<h2 class="text-center">{{ item.title }}</h2>
 				<br>
 				<div class="row">
-					<div class="medium-10 medium-centered columns">
+					<div class=" columns">
 						<ul class="section small-block-grid-1 medium-block-grid-3">
 						{% for item in item.children %}
 							<li>
-								<h3 class="course-tile"><a href="/courses/english-courses/course-item/">{{ item.title }}</a></h3>
+								{% assign index = {{forloop.index}} %}
+								{% include shared/media_tile_image.html random=index %}
+								<!-- <h3 class="course-tile" style="background-image: url(http://lorempixel.com/400/200/technics?{{forloop.index}})"><a href="/courses/english-courses/course-item/">{{ item.title }}</a></h3> -->
 							</li>
 						{% endfor %}
 						</ul>

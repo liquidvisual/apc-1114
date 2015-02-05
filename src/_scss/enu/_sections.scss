@@ -61,11 +61,15 @@
     width: 100%;
     margin-bottom: 0;
 
+    &:hover {
+        background-image: none !important;
+    }
+
     a {
         @include transition();
         display: table-cell;
         vertical-align: middle;
-        background: lighten($secondary-color, 50%);
+        background: rgba(lighten($secondary-color, 50%), 0.8);
         height: rem-calc(100);
         padding: rem-calc(15);
         text-transform: none;
@@ -83,7 +87,7 @@
     color: $body-font-color;
 
     &:hover {
-        color: $primary-color;
+        color: white; //$primary-color;
         border-color: $primary-color;
     }
 }
