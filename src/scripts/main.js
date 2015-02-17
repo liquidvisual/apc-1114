@@ -214,6 +214,8 @@ $(function(){
       initialSlide: 0,
       asNavFor: '.timeline-slides',
       focusOnSelect: true,
+      variableWidth: true, // need?
+      adaptiveHeight: true,
       // centerMode: true,
       responsive: [
           {
