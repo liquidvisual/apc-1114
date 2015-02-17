@@ -6,6 +6,13 @@ IGNORE THIS COMMENT: Interchange code reference for dev self:
 {% assign settings = site.data.apc.settings %}
 {% assign logo = "/img/apc/content/logo.png" %}
 
+<script type="text/javascript">
+	function googleTranslateElementInit() {
+  		new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,es,ja,ko,pl,pt,th,zh-CN'}, 'google_translate_element');
+	}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 <div class="row">
 	<div class="header-top">
 		<div class="medium-6 medium-push-6 columns medium-text-right">
@@ -13,12 +20,15 @@ IGNORE THIS COMMENT: Interchange code reference for dev self:
 			<!-- Buttons -->
 			<a class="button tiny swish" href=""><i class="fa fa-play"></i> Apply Now</a>
 			<a class="button tiny swish" href="#where-does-this-go"><i class="fa fa-play"></i> Student Login</a>
+			<span class="button tiny swish"><i class="fa fa-play"></i> Translate <span id="google_translate_element"></span></span>
 
+			{% comment %}
 			<!-- Language Selector -->
 			<div class="language-selector right">
 				<a href="#" class="mobile-menu-trigger"></a>
-				{% include shared/languages.html %}
+				<!-- {% include shared/languages.html %} -->
 			</div>
+			{% endcomment %}
 
 		</div>
 	</div> <!-- .header-top -->
