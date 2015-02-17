@@ -363,7 +363,10 @@ $(".language-selector .mobile-menu-trigger").bind("click", function(e) {
 $(document).foundation({
   accordion: {
     content_class: 'content',
-    multi_expand: false
+    multi_expand: false,
+    callback: function(el){
+        $(document).foundation('equalizer','reflow');
+    }
   }
 });
 
