@@ -3,6 +3,7 @@ layout: internal
 ---
 
 {% assign page_breaks = site.data.apc.sitemap[1].children %}
+{% assign course_categories = site.data.apc.sitemap[1].children %}
 
 <!-- CLAIM SECTION -->
 <section class="section claim-section has-medium-padding">
@@ -13,42 +14,158 @@ layout: internal
                     <h2>COURSE FINDER</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio ipsum dolor sit amet.</p>
                 </div>
-                <div class="claim-right">
+                <!-- <div class="claim-right">
                     <h5>On this Page</h5>
-	                <ul class="triangle-list">
-	                	{% for item in page_breaks %}
-	                		<li><a href="#{{ item.url }}">{{ item.title }}</a></li>
-	                	{% endfor %}
-	                </ul>
-                </div>
+                    <ul class="triangle-list">
+                        {% for item in page_breaks %}
+                            <li><a href="#{{ item.url }}">{{ item.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div> -->
             </div>
         </div>
     </div>
 </section> <!-- .claim-section -->
 
-<div class="row">
-    <div class="medium-3 columns">
-        Find a course
-
-        ssd
-    </div>
-    <div class="medium-9 columns">
-
-        {% for i in (1..8) %}
-            <section class="section">
-                <div class="info-tile {{ category.title | slugify }}-cat" data-equalizer-watch>
-                    <h3>English</h3>
-                    <div class="info-tile-body">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+<!-- SEARCH -->
+<section class="section">
+    <div class="row">
+        <div class="columns">
+            <form class="course-search" action="/research/search-results/" method="post" novalidate>
+                <div class="row collapse">
+                    <div class="medium-9 medium-centered columns">
+                        <label>Quick Search<input type="text" name="search" id="search" value="" placeholder="Type Keyword">
                     </div>
                 </div>
-            </section>
-        {% endfor %}
+            </form>
+        </div>
+    </div>
+</section>
+
+<div class="row">
+    <div class="medium-4 columns">
+
+        <!-- RESET -->
+        <div class="text-right"><button id="reset-filters" class="button">Reset</button></div>
+
+        <!-- COURSE FILTERS -->
+        <form id="options">
+            <ul class="accordion course-finder-module" data-accordion>
+                <li class="accordion-navigation">
+                    <a href="#panel-1">Course Type</a>
+                    <div id="panel-1" class="option-set content active" data-group="course-type">
+                        <label><input type="checkbox" value="" class="all" checked>All</label>
+                        <label><input type="checkbox" value=".english-courses">English</label>
+                        <label><input type="checkbox" value=".vocational-courses">Vocational</label>
+                    </div>
+                </li>
+                <li class="accordion-navigation">
+                    <a href="#panel-2">Study Option</a>
+                    <div id="panel-2" class="option-set content active" data-group="study-option">
+                        <label><input type="checkbox" value="" class="all" checked>All</label>
+                        <label><input type="checkbox" value=".sydney-cbd-kent-street">Full Time</label>
+                        <label><input type="checkbox" value=".sydney-cbd-clarence-street">Part Time</label>
+                    </div>
+                </li>
+                <li class="accordion-navigation">
+                    <a href="#panel-3">Campus</a>
+                    <div id="panel-3" class="option-set content active" data-group="campus">
+                        <label><input type="checkbox" value="" class="all" checked>All</label>
+                        <label><input type="checkbox" value=".sydney-cbd-kent-street">Sydney CBD Kent Street</label>
+                        <label><input type="checkbox" value=".sydney-cbd-clarence-street">Sydney CBD Clarence Street</label>
+                        <label><input type="checkbox" value=".sydney-cbd-york-street">Sydney CBD York Street</label>
+                        <label><input type="checkbox" value=".bondi-junction">Bondi Junction</label>
+                        <label><input type="checkbox" value=".manly">Manly</label>
+                        <label><input type="checkbox" value=".brisbane">Brisbane</label>
+                    </div>
+                </li>
+
+                <!-- The below aren't functional yet -->
+
+                <li class="accordion-navigation">
+                    <a href="#panel-4">Course Times</a>
+                    <div id="panel-4" class="content active" data-group="course-times">
+                        <label><input type="checkbox" value="" class="all" checked>All</label>
+                        <label><input type="checkbox" value=".......">Morning (9:00 - 1:15pm approx)</label>
+                        <label><input type="checkbox" value=".......">Afternoon (2:15 - 3:15pm approx)</label>
+                        <label><input type="checkbox" value=".......">Evening (4:30 - 8:30pm approx)</label>
+                    </div>
+                </li>
+                <li class="accordion-navigation">
+                    <a href="#panel-5">Course Fees</a>
+                    <div id="panel-5" class="content active" data-group="course-fees">
+                        <label><input type="checkbox" value="" class="all" checked>All</label>
+                        <label><input type="checkbox" value=".......">Under $2000</label>
+                        <label><input type="checkbox" value=".......">$2000 - $4000</label>
+                        <label><input type="checkbox" value=".......">$4000 - $6000</label>
+                        <label><input type="checkbox" value=".......">$6000 - $10,000</label>
+                        <label><input type="checkbox" value=".......">$10,000 - $14,000</label>
+                        <label><input type="checkbox" value=".......">Over $14,000</label>
+                    </div>
+                </li>
+                <li class="accordion-navigation">
+                    <a href="#panel-6">Course Length</a>
+                    <div id="panel-6" class="content active" data-group="course-length">
+                        <label><input type="checkbox" value="" class="all" checked>All</label>
+                        <label><input type="checkbox" value=".......">Under 3 months</label>
+                        <label><input type="checkbox" value=".......">3-6 months</label>
+                        <label><input type="checkbox" value=".......">6-9 months</label>
+                        <label><input type="checkbox" value=".......">9-12 months</label>
+                        <label><input type="checkbox" value=".......">1-2 Years</label>
+                        <label><input type="checkbox" value=".......">Over 2 Years</label>
+                    </div>
+                </li>
+            </ul>
+        </form>
+
+    </div> <!-- .columns -->
+    <div class="medium-8 columns">
+
+        <!-- HINT -->
+        <!-- <div id="container">
+            <div class="course-post item english type1 red uk-size8">
+                <p>English</p>
+                <p>type1</p>
+                <p>uk-size8</p>
+                <p>for search: <span class="size">64</span></p>
+            </div>
+        </div> <!-- #container -->
+
+        <!-- ALL COURSES -->
+        <div id="container">
+            {% for category in course_categories %}
+                {% for item in category.children %}
+                    <section class="section course-post {{ category.title | downcase | slugify }}">
+
+                        <h3>{{ item.title }}</h3>
+
+                        <h4><small>FNS40611 | Postgraduate | Semester 1, Semester 2 intakes</small></h4>
+                        <br>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco.</p>
+
+                        <p class="right">
+                            <a href="#" class="button swish">See Course</a>
+                            <a href="#" class="button swish">Make Enquiry</a>
+                        </p>
+
+                    </section>
+                    <!-- <hr> -->
+                {% endfor %}
+            {% endfor %}
+        </div>
+
+        <!-- ALL COURSES -->
+
+        <!-- <section class="section course-post">
+            <h3>Course Item</h3>
+            <h4><small>FNS40611 | Postgraduate | Semester 1, Semester 2 intakes</small></h4>
+        </section> -->
+
+
+
 
     </div>
 </div>

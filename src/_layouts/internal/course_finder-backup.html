@@ -1,0 +1,151 @@
+---
+layout: internal
+---
+
+{% assign page_breaks = site.data.apc.sitemap[1].children %}
+{% assign course_categories = site.data.apc.sitemap[1].children %}
+
+<!-- CLAIM SECTION -->
+<section class="section claim-section has-medium-padding">
+    <div class="row">
+        <div class="columns">
+            <div class="claim-module">
+                <div class="claim-left">
+                    <h2>COURSE FINDER</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio ipsum dolor sit amet.</p>
+                </div>
+                <!-- <div class="claim-right">
+                    <h5>On this Page</h5>
+	                <ul class="triangle-list">
+	                	{% for item in page_breaks %}
+	                		<li><a href="#{{ item.url }}">{{ item.title }}</a></li>
+	                	{% endfor %}
+	                </ul>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</section> <!-- .claim-section -->
+
+<!-- SEARCH -->
+<section class="section">
+    <div class="row">
+        <div class="columns">
+            <form class="course-search" action="/research/search-results/" method="post" novalidate>
+                <div class="row collapse">
+                    <div class="small-10 medium-9 columns">
+                        <input class="prefix readius" name="q" type="text" placeholder="Type keywords to search">
+                    </div>
+                    <div class="small-2 medium-3 columns">
+                        <button type="submit" class="button postfix radius">Search</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<div class="row">
+    <div class="medium-4 columns">
+
+        <button class="button">Reset</button>
+
+        <!-- COURSE FILTERS -->
+        <ul class="accordion course-finder-module" data-accordion>
+            <li class="accordion-navigation">
+                <a href="#panel2a">Course Type</a>
+                <div id="panel2a" class="content active">
+                    <label><input type="checkbox" name="campus" value="all" checked disabled>All</label>
+                    <label><input type="checkbox" name="campus" value="sydney-cbd-kent-street">English</label>
+                    <label><input type="checkbox" name="campus" value="sydney-cbd-clarence-street">Vocational</label>
+                </div>
+            </li>
+            <li class="accordion-navigation">
+                <a href="#panel3a">Study Option</a>
+                <div id="panel3a" class="content active">
+                    <label><input type="checkbox" name="campus" value="all" checked disabled>All</label>
+                    <label><input type="checkbox" name="campus" value="sydney-cbd-kent-street">Full Time</label>
+                    <label><input type="checkbox" name="campus" value="sydney-cbd-clarence-street">Part Time</label>
+                </div>
+            </li>
+            <li class="accordion-navigation">
+                <a href="#panel1a">Campus</a>
+                <div id="panel1a" class="content active">
+
+                    <label><input type="checkbox" name="campus" value="all" checked disabled>All</label>
+                    <label><input type="checkbox" name="campus" value="sydney-cbd-kent-street">Sydney CBD Kent Street</label>
+                    <label><input type="checkbox" name="campus" value="sydney-cbd-clarence-street">Sydney CBD Clarence Street</label>
+                    <label><input type="checkbox" name="campus" value="sydney-cbd-york-street">Sydney CBD York Street</label>
+                    <label><input type="checkbox" name="campus" value="bondi-junction">Bondi Junction</label>
+                    <label><input type="checkbox" name="campus" value="manly">Manly</label>
+                    <label><input type="checkbox" name="campus" value="brisbane">Brisbane</label>
+
+                </div>
+            </li>
+
+            <li class="accordion-navigation">
+                <a href="#panel4a">Course Times</a>
+                <div id="panel4a" class="content active">
+                    <label><input type="checkbox" name="course-fees" value="all" checked disabled>All</label>
+                    <label><input type="checkbox" name="course-fees" value="sydney-cbd-kent-street">Morning (9:00 - 1:15pm approx)</label>
+                    <label><input type="checkbox" name="course-fees" value="sydney-cbd-clarence-street">Afternoon (2:15 - 3:15pm approx)</label>
+                    <label><input type="checkbox" name="course-fees" value="sydney-cbd-clarence-street">Evening (4:30 - 8:30pm approx)</label>
+                </div>
+            </li>
+
+            <li class="accordion-navigation">
+                <a href="#panel2a">Course Fees</a>
+                <div id="panel2a" class="content active">
+                    <label><input type="checkbox" name="course-fees" value="all" checked disabled>All</label>
+                    <label><input type="checkbox" name="course-fees" value="sydney-cbd-kent-street">Under $2000</label>
+                    <label><input type="checkbox" name="course-fees" value="sydney-cbd-clarence-street">$2000 - $4000</label>
+                    <label><input type="checkbox" name="course-fees" value="sydney-cbd-york-street">$4000 - $6000</label>
+                    <label><input type="checkbox" name="course-fees" value="sydney-cbd-york-street">$6000 - $10,000</label>
+                    <label><input type="checkbox" name="course-fees" value="sydney-cbd-york-street">$10,000 - $14,000</label>
+                    <label><input type="checkbox" name="course-fees" value="sydney-cbd-york-street">Over $14,000</label>
+                </div>
+            </li>
+
+            <li class="accordion-navigation">
+                <a href="#panel4a">Course Length</a>
+                <div id="panel4a" class="content active">
+                    <label><input type="checkbox" name="course-fees" value="all" checked disabled>All</label>
+                    <label><input type="checkbox" name="course-fees" value="sydney-cbd-kent-street">Under 3 months</label>
+                    <label><input type="checkbox" name="course-fees" value="sydney-cbd-clarence-street">3-6 months</label>
+                    <label><input type="checkbox" name="course-fees" value="sydney-cbd-clarence-street">6-9 months</label>
+                    <label><input type="checkbox" name="course-fees" value="sydney-cbd-clarence-street">9-12 months</label>
+                    <label><input type="checkbox" name="course-fees" value="sydney-cbd-clarence-street">1-2 Years</label>
+                    <label><input type="checkbox" name="course-fees" value="sydney-cbd-clarence-street">Over 2 Years</label>
+                </div>
+            </li>
+
+
+        </ul>
+    </div>
+    <div class="medium-8 columns">
+
+        <!-- ALL COURSES -->
+        {% for category in course_categories %}
+            {% for item in category.children %}
+                <section class="section course-post">
+
+                    <h3>{{ item.title }}</h3>
+                    <h4><small>FNS40611 | Postgraduate | Semester 1, Semester 2 intakes</small></h4>
+                    <br>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco</p>
+
+                    <p class="right">
+                        <a href="#" class="button swish">See Course</a>
+                        <a href="#" class="button swish">Make Enquiry</a>
+                    </p>
+
+                </section>
+                <!-- <hr> -->
+            {% endfor %}
+        {% endfor %}
+
+    </div>
+</div>

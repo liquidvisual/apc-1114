@@ -1,0 +1,142 @@
+---
+layout: internal
+---
+
+{% assign page_breaks = site.data.apc.sitemap[1].children %}
+{% assign course_categories = site.data.apc.sitemap[1].children %}
+
+<!-- CLAIM SECTION -->
+<section class="section claim-section has-medium-padding">
+    <div class="row">
+        <div class="columns">
+            <div class="claim-module">
+                <div class="claim-left">
+                    <h2>COURSE FINDER</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio ipsum dolor sit amet.</p>
+                </div>
+                <!-- <div class="claim-right">
+                    <h5>On this Page</h5>
+	                <ul class="triangle-list">
+	                	{% for item in page_breaks %}
+	                		<li><a href="#{{ item.url }}">{{ item.title }}</a></li>
+	                	{% endfor %}
+	                </ul>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</section> <!-- .claim-section -->
+
+<!-- SEARCH -->
+<section class="section">
+    <div class="row">
+        <div class="columns">
+            <form class="course-search" action="/research/search-results/" method="post" novalidate>
+                <div class="row collapse">
+                    <div class="medium-9 medium-centered columns">
+                        <!-- <input class="prefix readius" name="q" type="text" placeholder="Type keywords to search"> -->
+                        <input type="text" id="quicksearch" placeholder="Search">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<div class="row">
+    <div class="medium-4 columns">
+
+        <button class="button">Reset</button>
+
+        <!-- COURSE FILTERS -->
+        <!-- <ul class="accordion course-finder-module" data-accordion>
+            <li class="accordion-navigation">
+                <a href="#panel2a">Course Type</a>
+                <div id="panel2a" class="content active">
+                    <label><input type="checkbox" name="campus" value="all" checked disabled>All</label>
+                    <label><input type="checkbox" name="campus" value="sydney-cbd-kent-street">English</label>
+                    <label><input type="checkbox" name="campus" value="sydney-cbd-clarence-street">Vocational</label>
+                </div>
+            </li>
+        </ul> -->
+
+
+        <div id="filters">
+            <div class="ui-group">
+                <h3>Filters</h3>
+                <div class="button-group js-radio-button-group" data-filter-group="shape">
+                    <button class="button is-checked" data-filter="">All</button>
+                    <button class="button" data-filter=".pv">PV</button>
+                    <button class="button" data-filter=".vv">VV</button>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="ui-group">
+                <h3>Brændstof</h3>
+                <div class="button-group js-radio-button-group" data-filter-group="size">
+
+                    <label><input type="checkbox" value="" class="all checked" name="campus" data-filter="">All</label>
+                    <!-- <button class="button is-checked" data-filter="">Alle</button> -->
+                    <button class="button" data-filter=".benzin">Benzin</button>
+                    <button class="button" data-filter=".diesel">Diesel</button>
+                    <button class="button" data-filter=".el">El</button>
+                    <button class="button" data-filter=".hybrid">Hybrid</button>
+
+
+                    <label><input type="checkbox" name="campus" value="sydney-cbd-kent-street">English</label>
+                    <label><input type="checkbox" name="campus" value="sydney-cbd-clarence-street">Vocational</label>
+                </div>
+            </div>
+
+            <!-- <div class="option-set" data-group="brand">
+            <input type="checkbox" value="" id="brand-all" class="all" checked /><label for="brand-all">all brands</label>
+            <input type="checkbox" value=".brand1" id="brand1" /><label for="brand1">brand1</label>
+            <input type="checkbox" value=".brand2" id="brand2" /><label for="brand2">brand2</label>
+            <input type="checkbox" value=".brand3" id="brand3" /><label for="brand3">brand3</label>
+            <input type="checkbox" value=".brand4" id="brand4" /><label for="brand4">brand4</label>
+            </div> -->
+
+        </div> <!-- #filters -->
+
+    </div> <!-- .columns -->
+    <div class="medium-8 columns">
+
+        <!-- ALL COURSES -->
+
+        <!-- <section class="section course-post">
+            <h3>Course Item</h3>
+            <h4><small>FNS40611 | Postgraduate | Semester 1, Semester 2 intakes</small></h4>
+        </section> -->
+
+        <div class="isotope">
+          <section class="section filter-item course-post auto benzin pv mm"><h3>Opel</h3>Benzin<br />PV<br />Inkl. moms</section>
+          <section class="section filter-item course-post auto benzin pv um"><h3>Alfa</h3>Benzin<br />PV<br />Ekskl. moms</section>
+          <section class="section filter-item course-post auto benzin pv udenafg"><h3>Mazda</h3>Benzin<br />PV<br />Uden afg. </section>
+          <section class="section filter-item course-post auto benzin vv mm"><h3>Ford</h3>Benzin<br />VV<br />Med moms</section>
+          <section class="section filter-item course-post auto benzin vv um"><h3>BMW</h3>Benzin<br /> VV<br />Ekskl. moms</section>
+          <section class="section filter-item course-post auto benzin vv udenafg"><h3>Alfa</h3>Benzin<br />VV<br />Uden afg.</section>
+          <section class="section filter-item course-post auto diesel pv mm"><h3>Mazda</h3>Diesel<br />PV<br />Inkl. moms</section>
+          <section class="section filter-item course-post auto diesel pv um"><h3>Ford</h3>Deisel<br />PV<br />Ekskl. moms</section>
+          <section class="section filter-item course-post auto diesel pv udenafg"><h3>Alfa</h3>Diesel<br />PV<br />Uden afg.</section>
+          <section class="section filter-item course-post auto diesel vv mm"><h3>Opel</h3>Diesel<br />VV<br />Inkl. moms</section>
+          <section class="section filter-item course-post auto diesel vv um"><h3>Mazda</h3>Diesel<br />VV<br />Ekskl. moms</section>
+          <section class="section filter-item course-post auto diesel vv udenafg"><h3>Ford</h3>Diesel<br />VV<br />Uden afg.</section>
+          <section class="section filter-item course-post auto el pv mm"><h3>BMW</h3>El<br />PV<br />Inkl. moms</section>
+          <section class="section filter-item course-post auto el pv um"><h3>Mazda</h3>El<br />PV<br />Ekskl. moms</section>
+          <section class="section filter-item course-post auto el pv udenafg"><h3>Alfa</h3>El<br />PV<br />Uden afg.</section>
+          <section class="section filter-item course-post auto el vv mm"><h3>Opel</h3>El<br />VV<br />Inkl. moms</section>
+          <section class="section filter-item course-post auto el vv um"><h3>Opel</h3>El<br />VV<br />Ekskl. moms</section>
+          <section class="section filter-item course-post auto el vv udenafg"><h3>Opel</h3>El<br />VV<br />Uden afg.</section>
+          <section class="section filter-item course-post auto hybrid pv mm"><h3>Alfa</h3>Hybrid<br />PV<br />Inkl. moms</section>
+          <section class="section filter-item course-post auto hybrid pv um"><h3>BMW</h3>Hybrid<br />PV<br />Ekskl. moms</section>
+          <section class="section filter-item course-post auto hybrid pv udenafg"><h3>Audi</h3>Hybrid<br />PV<br />Uden afg.</section>
+          <section class="section filter-item course-post auto hybrid vv mm"><h3>BMW</h3>Hybrid<br />VV<br />Inkl. moms</section>
+          <section class="section filter-item course-post auto hybrid vv um"><h3>Audi</h3>Hybrid<br />VV<br />Ekskl moms</section>
+          <section class="section filter-item course-post auto hybrid vv udenafg"><h3>Audi</h3>Hybrid<br />VV<br />Uden afg.</section>
+        </div>
+
+
+    </div>
+</div>

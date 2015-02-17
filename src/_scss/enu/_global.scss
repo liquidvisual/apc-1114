@@ -15,12 +15,15 @@ html, body {
 	//@media #{$small-only} {
         //font-size: 90%;
 	//}
-
-    overflow-x: hidden;
 }
 
 ol ol ul, ol ul ul, ul ol ul, ul ul ul {
     list-style: circle;
+}
+
+// Only ever place on the BODY - otherwise will jank scrolling on iOS
+body {
+    overflow-x: hidden;
 }
 
 //=========================================

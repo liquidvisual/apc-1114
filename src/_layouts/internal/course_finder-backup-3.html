@@ -1,0 +1,168 @@
+---
+layout: internal
+---
+
+{% assign page_breaks = site.data.apc.sitemap[1].children %}
+{% assign course_categories = site.data.apc.sitemap[1].children %}
+
+<!-- CLAIM SECTION -->
+<section class="section claim-section has-medium-padding">
+    <div class="row">
+        <div class="columns">
+            <div class="claim-module">
+                <div class="claim-left">
+                    <h2>COURSE FINDER</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum libero. Aenean pharetra luctus erat, nec aliquet velit porta nec. Maecenas a velit in lorem feugiat suscipit quis et odio ipsum dolor sit amet.</p>
+                </div>
+                <!-- <div class="claim-right">
+                    <h5>On this Page</h5>
+	                <ul class="triangle-list">
+	                	{% for item in page_breaks %}
+	                		<li><a href="#{{ item.url }}">{{ item.title }}</a></li>
+	                	{% endfor %}
+	                </ul>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</section> <!-- .claim-section -->
+
+<!-- SEARCH -->
+<section class="section">
+    <div class="row">
+        <div class="columns">
+            <form class="course-search" action="/research/search-results/" method="post" novalidate>
+                <div class="row collapse">
+                    <div class="medium-9 medium-centered columns">
+                        <label>Quick Search<input type="text" name="search" id="search" value="" placeholder="Type Keyword">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<div class="row">
+    <div class="medium-4 columns">
+
+        <button id="reset-filters" class="button">Reset</button>
+
+        <!-- COURSE FILTERS -->
+        <!-- <ul class="accordion course-finder-module" data-accordion>
+            <li class="accordion-navigation">
+                <a href="#panel2a">Course Type</a>
+                <div id="panel2a" class="content active">
+                    <label><input type="checkbox" name="campus" value="all" checked disabled>All</label>
+                    <label><input type="checkbox" name="campus" value="sydney-cbd-kent-street">English</label>
+                    <label><input type="checkbox" name="campus" value="sydney-cbd-clarence-street">Vocational</label>
+                </div>
+            </li>
+        </ul> -->
+
+        <div id="options">
+          <div class="option-set" data-group="brand">
+            <input type="checkbox" value="" id="brand-all" class="all" checked /><label for="brand-all">all brands</label><br>
+            <input type="checkbox" value=".brand1" id="brand1" /><label for="brand1">brand1</label><br>
+            <input type="checkbox" value=".brand2" id="brand2" /><label for="brand2">brand2</label><br>
+            <input type="checkbox" value=".brand3" id="brand3" /><label for="brand3">brand3</label><br>
+            <input type="checkbox" value=".brand4" id="brand4" /><label for="brand4">brand4</label>
+          </div>
+          <br>
+          <div class="option-set" data-group="type">
+            <input type="checkbox" value=""        id="type-all" class="all" checked /><label for="type-all">all types</label><br>
+            <input type="checkbox" value=".type1" id="type1" /><label for="type1">type1</label><br>
+            <input type="checkbox" value=".type2" id="type2" /><label for="type2">type2</label><br>
+            <input type="checkbox" value=".type3" id="type3" /><label for="type3">type3</label><br>
+            <input type="checkbox" value=".type4" id="type4" /><label for="type4">type4</label>
+          </div>
+          <br>
+          <div class="option-set" data-group="color">
+            <input type="checkbox" value=""        id="color-all" class="all" checked /><label for="color-all">all colors</label><br>
+            <input type="checkbox" value=".red" id="red" /><label for="red">red</label><br>
+            <input type="checkbox" value=".blue" id="blue" /><label for="blue">blue</label><br>
+            <input type="checkbox" value=".green" id="green" /><label for="green">green</label><br>
+            <input type="checkbox" value=".yellow" id="yellow" /><label for="yellow">yellow</label>
+          </div>
+          <br>
+          <div class="option-set" data-group="size">
+            <input type="checkbox" value=""        id="size-all" class="all" checked /><label for="size-all">all sizes</label><br>
+            <input type="checkbox" value=".uk-size8" id="uk-size8" /><label for="uk-size8">uk-size8</label><br>
+            <input type="checkbox" value=".uk-size9" id="uk-size9" /><label for="uk-size9">uk-size9</label><br>
+            <input type="checkbox" value=".uk-size10" id="uk-size10" /><label for="uk-size10">uk-size10</label><br>
+            <input type="checkbox" value=".uk-size11" id="uk-size11" /><label for="uk-size11">uk-size11</label>
+          </div>
+        </div>
+
+    </div> <!-- .columns -->
+    <div class="medium-8 columns">
+
+        <div id="container">
+            <div class="course-post item brand1 type1 red uk-size8">
+                <p>brand1</p>
+                <p>type1</p>
+                <p>uk-size8</p>
+                <p>for search: <span class="size">64</span></p>
+            </div>
+            <div class="course-post item brand1 type1 red uk-size9">
+                <p>brand1</p>
+                <p>type1</p>
+                <p>uk-size9</p>
+                <p>for search: <span class="size">0</span></p>
+            </div>
+            <div class="course-post item brand1 type1 red uk-size10">
+                <p>brand1</p>
+                <p>type1</p>
+                <p>uk-size10</p>
+                <p>for search: <span class="size">56</span></p>
+            </div>
+            <div class="course-post item brand1 type1 red uk-size11">
+                <p>brand1</p>
+                <p>type1</p>
+                <p>uk-size11</p>
+                <p>for search: <span class="size">56</span></p>
+            </div>
+            <div class="course-post item brand1 type1 blue uk-size8">
+                <p>brand1</p>
+                <p>type1</p>
+                <p>uk-size8</p>
+                <p>for search: <span class="size">24</span></p>
+            </div>
+
+            <div class="course-post item brand1 type3 green uk-size8">
+                <p>brand1</p>
+                <p>type3</p>
+                <p>uk-size8</p>
+                <p>for search: <span class="size">48</span></p>
+            </div>
+            <div class="course-post item brand1 type3 green uk-size9">
+                <p>brand1</p>
+                <p>type3</p>
+                <p>uk-size9</p>
+                <p>for search: <span class="size">32</span></p>
+            </div>
+            <div class="course-post item brand1 type3 green uk-size10">
+                <p>brand1</p>
+                <p>type3</p>
+                <p>uk-size10</p>
+                <p>for search: <span class="size">16</span></p>
+            </div>
+            <div class="course-post item brand1 type3 green uk-size11">
+                <p>brand1</p>
+                <p>type3</p>
+                <p>uk-size11</p>
+                <p>for search: <span class="size">56</span></p>
+            </div>
+        </div> <!-- #container -->
+
+        <!-- ALL COURSES -->
+
+        <!-- <section class="section course-post">
+            <h3>Course Item</h3>
+            <h4><small>FNS40611 | Postgraduate | Semester 1, Semester 2 intakes</small></h4>
+        </section> -->
+
+
+
+
+    </div>
+</div>
