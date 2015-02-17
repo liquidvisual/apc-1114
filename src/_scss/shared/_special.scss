@@ -11,9 +11,62 @@
 //-----------------------------------------------------------------
 //
 //-----------------------------------------------------------------
-//=========================================
-//
-//=========================================
+//-----------------------------------------------------------------
+// Course Finder
+//-----------------------------------------------------------------
+
+.course-post {
+    background: white;
+    overflow: hidden;
+    padding: rem-calc(15 20);
+    border: 1px solid #E1E1E1;
+    border-top: 4px solid $primary-color;
+    width: 100%;
+
+    h3 {
+        margin-bottom: 0;
+    }
+
+    .button {
+        margin: 0;
+    }
+}
+
+.no-touch .course-post:hover {
+    background: rgba(yellow, .3);
+}
+
+.course-search {
+    background: #E1E1E1;
+    padding: 20px;
+
+    .button {
+        margin-bottom: 0;
+    }
+
+    input {
+        background: white;
+    }
+}
+
+//-----------------------------------------------------------------
+// Move to shared forms
+//-----------------------------------------------------------------
+
+input[type=checkbox] {
+    margin-right: 10px;
+}
+
+.course-finder-module {
+    label {
+        font-weight: normal;
+        font-size: rem-calc(14);
+    }
+}
+
+//-----------------------------------------------------------------
+// Accordion (refactor into own CSS file)
+//-----------------------------------------------------------------
 
 .accordion {
     margin-left: 0;
@@ -28,14 +81,14 @@
     }
 
     // Icon
-    li > a:before {
+    > li > a:before {
         content: "\f0dd";
         font-family: 'FontAwesome';
         padding-right: 10px;
         float: right;
     }
 
-    li.active a:before {
+    > li.active > a:before {
         content: "\f0de";
     }
 }
@@ -53,3 +106,7 @@
         margin: 0;
     }
 }
+
+//=========================================
+//
+//=========================================

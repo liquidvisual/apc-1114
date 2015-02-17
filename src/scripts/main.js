@@ -355,15 +355,27 @@ $(".language-selector .mobile-menu-trigger").bind("click", function(e) {
     $(".js-off-canvas-menu-right").removeClass('hide').trigger("open.mm");
 });
 
+
+// ACCORDION
+
+$(document).foundation({
+  accordion: {
+    content_class: 'content',
+    multi_expand: false
+  }
+});
+
+// FOR TOUCH ADDITIONAL
+
 if (TOUCH_ENABLED) {
     // Make Accordion jump to the top of the heading on mobile
     // http://foundation.zurb.com/forum/posts/1316-accordion-jump-to-top-when-active
-    /*$(document).foundation('accordion', {
+    $(document).foundation('accordion', {
         callback: function (el){
             var containerPos = $(el).parent().offset().top;
             $('html, body').animate({ scrollTop: containerPos }, 300);
         }
-    });*/
+    });
 }
 //-----------------------------------------------------------------
 // <= IE8 Caution Message
