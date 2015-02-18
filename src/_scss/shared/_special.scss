@@ -74,6 +74,28 @@ input[type=checkbox] {
         font-size: rem-calc(14);
     }
 }
+//-----------------------------------------------------------------
+// Pathways
+//-----------------------------------------------------------------
+
+
+.pathways-listing {
+    min-width: 100%;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+
+    @media #{$medium-up} {
+        overflow: hidden;
+    }
+
+    table {
+        min-width: 700px;
+
+        @media #{$medium-up} {
+            min-width: none;
+        }
+    }
+}
 
 //-----------------------------------------------------------------
 // Course Headings

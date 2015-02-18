@@ -59,8 +59,7 @@ layout: internal
                         <div class="accordion-header show-for-medium-up">
                             <div class="row">
                                 <div class="small-4 columns"><h5>Institution</h5></div>
-                                <div class="small-5 columns"><h5>Institution Profile</h5></div>
-                                <div class="small-3 columns"><h5>Relevant Course</h5></div>
+                                <div class="small-8 columns"><h5>Institution Profile</h5></div>
                             </div>
                         </div>
 
@@ -81,7 +80,7 @@ layout: internal
                                     <br>
                                     <a href="http://unisa.edu.au">www.unisa.edu.au</a></p>
                                 </div>
-                                <div class="medium-5 columns">
+                                <div class="medium-8 columns">
 
                                     <!-- Mobile Only -->
                                     <h5 class="hide-for-medium-up">Institution Profile</h5>
@@ -92,15 +91,35 @@ layout: internal
  Today, over 3000 students have studied at the school.
  Of those who have completed their studies, most are presently working in the hospitality industry around the world.
  Students must achieve B+ in EAP to enter the BMIHMS degree courses.</p>
-                                </div>
-                                <div class="medium-3 columns">
+                                </div> <!-- .medium-8 -->
 
-                                    <!-- Mobile Only -->
-                                    <h5 class="hide-for-medium-up">Relevant Course</h5>
-
-                                    <p>Bachelor of Business - International Hotel and Resort Management</p>
-                                </div>
                             </div> <!-- .row -->
+
+                            <br>
+
+                            <!-- PATHWAYS LISTING -->
+                            <div class="pathways-listing">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <th>Relevant Course</th>
+                                            <th>Higher Education Course</th>
+                                            <th>Number of Credits</th>
+                                            <th>Approximate Length Credit</th>
+                                        </tr>
+                                        {% for i in (1..3) %}
+                                            {% for i in (1..3) %}
+                                            <tr>
+                                                <td>Certificate IV in Marketing</td>
+                                                <td>Bachelor of Tourism</td>
+                                                <td>2 Credits</td>
+                                                <td>Reduced workload</td>
+                                            </tr>
+                                            {% endfor %}
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div> <!-- .pathways-listing -->
 
                             {% unless forloop.last %}
                             <div class="row">
