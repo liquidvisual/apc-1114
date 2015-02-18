@@ -208,14 +208,13 @@ $(function() {
 
 $(function(){
     $('.timeline-controls').slick({
-      infinite: true,
+      infinite: false,
       slidesToShow: 9,
-      slidesToScroll: 1,
+      slidesToScroll: 3,
       initialSlide: 0,
       asNavFor: '.timeline-slides',
       focusOnSelect: true,
       variableWidth: true, // need?
-      adaptiveHeight: true,
       // centerMode: true,
       responsive: [
           {
@@ -234,6 +233,7 @@ $(function(){
     // --
 
      $('.timeline-slides').slick({
+        adaptiveHeight: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
