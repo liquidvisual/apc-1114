@@ -58,7 +58,7 @@ if ($("#enu, #apc").length) {
 // Site switcher assets
 if ($("#enu").length) {
     $('link[href*="/css/apc"], link[href*="/assets/css/minified-apc"]').remove();
-} else {
+} else if ($("#apc").length){
     $('link[href*="/css/enu.css"], link[href*="/assets/css/minified-enu"]').remove();
 }
 
