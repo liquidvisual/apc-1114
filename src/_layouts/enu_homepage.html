@@ -30,13 +30,13 @@ layout: master
 	<!-- ENGLISH COURSES -->
 	<div class="section course-section">
 		<div class="row">
-			<div class="large-11 medium-centered columns">
+			<div class="medium-11 large-10 medium-centered columns">
 			{% for item in courses %}
 				<h2 class="text-center">{{ item.title }}</h2>
 				<br>
 				<div class="row">
-					<div class=" columns">
-						<ul class="section small-block-grid-1 medium-block-grid-3">
+					<div class="columns">
+						<ul class="section small-block-grid-1 medium-block-grid-2 large-block-grid-3">
 						{% for item in item.children %}
 							<li>
 								{% assign index = {{forloop.index}} %}
@@ -64,10 +64,14 @@ layout: master
 	</div> <!-- .image-section -->
 
 	<!-- OUR CAMPUS - 2 COLUMNS -->
-	<div class="section has-padding">
+	<div class="section has-padding js-block-equalizer">
 		<div class="row">
-			<div class="large-9 medium-centered columns">
+			<div class="columns">
 				<h2 class="text-center section">Our Campus</h2>
+
+				{% include enu/campuses_snippet.html %}
+
+				{% comment %}
 				<ul class="small-block-grid-1 medium-block-grid-2" data-equalizer>
 					{% for i in (1..2) %}
 					<li>
@@ -86,11 +90,13 @@ layout: master
 					</li>
 					{% endfor %}
 				</ul>
+				{% endcomment %}
 
 			</div> <!-- .columns -->
 		</div> <!-- .row -->
 	</div> <!-- .section -->
 
+	{% comment %}
 	<!-- OUR CAMPUS 3 COLUMNS -->
 	<div class="section has-padding">
 		<div class="row">
@@ -118,6 +124,7 @@ layout: master
 			</div> <!-- .columns -->
 		</div> <!-- .row -->
 	</div> <!-- .section -->
+	{% endcomment %}
 
 	<!-- MEET OUR TEAM -->
 	<div class="section color-section light color-3 has-no-margin has-medium-padding">

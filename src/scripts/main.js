@@ -370,6 +370,15 @@ $(document).foundation({
   }
 });
 
+// EQUALIZER
+
+$('.js-block-equalizer').foundation({
+  equalizer : {
+    // Specify if Equalizer should make elements equal height once they become stacked.
+    equalize_on_stack: true
+  }
+});
+
 // FOR TOUCH ADDITIONAL
 
 if (TOUCH_ENABLED) {

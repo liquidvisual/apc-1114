@@ -157,5 +157,14 @@ input[type=checkbox] {
 }
 
 //=========================================
-//
+// Block grid - move into global - risky without js-block thing
 //=========================================
+
+// Ensure images scale to block grid LIs
+// ul[class*='block-grid'] li {
+
+.js-block-equalizer ul[class*='block-grid'] li {
+    @media #{$small-only} {
+        width: 100%;
+    }
+}

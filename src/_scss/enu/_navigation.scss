@@ -125,7 +125,7 @@
 //=========================================
 
 /* UX decision, dropdowns are fiddly on tablets */
-.no-touch .topbar .has-dropdown:hover > .dropdown {
+.topbar .has-dropdown:hover > .dropdown {
     opacity: 1;
     height: auto;
     overflow: visible;
@@ -134,7 +134,7 @@
     top: 100%;
 }
 
-.no-touch .topbar .has-dropdown:hover > a {
+.topbar .has-dropdown:hover > a {
     background: darken($secondary-color, 10%);
     border-radius: $global-radius;
 }
@@ -157,7 +157,7 @@
 //     border-radius: $global-radius;
 // }
 
-.no-touch .topbar .dropdown .has-dropdown:hover > .dropdown {
+.topbar .dropdown .has-dropdown:hover > .dropdown {
     opacity: 1;
     height: auto;
 }
