@@ -124,13 +124,15 @@ $(function(){
 //-----------------------------------------------------------------
 
 function setupHero() {
+    var largeUp = $(window).width() > 1025; // no more touch
+
     bxSliderHero = $('.js-carousel').bxSlider({
-        auto: (TOUCH_ENABLED ? false : true),
+        auto: (largeUp ? true : false),
         mode: 'horizontal',
         adaptiveHeight: true,
         responsive: true,
         touchEnabled: false,
-        pause: 10000, // Slow timer
+        pause: 8000, // Slow timer
         slideMargin: 0,
         slideSelector: ".lv-hero",
         minSlides: 1,
