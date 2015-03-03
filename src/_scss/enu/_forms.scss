@@ -18,8 +18,24 @@
 }
 
 //=========================================
-//
+// Footer Form
 //=========================================
+
+.status {
+	position: relative;
+	top: -14px;
+	display: block;
+	padding: rem-calc(5 10);
+	border-radius: 2px;
+}
+
+.status.errors {
+	background: #D03237;
+}
+
+.status.success {
+	background: #63BE60;
+}
 
 //-----------------------------------------------------------------
 //
