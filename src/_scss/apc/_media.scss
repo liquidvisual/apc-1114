@@ -74,6 +74,14 @@
     }
 }
 
+// Handles images with cover, for feed images
+.article-card .img-bg {
+    display: block;
+    width: 100px;
+    height: rem-calc(403);
+
+}
+
 .article-card-text {
     // background: white;
     padding: rem-calc(20);

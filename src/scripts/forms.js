@@ -33,7 +33,7 @@
             NProgress.start();
 
             $.ajax({
-                    type: 'GET',
+                    type: 'POST',
                     url: $this.attr('action'),
                     // data: JSON.stringify($this.serializeArray()),
                     data: $(this).serialize(),
@@ -42,7 +42,7 @@
                     displaySuccess(data);
                 })
             .fail(function(data) {
-                displayError("We're sorry, there was an error");
+                displayError(data);
             })
             .always(function(data) {
                 console.log("The server responded with: "+data);
@@ -60,7 +60,7 @@
                 $form[0].reset();
                 NProgress.done();
             } else {
-                displayError("Sorry. There was an error with the server");
+                displayError(message);
             }
         }
 
