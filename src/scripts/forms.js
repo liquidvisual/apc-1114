@@ -71,7 +71,6 @@
 
         function displayError(response) {
             var response = response.Message;
-
             $status.text(response).removeClass('success').addClass('errors');
             $status.insertAfter($email);
             NProgress.done();
