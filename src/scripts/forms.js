@@ -53,14 +53,15 @@
         // Success
         //==================================================
 
-        function displaySuccess(message) {
-            if (message == "OK") {
-                $status.text(message).removeClass('errors').addClass('success');
+        function displaySuccess(response) {
+            var response = response.Message;
+            if (response == "OK") {
+                $status.text(response).removeClass('errors').addClass('success');
                 $status.insertAfter($email);
                 $form[0].reset();
                 NProgress.done();
             } else {
-                displayError(message);
+                displayError(response);
             }
         }
 
@@ -68,8 +69,10 @@
         // Error
         //==================================================
 
-        function displayError(message) {
-            $status.text(message).removeClass('success').addClass('errors');
+        function displayError(response) {
+            var response = response.Message;
+
+            $status.text(response).removeClass('success').addClass('errors');
             $status.insertAfter($email);
             NProgress.done();
         }
