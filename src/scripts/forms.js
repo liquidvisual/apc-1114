@@ -33,9 +33,10 @@
             NProgress.start();
 
             $.ajax({
-                    type: 'POST',
+                    type: 'GET',
                     url: $this.attr('action'),
-                    data: JSON.stringify($this.serializeArray()),
+                    // data: JSON.stringify($this.serializeArray()),
+                    data: $this.serialize(),
                     cache: false
             }).done(function(data) {
                     displaySuccess(data);

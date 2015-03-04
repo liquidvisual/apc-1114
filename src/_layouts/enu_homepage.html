@@ -182,7 +182,13 @@ layout: master
 						<!-- Hide the last one on mobile. Limit to 2 -->
 						<li class="{% if forloop.last %}show-for-large-up{% endif %}">
 							<a class="article-card" href="/news-and-events/events/events-item/" data-equalizer-watch>
-								<img src="http://lorempixel.com/400/200/fashion?{{forloop.index}}" alt="...">
+								{% if forloop.index == 1 %}
+									<span class="img-bg" style="http://2.bp.blogspot.com/-j95H3UQw5Xk/VOvsk-k_k_I/AAAAAAAABug/IhCc_aVbT-U/s1600/Lonsdale%2Bstreet.PNG"></span>
+								    <!-- <img src="http://2.bp.blogspot.com/-j95H3UQw5Xk/VOvsk-k_k_I/AAAAAAAABug/IhCc_aVbT-U/s1600/Lonsdale%2Bstreet.PNG"> -->
+								{% else %}
+									<img src="http://lorempixel.com/400/200/fashion?{{forloop.index}}" alt="...">
+								{% endif %}
+
 								<div class="article-card-text">
 									<h3>{{ item.title }}</h3>
 									<h5 class="subheader"><date><i class="fa fa-calendar"></i>&nbsp; {{ item.date | date: "%d %B %Y" }}</h5>
