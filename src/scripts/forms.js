@@ -33,12 +33,18 @@
             NProgress.start();
 
             $.ajax({
-                    type: 'GET',
+                    type: 'POST',
                     url: $this.attr('action'),
                     data: JSON.stringify($this.serializeArray()),
-                    cache: false,
-                    success: function(){ displaySuccess("Thanks for signing up!") },
-                    error: function(){ displayError("We're sorry, there was an error") }
+                    cache: false
+            }).done(function(data) {
+                    displaySuccess(data);
+                })
+            .fail(function(data) {
+                displayError("We're sorry, there was an error");
+            })
+            .always(function(data) {
+                console.log("The server responded with: "+data);
             });
         });
 
@@ -47,10 +53,14 @@
         //==================================================
 
         function displaySuccess(message) {
-            $status.text(message).removeClass('errors').addClass('success');
-            $status.insertAfter($email);
-            $form[0].reset();
-            NProgress.done();
+            if (message == "OK") {
+                $status.text(message).removeClass('errors').addClass('success');
+                $status.insertAfter($email);
+                $form[0].reset();
+                NProgress.done();
+            } else {
+                displayError("Sorry. There was an error with the server");
+            }
         }
 
         //==================================================
