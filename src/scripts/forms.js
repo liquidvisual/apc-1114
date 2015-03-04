@@ -40,9 +40,11 @@
                     cache: false
             }).done(function(data) {
                     displaySuccess(data);
+                    console.log("The server responded with success: "+data);
                 })
             .fail(function(data) {
                 displayError(data);
+                console.log("The server responded with error: "+data);
             })
             .always(function(data) {
                 console.log("The server responded with: "+data);
