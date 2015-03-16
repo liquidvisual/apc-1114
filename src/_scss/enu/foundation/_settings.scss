@@ -96,11 +96,13 @@ $font-family-sans-serif: "Open Sans", "Helvetica Neue", Helvetica, Roboto, Arial
 // $font-weight-bold: bold !default;
 
 // We use these as default colors throughout
-$primary-color: #F47220;
-$secondary-color: #505D66; //#3A4349; //#505D66; //#35373B
-$tertiary-color: #F4D760;
-$alert-color: #f04124;
-$success-color: #43AC6A;
+$primary-color: rgb(243,115,33);//#F47220;
+$secondary-color: rgb(69, 85, 96); //#505D66; //#3A4349; //#505D66; //#35373B
+$tertiary-color: rgb(255, 215, 4); //#F4D760;
+$quaternary-color: rgb(135, 207, 197); // hacked in liquidvisual/component/sections
+$quinary-color: rgb(96, 179, 200);
+$alert-color: rgb(242, 104, 75); //#f04124;
+$success-color: rgb(203, 219, 47); // #43AC6A;
 // $warning-color: #f08a24;
 // $info-color: #a0d3e8;
 
