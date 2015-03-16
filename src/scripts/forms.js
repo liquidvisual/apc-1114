@@ -20,7 +20,8 @@
         $form.submit(function(event) {
 
             var $this = $(this);
-
+            $status.remove();
+            $status.insertAfter($email).removeClass('success errors');
             event.preventDefault();
 
             // Email Validation
@@ -33,17 +34,17 @@
             NProgress.start();
 
             $.ajax({
-                    type: 'POST',
+                    type: 'GET',
                     url: $this.attr('action'),
                     // data: JSON.stringify($this.serializeArray()),
                     data: $(this).serialize(),
                     cache: false
             }).done(function(data) {
-                    displaySuccess(data);
+                    displaySuccess(data.Message);
                     console.log("The server responded with success: "+data);
                 })
             .fail(function(data) {
-                displayError(data);
+                displayError(data.Message);
                 console.log("The server responded with error: "+data);
             })
             .always(function(data) {
@@ -56,10 +57,8 @@
         //==================================================
 
         function displaySuccess(response) {
-            var response = response.Message;
             if (response == "OK") {
                 $status.text(response).removeClass('errors').addClass('success');
-                $status.insertAfter($email);
                 $form[0].reset();
                 NProgress.done();
             } else {
@@ -72,9 +71,7 @@
         //==================================================
 
         function displayError(response) {
-            var response = response.Message;
             $status.text(response).removeClass('success').addClass('errors');
-            $status.insertAfter($email);
             NProgress.done();
         }
     }();
