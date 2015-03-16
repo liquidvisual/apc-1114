@@ -34,7 +34,7 @@
             NProgress.start();
 
             $.ajax({
-                    type: 'GET',
+                    type: 'POST',
                     url: $this.attr('action'),
                     // data: JSON.stringify($this.serializeArray()),
                     data: $(this).serialize(),
