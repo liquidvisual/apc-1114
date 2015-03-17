@@ -13,15 +13,11 @@
 
     var init = function(){
 
-        var $form = $('.newsletter-subscribe-form');
+        var $form = $('.newsletter-subscribe-form-new');
         var $email = $form.find('input');
-        var $status = $('<span class="status animated fadeIn"></span>');
 
         $form.submit(function(event) {
-
             var $this = $(this);
-            $status.remove();
-            $status.insertAfter($email).removeClass('success errors');
             event.preventDefault();
 
             // Email Validation
@@ -57,6 +53,9 @@
         //==================================================
 
         function displaySuccess(response) {
+            var $status = $('<span class="status animated fadeIn"></span>');
+            $form.find('span.status').remove();
+            $status.insertAfter($email).removeClass('success errors');
             if (response == "OK") {
                 $status.text(response).removeClass('errors').addClass('success');
                 $form[0].reset();
@@ -71,6 +70,9 @@
         //==================================================
 
         function displayError(response) {
+            var $status = $('<span class="status animated fadeIn"></span>');
+            $form.find('span.status').remove();
+            $status.insertAfter($email).removeClass('success errors');
             $status.text(response).removeClass('success').addClass('errors');
             NProgress.done();
         }
