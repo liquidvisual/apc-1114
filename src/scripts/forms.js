@@ -13,7 +13,7 @@
 
     var init = function(){
 
-        var $form = $('.newsletter-subscribe-form-new');
+        var $form = $('.newsletter-subscribe-form');
         var $email = $form.find('input');
 
         $form.submit(function(event) {
