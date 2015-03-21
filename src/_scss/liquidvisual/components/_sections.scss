@@ -149,6 +149,8 @@ $color-section-bg-5: aqua !default;
 .claim-module {
     @media #{$medium-up} {
         display: table;
+        width: 100%; // Fixed
+        // min-height: 115px;
     }
 
     .claim-left,
