@@ -9,6 +9,28 @@
 // Variables
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------
+// Contour Forms
+//-----------------------------------------------------------------
+
+.contourField {
+    position: relative;
+}
+
+.lv-super input.input-validation-error {
+    margin: 0;
+}
+
+.lv-super span.field-validation-error {
+    background: $alert-color;
+    color: white;
+    padding: 5px 15px;
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+    border-radius: 0 0 4px 4px;
+}
+
+//-----------------------------------------------------------------
 // Google Translate
 //-----------------------------------------------------------------
 
