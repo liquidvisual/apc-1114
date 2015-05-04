@@ -148,3 +148,11 @@ h1 .date {
 //=========================================
 //
 //=========================================
+
+.course-item-heading {
+    border-radius: $global-radius * 2;
+}
+
+.lv-super .course .side_content h4 {
+    font-size: rem-calc(23); // forgive me 04.05.205
+}
