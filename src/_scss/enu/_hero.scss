@@ -29,7 +29,12 @@
 //=========================================
 
 .internal .lv-hero {
-    height: rem-calc(360);
+    // height: rem-calc(360);
+    height: rem-calc(150);
+
+    @media #{$medium-up} {
+        height: rem-calc(360);
+    }
 
     .lv-hero-caption {
         padding: rem-calc(40 0);

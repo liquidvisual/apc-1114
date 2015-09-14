@@ -45,7 +45,12 @@
 //=========================================
 
 .internal .lv-hero {
-    height: rem-calc(360);
+    // height: rem-calc(360);
+    height: rem-calc(150);
+
+    @media #{$medium-up} {
+        height: rem-calc(360);
+    }
 }
 
 .internal .lv-hero .lv-hero-caption {
